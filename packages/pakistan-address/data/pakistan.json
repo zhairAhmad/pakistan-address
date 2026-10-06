@@ -1,0 +1,5066 @@
+{
+ "meta": {
+  "dataVersion": "2026-10-06",
+  "baseline": "Pakistan census 2017 units (geo-pakistan) merged with the OCHA/WFP COD-AB boundaries valid from September 2022",
+  "sources": [
+   {
+    "name": "OCHA / WFP Pakistan Subnational Administrative Boundaries (COD-AB)",
+    "url": "https://data.humdata.org/dataset/cod-ab-pak",
+    "license": "CC BY-IGO",
+    "note": "Districts, tehsils and p-codes; boundaries valid from 2022-09-09, reviewed September 2024"
+   },
+   {
+    "name": "aaqibmehran/geo-pakistan",
+    "url": "https://github.com/aaqibmehran/geo-pakistan",
+    "license": "MIT (declared in composer.json)",
+    "note": "Provinces, divisions and the tehsils HDX does not list; last upstream update 2020"
+   }
+  ]
+ },
+ "provinces": [
+  {
+   "id": "ajk",
+   "name": "Azad Jammu & Kashmir",
+   "pcode": "PK1"
+  },
+  {
+   "id": "bl",
+   "name": "Balochistan",
+   "pcode": "PK2"
+  },
+  {
+   "id": "gb",
+   "name": "Gilgit-Baltistan",
+   "pcode": "PK3"
+  },
+  {
+   "id": "ict",
+   "name": "Islamabad Capital Territory",
+   "pcode": "PK4"
+  },
+  {
+   "id": "kp",
+   "name": "Khyber Pakhtunkhwa",
+   "pcode": "PK5"
+  },
+  {
+   "id": "pb",
+   "name": "Punjab",
+   "pcode": "PK6"
+  },
+  {
+   "id": "sd",
+   "name": "Sindh",
+   "pcode": "PK7"
+  }
+ ],
+ "divisions": [
+  {
+   "id": "pb-bahawalpur-div",
+   "provinceId": "pb",
+   "name": "Bahawalpur"
+  },
+  {
+   "id": "gb-baltistan-div",
+   "provinceId": "gb",
+   "name": "Baltistan"
+  },
+  {
+   "id": "sd-banbhore-div",
+   "provinceId": "sd",
+   "name": "Banbhore"
+  },
+  {
+   "id": "kp-bannu-div",
+   "provinceId": "kp",
+   "name": "Bannu"
+  },
+  {
+   "id": "pb-dera-ghazi-khan-div",
+   "provinceId": "pb",
+   "name": "Dera Ghazi Khan"
+  },
+  {
+   "id": "kp-dera-ismail-khan-div",
+   "provinceId": "kp",
+   "name": "Dera Ismail Khan"
+  },
+  {
+   "id": "gb-diamer-div",
+   "provinceId": "gb",
+   "name": "Diamer"
+  },
+  {
+   "id": "pb-faisalabad-div",
+   "provinceId": "pb",
+   "name": "Faisalabad"
+  },
+  {
+   "id": "gb-gilgit-div",
+   "provinceId": "gb",
+   "name": "Gilgit"
+  },
+  {
+   "id": "pb-gujranwala-div",
+   "provinceId": "pb",
+   "name": "Gujranwala"
+  },
+  {
+   "id": "kp-hazara-div",
+   "provinceId": "kp",
+   "name": "Hazara"
+  },
+  {
+   "id": "sd-hyderabad-div",
+   "provinceId": "sd",
+   "name": "Hyderabad"
+  },
+  {
+   "id": "bl-kalat-div",
+   "provinceId": "bl",
+   "name": "Kalat"
+  },
+  {
+   "id": "sd-karachi-div",
+   "provinceId": "sd",
+   "name": "Karachi"
+  },
+  {
+   "id": "kp-kohat-div",
+   "provinceId": "kp",
+   "name": "Kohat"
+  },
+  {
+   "id": "pb-lahore-div",
+   "provinceId": "pb",
+   "name": "Lahore"
+  },
+  {
+   "id": "sd-larkana-div",
+   "provinceId": "sd",
+   "name": "Larkana"
+  },
+  {
+   "id": "bl-makran-div",
+   "provinceId": "bl",
+   "name": "Makran"
+  },
+  {
+   "id": "kp-malakand-div",
+   "provinceId": "kp",
+   "name": "Malakand"
+  },
+  {
+   "id": "kp-mardan-div",
+   "provinceId": "kp",
+   "name": "Mardan"
+  },
+  {
+   "id": "ajk-mirpur-div",
+   "provinceId": "ajk",
+   "name": "Mirpur"
+  },
+  {
+   "id": "sd-mirpur-khas-div",
+   "provinceId": "sd",
+   "name": "Mirpur Khas"
+  },
+  {
+   "id": "pb-multan-div",
+   "provinceId": "pb",
+   "name": "Multan"
+  },
+  {
+   "id": "ajk-muzaffarabad-div",
+   "provinceId": "ajk",
+   "name": "Muzaffarabad"
+  },
+  {
+   "id": "bl-naseerabad-div",
+   "provinceId": "bl",
+   "name": "Naseerabad"
+  },
+  {
+   "id": "kp-peshawar-div",
+   "provinceId": "kp",
+   "name": "Peshawar"
+  },
+  {
+   "id": "ajk-poonch-div",
+   "provinceId": "ajk",
+   "name": "Poonch"
+  },
+  {
+   "id": "bl-quetta-div",
+   "provinceId": "bl",
+   "name": "Quetta"
+  },
+  {
+   "id": "bl-rakhshan-div",
+   "provinceId": "bl",
+   "name": "Rakhshan"
+  },
+  {
+   "id": "pb-rawalpindi-div",
+   "provinceId": "pb",
+   "name": "Rawalpindi"
+  },
+  {
+   "id": "pb-sahiwal-div",
+   "provinceId": "pb",
+   "name": "Sahiwal"
+  },
+  {
+   "id": "pb-sargodha-div",
+   "provinceId": "pb",
+   "name": "Sargodha"
+  },
+  {
+   "id": "sd-shaheed-benazirabad-div",
+   "provinceId": "sd",
+   "name": "Shaheed Benazirabad"
+  },
+  {
+   "id": "bl-sibi-div",
+   "provinceId": "bl",
+   "name": "Sibi"
+  },
+  {
+   "id": "sd-sukkur-div",
+   "provinceId": "sd",
+   "name": "Sukkur"
+  },
+  {
+   "id": "bl-zhob-div",
+   "provinceId": "bl",
+   "name": "Zhob"
+  }
+ ],
+ "districts": [
+  {
+   "id": "kp-abbottabad",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Abbottabad",
+   "pcode": "PK501"
+  },
+  {
+   "id": "gb-astore",
+   "provinceId": "gb",
+   "divisionId": "gb-diamer-div",
+   "name": "Astore",
+   "pcode": "PK301"
+  },
+  {
+   "id": "pb-attock",
+   "provinceId": "pb",
+   "divisionId": "pb-rawalpindi-div",
+   "name": "Attock",
+   "pcode": "PK601"
+  },
+  {
+   "id": "bl-awaran",
+   "provinceId": "bl",
+   "divisionId": "bl-kalat-div",
+   "name": "Awaran",
+   "pcode": "PK201"
+  },
+  {
+   "id": "sd-badin",
+   "provinceId": "sd",
+   "divisionId": "sd-banbhore-div",
+   "name": "Badin",
+   "pcode": "PK701"
+  },
+  {
+   "id": "ajk-bagh",
+   "provinceId": "ajk",
+   "divisionId": "ajk-poonch-div",
+   "name": "Bagh",
+   "pcode": "PK101"
+  },
+  {
+   "id": "pb-bahawalnagar",
+   "provinceId": "pb",
+   "divisionId": "pb-bahawalpur-div",
+   "name": "Bahawalnagar",
+   "pcode": "PK602"
+  },
+  {
+   "id": "pb-bahawalpur",
+   "provinceId": "pb",
+   "divisionId": "pb-bahawalpur-div",
+   "name": "Bahawalpur",
+   "pcode": "PK603"
+  },
+  {
+   "id": "kp-bajaur",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Bajaur",
+   "pcode": "PK502"
+  },
+  {
+   "id": "kp-bannu",
+   "provinceId": "kp",
+   "divisionId": "kp-bannu-div",
+   "name": "Bannu",
+   "pcode": "PK503"
+  },
+  {
+   "id": "bl-barkhan",
+   "provinceId": "bl",
+   "divisionId": "bl-zhob-div",
+   "name": "Barkhan",
+   "pcode": "PK202"
+  },
+  {
+   "id": "kp-batagram",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Batagram",
+   "pcode": "PK504"
+  },
+  {
+   "id": "pb-bhakkar",
+   "provinceId": "pb",
+   "divisionId": "pb-sargodha-div",
+   "name": "Bhakkar",
+   "pcode": "PK604"
+  },
+  {
+   "id": "ajk-bhimber",
+   "provinceId": "ajk",
+   "divisionId": "ajk-mirpur-div",
+   "name": "Bhimber",
+   "pcode": "PK102"
+  },
+  {
+   "id": "kp-buner",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Buner",
+   "pcode": "PK505"
+  },
+  {
+   "id": "bl-chagai",
+   "provinceId": "bl",
+   "divisionId": "bl-rakhshan-div",
+   "name": "Chagai",
+   "pcode": "PK203"
+  },
+  {
+   "id": "pb-chakwal",
+   "provinceId": "pb",
+   "divisionId": "pb-rawalpindi-div",
+   "name": "Chakwal",
+   "pcode": "PK605"
+  },
+  {
+   "id": "bl-chaman",
+   "provinceId": "bl",
+   "divisionId": "bl-quetta-div",
+   "name": "Chaman",
+   "pcode": "PK235"
+  },
+  {
+   "id": "kp-charsadda",
+   "provinceId": "kp",
+   "divisionId": "kp-peshawar-div",
+   "name": "Charsadda",
+   "pcode": "PK506"
+  },
+  {
+   "id": "pb-chiniot",
+   "provinceId": "pb",
+   "divisionId": "pb-faisalabad-div",
+   "name": "Chiniot",
+   "pcode": "PK606"
+  },
+  {
+   "id": "sd-dadu",
+   "provinceId": "sd",
+   "divisionId": "sd-hyderabad-div",
+   "name": "Dadu",
+   "pcode": "PK703"
+  },
+  {
+   "id": "gb-darel",
+   "provinceId": "gb",
+   "divisionId": "gb-diamer-div",
+   "name": "Darel",
+   "pcode": "PK311"
+  },
+  {
+   "id": "bl-dera-bugti",
+   "provinceId": "bl",
+   "divisionId": "bl-sibi-div",
+   "name": "Dera Bugti",
+   "pcode": "PK204"
+  },
+  {
+   "id": "pb-dera-ghazi-khan",
+   "provinceId": "pb",
+   "divisionId": "pb-dera-ghazi-khan-div",
+   "name": "Dera Ghazi Khan",
+   "pcode": "PK607"
+  },
+  {
+   "id": "kp-dera-ismail-khan",
+   "provinceId": "kp",
+   "divisionId": "kp-dera-ismail-khan-div",
+   "name": "Dera Ismail Khan",
+   "pcode": "PK509"
+  },
+  {
+   "id": "gb-diamer",
+   "provinceId": "gb",
+   "divisionId": "gb-diamer-div",
+   "name": "Diamer",
+   "pcode": "PK302"
+  },
+  {
+   "id": "bl-duki",
+   "provinceId": "bl",
+   "divisionId": "bl-zhob-div",
+   "name": "Duki",
+   "pcode": "PK234"
+  },
+  {
+   "id": "pb-faisalabad",
+   "provinceId": "pb",
+   "divisionId": "pb-faisalabad-div",
+   "name": "Faisalabad",
+   "pcode": "PK608"
+  },
+  {
+   "id": "gb-ghanche",
+   "provinceId": "gb",
+   "divisionId": "gb-baltistan-div",
+   "name": "Ghanche",
+   "pcode": "PK303"
+  },
+  {
+   "id": "gb-ghizer",
+   "provinceId": "gb",
+   "divisionId": "gb-gilgit-div",
+   "name": "Ghizer",
+   "pcode": "PK304"
+  },
+  {
+   "id": "sd-ghotki",
+   "provinceId": "sd",
+   "divisionId": "sd-sukkur-div",
+   "name": "Ghotki",
+   "pcode": "PK705"
+  },
+  {
+   "id": "gb-gilgit",
+   "provinceId": "gb",
+   "divisionId": "gb-gilgit-div",
+   "name": "Gilgit",
+   "pcode": "PK305"
+  },
+  {
+   "id": "pb-gujranwala",
+   "provinceId": "pb",
+   "divisionId": "pb-gujranwala-div",
+   "name": "Gujranwala",
+   "pcode": "PK609"
+  },
+  {
+   "id": "pb-gujrat",
+   "provinceId": "pb",
+   "divisionId": "pb-gujranwala-div",
+   "name": "Gujrat",
+   "pcode": "PK610"
+  },
+  {
+   "id": "gb-gupis-yasin",
+   "provinceId": "gb",
+   "divisionId": "gb-gilgit-div",
+   "name": "Gupis–Yasin",
+   "pcode": "PK313"
+  },
+  {
+   "id": "bl-gwadar",
+   "provinceId": "bl",
+   "divisionId": "bl-makran-div",
+   "name": "Gwadar",
+   "pcode": "PK205"
+  },
+  {
+   "id": "pb-hafizabad",
+   "provinceId": "pb",
+   "divisionId": "pb-gujranwala-div",
+   "name": "Hafizabad",
+   "pcode": "PK611"
+  },
+  {
+   "id": "kp-hangu",
+   "provinceId": "kp",
+   "divisionId": "kp-kohat-div",
+   "name": "Hangu",
+   "pcode": "PK510"
+  },
+  {
+   "id": "kp-haripur",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Haripur",
+   "pcode": "PK511"
+  },
+  {
+   "id": "bl-harnai",
+   "provinceId": "bl",
+   "divisionId": "bl-sibi-div",
+   "name": "Harnai",
+   "pcode": "PK206"
+  },
+  {
+   "id": "ajk-hattian-bala",
+   "provinceId": "ajk",
+   "divisionId": "ajk-muzaffarabad-div",
+   "name": "Hattian Bala",
+   "pcode": "PK103"
+  },
+  {
+   "id": "ajk-haveli",
+   "provinceId": "ajk",
+   "divisionId": "ajk-poonch-div",
+   "name": "Haveli",
+   "pcode": "PK104"
+  },
+  {
+   "id": "gb-hunza",
+   "provinceId": "gb",
+   "divisionId": "gb-gilgit-div",
+   "name": "Hunza",
+   "pcode": "PK306"
+  },
+  {
+   "id": "sd-hyderabad",
+   "provinceId": "sd",
+   "divisionId": "sd-hyderabad-div",
+   "name": "Hyderabad",
+   "pcode": "PK706"
+  },
+  {
+   "id": "ict-islamabad",
+   "provinceId": "ict",
+   "divisionId": null,
+   "name": "Islamabad",
+   "pcode": "PK401"
+  },
+  {
+   "id": "sd-jacobabad",
+   "provinceId": "sd",
+   "divisionId": "sd-larkana-div",
+   "name": "Jacobabad",
+   "pcode": "PK707"
+  },
+  {
+   "id": "bl-jaffarabad",
+   "provinceId": "bl",
+   "divisionId": "bl-naseerabad-div",
+   "name": "Jaffarabad",
+   "pcode": "PK207"
+  },
+  {
+   "id": "sd-jamshoro",
+   "provinceId": "sd",
+   "divisionId": "sd-hyderabad-div",
+   "name": "Jamshoro",
+   "pcode": "PK708"
+  },
+  {
+   "id": "bl-jhal-magsi",
+   "provinceId": "bl",
+   "divisionId": "bl-naseerabad-div",
+   "name": "Jhal Magsi",
+   "pcode": "PK208"
+  },
+  {
+   "id": "pb-jhang",
+   "provinceId": "pb",
+   "divisionId": "pb-faisalabad-div",
+   "name": "Jhang",
+   "pcode": "PK612"
+  },
+  {
+   "id": "pb-jhelum",
+   "provinceId": "pb",
+   "divisionId": "pb-rawalpindi-div",
+   "name": "Jhelum",
+   "pcode": "PK613"
+  },
+  {
+   "id": "bl-kachhi",
+   "provinceId": "bl",
+   "divisionId": "bl-naseerabad-div",
+   "name": "Kachhi (Bolan)",
+   "pcode": "PK209"
+  },
+  {
+   "id": "bl-kalat",
+   "provinceId": "bl",
+   "divisionId": "bl-kalat-div",
+   "name": "Kalat",
+   "pcode": "PK210"
+  },
+  {
+   "id": "sd-karachi-central",
+   "provinceId": "sd",
+   "divisionId": "sd-karachi-div",
+   "name": "Karachi Central",
+   "pcode": "PK702"
+  },
+  {
+   "id": "sd-karachi-east",
+   "provinceId": "sd",
+   "divisionId": "sd-karachi-div",
+   "name": "Karachi East",
+   "pcode": "PK704"
+  },
+  {
+   "id": "sd-karachi-south",
+   "provinceId": "sd",
+   "divisionId": "sd-karachi-div",
+   "name": "Karachi South",
+   "pcode": "PK721"
+  },
+  {
+   "id": "sd-karachi-west",
+   "provinceId": "sd",
+   "divisionId": "sd-karachi-div",
+   "name": "Karachi West",
+   "pcode": "PK729"
+  },
+  {
+   "id": "kp-karak",
+   "provinceId": "kp",
+   "divisionId": "kp-kohat-div",
+   "name": "Karak",
+   "pcode": "PK512"
+  },
+  {
+   "id": "sd-kashmore",
+   "provinceId": "sd",
+   "divisionId": "sd-larkana-div",
+   "name": "Kashmore",
+   "pcode": "PK710"
+  },
+  {
+   "id": "pb-kasur",
+   "provinceId": "pb",
+   "divisionId": "pb-lahore-div",
+   "name": "Kasur",
+   "pcode": "PK614"
+  },
+  {
+   "id": "bl-kech",
+   "provinceId": "bl",
+   "divisionId": "bl-makran-div",
+   "name": "Kech",
+   "pcode": "PK211"
+  },
+  {
+   "id": "sd-khairpur",
+   "provinceId": "sd",
+   "divisionId": "sd-sukkur-div",
+   "name": "Khairpur",
+   "pcode": "PK711"
+  },
+  {
+   "id": "pb-khanewal",
+   "provinceId": "pb",
+   "divisionId": "pb-multan-div",
+   "name": "Khanewal",
+   "pcode": "PK615"
+  },
+  {
+   "id": "bl-kharan",
+   "provinceId": "bl",
+   "divisionId": "bl-rakhshan-div",
+   "name": "Kharan",
+   "pcode": "PK212"
+  },
+  {
+   "id": "gb-kharmang",
+   "provinceId": "gb",
+   "divisionId": "gb-baltistan-div",
+   "name": "Kharmang",
+   "pcode": "PK309"
+  },
+  {
+   "id": "pb-khushab",
+   "provinceId": "pb",
+   "divisionId": "pb-sargodha-div",
+   "name": "Khushab",
+   "pcode": "PK616"
+  },
+  {
+   "id": "bl-khuzdar",
+   "provinceId": "bl",
+   "divisionId": "bl-kalat-div",
+   "name": "Khuzdar",
+   "pcode": "PK213"
+  },
+  {
+   "id": "kp-khyber",
+   "provinceId": "kp",
+   "divisionId": "kp-peshawar-div",
+   "name": "Khyber",
+   "pcode": "PK513"
+  },
+  {
+   "id": "bl-killa-abdullah",
+   "provinceId": "bl",
+   "divisionId": "bl-quetta-div",
+   "name": "Killa Abdullah",
+   "pcode": "PK214"
+  },
+  {
+   "id": "bl-killa-saifullah",
+   "provinceId": "bl",
+   "divisionId": "bl-zhob-div",
+   "name": "Killa Saifullah",
+   "pcode": "PK215"
+  },
+  {
+   "id": "kp-kohat",
+   "provinceId": "kp",
+   "divisionId": "kp-kohat-div",
+   "name": "Kohat",
+   "pcode": "PK514"
+  },
+  {
+   "id": "bl-kohlu",
+   "provinceId": "bl",
+   "divisionId": "bl-sibi-div",
+   "name": "Kohlu",
+   "pcode": "PK216"
+  },
+  {
+   "id": "kp-kolai-palas",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Kolai-Palas",
+   "pcode": "PK517"
+  },
+  {
+   "id": "sd-korangi",
+   "provinceId": "sd",
+   "divisionId": "sd-karachi-div",
+   "name": "Korangi",
+   "pcode": "PK712"
+  },
+  {
+   "id": "ajk-kotli",
+   "provinceId": "ajk",
+   "divisionId": "ajk-mirpur-div",
+   "name": "Kotli",
+   "pcode": "PK105"
+  },
+  {
+   "id": "kp-kurram",
+   "provinceId": "kp",
+   "divisionId": "kp-kohat-div",
+   "name": "Kurram",
+   "pcode": "PK518"
+  },
+  {
+   "id": "pb-lahore",
+   "provinceId": "pb",
+   "divisionId": "pb-lahore-div",
+   "name": "Lahore",
+   "pcode": "PK617"
+  },
+  {
+   "id": "kp-lakki-marwat",
+   "provinceId": "kp",
+   "divisionId": "kp-bannu-div",
+   "name": "Lakki Marwat",
+   "pcode": "PK519"
+  },
+  {
+   "id": "sd-larkana",
+   "provinceId": "sd",
+   "divisionId": "sd-larkana-div",
+   "name": "Larkana",
+   "pcode": "PK713"
+  },
+  {
+   "id": "bl-lasbela",
+   "provinceId": "bl",
+   "divisionId": "bl-kalat-div",
+   "name": "Lasbela",
+   "pcode": "PK217"
+  },
+  {
+   "id": "pb-layyah",
+   "provinceId": "pb",
+   "divisionId": "pb-dera-ghazi-khan-div",
+   "name": "Layyah",
+   "pcode": "PK618"
+  },
+  {
+   "id": "bl-lehri",
+   "provinceId": "bl",
+   "divisionId": "bl-sibi-div",
+   "name": "Lehri",
+   "pcode": "PK218"
+  },
+  {
+   "id": "pb-lodhran",
+   "provinceId": "pb",
+   "divisionId": "pb-multan-div",
+   "name": "Lodhran",
+   "pcode": "PK619"
+  },
+  {
+   "id": "bl-loralai",
+   "provinceId": "bl",
+   "divisionId": "bl-zhob-div",
+   "name": "Loralai",
+   "pcode": "PK219"
+  },
+  {
+   "id": "kp-lower-chitral",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Lower Chitral",
+   "pcode": "PK507"
+  },
+  {
+   "id": "kp-lower-dir",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Lower Dir",
+   "pcode": "PK520"
+  },
+  {
+   "id": "kp-lower-kohistan",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Lower Kohistan",
+   "pcode": "PK515"
+  },
+  {
+   "id": "kp-malakand",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Malakand",
+   "pcode": "PK521"
+  },
+  {
+   "id": "sd-malir",
+   "provinceId": "sd",
+   "divisionId": "sd-karachi-div",
+   "name": "Malir",
+   "pcode": "PK714"
+  },
+  {
+   "id": "pb-mandi-bahauddin",
+   "provinceId": "pb",
+   "divisionId": "pb-gujranwala-div",
+   "name": "Mandi Bahauddin",
+   "pcode": "PK620"
+  },
+  {
+   "id": "kp-mansehra",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Mansehra",
+   "pcode": "PK522"
+  },
+  {
+   "id": "kp-mardan",
+   "provinceId": "kp",
+   "divisionId": "kp-mardan-div",
+   "name": "Mardan",
+   "pcode": "PK523"
+  },
+  {
+   "id": "bl-mastung",
+   "provinceId": "bl",
+   "divisionId": "bl-kalat-div",
+   "name": "Mastung",
+   "pcode": "PK220"
+  },
+  {
+   "id": "sd-matiari",
+   "provinceId": "sd",
+   "divisionId": "sd-hyderabad-div",
+   "name": "Matiari",
+   "pcode": "PK715"
+  },
+  {
+   "id": "pb-mianwali",
+   "provinceId": "pb",
+   "divisionId": "pb-sargodha-div",
+   "name": "Mianwali",
+   "pcode": "PK621"
+  },
+  {
+   "id": "ajk-mirpur",
+   "provinceId": "ajk",
+   "divisionId": "ajk-mirpur-div",
+   "name": "Mirpur",
+   "pcode": "PK106"
+  },
+  {
+   "id": "sd-mirpur-khas",
+   "provinceId": "sd",
+   "divisionId": "sd-mirpur-khas-div",
+   "name": "Mirpur Khas",
+   "pcode": "PK716"
+  },
+  {
+   "id": "kp-mohmand",
+   "provinceId": "kp",
+   "divisionId": "kp-peshawar-div",
+   "name": "Mohmand",
+   "pcode": "PK524"
+  },
+  {
+   "id": "pb-multan",
+   "provinceId": "pb",
+   "divisionId": "pb-multan-div",
+   "name": "Multan",
+   "pcode": "PK622"
+  },
+  {
+   "id": "bl-musakhel",
+   "provinceId": "bl",
+   "divisionId": "bl-zhob-div",
+   "name": "Musakhel",
+   "pcode": "PK221"
+  },
+  {
+   "id": "ajk-muzaffarabad",
+   "provinceId": "ajk",
+   "divisionId": "ajk-muzaffarabad-div",
+   "name": "Muzaffarabad",
+   "pcode": "PK107"
+  },
+  {
+   "id": "pb-muzaffargarh",
+   "provinceId": "pb",
+   "divisionId": "pb-dera-ghazi-khan-div",
+   "name": "Muzaffargarh",
+   "pcode": "PK623"
+  },
+  {
+   "id": "gb-nagar",
+   "provinceId": "gb",
+   "divisionId": "gb-gilgit-div",
+   "name": "Nagar",
+   "pcode": "PK308"
+  },
+  {
+   "id": "pb-nankana-sahib",
+   "provinceId": "pb",
+   "divisionId": "pb-lahore-div",
+   "name": "Nankana Sahib",
+   "pcode": "PK624"
+  },
+  {
+   "id": "pb-narowal",
+   "provinceId": "pb",
+   "divisionId": "pb-gujranwala-div",
+   "name": "Narowal",
+   "pcode": "PK625"
+  },
+  {
+   "id": "bl-nasirabad",
+   "provinceId": "bl",
+   "divisionId": "bl-naseerabad-div",
+   "name": "Nasirabad",
+   "pcode": "PK222"
+  },
+  {
+   "id": "sd-naushahro-feroze",
+   "provinceId": "sd",
+   "divisionId": "sd-shaheed-benazirabad-div",
+   "name": "Naushahro Feroze",
+   "pcode": "PK717"
+  },
+  {
+   "id": "ajk-neelum",
+   "provinceId": "ajk",
+   "divisionId": "ajk-muzaffarabad-div",
+   "name": "Neelum",
+   "pcode": "PK108"
+  },
+  {
+   "id": "kp-north-waziristan",
+   "provinceId": "kp",
+   "divisionId": "kp-bannu-div",
+   "name": "North Waziristan",
+   "pcode": "PK525"
+  },
+  {
+   "id": "kp-nowshera",
+   "provinceId": "kp",
+   "divisionId": "kp-peshawar-div",
+   "name": "Nowshera",
+   "pcode": "PK526"
+  },
+  {
+   "id": "bl-nushki",
+   "provinceId": "bl",
+   "divisionId": "bl-rakhshan-div",
+   "name": "Nushki",
+   "pcode": "PK223"
+  },
+  {
+   "id": "pb-okara",
+   "provinceId": "pb",
+   "divisionId": "pb-sahiwal-div",
+   "name": "Okara",
+   "pcode": "PK626"
+  },
+  {
+   "id": "kp-orakzai",
+   "provinceId": "kp",
+   "divisionId": "kp-kohat-div",
+   "name": "Orakzai",
+   "pcode": "PK527"
+  },
+  {
+   "id": "pb-pakpattan",
+   "provinceId": "pb",
+   "divisionId": "pb-sahiwal-div",
+   "name": "Pakpattan",
+   "pcode": "PK627"
+  },
+  {
+   "id": "bl-panjgur",
+   "provinceId": "bl",
+   "divisionId": "bl-makran-div",
+   "name": "Panjgur",
+   "pcode": "PK224"
+  },
+  {
+   "id": "kp-peshawar",
+   "provinceId": "kp",
+   "divisionId": "kp-peshawar-div",
+   "name": "Peshawar",
+   "pcode": "PK528"
+  },
+  {
+   "id": "bl-pishin",
+   "provinceId": "bl",
+   "divisionId": "bl-quetta-div",
+   "name": "Pishin",
+   "pcode": "PK225"
+  },
+  {
+   "id": "ajk-poonch",
+   "provinceId": "ajk",
+   "divisionId": "ajk-poonch-div",
+   "name": "Poonch",
+   "pcode": "PK109"
+  },
+  {
+   "id": "sd-qambar-shahdadkot",
+   "provinceId": "sd",
+   "divisionId": "sd-larkana-div",
+   "name": "Qambar Shahdadkot",
+   "pcode": "PK709"
+  },
+  {
+   "id": "bl-quetta",
+   "provinceId": "bl",
+   "divisionId": "bl-quetta-div",
+   "name": "Quetta",
+   "pcode": "PK226"
+  },
+  {
+   "id": "pb-rahim-yar-khan",
+   "provinceId": "pb",
+   "divisionId": "pb-bahawalpur-div",
+   "name": "Rahim Yar Khan",
+   "pcode": "PK628"
+  },
+  {
+   "id": "pb-rajanpur",
+   "provinceId": "pb",
+   "divisionId": "pb-dera-ghazi-khan-div",
+   "name": "Rajanpur",
+   "pcode": "PK629"
+  },
+  {
+   "id": "pb-rawalpindi",
+   "provinceId": "pb",
+   "divisionId": "pb-rawalpindi-div",
+   "name": "Rawalpindi",
+   "pcode": "PK630"
+  },
+  {
+   "id": "gb-roundu",
+   "provinceId": "gb",
+   "divisionId": "gb-baltistan-div",
+   "name": "Roundu",
+   "pcode": "PK314"
+  },
+  {
+   "id": "pb-sahiwal",
+   "provinceId": "pb",
+   "divisionId": "pb-sahiwal-div",
+   "name": "Sahiwal",
+   "pcode": "PK631"
+  },
+  {
+   "id": "sd-sanghar",
+   "provinceId": "sd",
+   "divisionId": "sd-shaheed-benazirabad-div",
+   "name": "Sanghar",
+   "pcode": "PK718"
+  },
+  {
+   "id": "pb-sargodha",
+   "provinceId": "pb",
+   "divisionId": "pb-sargodha-div",
+   "name": "Sargodha",
+   "pcode": "PK632"
+  },
+  {
+   "id": "sd-shaheed-benazir-abad",
+   "provinceId": "sd",
+   "divisionId": "sd-shaheed-benazirabad-div",
+   "name": "Shaheed Benazir Abad (Nawabshah)",
+   "pcode": "PK719"
+  },
+  {
+   "id": "bl-shaheed-sikandarabad",
+   "provinceId": "bl",
+   "divisionId": "bl-kalat-div",
+   "name": "Shaheed Sikandarabad",
+   "pcode": "PK233"
+  },
+  {
+   "id": "kp-shangla",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Shangla",
+   "pcode": "PK529"
+  },
+  {
+   "id": "bl-sheerani",
+   "provinceId": "bl",
+   "divisionId": "bl-zhob-div",
+   "name": "Sheerani (Sherani)",
+   "pcode": "PK227"
+  },
+  {
+   "id": "pb-sheikhupura",
+   "provinceId": "pb",
+   "divisionId": "pb-lahore-div",
+   "name": "Sheikhupura",
+   "pcode": "PK633"
+  },
+  {
+   "id": "gb-shigar",
+   "provinceId": "gb",
+   "divisionId": "gb-baltistan-div",
+   "name": "Shigar",
+   "pcode": "PK310"
+  },
+  {
+   "id": "sd-shikarpur",
+   "provinceId": "sd",
+   "divisionId": "sd-larkana-div",
+   "name": "Shikarpur",
+   "pcode": "PK720"
+  },
+  {
+   "id": "pb-sialkot",
+   "provinceId": "pb",
+   "divisionId": "pb-gujranwala-div",
+   "name": "Sialkot",
+   "pcode": "PK634"
+  },
+  {
+   "id": "bl-sibi",
+   "provinceId": "bl",
+   "divisionId": "bl-sibi-div",
+   "name": "Sibi",
+   "pcode": "PK228"
+  },
+  {
+   "id": "gb-skardu",
+   "provinceId": "gb",
+   "divisionId": "gb-baltistan-div",
+   "name": "Skardu",
+   "pcode": "PK307"
+  },
+  {
+   "id": "bl-sohbatpur",
+   "provinceId": "bl",
+   "divisionId": "bl-naseerabad-div",
+   "name": "Sohbatpur",
+   "pcode": "PK229"
+  },
+  {
+   "id": "kp-south-waziristan",
+   "provinceId": "kp",
+   "divisionId": "kp-dera-ismail-khan-div",
+   "name": "South Waziristan",
+   "pcode": "PK530"
+  },
+  {
+   "id": "ajk-sudhnati",
+   "provinceId": "ajk",
+   "divisionId": "ajk-poonch-div",
+   "name": "Sudhnati",
+   "pcode": "PK110"
+  },
+  {
+   "id": "sd-sujawal",
+   "provinceId": "sd",
+   "divisionId": "sd-banbhore-div",
+   "name": "Sujawal",
+   "pcode": "PK722"
+  },
+  {
+   "id": "sd-sukkur",
+   "provinceId": "sd",
+   "divisionId": "sd-sukkur-div",
+   "name": "Sukkur",
+   "pcode": "PK723"
+  },
+  {
+   "id": "kp-swabi",
+   "provinceId": "kp",
+   "divisionId": "kp-mardan-div",
+   "name": "Swabi",
+   "pcode": "PK531"
+  },
+  {
+   "id": "kp-swat",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Swat",
+   "pcode": "PK532"
+  },
+  {
+   "id": "sd-tando-allahyar",
+   "provinceId": "sd",
+   "divisionId": "sd-hyderabad-div",
+   "name": "Tando Allahyar",
+   "pcode": "PK724"
+  },
+  {
+   "id": "sd-tando-muhammad-khan",
+   "provinceId": "sd",
+   "divisionId": "sd-hyderabad-div",
+   "name": "Tando Muhammad Khan",
+   "pcode": "PK725"
+  },
+  {
+   "id": "gb-tangir",
+   "provinceId": "gb",
+   "divisionId": "gb-diamer-div",
+   "name": "Tangir",
+   "pcode": "PK312"
+  },
+  {
+   "id": "kp-tank",
+   "provinceId": "kp",
+   "divisionId": "kp-dera-ismail-khan-div",
+   "name": "Tank",
+   "pcode": "PK533"
+  },
+  {
+   "id": "sd-tharparkar",
+   "provinceId": "sd",
+   "divisionId": "sd-mirpur-khas-div",
+   "name": "Tharparkar",
+   "pcode": "PK726"
+  },
+  {
+   "id": "sd-thatta",
+   "provinceId": "sd",
+   "divisionId": "sd-banbhore-div",
+   "name": "Thatta",
+   "pcode": "PK727"
+  },
+  {
+   "id": "pb-toba-tek-singh",
+   "provinceId": "pb",
+   "divisionId": "pb-faisalabad-div",
+   "name": "Toba Tek Singh",
+   "pcode": "PK635"
+  },
+  {
+   "id": "kp-tor-ghar",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Tor Ghar (Kala Dhaka)",
+   "pcode": "PK534"
+  },
+  {
+   "id": "sd-umerkot",
+   "provinceId": "sd",
+   "divisionId": "sd-mirpur-khas-div",
+   "name": "Umerkot",
+   "pcode": "PK728"
+  },
+  {
+   "id": "kp-upper-chitral",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Upper Chitral",
+   "pcode": "PK508"
+  },
+  {
+   "id": "kp-upper-dir",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Upper Dir",
+   "pcode": "PK535"
+  },
+  {
+   "id": "kp-upper-kohistan",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Upper Kohistan",
+   "pcode": "PK516"
+  },
+  {
+   "id": "pb-vehari",
+   "provinceId": "pb",
+   "divisionId": "pb-multan-div",
+   "name": "Vehari",
+   "pcode": "PK636"
+  },
+  {
+   "id": "bl-washuk",
+   "provinceId": "bl",
+   "divisionId": "bl-rakhshan-div",
+   "name": "Washuk",
+   "pcode": "PK230"
+  },
+  {
+   "id": "bl-zhob",
+   "provinceId": "bl",
+   "divisionId": "bl-zhob-div",
+   "name": "Zhob",
+   "pcode": "PK231"
+  },
+  {
+   "id": "bl-ziarat",
+   "provinceId": "bl",
+   "divisionId": "bl-sibi-div",
+   "name": "Ziarat",
+   "pcode": "PK232"
+  }
+ ],
+ "tehsils": [
+  {
+   "id": "pb-jhang-18-hazari",
+   "districtId": "pb-jhang",
+   "name": "18 Hazari"
+  },
+  {
+   "id": "ajk-poonch-abbaspur",
+   "districtId": "ajk-poonch",
+   "name": "Abbaspur",
+   "pcode": "PK10901"
+  },
+  {
+   "id": "kp-abbottabad-abbottabad",
+   "districtId": "kp-abbottabad",
+   "name": "Abbottabad",
+   "pcode": "PK50101"
+  },
+  {
+   "id": "kp-lower-dir-adenzai",
+   "districtId": "kp-lower-dir",
+   "name": "Adenzai",
+   "pcode": "PK52001"
+  },
+  {
+   "id": "pb-bahawalpur-ahmadpur-east",
+   "districtId": "pb-bahawalpur",
+   "name": "Ahmadpur East",
+   "pcode": "PK60301"
+  },
+  {
+   "id": "pb-jhang-ahmadpur-sial",
+   "districtId": "pb-jhang",
+   "name": "Ahmadpur Sial",
+   "pcode": "PK61201"
+  },
+  {
+   "id": "gb-hunza-ali-abad",
+   "districtId": "gb-hunza",
+   "name": "Ali Abad",
+   "pcode": "PK30601"
+  },
+  {
+   "id": "pb-muzaffargarh-alipur",
+   "districtId": "pb-muzaffargarh",
+   "name": "Alipur",
+   "pcode": "PK62301"
+  },
+  {
+   "id": "kp-batagram-allai",
+   "districtId": "kp-batagram",
+   "name": "Allai",
+   "pcode": "PK50401"
+  },
+  {
+   "id": "kp-shangla-alpuri",
+   "districtId": "kp-shangla",
+   "name": "Alpuri",
+   "pcode": "PK52901"
+  },
+  {
+   "id": "kp-mohmand-ambar",
+   "districtId": "kp-mohmand",
+   "name": "Ambar",
+   "pcode": "PK52401"
+  },
+  {
+   "id": "bl-khuzdar-aranji",
+   "districtId": "bl-khuzdar",
+   "name": "Aranji"
+  },
+  {
+   "id": "pb-pakpattan-arif-wala",
+   "districtId": "pb-pakpattan",
+   "name": "Arif Wala",
+   "pcode": "PK62701"
+  },
+  {
+   "id": "bl-zhob-ashwat",
+   "districtId": "bl-zhob",
+   "name": "Ashwat"
+  },
+  {
+   "id": "gb-astore-astore",
+   "districtId": "gb-astore",
+   "name": "Astore",
+   "pcode": "PK30101"
+  },
+  {
+   "id": "pb-jhang-athara-hazari",
+   "districtId": "pb-jhang",
+   "name": "Athara Hazari",
+   "pcode": "PK61204"
+  },
+  {
+   "id": "ajk-neelum-athmuqam",
+   "districtId": "ajk-neelum",
+   "name": "Athmuqam",
+   "pcode": "PK10801"
+  },
+  {
+   "id": "pb-attock-attock",
+   "districtId": "pb-attock",
+   "name": "Attock",
+   "pcode": "PK60101"
+  },
+  {
+   "id": "bl-awaran-awaran",
+   "districtId": "bl-awaran",
+   "name": "Awaran",
+   "pcode": "PK20101"
+  },
+  {
+   "id": "bl-nasirabad-baba-kot",
+   "districtId": "bl-nasirabad",
+   "name": "Baba Kot"
+  },
+  {
+   "id": "kp-swat-babuzai",
+   "districtId": "kp-swat",
+   "name": "Babuzai",
+   "pcode": "PK53201"
+  },
+  {
+   "id": "bl-killa-saifullah-baddini",
+   "districtId": "bl-killa-saifullah",
+   "name": "Baddini"
+  },
+  {
+   "id": "sd-badin-badin",
+   "districtId": "sd-badin",
+   "name": "Badin",
+   "pcode": "PK70101"
+  },
+  {
+   "id": "kp-mansehra-baffa-pakhal",
+   "districtId": "kp-mansehra",
+   "name": "Baffa Pakhal",
+   "pcode": "PK52204"
+  },
+  {
+   "id": "ajk-bagh-bagh",
+   "districtId": "ajk-bagh",
+   "name": "Bagh",
+   "pcode": "PK10101"
+  },
+  {
+   "id": "pb-bahawalnagar-bahawalnagar",
+   "districtId": "pb-bahawalnagar",
+   "name": "Bahawalnagar",
+   "pcode": "PK60201"
+  },
+  {
+   "id": "pb-bahawalpur-bahawalpur",
+   "districtId": "pb-bahawalpur",
+   "name": "Bahawalpur",
+   "pcode": "PK60302"
+  },
+  {
+   "id": "pb-bahawalpur-bahawalpur-saddar",
+   "districtId": "pb-bahawalpur",
+   "name": "Bahawalpur Saddar"
+  },
+  {
+   "id": "kp-swat-bahrain",
+   "districtId": "kp-swat",
+   "name": "Bahrain",
+   "pcode": "PK53202"
+  },
+  {
+   "id": "bl-dera-bugti-baiker",
+   "districtId": "bl-dera-bugti",
+   "name": "Baiker"
+  },
+  {
+   "id": "kp-mohmand-baizai",
+   "districtId": "kp-mohmand",
+   "name": "Baizai",
+   "pcode": "PK52402"
+  },
+  {
+   "id": "kp-bannu-baka-khel",
+   "districtId": "kp-bannu",
+   "name": "Baka Khel",
+   "pcode": "PK50302"
+  },
+  {
+   "id": "kp-mansehra-bala-kot",
+   "districtId": "kp-mansehra",
+   "name": "Bala Kot",
+   "pcode": "PK52201"
+  },
+  {
+   "id": "kp-lower-dir-balambat",
+   "districtId": "kp-lower-dir",
+   "name": "Balambat",
+   "pcode": "PK52002"
+  },
+  {
+   "id": "bl-kachhi-balanari",
+   "districtId": "bl-kachhi",
+   "name": "Balanari",
+   "pcode": "PK20904"
+  },
+  {
+   "id": "sd-karachi-west-baldia-town",
+   "districtId": "sd-karachi-west",
+   "name": "Baldia Town",
+   "pcode": "PK72901"
+  },
+  {
+   "id": "bl-kech-balnigor",
+   "districtId": "bl-kech",
+   "name": "Balnigor"
+  },
+  {
+   "id": "ajk-sudhnati-baluch",
+   "districtId": "ajk-sudhnati",
+   "name": "Baluch",
+   "pcode": "PK11001"
+  },
+  {
+   "id": "kp-karak-banda-daud-shah",
+   "districtId": "kp-karak",
+   "name": "Banda Daud Shah",
+   "pcode": "PK51201"
+  },
+  {
+   "id": "kp-lower-kohistan-bankad",
+   "districtId": "kp-lower-kohistan",
+   "name": "Bankad",
+   "pcode": "PK51502"
+  },
+  {
+   "id": "kp-bannu-bannu",
+   "districtId": "kp-bannu",
+   "name": "Bannu",
+   "pcode": "PK50301"
+  },
+  {
+   "id": "sd-larkana-baqrani",
+   "districtId": "sd-larkana",
+   "name": "Baqrani",
+   "pcode": "PK71301"
+  },
+  {
+   "id": "kp-bajaur-bar-chamarkand",
+   "districtId": "kp-bajaur",
+   "name": "Bar Chamarkand",
+   "pcode": "PK50201"
+  },
+  {
+   "id": "kp-khyber-bara",
+   "districtId": "kp-khyber",
+   "name": "Bara",
+   "pcode": "PK51301"
+  },
+  {
+   "id": "kp-bajaur-barang",
+   "districtId": "kp-bajaur",
+   "name": "Barang",
+   "pcode": "PK50202"
+  },
+  {
+   "id": "kp-upper-dir-barawal",
+   "districtId": "kp-upper-dir",
+   "name": "Barawal",
+   "pcode": "PK53501"
+  },
+  {
+   "id": "kp-swat-barikot",
+   "districtId": "kp-swat",
+   "name": "Barikot",
+   "pcode": "PK53203"
+  },
+  {
+   "id": "bl-barkhan-barkhan",
+   "districtId": "bl-barkhan",
+   "name": "Barkhan",
+   "pcode": "PK20201"
+  },
+  {
+   "id": "ajk-bhimber-barnala",
+   "districtId": "ajk-bhimber",
+   "name": "Barnala",
+   "pcode": "PK10201"
+  },
+  {
+   "id": "bl-pishin-barshore",
+   "districtId": "bl-pishin",
+   "name": "Barshore",
+   "pcode": "PK22501"
+  },
+  {
+   "id": "bl-washuk-basima",
+   "districtId": "bl-washuk",
+   "name": "Basima",
+   "pcode": "PK23002"
+  },
+  {
+   "id": "kp-malakand-bat-khela",
+   "districtId": "kp-malakand",
+   "name": "Bat Khela",
+   "pcode": "PK52101"
+  },
+  {
+   "id": "kp-batagram-batagram",
+   "districtId": "kp-batagram",
+   "name": "Batagram",
+   "pcode": "PK50402"
+  },
+  {
+   "id": "kp-kolai-palas-battera-kolai",
+   "districtId": "kp-kolai-palas",
+   "name": "Battera Kolai",
+   "pcode": "PK51702"
+  },
+  {
+   "id": "bl-lasbela-bela",
+   "districtId": "bl-lasbela",
+   "name": "Bela",
+   "pcode": "PK21701"
+  },
+  {
+   "id": "kp-lakki-marwat-bettani",
+   "districtId": "kp-lakki-marwat",
+   "name": "Bettani",
+   "pcode": "PK51903"
+  },
+  {
+   "id": "bl-lehri-bhag",
+   "districtId": "bl-lehri",
+   "name": "Bhag",
+   "pcode": "PK21801"
+  },
+  {
+   "id": "pb-bhakkar-bhakkar",
+   "districtId": "pb-bhakkar",
+   "name": "Bhakkar",
+   "pcode": "PK60401"
+  },
+  {
+   "id": "pb-sargodha-bhalwal",
+   "districtId": "pb-sargodha",
+   "name": "Bhalwal",
+   "pcode": "PK63201"
+  },
+  {
+   "id": "pb-chiniot-bhawana",
+   "districtId": "pb-chiniot",
+   "name": "Bhawana",
+   "pcode": "PK60601"
+  },
+  {
+   "id": "pb-sargodha-bhera",
+   "districtId": "pb-sargodha",
+   "name": "Bhera",
+   "pcode": "PK63207"
+  },
+  {
+   "id": "ajk-bhimber-bhimber",
+   "districtId": "ajk-bhimber",
+   "name": "Bhimber",
+   "pcode": "PK10202"
+  },
+  {
+   "id": "sd-naushahro-feroze-bhiria",
+   "districtId": "sd-naushahro-feroze",
+   "name": "Bhiria",
+   "pcode": "PK71701"
+  },
+  {
+   "id": "sd-malir-bin-qasim-town",
+   "districtId": "sd-malir",
+   "name": "Bin Qasim Town",
+   "pcode": "PK71401"
+  },
+  {
+   "id": "kp-south-waziristan-birmal",
+   "districtId": "kp-south-waziristan",
+   "name": "Birmal",
+   "pcode": "PK53001"
+  },
+  {
+   "id": "kp-shangla-bisham",
+   "districtId": "kp-shangla",
+   "name": "Bisham",
+   "pcode": "PK52902"
+  },
+  {
+   "id": "bl-loralai-bori",
+   "districtId": "bl-loralai",
+   "name": "Bori"
+  },
+  {
+   "id": "bl-kech-buleda",
+   "districtId": "bl-kech",
+   "name": "Buleda",
+   "pcode": "PK21101"
+  },
+  {
+   "id": "sd-tando-muhammad-khan-bulri-shah-karim",
+   "districtId": "sd-tando-muhammad-khan",
+   "name": "Bulri Shah Karim",
+   "pcode": "PK72501"
+  },
+  {
+   "id": "pb-vehari-burewala",
+   "districtId": "pb-vehari",
+   "name": "Burewala",
+   "pcode": "PK63601"
+  },
+  {
+   "id": "kp-kurram-central-kurram",
+   "districtId": "kp-kurram",
+   "name": "Central Kurram",
+   "pcode": "PK51801"
+  },
+  {
+   "id": "kp-orakzai-central-orakzai",
+   "districtId": "kp-orakzai",
+   "name": "Central Orakzai",
+   "pcode": "PK52701"
+  },
+  {
+   "id": "sd-tharparkar-chachro",
+   "districtId": "sd-tharparkar",
+   "name": "Chachro",
+   "pcode": "PK72601"
+  },
+  {
+   "id": "bl-chagai-chagai",
+   "districtId": "bl-chagai",
+   "name": "Chagai",
+   "pcode": "PK20304"
+  },
+  {
+   "id": "pb-faisalabad-chak-jhumra",
+   "districtId": "pb-faisalabad",
+   "name": "Chak Jhumra",
+   "pcode": "PK60801"
+  },
+  {
+   "id": "kp-shangla-chakisar",
+   "districtId": "kp-shangla",
+   "name": "Chakisar",
+   "pcode": "PK52903"
+  },
+  {
+   "id": "pb-chakwal-chakwal",
+   "districtId": "pb-chakwal",
+   "name": "Chakwal",
+   "pcode": "PK60501"
+  },
+  {
+   "id": "bl-chaman-chaman",
+   "districtId": "bl-chaman",
+   "name": "Chaman",
+   "pcode": "PK23501"
+  },
+  {
+   "id": "sd-tando-allahyar-chamber",
+   "districtId": "sd-tando-allahyar",
+   "name": "Chamber",
+   "pcode": "PK72401"
+  },
+  {
+   "id": "kp-swat-charbagh",
+   "districtId": "kp-swat",
+   "name": "Charbagh",
+   "pcode": "PK53204"
+  },
+  {
+   "id": "ajk-kotli-charhoi",
+   "districtId": "ajk-kotli",
+   "name": "Charhoi",
+   "pcode": "PK10501"
+  },
+  {
+   "id": "kp-charsadda-charsadda",
+   "districtId": "kp-charsadda",
+   "name": "Charsadda",
+   "pcode": "PK50601"
+  },
+  {
+   "id": "bl-nasirabad-chattar",
+   "districtId": "bl-nasirabad",
+   "name": "Chattar",
+   "pcode": "PK22201"
+  },
+  {
+   "id": "pb-sahiwal-chichawatni",
+   "districtId": "pb-sahiwal",
+   "name": "Chichawatni",
+   "pcode": "PK63101"
+  },
+  {
+   "id": "ajk-hattian-bala-chikar",
+   "districtId": "ajk-hattian-bala",
+   "name": "Chikar",
+   "pcode": "PK10301"
+  },
+  {
+   "id": "gb-diamer-chilas",
+   "districtId": "gb-diamer",
+   "name": "Chilas",
+   "pcode": "PK30201"
+  },
+  {
+   "id": "pb-chiniot-chiniot",
+   "districtId": "pb-chiniot",
+   "name": "Chiniot",
+   "pcode": "PK60602"
+  },
+  {
+   "id": "pb-bahawalnagar-chishtian",
+   "districtId": "pb-bahawalnagar",
+   "name": "Chishtian",
+   "pcode": "PK60202"
+  },
+  {
+   "id": "kp-lower-chitral-chitral",
+   "districtId": "kp-lower-chitral",
+   "name": "Chitral",
+   "pcode": "PK50701"
+  },
+  {
+   "id": "pb-chakwal-choa-saidan-shah",
+   "districtId": "pb-chakwal",
+   "name": "Choa Saidan Shah",
+   "pcode": "PK60502"
+  },
+  {
+   "id": "pb-layyah-choubara",
+   "districtId": "pb-layyah",
+   "name": "Choubara",
+   "pcode": "PK61801"
+  },
+  {
+   "id": "pb-kasur-chunian",
+   "districtId": "pb-kasur",
+   "name": "Chunian",
+   "pcode": "PK61401"
+  },
+  {
+   "id": "pb-dera-ghazi-khan-d-g-khan-tribal-area",
+   "districtId": "pb-dera-ghazi-khan",
+   "name": "D.G Khan (Tribal Area)",
+   "pcode": "PK60701"
+  },
+  {
+   "id": "kp-dera-ismail-khan-d-i-khan",
+   "districtId": "kp-dera-ismail-khan",
+   "name": "D.I. Khan",
+   "pcode": "PK50901"
+  },
+  {
+   "id": "sd-dadu-dadu",
+   "districtId": "sd-dadu",
+   "name": "Dadu",
+   "pcode": "PK70301"
+  },
+  {
+   "id": "ajk-mirpur-dadyal",
+   "districtId": "ajk-mirpur",
+   "name": "Dadyal",
+   "pcode": "PK10601"
+  },
+  {
+   "id": "kp-buner-daggar",
+   "districtId": "kp-buner",
+   "name": "Daggar",
+   "pcode": "PK50501"
+  },
+  {
+   "id": "gb-ghanche-daghoni",
+   "districtId": "gb-ghanche",
+   "name": "Daghoni",
+   "pcode": "PK30301"
+  },
+  {
+   "id": "sd-ghotki-daharki",
+   "districtId": "sd-ghotki",
+   "name": "Daharki",
+   "pcode": "PK70501"
+  },
+  {
+   "id": "sd-tharparkar-dahli",
+   "districtId": "sd-tharparkar",
+   "name": "Dahli",
+   "pcode": "PK72602"
+  },
+  {
+   "id": "bl-chagai-dalbandin",
+   "districtId": "bl-chagai",
+   "name": "Dalbandin",
+   "pcode": "PK20301"
+  },
+  {
+   "id": "kp-dera-ismail-khan-daraban",
+   "districtId": "kp-dera-ismail-khan",
+   "name": "Daraban",
+   "pcode": "PK50902"
+  },
+  {
+   "id": "kp-dera-ismail-khan-darazinda",
+   "districtId": "kp-dera-ismail-khan",
+   "name": "Darazinda",
+   "pcode": "PK50906"
+  },
+  {
+   "id": "kp-mansehra-darband",
+   "districtId": "kp-mansehra",
+   "name": "Darband",
+   "pcode": "PK52205"
+  },
+  {
+   "id": "gb-darel-darel",
+   "districtId": "gb-darel",
+   "name": "Darel",
+   "pcode": "PK31101"
+  },
+  {
+   "id": "kp-malakand-dargai",
+   "districtId": "kp-malakand",
+   "name": "Dargai",
+   "pcode": "PK52102"
+  },
+  {
+   "id": "kp-kohat-darra-adam-khel",
+   "districtId": "kp-kohat",
+   "name": "Darra Adam Khel",
+   "pcode": "PK51404"
+  },
+  {
+   "id": "pb-bhakkar-darya-khan",
+   "districtId": "pb-bhakkar",
+   "name": "Darya Khan",
+   "pcode": "PK60402"
+  },
+  {
+   "id": "bl-kech-dasht",
+   "districtId": "bl-kech",
+   "name": "Dasht",
+   "pcode": "PK21102"
+  },
+  {
+   "id": "bl-mastung-dasht-spenzend",
+   "districtId": "bl-mastung",
+   "name": "Dasht Spenzend",
+   "pcode": "PK22001"
+  },
+  {
+   "id": "pb-sialkot-daska",
+   "districtId": "pb-sialkot",
+   "name": "Daska",
+   "pcode": "PK63401"
+  },
+  {
+   "id": "kp-upper-kohistan-dassu",
+   "districtId": "kp-upper-kohistan",
+   "name": "Dassu",
+   "pcode": "PK51601"
+  },
+  {
+   "id": "kp-north-waziristan-data-khel",
+   "districtId": "kp-north-waziristan",
+   "name": "Data Khel",
+   "pcode": "PK52501"
+  },
+  {
+   "id": "sd-shaheed-benazir-abad-daulat-pur",
+   "districtId": "sd-shaheed-benazir-abad",
+   "name": "Daulat Pur",
+   "pcode": "PK71901"
+  },
+  {
+   "id": "sd-shaheed-benazir-abad-daur",
+   "districtId": "sd-shaheed-benazir-abad",
+   "name": "Daur",
+   "pcode": "PK71902"
+  },
+  {
+   "id": "pb-okara-depalpur",
+   "districtId": "pb-okara",
+   "name": "Depalpur",
+   "pcode": "PK62601"
+  },
+  {
+   "id": "bl-dera-bugti-dera-bugti",
+   "districtId": "bl-dera-bugti",
+   "name": "Dera Bugti",
+   "pcode": "PK20401"
+  },
+  {
+   "id": "pb-dera-ghazi-khan-dera-ghazi-khan",
+   "districtId": "pb-dera-ghazi-khan",
+   "name": "Dera Ghazi Khan",
+   "pcode": "PK60702"
+  },
+  {
+   "id": "bl-nasirabad-dera-murad-jamali",
+   "districtId": "bl-nasirabad",
+   "name": "Dera Murad Jamali",
+   "pcode": "PK22202"
+  },
+  {
+   "id": "bl-kachhi-dhadar",
+   "districtId": "bl-kachhi",
+   "name": "Dhadar",
+   "pcode": "PK20901"
+  },
+  {
+   "id": "ajk-bagh-dhir-kot",
+   "districtId": "ajk-bagh",
+   "name": "Dhir Kot",
+   "pcode": "PK10102"
+  },
+  {
+   "id": "sd-mirpur-khas-digri",
+   "districtId": "sd-mirpur-khas",
+   "name": "Digri",
+   "pcode": "PK71601"
+  },
+  {
+   "id": "pb-jhelum-dina",
+   "districtId": "pb-jhelum",
+   "name": "Dina",
+   "pcode": "PK61301"
+  },
+  {
+   "id": "sd-tharparkar-diplo",
+   "districtId": "sd-tharparkar",
+   "name": "Diplo",
+   "pcode": "PK72603"
+  },
+  {
+   "id": "kp-upper-dir-dir",
+   "districtId": "kp-upper-dir",
+   "name": "Dir",
+   "pcode": "PK53502"
+  },
+  {
+   "id": "bl-killa-abdullah-dobandi",
+   "districtId": "bl-killa-abdullah",
+   "name": "Dobandi",
+   "pcode": "PK21402"
+  },
+  {
+   "id": "sd-larkana-dokri",
+   "districtId": "sd-larkana",
+   "name": "Dokri",
+   "pcode": "PK71302"
+  },
+  {
+   "id": "kp-bannu-domel",
+   "districtId": "kp-bannu",
+   "name": "Domel",
+   "pcode": "PK50303"
+  },
+  {
+   "id": "kp-north-waziristan-dossali",
+   "districtId": "kp-north-waziristan",
+   "name": "Dossali",
+   "pcode": "PK52502"
+  },
+  {
+   "id": "kp-lower-chitral-drosh",
+   "districtId": "kp-lower-chitral",
+   "name": "Drosh",
+   "pcode": "PK50702"
+  },
+  {
+   "id": "bl-musakhel-drug",
+   "districtId": "bl-musakhel",
+   "name": "Drug",
+   "pcode": "PK22101"
+  },
+  {
+   "id": "bl-duki-duki",
+   "districtId": "bl-duki",
+   "name": "Duki",
+   "pcode": "PK23401"
+  },
+  {
+   "id": "ajk-kotli-dulliya-jattan",
+   "districtId": "ajk-kotli",
+   "name": "Dulliya Jattan",
+   "pcode": "PK10502"
+  },
+  {
+   "id": "pb-lodhran-dunyapur",
+   "districtId": "pb-lodhran",
+   "name": "Dunyapur",
+   "pcode": "PK61901"
+  },
+  {
+   "id": "bl-lasbela-dureji",
+   "districtId": "bl-lasbela",
+   "name": "Dureji",
+   "pcode": "PK21702"
+  },
+  {
+   "id": "pb-faisalabad-faisalabad-city",
+   "districtId": "pb-faisalabad",
+   "name": "Faisalabad City",
+   "pcode": "PK60802"
+  },
+  {
+   "id": "pb-faisalabad-faisalabad-sadar",
+   "districtId": "pb-faisalabad",
+   "name": "Faisalabad Sadar",
+   "pcode": "PK60803"
+  },
+  {
+   "id": "sd-khairpur-faiz-ganj",
+   "districtId": "sd-khairpur",
+   "name": "Faiz Ganj",
+   "pcode": "PK71101"
+  },
+  {
+   "id": "bl-sohbatpur-faridabad",
+   "districtId": "bl-sohbatpur",
+   "name": "Faridabad"
+  },
+  {
+   "id": "pb-attock-fateh-jang",
+   "districtId": "pb-attock",
+   "name": "Fateh Jang",
+   "pcode": "PK60102"
+  },
+  {
+   "id": "ajk-kotli-fatehpur-thakiala",
+   "districtId": "ajk-kotli",
+   "name": "Fatehpur Thakiala",
+   "pcode": "PK10503"
+  },
+  {
+   "id": "pb-sheikhupura-ferozewala",
+   "districtId": "pb-sheikhupura",
+   "name": "Ferozewala",
+   "pcode": "PK63301"
+  },
+  {
+   "id": "pb-bahawalnagar-fort-abbas",
+   "districtId": "pb-bahawalnagar",
+   "name": "Fort Abbas",
+   "pcode": "PK60203"
+  },
+  {
+   "id": "sd-malir-gadap-town",
+   "districtId": "sd-malir",
+   "name": "Gadap Town",
+   "pcode": "PK71402"
+  },
+  {
+   "id": "bl-lasbela-gaddani",
+   "districtId": "bl-lasbela",
+   "name": "Gaddani",
+   "pcode": "PK21703"
+  },
+  {
+   "id": "kp-buner-gagra",
+   "districtId": "kp-buner",
+   "name": "Gagra",
+   "pcode": "PK50502"
+  },
+  {
+   "id": "gb-skardu-gamba",
+   "districtId": "gb-skardu",
+   "name": "Gamba",
+   "pcode": "PK30701"
+  },
+  {
+   "id": "sd-khairpur-gambat",
+   "districtId": "sd-khairpur",
+   "name": "Gambat",
+   "pcode": "PK71102"
+  },
+  {
+   "id": "bl-jaffarabad-gandakha",
+   "districtId": "bl-jaffarabad",
+   "name": "Gandakha",
+   "pcode": "PK20701"
+  },
+  {
+   "id": "bl-jhal-magsi-gandawa",
+   "districtId": "bl-jhal-magsi",
+   "name": "Gandawa",
+   "pcode": "PK20801"
+  },
+  {
+   "id": "kp-mardan-garhi-kapura",
+   "districtId": "kp-mardan",
+   "name": "Garhi Kapura",
+   "pcode": "PK52305"
+  },
+  {
+   "id": "sd-jacobabad-garhi-khairo",
+   "districtId": "sd-jacobabad",
+   "name": "Garhi Khairo",
+   "pcode": "PK70701"
+  },
+  {
+   "id": "sd-shikarpur-garhi-yasin",
+   "districtId": "sd-shikarpur",
+   "name": "Garhi Yasin",
+   "pcode": "PK72001"
+  },
+  {
+   "id": "kp-north-waziristan-garyum",
+   "districtId": "kp-north-waziristan",
+   "name": "Garyum",
+   "pcode": "PK52503"
+  },
+  {
+   "id": "bl-kalat-gazg",
+   "districtId": "bl-kalat",
+   "name": "Gazg"
+  },
+  {
+   "id": "kp-haripur-ghazi",
+   "districtId": "kp-haripur",
+   "name": "Ghazi",
+   "pcode": "PK51101"
+  },
+  {
+   "id": "sd-thatta-ghorabari",
+   "districtId": "sd-thatta",
+   "name": "Ghorabari",
+   "pcode": "PK72701"
+  },
+  {
+   "id": "sd-ghotki-ghotki",
+   "districtId": "sd-ghotki",
+   "name": "Ghotki",
+   "pcode": "PK70502"
+  },
+  {
+   "id": "kp-north-waziristan-ghulam-khan",
+   "districtId": "kp-north-waziristan",
+   "name": "Ghulam Khan",
+   "pcode": "PK52504"
+  },
+  {
+   "id": "bl-panjgur-gichk",
+   "districtId": "bl-panjgur",
+   "name": "Gichk",
+   "pcode": "PK22404"
+  },
+  {
+   "id": "gb-gilgit-gilgit",
+   "districtId": "gb-gilgit",
+   "name": "Gilgit",
+   "pcode": "PK30501"
+  },
+  {
+   "id": "bl-awaran-gishekore",
+   "districtId": "bl-awaran",
+   "name": "Gishekore",
+   "pcode": "PK20104"
+  },
+  {
+   "id": "gb-hunza-gojal",
+   "districtId": "gb-hunza",
+   "name": "Gojal",
+   "pcode": "PK30602"
+  },
+  {
+   "id": "pb-toba-tek-singh-gojra",
+   "districtId": "pb-toba-tek-singh",
+   "name": "Gojra",
+   "pcode": "PK63501"
+  },
+  {
+   "id": "bl-panjgur-gowargo",
+   "districtId": "bl-panjgur",
+   "name": "Gowargo",
+   "pcode": "PK22401"
+  },
+  {
+   "id": "bl-kohlu-grisani",
+   "districtId": "bl-kohlu",
+   "name": "Grisani"
+  },
+  {
+   "id": "pb-rawalpindi-gujar-khan",
+   "districtId": "pb-rawalpindi",
+   "name": "Gujar Khan",
+   "pcode": "PK63001"
+  },
+  {
+   "id": "pb-gujranwala-gujranwala",
+   "districtId": "pb-gujranwala",
+   "name": "Gujranwala",
+   "pcode": "PK60901"
+  },
+  {
+   "id": "pb-gujranwala-gujranwala-saddar",
+   "districtId": "pb-gujranwala",
+   "name": "Gujranwala Saddar"
+  },
+  {
+   "id": "pb-gujrat-gujrat",
+   "districtId": "pb-gujrat",
+   "name": "Gujrat",
+   "pcode": "PK61001"
+  },
+  {
+   "id": "sd-karachi-central-gulberg-town",
+   "districtId": "sd-karachi-central",
+   "name": "Gulberg Town",
+   "pcode": "PK70201"
+  },
+  {
+   "id": "bl-killa-abdullah-gulistan",
+   "districtId": "bl-killa-abdullah",
+   "name": "Gulistan",
+   "pcode": "PK21403"
+  },
+  {
+   "id": "sd-karachi-east-gulshan-iqbal-town",
+   "districtId": "sd-karachi-east",
+   "name": "Gulshan Iqbal Town",
+   "pcode": "PK70401"
+  },
+  {
+   "id": "gb-kharmang-gultari",
+   "districtId": "gb-kharmang",
+   "name": "Gultari",
+   "pcode": "PK30901"
+  },
+  {
+   "id": "kp-kohat-gumbat",
+   "districtId": "kp-kohat",
+   "name": "Gumbat",
+   "pcode": "PK51403"
+  },
+  {
+   "id": "gb-gupis-yasin-gupis",
+   "districtId": "gb-gupis-yasin",
+   "name": "Gupis",
+   "pcode": "PK31301"
+  },
+  {
+   "id": "bl-gwadar-gwadar",
+   "districtId": "bl-gwadar",
+   "name": "Gwadar",
+   "pcode": "PK20501"
+  },
+  {
+   "id": "pb-hafizabad-hafizabad",
+   "districtId": "pb-hafizabad",
+   "name": "Hafizabad",
+   "pcode": "PK61101"
+  },
+  {
+   "id": "ajk-poonch-hajira",
+   "districtId": "ajk-poonch",
+   "name": "Hajira",
+   "pcode": "PK10902"
+  },
+  {
+   "id": "sd-matiari-hala",
+   "districtId": "sd-matiari",
+   "name": "Hala",
+   "pcode": "PK71501"
+  },
+  {
+   "id": "kp-mohmand-halimzai",
+   "districtId": "kp-mohmand",
+   "name": "Halimzai",
+   "pcode": "PK52403"
+  },
+  {
+   "id": "kp-hangu-hangu",
+   "districtId": "kp-hangu",
+   "name": "Hangu",
+   "pcode": "PK51001"
+  },
+  {
+   "id": "kp-upper-kohistan-harban-basha",
+   "districtId": "kp-upper-kohistan",
+   "name": "Harban Basha",
+   "pcode": "PK51603"
+  },
+  {
+   "id": "ajk-bagh-harighel",
+   "districtId": "ajk-bagh",
+   "name": "Harighel",
+   "pcode": "PK10103"
+  },
+  {
+   "id": "kp-haripur-haripur",
+   "districtId": "kp-haripur",
+   "name": "Haripur",
+   "pcode": "PK51102"
+  },
+  {
+   "id": "bl-harnai-harnai",
+   "districtId": "bl-harnai",
+   "name": "Harnai",
+   "pcode": "PK20601"
+  },
+  {
+   "id": "pb-bahawalnagar-haroonabad",
+   "districtId": "pb-bahawalnagar",
+   "name": "Haroonabad",
+   "pcode": "PK60204"
+  },
+  {
+   "id": "pb-attock-hasan-abdal",
+   "districtId": "pb-attock",
+   "name": "Hasan Abdal",
+   "pcode": "PK60103"
+  },
+  {
+   "id": "pb-bahawalpur-hasilpur",
+   "districtId": "pb-bahawalpur",
+   "name": "Hasilpur",
+   "pcode": "PK60303"
+  },
+  {
+   "id": "kp-peshawar-hassan-khel",
+   "districtId": "kp-peshawar",
+   "name": "Hassan Khel",
+   "pcode": "PK52805"
+  },
+  {
+   "id": "ajk-hattian-bala-hattian",
+   "districtId": "ajk-hattian-bala",
+   "name": "Hattian",
+   "pcode": "PK10302"
+  },
+  {
+   "id": "ajk-haveli-haveli",
+   "districtId": "ajk-haveli",
+   "name": "Haveli",
+   "pcode": "PK10401"
+  },
+  {
+   "id": "kp-abbottabad-havelian",
+   "districtId": "kp-abbottabad",
+   "name": "Havelian",
+   "pcode": "PK50102"
+  },
+  {
+   "id": "pb-attock-hazro",
+   "districtId": "pb-attock",
+   "name": "Hazro",
+   "pcode": "PK60104"
+  },
+  {
+   "id": "bl-kech-hoshab",
+   "districtId": "bl-kech",
+   "name": "Hoshab"
+  },
+  {
+   "id": "bl-lasbela-hub",
+   "districtId": "bl-lasbela",
+   "name": "Hub",
+   "pcode": "PK21704"
+  },
+  {
+   "id": "bl-pishin-huramzai",
+   "districtId": "bl-pishin",
+   "name": "Huramzai",
+   "pcode": "PK22502"
+  },
+  {
+   "id": "sd-mirpur-khas-hussain-bux-muree",
+   "districtId": "sd-mirpur-khas",
+   "name": "Hussain Bux Muree",
+   "pcode": "PK71602"
+  },
+  {
+   "id": "sd-hyderabad-hyderabad",
+   "districtId": "sd-hyderabad",
+   "name": "Hyderabad",
+   "pcode": "PK70601"
+  },
+  {
+   "id": "sd-hyderabad-hyderabad-city",
+   "districtId": "sd-hyderabad",
+   "name": "Hyderabad City",
+   "pcode": "PK70602"
+  },
+  {
+   "id": "pb-mianwali-isakhel",
+   "districtId": "pb-mianwali",
+   "name": "Isakhel",
+   "pcode": "PK62101"
+  },
+  {
+   "id": "gb-ghizer-ishkoman",
+   "districtId": "gb-ghizer",
+   "name": "Ishkoman",
+   "pcode": "PK30401"
+  },
+  {
+   "id": "sd-tharparkar-islam-kot",
+   "districtId": "sd-tharparkar",
+   "name": "Islam Kot",
+   "pcode": "PK72604"
+  },
+  {
+   "id": "ict-islamabad-islamabad",
+   "districtId": "ict-islamabad",
+   "name": "Islamabad",
+   "pcode": "PK40101"
+  },
+  {
+   "id": "kp-orakzai-ismailzai",
+   "districtId": "kp-orakzai",
+   "name": "Ismailzai",
+   "pcode": "PK52702"
+  },
+  {
+   "id": "sd-jacobabad-jacobabad",
+   "districtId": "sd-jacobabad",
+   "name": "Jacobabad",
+   "pcode": "PK70702"
+  },
+  {
+   "id": "pb-khanewal-jahanian",
+   "districtId": "pb-khanewal",
+   "name": "Jahanian",
+   "pcode": "PK61501"
+  },
+  {
+   "id": "bl-panjgur-jaheen-parome",
+   "districtId": "bl-panjgur",
+   "name": "Jaheen Parome",
+   "pcode": "PK22402"
+  },
+  {
+   "id": "pb-multan-jalalpur-pirwala",
+   "districtId": "pb-multan",
+   "name": "Jalalpur Pirwala",
+   "pcode": "PK62201"
+  },
+  {
+   "id": "sd-sanghar-jam-nawaz-ali",
+   "districtId": "sd-sanghar",
+   "name": "Jam Nawaz Ali",
+   "pcode": "PK71801"
+  },
+  {
+   "id": "pb-rajanpur-jampur",
+   "districtId": "pb-rajanpur",
+   "name": "Jampur",
+   "pcode": "PK62901"
+  },
+  {
+   "id": "kp-khyber-jamrud",
+   "districtId": "kp-khyber",
+   "name": "Jamrud",
+   "pcode": "PK51302"
+  },
+  {
+   "id": "sd-karachi-east-jamshaid-town",
+   "districtId": "sd-karachi-east",
+   "name": "Jamshaid Town",
+   "pcode": "PK70402"
+  },
+  {
+   "id": "pb-attock-jand",
+   "districtId": "pb-attock",
+   "name": "Jand",
+   "pcode": "PK60105"
+  },
+  {
+   "id": "kp-tank-jandola",
+   "districtId": "kp-tank",
+   "name": "Jandola",
+   "pcode": "PK53302"
+  },
+  {
+   "id": "pb-faisalabad-jaranwala",
+   "districtId": "pb-faisalabad",
+   "name": "Jaranwala",
+   "pcode": "PK60804"
+  },
+  {
+   "id": "sd-sujawal-jati",
+   "districtId": "sd-sujawal",
+   "name": "Jati",
+   "pcode": "PK72201"
+  },
+  {
+   "id": "pb-muzaffargarh-jatoi",
+   "districtId": "pb-muzaffargarh",
+   "name": "Jatoi",
+   "pcode": "PK62302"
+  },
+  {
+   "id": "kp-nowshera-jehangira",
+   "districtId": "kp-nowshera",
+   "name": "Jehangira",
+   "pcode": "PK52603"
+  },
+  {
+   "id": "bl-awaran-jhal-jhao",
+   "districtId": "bl-awaran",
+   "name": "Jhal Jhao",
+   "pcode": "PK20102"
+  },
+  {
+   "id": "bl-jhal-magsi-jhal-magsi",
+   "districtId": "bl-jhal-magsi",
+   "name": "Jhal Magsi",
+   "pcode": "PK20802"
+  },
+  {
+   "id": "sd-tando-allahyar-jhando-mari",
+   "districtId": "sd-tando-allahyar",
+   "name": "Jhando Mari",
+   "pcode": "PK72402"
+  },
+  {
+   "id": "pb-jhang-jhang",
+   "districtId": "pb-jhang",
+   "name": "Jhang",
+   "pcode": "PK61202"
+  },
+  {
+   "id": "bl-jaffarabad-jhat-pat",
+   "districtId": "bl-jaffarabad",
+   "name": "Jhat Pat",
+   "pcode": "PK20702"
+  },
+  {
+   "id": "pb-jhelum-jhelum",
+   "districtId": "pb-jhelum",
+   "name": "Jhelum",
+   "pcode": "PK61302"
+  },
+  {
+   "id": "sd-mirpur-khas-jhudo",
+   "districtId": "sd-mirpur-khas",
+   "name": "Jhudo",
+   "pcode": "PK71603"
+  },
+  {
+   "id": "bl-gwadar-jiwani",
+   "districtId": "bl-gwadar",
+   "name": "Jiwani",
+   "pcode": "PK20502"
+  },
+  {
+   "id": "bl-kalat-johan",
+   "districtId": "bl-kalat",
+   "name": "Johan"
+  },
+  {
+   "id": "sd-dadu-johi",
+   "districtId": "sd-dadu",
+   "name": "Johi",
+   "pcode": "PK70302"
+  },
+  {
+   "id": "kp-tor-ghar-judba",
+   "districtId": "kp-tor-ghar",
+   "name": "Judba",
+   "pcode": "PK53401"
+  },
+  {
+   "id": "kp-swat-kabal",
+   "districtId": "kp-swat",
+   "name": "Kabal",
+   "pcode": "PK53205"
+  },
+  {
+   "id": "pb-khanewal-kabirwala",
+   "districtId": "pb-khanewal",
+   "name": "Kabirwala",
+   "pcode": "PK61502"
+  },
+  {
+   "id": "bl-kohlu-kahan",
+   "districtId": "bl-kohlu",
+   "name": "Kahan",
+   "pcode": "PK21601"
+  },
+  {
+   "id": "pb-lodhran-kahror-pacca",
+   "districtId": "pb-lodhran",
+   "name": "Kahror Pacca",
+   "pcode": "PK61902"
+  },
+  {
+   "id": "pb-rawalpindi-kahuta",
+   "districtId": "pb-rawalpindi",
+   "name": "Kahuta",
+   "pcode": "PK63002"
+  },
+  {
+   "id": "bl-zhob-kakar-khurasan",
+   "districtId": "bl-zhob",
+   "name": "Kakar Khurasan",
+   "pcode": "PK23101"
+  },
+  {
+   "id": "kp-bannu-kakki",
+   "districtId": "kp-bannu",
+   "name": "Kakki",
+   "pcode": "PK50304"
+  },
+  {
+   "id": "kp-swat-kalam",
+   "districtId": "kp-swat",
+   "name": "Kalam",
+   "pcode": "PK53206"
+  },
+  {
+   "id": "bl-kalat-kalat",
+   "districtId": "bl-kalat",
+   "name": "Kalat",
+   "pcode": "PK21001"
+  },
+  {
+   "id": "kp-upper-dir-kalkot",
+   "districtId": "kp-upper-dir",
+   "name": "Kalkot",
+   "pcode": "PK53503"
+  },
+  {
+   "id": "pb-chakwal-kallar-kahar",
+   "districtId": "pb-chakwal",
+   "name": "Kallar Kahar",
+   "pcode": "PK60503"
+  },
+  {
+   "id": "pb-rawalpindi-kallar-sayaddan",
+   "districtId": "pb-rawalpindi",
+   "name": "Kallar Sayaddan",
+   "pcode": "PK63003"
+  },
+  {
+   "id": "sd-tharparkar-kaloi",
+   "districtId": "sd-tharparkar",
+   "name": "Kaloi",
+   "pcode": "PK72607"
+  },
+  {
+   "id": "pb-bhakkar-kalur-kot",
+   "districtId": "pb-bhakkar",
+   "name": "Kalur Kot",
+   "pcode": "PK60403"
+  },
+  {
+   "id": "pb-toba-tek-singh-kamalia",
+   "districtId": "pb-toba-tek-singh",
+   "name": "Kamalia",
+   "pcode": "PK63502"
+  },
+  {
+   "id": "pb-gujranwala-kamoke",
+   "districtId": "pb-gujranwala",
+   "name": "Kamoke",
+   "pcode": "PK60902"
+  },
+  {
+   "id": "bl-killa-saifullah-kan-mehtarzai",
+   "districtId": "bl-killa-saifullah",
+   "name": "Kan Mehtarzai"
+  },
+  {
+   "id": "sd-kashmore-kandh-kot",
+   "districtId": "sd-kashmore",
+   "name": "Kandh Kot",
+   "pcode": "PK71001"
+  },
+  {
+   "id": "kp-upper-kohistan-kandia",
+   "districtId": "kp-upper-kohistan",
+   "name": "Kandia",
+   "pcode": "PK51602"
+  },
+  {
+   "id": "sd-naushahro-feroze-kandiaro",
+   "districtId": "sd-naushahro-feroze",
+   "name": "Kandiaro",
+   "pcode": "PK71702"
+  },
+  {
+   "id": "bl-lasbela-kanraj",
+   "districtId": "bl-lasbela",
+   "name": "Kanraj",
+   "pcode": "PK21705"
+  },
+  {
+   "id": "kp-karak-karak",
+   "districtId": "kp-karak",
+   "name": "Karak",
+   "pcode": "PK51202"
+  },
+  {
+   "id": "bl-khuzdar-karakh",
+   "districtId": "bl-khuzdar",
+   "name": "Karakh"
+  },
+  {
+   "id": "bl-pishin-karezat",
+   "districtId": "bl-pishin",
+   "name": "Karezat",
+   "pcode": "PK22503"
+  },
+  {
+   "id": "pb-layyah-karor-lal-esan",
+   "districtId": "pb-layyah",
+   "name": "Karor Lal Esan",
+   "pcode": "PK61802"
+  },
+  {
+   "id": "bl-zhob-kashatoo",
+   "districtId": "bl-zhob",
+   "name": "Kashatoo"
+  },
+  {
+   "id": "sd-kashmore-kashmore",
+   "districtId": "sd-kashmore",
+   "name": "Kashmore",
+   "pcode": "PK71002"
+  },
+  {
+   "id": "pb-kasur-kasur",
+   "districtId": "pb-kasur",
+   "name": "Kasur",
+   "pcode": "PK61402"
+  },
+  {
+   "id": "kp-mardan-katlang",
+   "districtId": "kp-mardan",
+   "name": "Katlang",
+   "pcode": "PK52301"
+  },
+  {
+   "id": "bl-kech-kech-turbat",
+   "districtId": "bl-kech",
+   "name": "Kech (Turbat)",
+   "pcode": "PK21103"
+  },
+  {
+   "id": "sd-karachi-south-kemari-town",
+   "districtId": "sd-karachi-south",
+   "name": "Kemari Town",
+   "pcode": "PK72101"
+  },
+  {
+   "id": "sd-thatta-keti-bunder",
+   "districtId": "sd-thatta",
+   "name": "Keti Bunder",
+   "pcode": "PK72702"
+  },
+  {
+   "id": "bl-mastung-khad-koocha",
+   "districtId": "bl-mastung",
+   "name": "Khad Koocha"
+  },
+  {
+   "id": "kp-buner-khado-khel",
+   "districtId": "kp-buner",
+   "name": "Khado Khel",
+   "pcode": "PK50503"
+  },
+  {
+   "id": "sd-khairpur-khairpur",
+   "districtId": "sd-khairpur",
+   "name": "Khairpur",
+   "pcode": "PK71103"
+  },
+  {
+   "id": "sd-dadu-khairpur-nathan-shah",
+   "districtId": "sd-dadu",
+   "name": "Khairpur Nathan Shah",
+   "pcode": "PK70303"
+  },
+  {
+   "id": "pb-bahawalpur-khairpur-tamewali",
+   "districtId": "pb-bahawalpur",
+   "name": "Khairpur Tamewali",
+   "pcode": "PK60304"
+  },
+  {
+   "id": "bl-kalat-khaliqabad",
+   "districtId": "bl-kalat",
+   "name": "Khaliqabad",
+   "pcode": "PK21002"
+  },
+  {
+   "id": "kp-upper-dir-khall",
+   "districtId": "kp-upper-dir",
+   "name": "Khall",
+   "pcode": "PK53504"
+  },
+  {
+   "id": "kp-tor-ghar-khander",
+   "districtId": "kp-tor-ghar",
+   "name": "Khander",
+   "pcode": "PK53402"
+  },
+  {
+   "id": "pb-khanewal-khanewal",
+   "districtId": "pb-khanewal",
+   "name": "Khanewal",
+   "pcode": "PK61503"
+  },
+  {
+   "id": "sd-ghotki-khangarh",
+   "districtId": "sd-ghotki",
+   "name": "Khangarh",
+   "pcode": "PK70503"
+  },
+  {
+   "id": "kp-haripur-khanpur",
+   "districtId": "kp-haripur",
+   "name": "Khanpur",
+   "pcode": "PK51103"
+  },
+  {
+   "id": "pb-rahim-yar-khan-khanpur",
+   "districtId": "pb-rahim-yar-khan",
+   "name": "Khanpur",
+   "pcode": "PK62801"
+  },
+  {
+   "id": "sd-shikarpur-khanpur",
+   "districtId": "sd-shikarpur",
+   "name": "Khanpur",
+   "pcode": "PK72002"
+  },
+  {
+   "id": "gb-ghanche-khaplu",
+   "districtId": "gb-ghanche",
+   "name": "Khaplu",
+   "pcode": "PK30302"
+  },
+  {
+   "id": "kp-bajaur-khar",
+   "districtId": "kp-bajaur",
+   "name": "Khar",
+   "pcode": "PK50203"
+  },
+  {
+   "id": "bl-kharan-kharan",
+   "districtId": "bl-kharan",
+   "name": "Kharan",
+   "pcode": "PK21201"
+  },
+  {
+   "id": "pb-gujrat-kharian",
+   "districtId": "pb-gujrat",
+   "name": "Kharian",
+   "pcode": "PK61002"
+  },
+  {
+   "id": "gb-kharmang-kharmang",
+   "districtId": "gb-kharmang",
+   "name": "Kharmang",
+   "pcode": "PK30902"
+  },
+  {
+   "id": "sd-sujawal-kharo-chan",
+   "districtId": "sd-sujawal",
+   "name": "Kharo Chan",
+   "pcode": "PK72202"
+  },
+  {
+   "id": "bl-kachhi-khattan",
+   "districtId": "bl-kachhi",
+   "name": "Khattan",
+   "pcode": "PK20905"
+  },
+  {
+   "id": "sd-sanghar-khipro",
+   "districtId": "sd-sanghar",
+   "name": "Khipro",
+   "pcode": "PK71802"
+  },
+  {
+   "id": "bl-harnai-khoast",
+   "districtId": "bl-harnai",
+   "name": "Khoast"
+  },
+  {
+   "id": "ajk-kotli-khui-ratta",
+   "districtId": "ajk-kotli",
+   "name": "Khui Ratta",
+   "pcode": "PK10504"
+  },
+  {
+   "id": "ajk-haveli-khurshid-abad",
+   "districtId": "ajk-haveli",
+   "name": "Khurshid Abad",
+   "pcode": "PK10402"
+  },
+  {
+   "id": "pb-khushab-khushab",
+   "districtId": "pb-khushab",
+   "name": "Khushab",
+   "pcode": "PK61601"
+  },
+  {
+   "id": "bl-khuzdar-khuzdar",
+   "districtId": "bl-khuzdar",
+   "name": "Khuzdar",
+   "pcode": "PK21301"
+  },
+  {
+   "id": "kp-swat-khwaza-khela",
+   "districtId": "kp-swat",
+   "name": "Khwaza Khela",
+   "pcode": "PK53207"
+  },
+  {
+   "id": "kp-mohmand-khwazai",
+   "districtId": "kp-mohmand",
+   "name": "Khwazai",
+   "pcode": "PK52404"
+  },
+  {
+   "id": "bl-killa-abdullah-killa-abdullah",
+   "districtId": "bl-killa-abdullah",
+   "name": "Killa Abdullah",
+   "pcode": "PK21404"
+  },
+  {
+   "id": "bl-killa-saifullah-killa-saifullah",
+   "districtId": "bl-killa-saifullah",
+   "name": "Killa Saifullah",
+   "pcode": "PK21501"
+  },
+  {
+   "id": "bl-musakhel-kingri",
+   "districtId": "bl-musakhel",
+   "name": "Kingri",
+   "pcode": "PK22102"
+  },
+  {
+   "id": "sd-khairpur-kingri",
+   "districtId": "sd-khairpur",
+   "name": "Kingri",
+   "pcode": "PK71104"
+  },
+  {
+   "id": "bl-mastung-kirdgap",
+   "districtId": "bl-mastung",
+   "name": "Kirdgap",
+   "pcode": "PK22002"
+  },
+  {
+   "id": "kp-kohat-kohat",
+   "districtId": "kp-kohat",
+   "name": "Kohat",
+   "pcode": "PK51401"
+  },
+  {
+   "id": "bl-kohlu-kohlu",
+   "districtId": "bl-kohlu",
+   "name": "Kohlu",
+   "pcode": "PK21602"
+  },
+  {
+   "id": "sd-korangi-korangi-town",
+   "districtId": "sd-korangi",
+   "name": "Korangi Town",
+   "pcode": "PK71201"
+  },
+  {
+   "id": "pb-muzaffargarh-kot-addu",
+   "districtId": "pb-muzaffargarh",
+   "name": "Kot Addu",
+   "pcode": "PK62303"
+  },
+  {
+   "id": "pb-dera-ghazi-khan-kot-chatta",
+   "districtId": "pb-dera-ghazi-khan",
+   "name": "Kot Chatta",
+   "pcode": "PK60703"
+  },
+  {
+   "id": "sd-khairpur-kot-diji",
+   "districtId": "sd-khairpur",
+   "name": "Kot Diji",
+   "pcode": "PK71105"
+  },
+  {
+   "id": "sd-mirpur-khas-kot-ghulam-muhammad",
+   "districtId": "sd-mirpur-khas",
+   "name": "Kot Ghulam Muhammad",
+   "pcode": "PK71604"
+  },
+  {
+   "id": "pb-sargodha-kot-momin",
+   "districtId": "pb-sargodha",
+   "name": "Kot Momin",
+   "pcode": "PK63202"
+  },
+  {
+   "id": "pb-kasur-kot-radha-kishen",
+   "districtId": "pb-kasur",
+   "name": "Kot Radha Kishen",
+   "pcode": "PK61403"
+  },
+  {
+   "id": "ajk-kotli-kotli",
+   "districtId": "ajk-kotli",
+   "name": "Kotli",
+   "pcode": "PK10505"
+  },
+  {
+   "id": "pb-rawalpindi-kotli-sattian",
+   "districtId": "pb-rawalpindi",
+   "name": "Kotli Sattian",
+   "pcode": "PK63004"
+  },
+  {
+   "id": "bl-sibi-kotmandai",
+   "districtId": "bl-sibi",
+   "name": "Kotmandai"
+  },
+  {
+   "id": "sd-jamshoro-kotri",
+   "districtId": "sd-jamshoro",
+   "name": "Kotri",
+   "pcode": "PK70801"
+  },
+  {
+   "id": "kp-dera-ismail-khan-kulachi",
+   "districtId": "kp-dera-ismail-khan",
+   "name": "Kulachi",
+   "pcode": "PK50903"
+  },
+  {
+   "id": "sd-umerkot-kunri",
+   "districtId": "sd-umerkot",
+   "name": "Kunri",
+   "pcode": "PK72801"
+  },
+  {
+   "id": "kp-kohat-lachi",
+   "districtId": "kp-kohat",
+   "name": "Lachi",
+   "pcode": "PK51402"
+  },
+  {
+   "id": "kp-south-waziristan-ladha",
+   "districtId": "kp-south-waziristan",
+   "name": "Ladha",
+   "pcode": "PK53002"
+  },
+  {
+   "id": "kp-swabi-lahor",
+   "districtId": "kp-swabi",
+   "name": "Lahor",
+   "pcode": "PK53101"
+  },
+  {
+   "id": "pb-lahore-lahore-cantt",
+   "districtId": "pb-lahore",
+   "name": "Lahore Cantt",
+   "pcode": "PK61701"
+  },
+  {
+   "id": "pb-lahore-lahore-city",
+   "districtId": "pb-lahore",
+   "name": "Lahore City",
+   "pcode": "PK61702"
+  },
+  {
+   "id": "bl-lasbela-lairi",
+   "districtId": "bl-lasbela",
+   "name": "Lairi",
+   "pcode": "PK21709"
+  },
+  {
+   "id": "sd-shikarpur-lakhi",
+   "districtId": "sd-shikarpur",
+   "name": "Lakhi",
+   "pcode": "PK72003"
+  },
+  {
+   "id": "bl-lasbela-lakhra",
+   "districtId": "bl-lasbela",
+   "name": "Lakhra",
+   "pcode": "PK21708"
+  },
+  {
+   "id": "kp-lakki-marwat-lakki-marwat",
+   "districtId": "kp-lakki-marwat",
+   "name": "Lakki Marwat",
+   "pcode": "PK51901"
+  },
+  {
+   "id": "pb-chiniot-lalian",
+   "districtId": "pb-chiniot",
+   "name": "Lalian",
+   "pcode": "PK60603"
+  },
+  {
+   "id": "kp-lower-dir-lalqila",
+   "districtId": "kp-lower-dir",
+   "name": "Lalqila",
+   "pcode": "PK52003"
+  },
+  {
+   "id": "sd-korangi-landhi-town",
+   "districtId": "sd-korangi",
+   "name": "Landhi Town",
+   "pcode": "PK71202"
+  },
+  {
+   "id": "kp-khyber-landi-kotal",
+   "districtId": "kp-khyber",
+   "name": "Landi Kotal",
+   "pcode": "PK51303"
+  },
+  {
+   "id": "kp-upper-dir-larjam",
+   "districtId": "kp-upper-dir",
+   "name": "Larjam",
+   "pcode": "PK53507"
+  },
+  {
+   "id": "sd-larkana-larkana",
+   "districtId": "sd-larkana",
+   "name": "Larkana",
+   "pcode": "PK71303"
+  },
+  {
+   "id": "sd-hyderabad-latifabad",
+   "districtId": "sd-hyderabad",
+   "name": "Latifabad",
+   "pcode": "PK70603"
+  },
+  {
+   "id": "pb-chakwal-lawa",
+   "districtId": "pb-chakwal",
+   "name": "Lawa"
+  },
+  {
+   "id": "ajk-hattian-bala-leepa",
+   "districtId": "ajk-hattian-bala",
+   "name": "Leepa",
+   "pcode": "PK10303"
+  },
+  {
+   "id": "bl-lehri-lehri",
+   "districtId": "bl-lehri",
+   "name": "Lehri",
+   "pcode": "PK21802"
+  },
+  {
+   "id": "pb-layyah-leiah",
+   "districtId": "pb-layyah",
+   "name": "Leiah",
+   "pcode": "PK61803"
+  },
+  {
+   "id": "sd-karachi-central-liaqatabad-town",
+   "districtId": "sd-karachi-central",
+   "name": "Liaqatabad Town",
+   "pcode": "PK70202"
+  },
+  {
+   "id": "pb-rahim-yar-khan-liaqatpur",
+   "districtId": "pb-rahim-yar-khan",
+   "name": "Liaqatpur",
+   "pcode": "PK62802"
+  },
+  {
+   "id": "bl-lasbela-liari",
+   "districtId": "bl-lasbela",
+   "name": "Liari"
+  },
+  {
+   "id": "sd-karachi-south-liyari-town",
+   "districtId": "sd-karachi-south",
+   "name": "Liyari Town",
+   "pcode": "PK72102"
+  },
+  {
+   "id": "pb-lodhran-lodhran",
+   "districtId": "pb-lodhran",
+   "name": "Lodhran",
+   "pcode": "PK61903"
+  },
+  {
+   "id": "bl-killa-saifullah-loiband",
+   "districtId": "bl-killa-saifullah",
+   "name": "Loiband"
+  },
+  {
+   "id": "kp-abbottabad-lora",
+   "districtId": "kp-abbottabad",
+   "name": "Lora",
+   "pcode": "PK50103"
+  },
+  {
+   "id": "bl-loralai-loralai",
+   "districtId": "bl-loralai",
+   "name": "Loralai",
+   "pcode": "PK21901"
+  },
+  {
+   "id": "bl-dera-bugti-loti",
+   "districtId": "bl-dera-bugti",
+   "name": "Loti"
+  },
+  {
+   "id": "kp-lower-chitral-lotkoh",
+   "districtId": "kp-lower-chitral",
+   "name": "Lotkoh",
+   "pcode": "PK50703"
+  },
+  {
+   "id": "kp-kurram-lower-kurram",
+   "districtId": "kp-kurram",
+   "name": "Lower Kurram",
+   "pcode": "PK51802"
+  },
+  {
+   "id": "kp-orakzai-lower-orakzai",
+   "districtId": "kp-orakzai",
+   "name": "Lower Orakzai",
+   "pcode": "PK52703"
+  },
+  {
+   "id": "kp-abbottabad-lower-tanawal",
+   "districtId": "kp-abbottabad",
+   "name": "Lower Tanawal",
+   "pcode": "PK50104"
+  },
+  {
+   "id": "bl-kachhi-mach",
+   "districtId": "bl-kachhi",
+   "name": "Mach",
+   "pcode": "PK20902"
+  },
+  {
+   "id": "pb-vehari-mailsi",
+   "districtId": "pb-vehari",
+   "name": "Mailsi",
+   "pcode": "PK63602"
+  },
+  {
+   "id": "kp-shangla-makhuzai",
+   "districtId": "kp-shangla",
+   "name": "Makhuzai",
+   "pcode": "PK52904"
+  },
+  {
+   "id": "kp-south-waziristan-makin",
+   "districtId": "kp-south-waziristan",
+   "name": "Makin",
+   "pcode": "PK53003"
+  },
+  {
+   "id": "pb-mandi-bahauddin-malakwal",
+   "districtId": "pb-mandi-bahauddin",
+   "name": "Malakwal",
+   "pcode": "PK62001"
+  },
+  {
+   "id": "bl-dera-bugti-malam",
+   "districtId": "bl-dera-bugti",
+   "name": "Malam"
+  },
+  {
+   "id": "sd-malir-malir-town",
+   "districtId": "sd-malir",
+   "name": "Malir Town",
+   "pcode": "PK71403"
+  },
+  {
+   "id": "kp-bajaur-mamund",
+   "districtId": "kp-bajaur",
+   "name": "Mamund",
+   "pcode": "PK50204"
+  },
+  {
+   "id": "bl-kech-mand",
+   "districtId": "bl-kech",
+   "name": "Mand",
+   "pcode": "PK21104"
+  },
+  {
+   "id": "kp-buner-mandanr",
+   "districtId": "kp-buner",
+   "name": "Mandanr",
+   "pcode": "PK50504"
+  },
+  {
+   "id": "pb-mandi-bahauddin-mandi-bahauddin",
+   "districtId": "pb-mandi-bahauddin",
+   "name": "Mandi Bahauddin",
+   "pcode": "PK62002"
+  },
+  {
+   "id": "bl-kalat-mangochar",
+   "districtId": "bl-kalat",
+   "name": "Mangochar"
+  },
+  {
+   "id": "sd-jamshoro-manjhand",
+   "districtId": "sd-jamshoro",
+   "name": "Manjhand",
+   "pcode": "PK70802"
+  },
+  {
+   "id": "pb-bhakkar-mankera",
+   "districtId": "pb-bhakkar",
+   "name": "Mankera",
+   "pcode": "PK60404"
+  },
+  {
+   "id": "kp-mansehra-mansehra",
+   "districtId": "kp-mansehra",
+   "name": "Mansehra",
+   "pcode": "PK52202"
+  },
+  {
+   "id": "kp-mardan-mardan",
+   "districtId": "kp-mardan",
+   "name": "Mardan",
+   "pcode": "PK52302"
+  },
+  {
+   "id": "kp-shangla-martoong",
+   "districtId": "kp-shangla",
+   "name": "Martoong",
+   "pcode": "PK52905"
+  },
+  {
+   "id": "gb-ghanche-mashabbrum",
+   "districtId": "gb-ghanche",
+   "name": "Mashabbrum",
+   "pcode": "PK30303"
+  },
+  {
+   "id": "bl-awaran-mashkai",
+   "districtId": "bl-awaran",
+   "name": "Mashkai",
+   "pcode": "PK20103"
+  },
+  {
+   "id": "bl-washuk-mashkhel",
+   "districtId": "bl-washuk",
+   "name": "Mashkhel",
+   "pcode": "PK23001"
+  },
+  {
+   "id": "kp-upper-chitral-mastuj",
+   "districtId": "kp-upper-chitral",
+   "name": "Mastuj",
+   "pcode": "PK50801"
+  },
+  {
+   "id": "bl-mastung-mastung",
+   "districtId": "bl-mastung",
+   "name": "Mastung",
+   "pcode": "PK22003"
+  },
+  {
+   "id": "sd-matiari-matiari",
+   "districtId": "sd-matiari",
+   "name": "Matiari",
+   "pcode": "PK71502"
+  },
+  {
+   "id": "sd-badin-matli",
+   "districtId": "sd-badin",
+   "name": "Matli",
+   "pcode": "PK70102"
+  },
+  {
+   "id": "kp-swat-matta-kharirai",
+   "districtId": "kp-swat",
+   "name": "Matta Kharirai",
+   "pcode": "PK53208"
+  },
+  {
+   "id": "kp-swat-matta-sebujni",
+   "districtId": "kp-swat",
+   "name": "Matta Sebujni",
+   "pcode": "PK53209"
+  },
+  {
+   "id": "bl-kohlu-mawand",
+   "districtId": "bl-kohlu",
+   "name": "Mawand",
+   "pcode": "PK21603"
+  },
+  {
+   "id": "sd-qambar-shahdadkot-meero-khan",
+   "districtId": "sd-qambar-shahdadkot",
+   "name": "Meero Khan",
+   "pcode": "PK70901"
+  },
+  {
+   "id": "sd-dadu-mehar",
+   "districtId": "sd-dadu",
+   "name": "Mehar",
+   "pcode": "PK70304"
+  },
+  {
+   "id": "sd-naushahro-feroze-mehrab-pur",
+   "districtId": "sd-naushahro-feroze",
+   "name": "Mehrab Pur",
+   "pcode": "PK71703"
+  },
+  {
+   "id": "bl-loralai-mekhtar",
+   "districtId": "bl-loralai",
+   "name": "Mekhtar",
+   "pcode": "PK21902"
+  },
+  {
+   "id": "pb-khanewal-mian-channu",
+   "districtId": "pb-khanewal",
+   "name": "Mian Channu",
+   "pcode": "PK61504"
+  },
+  {
+   "id": "pb-mianwali-mianwali",
+   "districtId": "pb-mianwali",
+   "name": "Mianwali",
+   "pcode": "PK62102"
+  },
+  {
+   "id": "pb-bahawalnagar-minchinabad",
+   "districtId": "pb-bahawalnagar",
+   "name": "Minchinabad",
+   "pcode": "PK60205"
+  },
+  {
+   "id": "kp-north-waziristan-mir-ali",
+   "districtId": "kp-north-waziristan",
+   "name": "Mir Ali",
+   "pcode": "PK52505"
+  },
+  {
+   "id": "kp-north-waziristan-miran-shah",
+   "districtId": "kp-north-waziristan",
+   "name": "Miran Shah",
+   "pcode": "PK52506"
+  },
+  {
+   "id": "ajk-mirpur-mirpur",
+   "districtId": "ajk-mirpur",
+   "name": "Mirpur",
+   "pcode": "PK10602"
+  },
+  {
+   "id": "bl-jhal-magsi-mirpur",
+   "districtId": "bl-jhal-magsi",
+   "name": "Mirpur"
+  },
+  {
+   "id": "sd-sujawal-mirpur-bathoro",
+   "districtId": "sd-sujawal",
+   "name": "Mirpur Bathoro",
+   "pcode": "PK72203"
+  },
+  {
+   "id": "sd-mirpur-khas-mirpur-khas",
+   "districtId": "sd-mirpur-khas",
+   "name": "Mirpur Khas",
+   "pcode": "PK71605"
+  },
+  {
+   "id": "sd-ghotki-mirpur-mathelo",
+   "districtId": "sd-ghotki",
+   "name": "Mirpur Mathelo",
+   "pcode": "PK70504"
+  },
+  {
+   "id": "sd-thatta-mirpur-sakro",
+   "districtId": "sd-thatta",
+   "name": "Mirpur Sakro",
+   "pcode": "PK72703"
+  },
+  {
+   "id": "kp-bannu-miryan",
+   "districtId": "kp-bannu",
+   "name": "Miryan",
+   "pcode": "PK50305"
+  },
+  {
+   "id": "sd-tharparkar-mithi",
+   "districtId": "sd-tharparkar",
+   "name": "Mithi",
+   "pcode": "PK72605"
+  },
+  {
+   "id": "pb-lahore-model-town",
+   "districtId": "pb-lahore",
+   "name": "Model Town"
+  },
+  {
+   "id": "bl-khuzdar-mola",
+   "districtId": "bl-khuzdar",
+   "name": "Mola",
+   "pcode": "PK21302"
+  },
+  {
+   "id": "ajk-sudhnati-mong",
+   "districtId": "ajk-sudhnati",
+   "name": "Mong",
+   "pcode": "PK11002"
+  },
+  {
+   "id": "sd-naushahro-feroze-moro",
+   "districtId": "sd-naushahro-feroze",
+   "name": "Moro",
+   "pcode": "PK71704"
+  },
+  {
+   "id": "kp-khyber-mulagori",
+   "districtId": "kp-khyber",
+   "name": "Mulagori",
+   "pcode": "PK51304"
+  },
+  {
+   "id": "kp-upper-chitral-mulkhow",
+   "districtId": "kp-upper-chitral",
+   "name": "Mulkhow",
+   "pcode": "PK50802"
+  },
+  {
+   "id": "pb-multan-multan-city",
+   "districtId": "pb-multan",
+   "name": "Multan City",
+   "pcode": "PK62202"
+  },
+  {
+   "id": "pb-multan-multan-saddar",
+   "districtId": "pb-multan",
+   "name": "Multan Saddar",
+   "pcode": "PK62203"
+  },
+  {
+   "id": "ajk-haveli-mumtazabad",
+   "districtId": "ajk-haveli",
+   "name": "Mumtazabad",
+   "pcode": "PK10403"
+  },
+  {
+   "id": "kp-lower-dir-munda",
+   "districtId": "kp-lower-dir",
+   "name": "Munda",
+   "pcode": "PK52004"
+  },
+  {
+   "id": "pb-sheikhupura-muridke",
+   "districtId": "pb-sheikhupura",
+   "name": "Muridke",
+   "pcode": "PK63302"
+  },
+  {
+   "id": "pb-rawalpindi-murree",
+   "districtId": "pb-rawalpindi",
+   "name": "Murree",
+   "pcode": "PK63005"
+  },
+  {
+   "id": "bl-musakhel-musakhel",
+   "districtId": "bl-musakhel",
+   "name": "Musakhel",
+   "pcode": "PK22103"
+  },
+  {
+   "id": "bl-killa-saifullah-muslim-bagh",
+   "districtId": "bl-killa-saifullah",
+   "name": "Muslim Bagh",
+   "pcode": "PK21502"
+  },
+  {
+   "id": "ajk-muzaffarabad-muzaffarabad",
+   "districtId": "ajk-muzaffarabad",
+   "name": "Muzaffarabad",
+   "pcode": "PK10701"
+  },
+  {
+   "id": "pb-muzaffargarh-muzaffargarh",
+   "districtId": "pb-muzaffargarh",
+   "name": "Muzaffargarh",
+   "pcode": "PK62304"
+  },
+  {
+   "id": "bl-khuzdar-naal",
+   "districtId": "bl-khuzdar",
+   "name": "Naal",
+   "pcode": "PK21303"
+  },
+  {
+   "id": "bl-washuk-nag",
+   "districtId": "bl-washuk",
+   "name": "Nag",
+   "pcode": "PK23004"
+  },
+  {
+   "id": "gb-nagar-nagar",
+   "districtId": "gb-nagar",
+   "name": "Nagar",
+   "pcode": "PK30801"
+  },
+  {
+   "id": "sd-tharparkar-nagar-parkar",
+   "districtId": "sd-tharparkar",
+   "name": "Nagar Parkar",
+   "pcode": "PK72606"
+  },
+  {
+   "id": "bl-khuzdar-nal",
+   "districtId": "bl-khuzdar",
+   "name": "Nal"
+  },
+  {
+   "id": "pb-nankana-sahib-nankana-sahib",
+   "districtId": "pb-nankana-sahib",
+   "name": "Nankana Sahib",
+   "pcode": "PK62401"
+  },
+  {
+   "id": "sd-khairpur-nara",
+   "districtId": "sd-khairpur",
+   "name": "Nara",
+   "pcode": "PK71106"
+  },
+  {
+   "id": "pb-narowal-narowal",
+   "districtId": "pb-narowal",
+   "name": "Narowal",
+   "pcode": "PK62501"
+  },
+  {
+   "id": "ajk-muzaffarabad-naseerabad",
+   "districtId": "ajk-muzaffarabad",
+   "name": "Naseerabad",
+   "pcode": "PK10702"
+  },
+  {
+   "id": "sd-qambar-shahdadkot-nasir-abad",
+   "districtId": "sd-qambar-shahdadkot",
+   "name": "Nasir Abad",
+   "pcode": "PK70902"
+  },
+  {
+   "id": "sd-naushahro-feroze-naushahro-feroze",
+   "districtId": "sd-naushahro-feroze",
+   "name": "Naushahro Feroze",
+   "pcode": "PK71705"
+  },
+  {
+   "id": "pb-khushab-naushera",
+   "districtId": "pb-khushab",
+   "name": "Naushera",
+   "pcode": "PK61602"
+  },
+  {
+   "id": "sd-shaheed-benazir-abad-nawabshah",
+   "districtId": "sd-shaheed-benazir-abad",
+   "name": "Nawabshah",
+   "pcode": "PK71903"
+  },
+  {
+   "id": "kp-bajaur-nawagai",
+   "districtId": "kp-bajaur",
+   "name": "Nawagai",
+   "pcode": "PK50205"
+  },
+  {
+   "id": "sd-karachi-central-new-karachi-town",
+   "districtId": "sd-karachi-central",
+   "name": "New Karachi Town",
+   "pcode": "PK70203"
+  },
+  {
+   "id": "sd-sukkur-new-sukkur",
+   "districtId": "sd-sukkur",
+   "name": "New Sukkur",
+   "pcode": "PK72301"
+  },
+  {
+   "id": "bl-chagai-nokkundi",
+   "districtId": "bl-chagai",
+   "name": "Nokkundi",
+   "pcode": "PK20302"
+  },
+  {
+   "id": "pb-khushab-noorpur",
+   "districtId": "pb-khushab",
+   "name": "Noorpur",
+   "pcode": "PK61603"
+  },
+  {
+   "id": "sd-karachi-central-north-nazimabad-town",
+   "districtId": "sd-karachi-central",
+   "name": "North Nazimabad Town",
+   "pcode": "PK70204"
+  },
+  {
+   "id": "kp-nowshera-nowshera",
+   "districtId": "kp-nowshera",
+   "name": "Nowshera",
+   "pcode": "PK52601"
+  },
+  {
+   "id": "pb-gujranwala-nowshera-virkan",
+   "districtId": "pb-gujranwala",
+   "name": "Nowshera Virkan",
+   "pcode": "PK60903"
+  },
+  {
+   "id": "bl-nushki-nushki",
+   "districtId": "bl-nushki",
+   "name": "Nushki",
+   "pcode": "PK22301"
+  },
+  {
+   "id": "kp-mansehra-oghi",
+   "districtId": "kp-mansehra",
+   "name": "Oghi",
+   "pcode": "PK52203"
+  },
+  {
+   "id": "pb-okara-okara",
+   "districtId": "pb-okara",
+   "name": "Okara",
+   "pcode": "PK62602"
+  },
+  {
+   "id": "sd-karachi-west-orangi-town",
+   "districtId": "sd-karachi-west",
+   "name": "Orangi Town",
+   "pcode": "PK72902"
+  },
+  {
+   "id": "bl-gwadar-ormara",
+   "districtId": "bl-gwadar",
+   "name": "Ormara",
+   "pcode": "PK20503"
+  },
+  {
+   "id": "bl-khuzdar-ornach",
+   "districtId": "bl-khuzdar",
+   "name": "Ornach"
+  },
+  {
+   "id": "kp-nowshera-pabbi",
+   "districtId": "kp-nowshera",
+   "name": "Pabbi",
+   "pcode": "PK52602"
+  },
+  {
+   "id": "kp-dera-ismail-khan-paharpur",
+   "districtId": "kp-dera-ismail-khan",
+   "name": "Paharpur",
+   "pcode": "PK50904"
+  },
+  {
+   "id": "pb-pakpattan-pakpattan",
+   "districtId": "pb-pakpattan",
+   "name": "Pakpattan",
+   "pcode": "PK62702"
+  },
+  {
+   "id": "kp-kolai-palas-palas",
+   "districtId": "kp-kolai-palas",
+   "name": "Palas",
+   "pcode": "PK51701"
+  },
+  {
+   "id": "ajk-sudhnati-pallandari",
+   "districtId": "ajk-sudhnati",
+   "name": "Pallandari",
+   "pcode": "PK11003"
+  },
+  {
+   "id": "kp-mohmand-pandiali",
+   "districtId": "kp-mohmand",
+   "name": "Pandiali",
+   "pcode": "PK52405"
+  },
+  {
+   "id": "bl-panjgur-panjgur",
+   "districtId": "bl-panjgur",
+   "name": "Panjgur",
+   "pcode": "PK22403"
+  },
+  {
+   "id": "bl-quetta-panjpai",
+   "districtId": "bl-quetta",
+   "name": "Panjpai",
+   "pcode": "PK22601"
+  },
+  {
+   "id": "sd-sukkur-pano-aqil",
+   "districtId": "sd-sukkur",
+   "name": "Pano Aqil",
+   "pcode": "PK72302"
+  },
+  {
+   "id": "kp-dera-ismail-khan-paroa",
+   "districtId": "kp-dera-ismail-khan",
+   "name": "Paroa",
+   "pcode": "PK50905"
+  },
+  {
+   "id": "bl-gwadar-pasni",
+   "districtId": "bl-gwadar",
+   "name": "Pasni",
+   "pcode": "PK20504"
+  },
+  {
+   "id": "pb-sialkot-pasrur",
+   "districtId": "pb-sialkot",
+   "name": "Pasrur",
+   "pcode": "PK63402"
+  },
+  {
+   "id": "kp-lower-kohistan-pattan",
+   "districtId": "kp-lower-kohistan",
+   "name": "Pattan",
+   "pcode": "PK51501"
+  },
+  {
+   "id": "pb-kasur-pattoki",
+   "districtId": "pb-kasur",
+   "name": "Pattoki",
+   "pcode": "PK61404"
+  },
+  {
+   "id": "kp-peshawar-peshawar",
+   "districtId": "kp-peshawar",
+   "name": "Peshawar"
+  },
+  {
+   "id": "pb-mandi-bahauddin-phalia",
+   "districtId": "pb-mandi-bahauddin",
+   "name": "Phalia",
+   "pcode": "PK62003"
+  },
+  {
+   "id": "gb-gupis-yasin-phandar",
+   "districtId": "gb-gupis-yasin",
+   "name": "Phandar",
+   "pcode": "PK31302"
+  },
+  {
+   "id": "bl-dera-bugti-phelawagh",
+   "districtId": "bl-dera-bugti",
+   "name": "Phelawagh",
+   "pcode": "PK20402"
+  },
+  {
+   "id": "pb-jhelum-pind-dadan-khan",
+   "districtId": "pb-jhelum",
+   "name": "Pind Dadan Khan",
+   "pcode": "PK61303"
+  },
+  {
+   "id": "pb-hafizabad-pindi-bhattian",
+   "districtId": "pb-hafizabad",
+   "name": "Pindi Bhattian",
+   "pcode": "PK61102"
+  },
+  {
+   "id": "pb-attock-pindi-gheb",
+   "districtId": "pb-attock",
+   "name": "Pindi Gheb",
+   "pcode": "PK60106"
+  },
+  {
+   "id": "pb-mianwali-piplan",
+   "districtId": "pb-mianwali",
+   "name": "Piplan",
+   "pcode": "PK62103"
+  },
+  {
+   "id": "bl-dera-bugti-pir-koh",
+   "districtId": "bl-dera-bugti",
+   "name": "Pir Koh"
+  },
+  {
+   "id": "pb-toba-tek-singh-pir-mahal",
+   "districtId": "pb-toba-tek-singh",
+   "name": "Pir Mahal",
+   "pcode": "PK63504"
+  },
+  {
+   "id": "bl-pishin-pishin",
+   "districtId": "bl-pishin",
+   "name": "Pishin",
+   "pcode": "PK22504"
+  },
+  {
+   "id": "sd-umerkot-pithoro",
+   "districtId": "sd-umerkot",
+   "name": "Pithoro",
+   "pcode": "PK72802"
+  },
+  {
+   "id": "kp-mohmand-prang-ghar",
+   "districtId": "kp-mohmand",
+   "name": "Prang Ghar",
+   "pcode": "PK52406"
+  },
+  {
+   "id": "gb-ghizer-punial",
+   "districtId": "gb-ghizer",
+   "name": "Punial",
+   "pcode": "PK30402"
+  },
+  {
+   "id": "kp-shangla-puran",
+   "districtId": "kp-shangla",
+   "name": "Puran",
+   "pcode": "PK52906"
+  },
+  {
+   "id": "bl-zhob-qamar-din-karez",
+   "districtId": "bl-zhob",
+   "name": "Qamar Din Karez"
+  },
+  {
+   "id": "sd-qambar-shahdadkot-qambar-ali-khan",
+   "districtId": "sd-qambar-shahdadkot",
+   "name": "Qambar Ali Khan",
+   "pcode": "PK70903"
+  },
+  {
+   "id": "sd-hyderabad-qasimabad",
+   "districtId": "sd-hyderabad",
+   "name": "Qasimabad",
+   "pcode": "PK70604"
+  },
+  {
+   "id": "pb-khushab-quaidabad",
+   "districtId": "pb-khushab",
+   "name": "Quaidabad",
+   "pcode": "PK61604"
+  },
+  {
+   "id": "sd-qambar-shahdadkot-qubo-saeed-khan",
+   "districtId": "sd-qambar-shahdadkot",
+   "name": "Qubo Saeed Khan",
+   "pcode": "PK70904"
+  },
+  {
+   "id": "bl-quetta-quetta-city",
+   "districtId": "bl-quetta",
+   "name": "Quetta City",
+   "pcode": "PK22602"
+  },
+  {
+   "id": "bl-quetta-quetta-saddar",
+   "districtId": "bl-quetta",
+   "name": "Quetta Saddar",
+   "pcode": "PK22603"
+  },
+  {
+   "id": "pb-rahim-yar-khan-rahim-yar-khan",
+   "districtId": "pb-rahim-yar-khan",
+   "name": "Rahim Yar Khan",
+   "pcode": "PK62803"
+  },
+  {
+   "id": "pb-lahore-raiwind",
+   "districtId": "pb-lahore",
+   "name": "Raiwind"
+  },
+  {
+   "id": "pb-rajanpur-rajanpur",
+   "districtId": "pb-rajanpur",
+   "name": "Rajanpur",
+   "pcode": "PK62902"
+  },
+  {
+   "id": "pb-rajanpur-rajanpur-tribal-area",
+   "districtId": "pb-rajanpur",
+   "name": "Rajanpur (Tribal Area)",
+   "pcode": "PK62903"
+  },
+  {
+   "id": "bl-barkhan-rakhni",
+   "districtId": "bl-barkhan",
+   "name": "Rakhni",
+   "pcode": "PK20202"
+  },
+  {
+   "id": "sd-larkana-rato-dero",
+   "districtId": "sd-larkana",
+   "name": "Rato Dero",
+   "pcode": "PK71304"
+  },
+  {
+   "id": "ajk-poonch-rawalakot",
+   "districtId": "ajk-poonch",
+   "name": "Rawalakot",
+   "pcode": "PK10903"
+  },
+  {
+   "id": "pb-rawalpindi-rawalpindi",
+   "districtId": "pb-rawalpindi",
+   "name": "Rawalpindi",
+   "pcode": "PK63006"
+  },
+  {
+   "id": "kp-swabi-razar",
+   "districtId": "kp-swabi",
+   "name": "Razar",
+   "pcode": "PK53104"
+  },
+  {
+   "id": "kp-north-waziristan-razmak",
+   "districtId": "kp-north-waziristan",
+   "name": "Razmak",
+   "pcode": "PK52507"
+  },
+  {
+   "id": "pb-okara-renala-khurd",
+   "districtId": "pb-okara",
+   "name": "Renala Khurd",
+   "pcode": "PK62603"
+  },
+  {
+   "id": "sd-sukkur-rohri",
+   "districtId": "sd-sukkur",
+   "name": "Rohri",
+   "pcode": "PK72303"
+  },
+  {
+   "id": "pb-rajanpur-rojhan",
+   "districtId": "pb-rajanpur",
+   "name": "Rojhan",
+   "pcode": "PK62904"
+  },
+  {
+   "id": "gb-roundu-rondu",
+   "districtId": "gb-roundu",
+   "name": "Rondu",
+   "pcode": "PK31401"
+  },
+  {
+   "id": "kp-mardan-rustam",
+   "districtId": "kp-mardan",
+   "name": "Rustam",
+   "pcode": "PK52304"
+  },
+  {
+   "id": "sd-karachi-south-saddar-town",
+   "districtId": "sd-karachi-south",
+   "name": "Saddar Town",
+   "pcode": "PK72103"
+  },
+  {
+   "id": "pb-rahim-yar-khan-sadiqabad",
+   "districtId": "pb-rahim-yar-khan",
+   "name": "Sadiqabad",
+   "pcode": "PK62804"
+  },
+  {
+   "id": "sd-matiari-saeedabad",
+   "districtId": "sd-matiari",
+   "name": "Saeedabad",
+   "pcode": "PK71503"
+  },
+  {
+   "id": "pb-sheikhupura-safdarabad",
+   "districtId": "pb-sheikhupura",
+   "name": "Safdarabad",
+   "pcode": "PK63303"
+  },
+  {
+   "id": "kp-mohmand-safi",
+   "districtId": "kp-mohmand",
+   "name": "Safi",
+   "pcode": "PK52407"
+  },
+  {
+   "id": "pb-sahiwal-sahiwal",
+   "districtId": "pb-sahiwal",
+   "name": "Sahiwal",
+   "pcode": "PK63102"
+  },
+  {
+   "id": "pb-sargodha-sahiwal",
+   "districtId": "pb-sargodha",
+   "name": "Sahiwal",
+   "pcode": "PK63203"
+  },
+  {
+   "id": "sd-shaheed-benazir-abad-sakrand",
+   "districtId": "sd-shaheed-benazir-abad",
+   "name": "Sakrand",
+   "pcode": "PK71904"
+  },
+  {
+   "id": "kp-bajaur-salarzai",
+   "districtId": "kp-bajaur",
+   "name": "Salarzai",
+   "pcode": "PK50206"
+  },
+  {
+   "id": "sd-sukkur-salehpat",
+   "districtId": "sd-sukkur",
+   "name": "Salehpat",
+   "pcode": "PK72304"
+  },
+  {
+   "id": "kp-malakand-sam-ranizai",
+   "districtId": "kp-malakand",
+   "name": "Sam Ranizai"
+  },
+  {
+   "id": "ajk-bhimber-samahni",
+   "districtId": "ajk-bhimber",
+   "name": "Samahni",
+   "pcode": "PK10203"
+  },
+  {
+   "id": "kp-lower-dir-samarbagh",
+   "districtId": "kp-lower-dir",
+   "name": "Samarbagh",
+   "pcode": "PK52005"
+  },
+  {
+   "id": "sd-umerkot-samaro",
+   "districtId": "sd-umerkot",
+   "name": "Samaro",
+   "pcode": "PK72803"
+  },
+  {
+   "id": "bl-zhob-sambaza",
+   "districtId": "bl-zhob",
+   "name": "Sambaza"
+  },
+  {
+   "id": "pb-sialkot-sambrial",
+   "districtId": "pb-sialkot",
+   "name": "Sambrial",
+   "pcode": "PK63403"
+  },
+  {
+   "id": "bl-sibi-sangan",
+   "districtId": "bl-sibi",
+   "name": "Sangan"
+  },
+  {
+   "id": "sd-sanghar-sanghar",
+   "districtId": "sd-sanghar",
+   "name": "Sanghar",
+   "pcode": "PK71803"
+  },
+  {
+   "id": "pb-nankana-sahib-sangla-hill",
+   "districtId": "pb-nankana-sahib",
+   "name": "Sangla Hill",
+   "pcode": "PK62402"
+  },
+  {
+   "id": "bl-dera-bugti-sangsillah",
+   "districtId": "bl-dera-bugti",
+   "name": "Sangsillah"
+  },
+  {
+   "id": "bl-sohbatpur-sanhri",
+   "districtId": "bl-sohbatpur",
+   "name": "Sanhri"
+  },
+  {
+   "id": "bl-kachhi-sanni",
+   "districtId": "bl-kachhi",
+   "name": "Sanni",
+   "pcode": "PK20903"
+  },
+  {
+   "id": "bl-kharan-sar-kharan",
+   "districtId": "bl-kharan",
+   "name": "Sar Kharan",
+   "pcode": "PK21202"
+  },
+  {
+   "id": "pb-gujrat-sarai-alamgir",
+   "districtId": "pb-gujrat",
+   "name": "Sarai Alamgir",
+   "pcode": "PK61003"
+  },
+  {
+   "id": "kp-lakki-marwat-sarai-naurang",
+   "districtId": "kp-lakki-marwat",
+   "name": "Sarai Naurang",
+   "pcode": "PK51902"
+  },
+  {
+   "id": "bl-pishin-saranan",
+   "districtId": "bl-pishin",
+   "name": "Saranan",
+   "pcode": "PK22505"
+  },
+  {
+   "id": "kp-south-waziristan-sararogha",
+   "districtId": "kp-south-waziristan",
+   "name": "Sararogha",
+   "pcode": "PK53004"
+  },
+  {
+   "id": "pb-sargodha-sargodha",
+   "districtId": "pb-sargodha",
+   "name": "Sargodha",
+   "pcode": "PK63204"
+  },
+  {
+   "id": "bl-khuzdar-saroona",
+   "districtId": "bl-khuzdar",
+   "name": "Saroona"
+  },
+  {
+   "id": "ajk-kotli-sehnsa",
+   "districtId": "ajk-kotli",
+   "name": "Sehnsa",
+   "pcode": "PK10506"
+  },
+  {
+   "id": "sd-jamshoro-sehwan-sharif",
+   "districtId": "sd-jamshoro",
+   "name": "Sehwan Sharif",
+   "pcode": "PK70803"
+  },
+  {
+   "id": "kp-upper-kohistan-seo",
+   "districtId": "kp-upper-kohistan",
+   "name": "Seo",
+   "pcode": "PK51604"
+  },
+  {
+   "id": "kp-south-waziristan-serwakai",
+   "districtId": "kp-south-waziristan",
+   "name": "Serwakai",
+   "pcode": "PK53005"
+  },
+  {
+   "id": "kp-charsadda-shabqadar",
+   "districtId": "kp-charsadda",
+   "name": "Shabqadar",
+   "pcode": "PK50602"
+  },
+  {
+   "id": "sd-sujawal-shah-bunder",
+   "districtId": "sd-sujawal",
+   "name": "Shah Bunder",
+   "pcode": "PK72204"
+  },
+  {
+   "id": "sd-korangi-shah-faisal-town",
+   "districtId": "sd-korangi",
+   "name": "Shah Faisal Town",
+   "pcode": "PK71203"
+  },
+  {
+   "id": "pb-nankana-sahib-shah-kot",
+   "districtId": "pb-nankana-sahib",
+   "name": "Shah Kot",
+   "pcode": "PK62403"
+  },
+  {
+   "id": "sd-qambar-shahdadkot-shahdad-kot",
+   "districtId": "sd-qambar-shahdadkot",
+   "name": "Shahdad Kot",
+   "pcode": "PK70905"
+  },
+  {
+   "id": "sd-sanghar-shahdadpur",
+   "districtId": "sd-sanghar",
+   "name": "Shahdadpur",
+   "pcode": "PK71804"
+  },
+  {
+   "id": "sd-badin-shaheed-fazil-rahu",
+   "districtId": "sd-badin",
+   "name": "Shaheed Fazil Rahu",
+   "pcode": "PK70103"
+  },
+  {
+   "id": "bl-washuk-shahoo-garhi",
+   "districtId": "bl-washuk",
+   "name": "Shahoo Garhi"
+  },
+  {
+   "id": "pb-sargodha-shahpur",
+   "districtId": "pb-sargodha",
+   "name": "Shahpur",
+   "pcode": "PK63205"
+  },
+  {
+   "id": "bl-harnai-shahrigh",
+   "districtId": "bl-harnai",
+   "name": "Shahrigh",
+   "pcode": "PK20602"
+  },
+  {
+   "id": "pb-narowal-shakargarh",
+   "districtId": "pb-narowal",
+   "name": "Shakargarh",
+   "pcode": "PK62502"
+  },
+  {
+   "id": "pb-lahore-shalimar",
+   "districtId": "pb-lahore",
+   "name": "Shalimar"
+  },
+  {
+   "id": "bl-washuk-shaogari",
+   "districtId": "bl-washuk",
+   "name": "Shaogari",
+   "pcode": "PK23005"
+  },
+  {
+   "id": "pb-sheikhupura-sharak-pur",
+   "districtId": "pb-sheikhupura",
+   "name": "Sharak Pur",
+   "pcode": "PK63304"
+  },
+  {
+   "id": "ajk-neelum-sharda",
+   "districtId": "ajk-neelum",
+   "name": "Sharda",
+   "pcode": "PK10802"
+  },
+  {
+   "id": "kp-north-waziristan-shawal",
+   "districtId": "kp-north-waziristan",
+   "name": "Shawal",
+   "pcode": "PK52510"
+  },
+  {
+   "id": "pb-sheikhupura-sheikhupura",
+   "districtId": "pb-sheikhupura",
+   "name": "Sheikhupura",
+   "pcode": "PK63305"
+  },
+  {
+   "id": "bl-sheerani-sherani",
+   "districtId": "bl-sheerani",
+   "name": "Sherani",
+   "pcode": "PK22701"
+  },
+  {
+   "id": "kp-north-waziristan-shewa",
+   "districtId": "kp-north-waziristan",
+   "name": "Shewa",
+   "pcode": "PK52508"
+  },
+  {
+   "id": "gb-shigar-shigar",
+   "districtId": "gb-shigar",
+   "name": "Shigar",
+   "pcode": "PK31001"
+  },
+  {
+   "id": "sd-shikarpur-shikarpur",
+   "districtId": "sd-shikarpur",
+   "name": "Shikarpur",
+   "pcode": "PK72004"
+  },
+  {
+   "id": "bl-killa-saifullah-shinki",
+   "districtId": "bl-killa-saifullah",
+   "name": "Shinki"
+  },
+  {
+   "id": "pb-jhang-shorkot",
+   "districtId": "pb-jhang",
+   "name": "Shorkot",
+   "pcode": "PK61203"
+  },
+  {
+   "id": "gb-astore-shounter",
+   "districtId": "gb-astore",
+   "name": "Shounter",
+   "pcode": "PK30102"
+  },
+  {
+   "id": "kp-upper-dir-shrengal",
+   "districtId": "kp-upper-dir",
+   "name": "Shrengal",
+   "pcode": "PK53505"
+  },
+  {
+   "id": "sd-mirpur-khas-shuja-abad",
+   "districtId": "sd-mirpur-khas",
+   "name": "Shuja Abad",
+   "pcode": "PK71606"
+  },
+  {
+   "id": "pb-multan-shujabad",
+   "districtId": "pb-multan",
+   "name": "Shujabad",
+   "pcode": "PK62204"
+  },
+  {
+   "id": "pb-sialkot-sialkot",
+   "districtId": "pb-sialkot",
+   "name": "Sialkot",
+   "pcode": "PK63404"
+  },
+  {
+   "id": "bl-sibi-sibi",
+   "districtId": "bl-sibi",
+   "name": "Sibi",
+   "pcode": "PK22801"
+  },
+  {
+   "id": "sd-qambar-shahdadkot-sijawal-junejo",
+   "districtId": "sd-qambar-shahdadkot",
+   "name": "Sijawal Junejo",
+   "pcode": "PK70906"
+  },
+  {
+   "id": "gb-nagar-sikandar-abad",
+   "districtId": "gb-nagar",
+   "name": "Sikandar Abad",
+   "pcode": "PK30802"
+  },
+  {
+   "id": "pb-sargodha-sillanwali",
+   "districtId": "pb-sargodha",
+   "name": "Sillanwali",
+   "pcode": "PK63206"
+  },
+  {
+   "id": "sd-mirpur-khas-sindhri",
+   "districtId": "sd-mirpur-khas",
+   "name": "Sindhri",
+   "pcode": "PK71607"
+  },
+  {
+   "id": "bl-ziarat-sinjawi",
+   "districtId": "bl-ziarat",
+   "name": "Sinjawi",
+   "pcode": "PK23201"
+  },
+  {
+   "id": "sd-sanghar-sinjhoro",
+   "districtId": "sd-sanghar",
+   "name": "Sinjhoro",
+   "pcode": "PK71805"
+  },
+  {
+   "id": "sd-karachi-west-site-town",
+   "districtId": "sd-karachi-west",
+   "name": "Site Town",
+   "pcode": "PK72903"
+  },
+  {
+   "id": "gb-skardu-skardu",
+   "districtId": "gb-skardu",
+   "name": "Skardu",
+   "pcode": "PK30702"
+  },
+  {
+   "id": "sd-khairpur-sobho-dero",
+   "districtId": "sd-khairpur",
+   "name": "Sobho Dero",
+   "pcode": "PK71107"
+  },
+  {
+   "id": "pb-jhelum-sohawa",
+   "districtId": "pb-jhelum",
+   "name": "Sohawa",
+   "pcode": "PK61304"
+  },
+  {
+   "id": "bl-sohbatpur-sohbatpur",
+   "districtId": "bl-sohbatpur",
+   "name": "Sohbatpur",
+   "pcode": "PK22901"
+  },
+  {
+   "id": "bl-lasbela-sonmiani",
+   "districtId": "bl-lasbela",
+   "name": "Sonmiani",
+   "pcode": "PK21706"
+  },
+  {
+   "id": "kp-north-waziristan-spinwam",
+   "districtId": "kp-north-waziristan",
+   "name": "Spinwam",
+   "pcode": "PK52509"
+  },
+  {
+   "id": "bl-dera-bugti-sui",
+   "districtId": "bl-dera-bugti",
+   "name": "Sui",
+   "pcode": "PK20403"
+  },
+  {
+   "id": "sd-sujawal-sujawal",
+   "districtId": "sd-sujawal",
+   "name": "Sujawal",
+   "pcode": "PK72205"
+  },
+  {
+   "id": "sd-sukkur-sukkur",
+   "districtId": "sd-sukkur",
+   "name": "Sukkur",
+   "pcode": "PK72305"
+  },
+  {
+   "id": "pb-faisalabad-summundri",
+   "districtId": "pb-faisalabad",
+   "name": "Summundri",
+   "pcode": "PK60805"
+  },
+  {
+   "id": "bl-gwadar-sunster",
+   "districtId": "bl-gwadar",
+   "name": "Sunster",
+   "pcode": "PK20505"
+  },
+  {
+   "id": "bl-gwadar-suntsar",
+   "districtId": "bl-gwadar",
+   "name": "Suntsar"
+  },
+  {
+   "id": "bl-shaheed-sikandarabad-surab",
+   "districtId": "bl-shaheed-sikandarabad",
+   "name": "Surab",
+   "pcode": "PK23301"
+  },
+  {
+   "id": "kp-swabi-swabi",
+   "districtId": "kp-swabi",
+   "name": "Swabi",
+   "pcode": "PK53102"
+  },
+  {
+   "id": "kp-malakand-swat-ranizai",
+   "districtId": "kp-malakand",
+   "name": "Swat Ranizai"
+  },
+  {
+   "id": "bl-chagai-taftan",
+   "districtId": "bl-chagai",
+   "name": "Taftan",
+   "pcode": "PK20303"
+  },
+  {
+   "id": "kp-mardan-takht-bhai",
+   "districtId": "kp-mardan",
+   "name": "Takht Bhai",
+   "pcode": "PK52303"
+  },
+  {
+   "id": "kp-karak-takht-e-nasrati",
+   "districtId": "kp-karak",
+   "name": "Takht-e-Nasrati",
+   "pcode": "PK51203"
+  },
+  {
+   "id": "pb-chakwal-tala-gang",
+   "districtId": "pb-chakwal",
+   "name": "Tala Gang",
+   "pcode": "PK60504"
+  },
+  {
+   "id": "sd-badin-talhar",
+   "districtId": "sd-badin",
+   "name": "Talhar",
+   "pcode": "PK70104"
+  },
+  {
+   "id": "kp-hangu-tall",
+   "districtId": "kp-hangu",
+   "name": "Tall",
+   "pcode": "PK51002"
+  },
+  {
+   "id": "bl-nasirabad-tamboo",
+   "districtId": "bl-nasirabad",
+   "name": "Tamboo",
+   "pcode": "PK22203"
+  },
+  {
+   "id": "pb-faisalabad-tandlian-wala",
+   "districtId": "pb-faisalabad",
+   "name": "Tandlian Wala",
+   "pcode": "PK60806"
+  },
+  {
+   "id": "sd-sanghar-tando-adam",
+   "districtId": "sd-sanghar",
+   "name": "Tando Adam",
+   "pcode": "PK71806"
+  },
+  {
+   "id": "sd-tando-allahyar-tando-allahyar",
+   "districtId": "sd-tando-allahyar",
+   "name": "Tando Allahyar",
+   "pcode": "PK72403"
+  },
+  {
+   "id": "sd-badin-tando-bago",
+   "districtId": "sd-badin",
+   "name": "Tando Bago",
+   "pcode": "PK70105"
+  },
+  {
+   "id": "sd-tando-muhammad-khan-tando-ghulam-hyder",
+   "districtId": "sd-tando-muhammad-khan",
+   "name": "Tando Ghulam Hyder",
+   "pcode": "PK72502"
+  },
+  {
+   "id": "sd-tando-muhammad-khan-tando-muhammad-khan",
+   "districtId": "sd-tando-muhammad-khan",
+   "name": "Tando Muhammad Khan",
+   "pcode": "PK72503"
+  },
+  {
+   "id": "kp-charsadda-tangi",
+   "districtId": "kp-charsadda",
+   "name": "Tangi",
+   "pcode": "PK50603"
+  },
+  {
+   "id": "gb-tangir-tangir",
+   "districtId": "gb-tangir",
+   "name": "Tangir",
+   "pcode": "PK31201"
+  },
+  {
+   "id": "sd-kashmore-tangwani",
+   "districtId": "sd-kashmore",
+   "name": "Tangwani",
+   "pcode": "PK71003"
+  },
+  {
+   "id": "kp-tank-tank",
+   "districtId": "kp-tank",
+   "name": "Tank",
+   "pcode": "PK53301"
+  },
+  {
+   "id": "ajk-sudhnati-tarar-khal",
+   "districtId": "ajk-sudhnati",
+   "name": "Tarar Khal",
+   "pcode": "PK11004"
+  },
+  {
+   "id": "pb-dera-ghazi-khan-taunsa",
+   "districtId": "pb-dera-ghazi-khan",
+   "name": "Taunsa",
+   "pcode": "PK60704"
+  },
+  {
+   "id": "pb-rawalpindi-taxila",
+   "districtId": "pb-rawalpindi",
+   "name": "Taxila",
+   "pcode": "PK63007"
+  },
+  {
+   "id": "sd-jamshoro-thano-bula-khan",
+   "districtId": "sd-jamshoro",
+   "name": "Thano Bula Khan",
+   "pcode": "PK70804"
+  },
+  {
+   "id": "sd-khairpur-thari-meer-wah",
+   "districtId": "sd-khairpur",
+   "name": "Thari Meer Wah",
+   "pcode": "PK71108"
+  },
+  {
+   "id": "sd-thatta-thatta",
+   "districtId": "sd-thatta",
+   "name": "Thatta",
+   "pcode": "PK72704"
+  },
+  {
+   "id": "ajk-poonch-thorar",
+   "districtId": "ajk-poonch",
+   "name": "Thorar",
+   "pcode": "PK10904"
+  },
+  {
+   "id": "sd-jacobabad-thul",
+   "districtId": "sd-jacobabad",
+   "name": "Thul",
+   "pcode": "PK70703"
+  },
+  {
+   "id": "kp-south-waziristan-tiarza",
+   "districtId": "kp-south-waziristan",
+   "name": "Tiarza",
+   "pcode": "PK53006"
+  },
+  {
+   "id": "kp-lower-dir-timergara",
+   "districtId": "kp-lower-dir",
+   "name": "Timergara",
+   "pcode": "PK52006"
+  },
+  {
+   "id": "pb-toba-tek-singh-toba-tek-singh",
+   "districtId": "pb-toba-tek-singh",
+   "name": "Toba Tek Singh",
+   "pcode": "PK63503"
+  },
+  {
+   "id": "kp-south-waziristan-toi-khulla",
+   "districtId": "kp-south-waziristan",
+   "name": "Toi Khulla",
+   "pcode": "PK53007"
+  },
+  {
+   "id": "bl-kharan-tomulk",
+   "districtId": "bl-kharan",
+   "name": "Tomulk",
+   "pcode": "PK21203"
+  },
+  {
+   "id": "kp-swabi-topi",
+   "districtId": "kp-swabi",
+   "name": "Topi",
+   "pcode": "PK53103"
+  },
+  {
+   "id": "kp-peshawar-town-i",
+   "districtId": "kp-peshawar",
+   "name": "Town-I",
+   "pcode": "PK52801"
+  },
+  {
+   "id": "kp-peshawar-town-ii",
+   "districtId": "kp-peshawar",
+   "name": "Town-II",
+   "pcode": "PK52802"
+  },
+  {
+   "id": "kp-peshawar-town-iii",
+   "districtId": "kp-peshawar",
+   "name": "Town-III",
+   "pcode": "PK52803"
+  },
+  {
+   "id": "kp-peshawar-town-iv",
+   "districtId": "kp-peshawar",
+   "name": "Town-IV",
+   "pcode": "PK52804"
+  },
+  {
+   "id": "bl-kech-tump",
+   "districtId": "bl-kech",
+   "name": "Tump",
+   "pcode": "PK21105"
+  },
+  {
+   "id": "sd-ghotki-ubauro",
+   "districtId": "sd-ghotki",
+   "name": "Ubauro",
+   "pcode": "PK70505"
+  },
+  {
+   "id": "sd-umerkot-umer-kot",
+   "districtId": "sd-umerkot",
+   "name": "Umer Kot",
+   "pcode": "PK72804"
+  },
+  {
+   "id": "kp-kurram-upper-kurram",
+   "districtId": "kp-kurram",
+   "name": "Upper Kurram",
+   "pcode": "PK51803"
+  },
+  {
+   "id": "kp-mohmand-upper-mohmand",
+   "districtId": "kp-mohmand",
+   "name": "Upper Mohmand"
+  },
+  {
+   "id": "kp-orakzai-upper-orakzai",
+   "districtId": "kp-orakzai",
+   "name": "Upper Orakzai",
+   "pcode": "PK52704"
+  },
+  {
+   "id": "bl-jaffarabad-usta-mohammad",
+   "districtId": "bl-jaffarabad",
+   "name": "Usta Mohammad",
+   "pcode": "PK20703"
+  },
+  {
+   "id": "bl-lasbela-uthal",
+   "districtId": "bl-lasbela",
+   "name": "Uthal",
+   "pcode": "PK21707"
+  },
+  {
+   "id": "kp-bajaur-utman-khel",
+   "districtId": "kp-bajaur",
+   "name": "Utman Khel",
+   "pcode": "PK50207"
+  },
+  {
+   "id": "pb-vehari-vehari",
+   "districtId": "pb-vehari",
+   "name": "Vehari",
+   "pcode": "PK63603"
+  },
+  {
+   "id": "bl-khuzdar-wadh",
+   "districtId": "bl-khuzdar",
+   "name": "Wadh",
+   "pcode": "PK21304"
+  },
+  {
+   "id": "kp-south-waziristan-wana",
+   "districtId": "kp-south-waziristan",
+   "name": "Wana",
+   "pcode": "PK53008"
+  },
+  {
+   "id": "sd-qambar-shahdadkot-warah",
+   "districtId": "sd-qambar-shahdadkot",
+   "name": "Warah",
+   "pcode": "PK70907"
+  },
+  {
+   "id": "kp-upper-dir-wari",
+   "districtId": "kp-upper-dir",
+   "name": "Wari",
+   "pcode": "PK53506"
+  },
+  {
+   "id": "bl-washuk-washuk",
+   "districtId": "bl-washuk",
+   "name": "Washuk",
+   "pcode": "PK23003"
+  },
+  {
+   "id": "kp-bannu-wazir",
+   "districtId": "kp-bannu",
+   "name": "Wazir",
+   "pcode": "PK50306"
+  },
+  {
+   "id": "pb-gujranwala-wazirabad",
+   "districtId": "pb-gujranwala",
+   "name": "Wazirabad",
+   "pcode": "PK60904"
+  },
+  {
+   "id": "kp-mohmand-yaka-ghund",
+   "districtId": "kp-mohmand",
+   "name": "Yaka Ghund",
+   "pcode": "PK52408"
+  },
+  {
+   "id": "gb-gupis-yasin-yasin",
+   "districtId": "gb-gupis-yasin",
+   "name": "Yasin",
+   "pcode": "PK31303"
+  },
+  {
+   "id": "pb-bahawalpur-yazman",
+   "districtId": "pb-bahawalpur",
+   "name": "Yazman",
+   "pcode": "PK60305"
+  },
+  {
+   "id": "pb-narowal-zafarwal",
+   "districtId": "pb-narowal",
+   "name": "Zafarwal",
+   "pcode": "PK62503"
+  },
+  {
+   "id": "bl-kech-zamuran",
+   "districtId": "bl-kech",
+   "name": "Zamuran"
+  },
+  {
+   "id": "bl-khuzdar-zehri",
+   "districtId": "bl-khuzdar",
+   "name": "Zehri",
+   "pcode": "PK21305"
+  },
+  {
+   "id": "bl-zhob-zhob",
+   "districtId": "bl-zhob",
+   "name": "Zhob",
+   "pcode": "PK23102"
+  },
+  {
+   "id": "bl-ziarat-ziarat",
+   "districtId": "bl-ziarat",
+   "name": "Ziarat",
+   "pcode": "PK23202"
+  }
+ ],
+ "localities": []
+}

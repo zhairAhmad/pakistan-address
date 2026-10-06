@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pakistan-address demo</title>
+<style>
+  :root {
+    --bg: #f7f8f7; --card: #fff; --text: #1a1f1c; --muted: #5b655f; --line: #d5dbd7; --accent: #01411c; --accent-text: #fff; --code: #eef1ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111513; --card: #1a201d; --text: #e8ece9; --muted: #98a39c; --line: #2f3833; --accent: #4fa56c; --accent-text: #08130c; --code: #232b27; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  .lede { color: var(--muted); margin: 0 0 24px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; align-items: start; } }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  h2 { font-size: 1rem; margin: 0 0 12px; }
+  .field { margin-bottom: 12px; }
+  label { display: block; font-size: .875rem; font-weight: 600; margin-bottom: 4px; }
+  select, input, textarea { width: 100%; padding: 8px 10px; font: inherit; color: var(--text); background: var(--card); border: 1px solid var(--line); border-radius: 6px; }
+  input.other { margin-top: 6px; }
+  select:focus, input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  [hidden] { display: none !important; }
+  pre { margin: 0; padding: 12px; background: var(--code); border-radius: 6px; overflow-x: auto; font-size: .8125rem; }
+  .meta { color: var(--muted); font-size: .8125rem; margin-top: 24px; }
+  .meta a { color: inherit; }
+  .note { font-size: .8125rem; color: var(--muted); margin: 0 0 12px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>pakistan-address</h1>
+  <p class="lede">Province → Division → District → Tehsil, with an "Other / not listed" fallback at every level.</p>
+
+  <div class="grid">
+    <section aria-labelledby="form-h">
+      <h2 id="form-h">Address</h2>
+      <p class="note">Data is never complete, so each level can be typed in, and the full address is a separate field.</p>
+      <form id="form" autocomplete="off"></form>
+    </section>
+    <section aria-labelledby="out-h">
+      <h2 id="out-h">Resolved value</h2>
+      <pre id="out" aria-live="polite"></pre>
+    </section>
+  </div>
+
+  <p class="meta" id="meta"></p>
+</main>
+
+<script type="module">
+import {
+  getProvinces, getDivisions, getDistricts, getDistrictsByProvince, getTehsils, getMeta,
+  getProvince, getDivision, getDistrict, getTehsil,
+} from './pakistan-address.js';
+
+const OTHER = '__other__';
+const levels = ['province', 'division', 'district', 'tehsil'];
+const labels = { province: 'Province', division: 'Division', district: 'District', tehsil: 'Tehsil' };
+const lookup = { province: getProvince, division: getDivision, district: getDistrict, tehsil: getTehsil };
+const state = { province: '', division: '', district: '', tehsil: '', text: { division: '', district: '', tehsil: '' }, addressLine: '' };
+
+const form = document.getElementById('form');
+const out = document.getElementById('out');
+const els = {};
+
+for (const level of levels) {
+  const wrap = document.createElement('div');
+  wrap.className = 'field';
+  wrap.innerHTML = `<label for="${level}">${labels[level]}</label><select id="${level}"></select>` +
+    (level === 'province' ? '' : `<input class="other" id="${level}-text" type="text" placeholder="Type your ${labels[level].toLowerCase()}" aria-label="${labels[level]} (not listed)" hidden>`);
+  form.append(wrap);
+  els[level] = { wrap, select: wrap.querySelector('select'), text: wrap.querySelector('input') };
+  els[level].select.addEventListener('change', (e) => choose(level, e.target.value));
+  els[level].text?.addEventListener('input', (e) => { state.text[level] = e.target.value; render(false); });
+}
+
+const addr = document.createElement('div');
+addr.className = 'field';
+addr.innerHTML = '<label for="line">Full address / landmark</label><textarea id="line" rows="3" placeholder="House, street, nearby landmark"></textarea>';
+form.append(addr);
+addr.querySelector('textarea').addEventListener('input', (e) => { state.addressLine = e.target.value; render(false); });
+
+function choose(level, value) {
+  state[level] = value;
+  for (const lower of levels.slice(levels.indexOf(level) + 1)) { state[lower] = ''; state.text[lower] = ''; }
+  state.text[level] = '';
+  render(true);
+}
+
+const listed = (v) => v && v !== OTHER;
+
+function optionsFor() {
+  const divisions = listed(state.province) ? getDivisions(state.province) : [];
+  const hasDivisions = divisions.length > 0;
+  const districts = listed(state.division) ? getDistricts(state.division)
+    : state.province && listed(state.province) && (!hasDivisions || state.division === OTHER) ? getDistrictsByProvince(state.province) : [];
+  const tehsils = listed(state.district) ? getTehsils(state.district) : [];
+  return {
+    hasDivisions,
+    visible: {
+      province: true,
+      division: hasDivisions,
+      district: !!state.province && (!hasDivisions || !!state.division),
+      tehsil: !!state.province && (!hasDivisions || !!state.division) && !!state.district,
+    },
+    options: { province: getProvinces(), division: divisions, district: districts, tehsil: tehsils },
+  };
+}
+
+function render(rebuildLists) {
+  const { visible, options } = optionsFor();
+  for (const level of levels) {
+    const { wrap, select, text } = els[level];
+    wrap.hidden = !visible[level];
+    const list = options[level];
+    const hasList = list.length > 0;
+    select.hidden = !hasList;
+    if (rebuildLists) {
+      const head = '<option value="">Select…</option>';
+      const opts = list.map((o) => `<option value="${o.id}">${o.name.replace(/&/g, '&amp;')}</option>`).join('');
+      select.innerHTML = head + opts + (level !== 'province' && hasList ? `<option value="${OTHER}">Other / not listed</option>` : '');
+      select.value = state[level];
+    }
+    if (text) {
+      text.hidden = !(visible[level] && (state[level] === OTHER || (level === 'tehsil' && visible.tehsil && !hasList)));
+      if (rebuildLists) text.value = state.text[level];
+    }
+  }
+  const name = (level) => listed(state[level]) ? (lookup[level](state[level])?.name ?? '') : (state.text[level] || '').trim();
+  out.textContent = JSON.stringify({
+    province: name('province'), division: name('division'), district: name('district'), tehsil: name('tehsil'),
+    addressLine: state.addressLine.trim(),
+    ids: Object.fromEntries(levels.map((l) => [l, listed(state[l]) ? state[l] : null])),
+  }, null, 2);
+}
+
+const meta = getMeta();
+document.getElementById('meta').innerHTML =
+  `Data version ${meta.dataVersion} · ${meta.baseline} · ` +
+  meta.sources.map((s) => `<a href="${s.url}">${s.name}</a>`).join(', ') +
+  ' · boundaries change and this data is not yet verified against official lists; see DATA.md.';
+
+render(true);
+</script>
+</body>
+</html>

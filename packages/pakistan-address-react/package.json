@@ -1,0 +1,41 @@
+{
+  "name": "pakistan-address-react",
+  "version": "0.1.0",
+  "description": "Cascading Province, Division, District and Tehsil address fields for React, with an \"Other / not listed\" option at every level. Built on pakistan-address.",
+  "keywords": ["pakistan", "address", "react", "cascading-select", "dropdown", "tehsil", "district"],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "pakistan-address": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^5.0.3"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/OWNER/pakistan-address.git", "directory": "packages/pakistan-address-react" }
+}

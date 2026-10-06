@@ -1,0 +1,15 @@
+pakistan-address contains data derived from:
+
+1. Pakistan - Subnational Administrative Boundaries (COD-AB)
+   World Food Programme SDI / OCHA, via the Humanitarian Data Exchange
+   https://data.humdata.org/dataset/cod-ab-pak
+   Licensed under Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO).
+   https://creativecommons.org/licenses/by/3.0/igo/
+   Changes: administrative unit names, parent relationships and p-codes were extracted from the
+   attribute tables, merged with the source below, and some names normalised. The original workbook is in
+   data-sources/hdx/. This is not an official product of, and is not endorsed by, WFP or OCHA.
+
+2. aaqibmehran/geo-pakistan (https://github.com/aaqibmehran/geo-pakistan)
+   Copyright (c) Aaqib Mehran
+   Licensed under the MIT License (declared in the project's composer.json).
+   The original PHP seeders are kept unmodified in data-sources/geo-pakistan/.

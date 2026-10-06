@@ -1,0 +1,4298 @@
+{
+ "provinces": [
+  {
+   "adm1_name": "Azad Kashmir",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm1_name": "Balochistan",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm1_name": "Gilgit Baltistan",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm1_name": "Islamabad",
+   "adm1_pcode": "PK4"
+  },
+  {
+   "adm1_name": "Khyber Pakhtunkhwa",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm1_name": "Punjab",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm1_name": "Sindh",
+   "adm1_pcode": "PK7"
+  }
+ ],
+ "districts": [
+  {
+   "adm2_name": "Bagh",
+   "adm2_pcode": "PK101",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Bhimber",
+   "adm2_pcode": "PK102",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Jhelum Valley",
+   "adm2_pcode": "PK103",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Haveli",
+   "adm2_pcode": "PK104",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Kotli",
+   "adm2_pcode": "PK105",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Mirpur",
+   "adm2_pcode": "PK106",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Muzaffarabad",
+   "adm2_pcode": "PK107",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Neelum",
+   "adm2_pcode": "PK108",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Poonch",
+   "adm2_pcode": "PK109",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Sudhnoti",
+   "adm2_pcode": "PK110",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm2_name": "Awaran",
+   "adm2_pcode": "PK201",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Barkhan",
+   "adm2_pcode": "PK202",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Chagai",
+   "adm2_pcode": "PK203",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Dera Bugti",
+   "adm2_pcode": "PK204",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Gwadar",
+   "adm2_pcode": "PK205",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Harnai",
+   "adm2_pcode": "PK206",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Jaffarabad",
+   "adm2_pcode": "PK207",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Jhal Magsi",
+   "adm2_pcode": "PK208",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Kachhi",
+   "adm2_pcode": "PK209",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Kalat",
+   "adm2_pcode": "PK210",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Kech",
+   "adm2_pcode": "PK211",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Kharan",
+   "adm2_pcode": "PK212",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Khuzdar",
+   "adm2_pcode": "PK213",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Killa Abdullah",
+   "adm2_pcode": "PK214",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Killa Saifullah",
+   "adm2_pcode": "PK215",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Kohlu",
+   "adm2_pcode": "PK216",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Lasbela",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Lehri",
+   "adm2_pcode": "PK218",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Loralai",
+   "adm2_pcode": "PK219",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Mastung",
+   "adm2_pcode": "PK220",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Musakhel",
+   "adm2_pcode": "PK221",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Nasirabad",
+   "adm2_pcode": "PK222",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Nushki",
+   "adm2_pcode": "PK223",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Panjgur",
+   "adm2_pcode": "PK224",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Pishin",
+   "adm2_pcode": "PK225",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Quetta",
+   "adm2_pcode": "PK226",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Sherani",
+   "adm2_pcode": "PK227",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Sibi",
+   "adm2_pcode": "PK228",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Sohbatpur",
+   "adm2_pcode": "PK229",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Washuk",
+   "adm2_pcode": "PK230",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Zhob",
+   "adm2_pcode": "PK231",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Ziarat",
+   "adm2_pcode": "PK232",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Shaheed Sikandarabad",
+   "adm2_pcode": "PK233",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Duki",
+   "adm2_pcode": "PK234",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Chaman",
+   "adm2_pcode": "PK235",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm2_name": "Astore",
+   "adm2_pcode": "PK301",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Diamir",
+   "adm2_pcode": "PK302",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Ghanche",
+   "adm2_pcode": "PK303",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Ghizer",
+   "adm2_pcode": "PK304",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Gilgit",
+   "adm2_pcode": "PK305",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Hunza",
+   "adm2_pcode": "PK306",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Skardu",
+   "adm2_pcode": "PK307",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Nagar",
+   "adm2_pcode": "PK308",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Kharmang",
+   "adm2_pcode": "PK309",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Shigar",
+   "adm2_pcode": "PK310",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Darel",
+   "adm2_pcode": "PK311",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Tangir",
+   "adm2_pcode": "PK312",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Gupis-Yasin",
+   "adm2_pcode": "PK313",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Rondu",
+   "adm2_pcode": "PK314",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm2_name": "Islamabad",
+   "adm2_pcode": "PK401",
+   "adm1_pcode": "PK4"
+  },
+  {
+   "adm2_name": "Abbottabad",
+   "adm2_pcode": "PK501",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Bajaur",
+   "adm2_pcode": "PK502",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Bannu",
+   "adm2_pcode": "PK503",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Batagram",
+   "adm2_pcode": "PK504",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Buner",
+   "adm2_pcode": "PK505",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Charsadda",
+   "adm2_pcode": "PK506",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Chitral Lower",
+   "adm2_pcode": "PK507",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Chitral Upper",
+   "adm2_pcode": "PK508",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "D. I. Khan",
+   "adm2_pcode": "PK509",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Hangu",
+   "adm2_pcode": "PK510",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Haripur",
+   "adm2_pcode": "PK511",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Karak",
+   "adm2_pcode": "PK512",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Khyber",
+   "adm2_pcode": "PK513",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Kohat",
+   "adm2_pcode": "PK514",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Kohistan Lower",
+   "adm2_pcode": "PK515",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Kohistan Upper",
+   "adm2_pcode": "PK516",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Kolai Palas Kohistan",
+   "adm2_pcode": "PK517",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Kurram",
+   "adm2_pcode": "PK518",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Lakki Marwat",
+   "adm2_pcode": "PK519",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Lower Dir",
+   "adm2_pcode": "PK520",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Malakand",
+   "adm2_pcode": "PK521",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Mansehra",
+   "adm2_pcode": "PK522",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Mardan",
+   "adm2_pcode": "PK523",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Mohmand",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "North Waziristan",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Nowshera",
+   "adm2_pcode": "PK526",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Orakzai",
+   "adm2_pcode": "PK527",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Peshawar",
+   "adm2_pcode": "PK528",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Shangla",
+   "adm2_pcode": "PK529",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "South Waziristan",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Swabi",
+   "adm2_pcode": "PK531",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Swat",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Tank",
+   "adm2_pcode": "PK533",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Tor Ghar",
+   "adm2_pcode": "PK534",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Upper Dir",
+   "adm2_pcode": "PK535",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm2_name": "Attock",
+   "adm2_pcode": "PK601",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Bahawalnagar",
+   "adm2_pcode": "PK602",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Bahawalpur",
+   "adm2_pcode": "PK603",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Bhakkar",
+   "adm2_pcode": "PK604",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Chakwal",
+   "adm2_pcode": "PK605",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Chiniot",
+   "adm2_pcode": "PK606",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Dera Ghazi Khan",
+   "adm2_pcode": "PK607",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Faisalabad",
+   "adm2_pcode": "PK608",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Gujranwala",
+   "adm2_pcode": "PK609",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Gujrat",
+   "adm2_pcode": "PK610",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Hafizabad",
+   "adm2_pcode": "PK611",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Jhang",
+   "adm2_pcode": "PK612",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Jhelum",
+   "adm2_pcode": "PK613",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Kasur",
+   "adm2_pcode": "PK614",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Khanewal",
+   "adm2_pcode": "PK615",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Khushab",
+   "adm2_pcode": "PK616",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Lahore",
+   "adm2_pcode": "PK617",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Leiah",
+   "adm2_pcode": "PK618",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Lodhran",
+   "adm2_pcode": "PK619",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Mandi Bahauddin",
+   "adm2_pcode": "PK620",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Mianwali",
+   "adm2_pcode": "PK621",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Multan",
+   "adm2_pcode": "PK622",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Muzaffargarh",
+   "adm2_pcode": "PK623",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Nankana Sahib",
+   "adm2_pcode": "PK624",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Narowal",
+   "adm2_pcode": "PK625",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Okara",
+   "adm2_pcode": "PK626",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Pakpattan",
+   "adm2_pcode": "PK627",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Rahim Yar Khan",
+   "adm2_pcode": "PK628",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Rajanpur",
+   "adm2_pcode": "PK629",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Rawalpindi",
+   "adm2_pcode": "PK630",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Sahiwal",
+   "adm2_pcode": "PK631",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Sargodha",
+   "adm2_pcode": "PK632",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Sheikhupura",
+   "adm2_pcode": "PK633",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Sialkot",
+   "adm2_pcode": "PK634",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Toba Tek Singh",
+   "adm2_pcode": "PK635",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Vehari",
+   "adm2_pcode": "PK636",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm2_name": "Badin",
+   "adm2_pcode": "PK701",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Central Karachi",
+   "adm2_pcode": "PK702",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Dadu",
+   "adm2_pcode": "PK703",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "East Karachi",
+   "adm2_pcode": "PK704",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Ghotki",
+   "adm2_pcode": "PK705",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Hyderabad",
+   "adm2_pcode": "PK706",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Jacobabad",
+   "adm2_pcode": "PK707",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Jamshoro",
+   "adm2_pcode": "PK708",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Kambar Shahdad Kot",
+   "adm2_pcode": "PK709",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Kashmore",
+   "adm2_pcode": "PK710",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Khairpur",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Korangi Karachi",
+   "adm2_pcode": "PK712",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Larkana",
+   "adm2_pcode": "PK713",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Malir Karachi",
+   "adm2_pcode": "PK714",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Matiari",
+   "adm2_pcode": "PK715",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Mirpur Khas",
+   "adm2_pcode": "PK716",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Naushahro Feroze",
+   "adm2_pcode": "PK717",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Sanghar",
+   "adm2_pcode": "PK718",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Shaheed Benazir Abad",
+   "adm2_pcode": "PK719",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Shikarpur",
+   "adm2_pcode": "PK720",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "South Karachi",
+   "adm2_pcode": "PK721",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Sujawal",
+   "adm2_pcode": "PK722",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Sukkur",
+   "adm2_pcode": "PK723",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Tando Allahyar",
+   "adm2_pcode": "PK724",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Tando Muhammad Khan",
+   "adm2_pcode": "PK725",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Tharparkar",
+   "adm2_pcode": "PK726",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Thatta",
+   "adm2_pcode": "PK727",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "Umer Kot",
+   "adm2_pcode": "PK728",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm2_name": "West Karachi",
+   "adm2_pcode": "PK729",
+   "adm1_pcode": "PK7"
+  }
+ ],
+ "tehsils": [
+  {
+   "adm3_name": "Bagh",
+   "adm3_pcode": "PK10101",
+   "adm2_pcode": "PK101",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Dhir Kot",
+   "adm3_pcode": "PK10102",
+   "adm2_pcode": "PK101",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Harighel",
+   "adm3_pcode": "PK10103",
+   "adm2_pcode": "PK101",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Barnala",
+   "adm3_pcode": "PK10201",
+   "adm2_pcode": "PK102",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Bhimber",
+   "adm3_pcode": "PK10202",
+   "adm2_pcode": "PK102",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Samahni",
+   "adm3_pcode": "PK10203",
+   "adm2_pcode": "PK102",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Chikar",
+   "adm3_pcode": "PK10301",
+   "adm2_pcode": "PK103",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Hattian",
+   "adm3_pcode": "PK10302",
+   "adm2_pcode": "PK103",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Leepa",
+   "adm3_pcode": "PK10303",
+   "adm2_pcode": "PK103",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Haveli",
+   "adm3_pcode": "PK10401",
+   "adm2_pcode": "PK104",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Khurshid Abad",
+   "adm3_pcode": "PK10402",
+   "adm2_pcode": "PK104",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Mumtazabad",
+   "adm3_pcode": "PK10403",
+   "adm2_pcode": "PK104",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Charhoi",
+   "adm3_pcode": "PK10501",
+   "adm2_pcode": "PK105",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Dulliya Jattan",
+   "adm3_pcode": "PK10502",
+   "adm2_pcode": "PK105",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Fatehpur Thakiala",
+   "adm3_pcode": "PK10503",
+   "adm2_pcode": "PK105",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Khui Ratta",
+   "adm3_pcode": "PK10504",
+   "adm2_pcode": "PK105",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Kotli",
+   "adm3_pcode": "PK10505",
+   "adm2_pcode": "PK105",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Sehnsa",
+   "adm3_pcode": "PK10506",
+   "adm2_pcode": "PK105",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Dadyal",
+   "adm3_pcode": "PK10601",
+   "adm2_pcode": "PK106",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Mirpur",
+   "adm3_pcode": "PK10602",
+   "adm2_pcode": "PK106",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Muzaffarabad",
+   "adm3_pcode": "PK10701",
+   "adm2_pcode": "PK107",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Naseerabad",
+   "adm3_pcode": "PK10702",
+   "adm2_pcode": "PK107",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Athmuqam",
+   "adm3_pcode": "PK10801",
+   "adm2_pcode": "PK108",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Sharda",
+   "adm3_pcode": "PK10802",
+   "adm2_pcode": "PK108",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Abbaspur",
+   "adm3_pcode": "PK10901",
+   "adm2_pcode": "PK109",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Hajira",
+   "adm3_pcode": "PK10902",
+   "adm2_pcode": "PK109",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Rawalakot",
+   "adm3_pcode": "PK10903",
+   "adm2_pcode": "PK109",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Thorar",
+   "adm3_pcode": "PK10904",
+   "adm2_pcode": "PK109",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Baluch",
+   "adm3_pcode": "PK11001",
+   "adm2_pcode": "PK110",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Mong",
+   "adm3_pcode": "PK11002",
+   "adm2_pcode": "PK110",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Pallandari",
+   "adm3_pcode": "PK11003",
+   "adm2_pcode": "PK110",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Tarar Khal",
+   "adm3_pcode": "PK11004",
+   "adm2_pcode": "PK110",
+   "adm1_pcode": "PK1"
+  },
+  {
+   "adm3_name": "Awaran",
+   "adm3_pcode": "PK20101",
+   "adm2_pcode": "PK201",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Jhal Jhao",
+   "adm3_pcode": "PK20102",
+   "adm2_pcode": "PK201",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Mashkai",
+   "adm3_pcode": "PK20103",
+   "adm2_pcode": "PK201",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Gishekore",
+   "adm3_pcode": "PK20104",
+   "adm2_pcode": "PK201",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Barkhan",
+   "adm3_pcode": "PK20201",
+   "adm2_pcode": "PK202",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Rakhni",
+   "adm3_pcode": "PK20202",
+   "adm2_pcode": "PK202",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Dalbandin",
+   "adm3_pcode": "PK20301",
+   "adm2_pcode": "PK203",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Nokkundi",
+   "adm3_pcode": "PK20302",
+   "adm2_pcode": "PK203",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Taftan",
+   "adm3_pcode": "PK20303",
+   "adm2_pcode": "PK203",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Chagai",
+   "adm3_pcode": "PK20304",
+   "adm2_pcode": "PK203",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Dera Bugti",
+   "adm3_pcode": "PK20401",
+   "adm2_pcode": "PK204",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Phelawagh",
+   "adm3_pcode": "PK20402",
+   "adm2_pcode": "PK204",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sui",
+   "adm3_pcode": "PK20403",
+   "adm2_pcode": "PK204",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Gwadar",
+   "adm3_pcode": "PK20501",
+   "adm2_pcode": "PK205",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Jiwani",
+   "adm3_pcode": "PK20502",
+   "adm2_pcode": "PK205",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Ormara",
+   "adm3_pcode": "PK20503",
+   "adm2_pcode": "PK205",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Pasni",
+   "adm3_pcode": "PK20504",
+   "adm2_pcode": "PK205",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sunster",
+   "adm3_pcode": "PK20505",
+   "adm2_pcode": "PK205",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Harnai",
+   "adm3_pcode": "PK20601",
+   "adm2_pcode": "PK206",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Shahrigh",
+   "adm3_pcode": "PK20602",
+   "adm2_pcode": "PK206",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Gandakha",
+   "adm3_pcode": "PK20701",
+   "adm2_pcode": "PK207",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Jhat Pat",
+   "adm3_pcode": "PK20702",
+   "adm2_pcode": "PK207",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Usta Mohammad",
+   "adm3_pcode": "PK20703",
+   "adm2_pcode": "PK207",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Gandawa",
+   "adm3_pcode": "PK20801",
+   "adm2_pcode": "PK208",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Jhal Magsi",
+   "adm3_pcode": "PK20802",
+   "adm2_pcode": "PK208",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Dhadar",
+   "adm3_pcode": "PK20901",
+   "adm2_pcode": "PK209",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Mach",
+   "adm3_pcode": "PK20902",
+   "adm2_pcode": "PK209",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sanni",
+   "adm3_pcode": "PK20903",
+   "adm2_pcode": "PK209",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Balanari",
+   "adm3_pcode": "PK20904",
+   "adm2_pcode": "PK209",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Khattan",
+   "adm3_pcode": "PK20905",
+   "adm2_pcode": "PK209",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kalat",
+   "adm3_pcode": "PK21001",
+   "adm2_pcode": "PK210",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Khaliqabad",
+   "adm3_pcode": "PK21002",
+   "adm2_pcode": "PK210",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Buleda",
+   "adm3_pcode": "PK21101",
+   "adm2_pcode": "PK211",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Dasht",
+   "adm3_pcode": "PK21102",
+   "adm2_pcode": "PK211",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kech (Turbat)",
+   "adm3_pcode": "PK21103",
+   "adm2_pcode": "PK211",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Mand",
+   "adm3_pcode": "PK21104",
+   "adm2_pcode": "PK211",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Tump",
+   "adm3_pcode": "PK21105",
+   "adm2_pcode": "PK211",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kharan",
+   "adm3_pcode": "PK21201",
+   "adm2_pcode": "PK212",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sar Kharan",
+   "adm3_pcode": "PK21202",
+   "adm2_pcode": "PK212",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Tomulk",
+   "adm3_pcode": "PK21203",
+   "adm2_pcode": "PK212",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Khuzdar",
+   "adm3_pcode": "PK21301",
+   "adm2_pcode": "PK213",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Mola",
+   "adm3_pcode": "PK21302",
+   "adm2_pcode": "PK213",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Naal",
+   "adm3_pcode": "PK21303",
+   "adm2_pcode": "PK213",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Wadh",
+   "adm3_pcode": "PK21304",
+   "adm2_pcode": "PK213",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Zehri",
+   "adm3_pcode": "PK21305",
+   "adm2_pcode": "PK213",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Dobandi",
+   "adm3_pcode": "PK21402",
+   "adm2_pcode": "PK214",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Gulistan",
+   "adm3_pcode": "PK21403",
+   "adm2_pcode": "PK214",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Killa Abdullah",
+   "adm3_pcode": "PK21404",
+   "adm2_pcode": "PK214",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Killa Saifullah",
+   "adm3_pcode": "PK21501",
+   "adm2_pcode": "PK215",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Muslim Bagh",
+   "adm3_pcode": "PK21502",
+   "adm2_pcode": "PK215",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kahan",
+   "adm3_pcode": "PK21601",
+   "adm2_pcode": "PK216",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kohlu",
+   "adm3_pcode": "PK21602",
+   "adm2_pcode": "PK216",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Mawand",
+   "adm3_pcode": "PK21603",
+   "adm2_pcode": "PK216",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Bela",
+   "adm3_pcode": "PK21701",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Dureji",
+   "adm3_pcode": "PK21702",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Gaddani",
+   "adm3_pcode": "PK21703",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Hub",
+   "adm3_pcode": "PK21704",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kanraj",
+   "adm3_pcode": "PK21705",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sonmiani",
+   "adm3_pcode": "PK21706",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Uthal",
+   "adm3_pcode": "PK21707",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Lakhra",
+   "adm3_pcode": "PK21708",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Lairi",
+   "adm3_pcode": "PK21709",
+   "adm2_pcode": "PK217",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Bhag",
+   "adm3_pcode": "PK21801",
+   "adm2_pcode": "PK218",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Lehri",
+   "adm3_pcode": "PK21802",
+   "adm2_pcode": "PK218",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Loralai",
+   "adm3_pcode": "PK21901",
+   "adm2_pcode": "PK219",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Mekhtar",
+   "adm3_pcode": "PK21902",
+   "adm2_pcode": "PK219",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Dasht Spenzend",
+   "adm3_pcode": "PK22001",
+   "adm2_pcode": "PK220",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kirdgap",
+   "adm3_pcode": "PK22002",
+   "adm2_pcode": "PK220",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Mastung",
+   "adm3_pcode": "PK22003",
+   "adm2_pcode": "PK220",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Drug",
+   "adm3_pcode": "PK22101",
+   "adm2_pcode": "PK221",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kingri",
+   "adm3_pcode": "PK22102",
+   "adm2_pcode": "PK221",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Musakhel",
+   "adm3_pcode": "PK22103",
+   "adm2_pcode": "PK221",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Chattar",
+   "adm3_pcode": "PK22201",
+   "adm2_pcode": "PK222",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Dera Murad Jamali",
+   "adm3_pcode": "PK22202",
+   "adm2_pcode": "PK222",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Tamboo",
+   "adm3_pcode": "PK22203",
+   "adm2_pcode": "PK222",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Nushki",
+   "adm3_pcode": "PK22301",
+   "adm2_pcode": "PK223",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Gowargo",
+   "adm3_pcode": "PK22401",
+   "adm2_pcode": "PK224",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Jaheen Parome",
+   "adm3_pcode": "PK22402",
+   "adm2_pcode": "PK224",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Panjgur",
+   "adm3_pcode": "PK22403",
+   "adm2_pcode": "PK224",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Gichk",
+   "adm3_pcode": "PK22404",
+   "adm2_pcode": "PK224",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Barshore",
+   "adm3_pcode": "PK22501",
+   "adm2_pcode": "PK225",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Huramzai",
+   "adm3_pcode": "PK22502",
+   "adm2_pcode": "PK225",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Karezat",
+   "adm3_pcode": "PK22503",
+   "adm2_pcode": "PK225",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Pishin",
+   "adm3_pcode": "PK22504",
+   "adm2_pcode": "PK225",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Saranan",
+   "adm3_pcode": "PK22505",
+   "adm2_pcode": "PK225",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Panjpai",
+   "adm3_pcode": "PK22601",
+   "adm2_pcode": "PK226",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Quetta City",
+   "adm3_pcode": "PK22602",
+   "adm2_pcode": "PK226",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Quetta Saddar",
+   "adm3_pcode": "PK22603",
+   "adm2_pcode": "PK226",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sherani",
+   "adm3_pcode": "PK22701",
+   "adm2_pcode": "PK227",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sibi",
+   "adm3_pcode": "PK22801",
+   "adm2_pcode": "PK228",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sohbatpur",
+   "adm3_pcode": "PK22901",
+   "adm2_pcode": "PK229",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Mashkhel",
+   "adm3_pcode": "PK23001",
+   "adm2_pcode": "PK230",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Basima",
+   "adm3_pcode": "PK23002",
+   "adm2_pcode": "PK230",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Washuk",
+   "adm3_pcode": "PK23003",
+   "adm2_pcode": "PK230",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Nag",
+   "adm3_pcode": "PK23004",
+   "adm2_pcode": "PK230",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Shaogari",
+   "adm3_pcode": "PK23005",
+   "adm2_pcode": "PK230",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Kakar Khurasan",
+   "adm3_pcode": "PK23101",
+   "adm2_pcode": "PK231",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Zhob",
+   "adm3_pcode": "PK23102",
+   "adm2_pcode": "PK231",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Sinjawi",
+   "adm3_pcode": "PK23201",
+   "adm2_pcode": "PK232",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Ziarat",
+   "adm3_pcode": "PK23202",
+   "adm2_pcode": "PK232",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Surab",
+   "adm3_pcode": "PK23301",
+   "adm2_pcode": "PK233",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Duki",
+   "adm3_pcode": "PK23401",
+   "adm2_pcode": "PK234",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Chaman",
+   "adm3_pcode": "PK23501",
+   "adm2_pcode": "PK235",
+   "adm1_pcode": "PK2"
+  },
+  {
+   "adm3_name": "Astore",
+   "adm3_pcode": "PK30101",
+   "adm2_pcode": "PK301",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Shounter",
+   "adm3_pcode": "PK30102",
+   "adm2_pcode": "PK301",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Chilas",
+   "adm3_pcode": "PK30201",
+   "adm2_pcode": "PK302",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Daghoni",
+   "adm3_pcode": "PK30301",
+   "adm2_pcode": "PK303",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Khaplu",
+   "adm3_pcode": "PK30302",
+   "adm2_pcode": "PK303",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Mashabbrum",
+   "adm3_pcode": "PK30303",
+   "adm2_pcode": "PK303",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Ishkoman",
+   "adm3_pcode": "PK30401",
+   "adm2_pcode": "PK304",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Punial",
+   "adm3_pcode": "PK30402",
+   "adm2_pcode": "PK304",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Gilgit",
+   "adm3_pcode": "PK30501",
+   "adm2_pcode": "PK305",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Ali Abad",
+   "adm3_pcode": "PK30601",
+   "adm2_pcode": "PK306",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Gojal",
+   "adm3_pcode": "PK30602",
+   "adm2_pcode": "PK306",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Gamba",
+   "adm3_pcode": "PK30701",
+   "adm2_pcode": "PK307",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Skardu",
+   "adm3_pcode": "PK30702",
+   "adm2_pcode": "PK307",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Nagar",
+   "adm3_pcode": "PK30801",
+   "adm2_pcode": "PK308",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Sikandar Abad",
+   "adm3_pcode": "PK30802",
+   "adm2_pcode": "PK308",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Gultari",
+   "adm3_pcode": "PK30901",
+   "adm2_pcode": "PK309",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Kharmang",
+   "adm3_pcode": "PK30902",
+   "adm2_pcode": "PK309",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Shigar",
+   "adm3_pcode": "PK31001",
+   "adm2_pcode": "PK310",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Darel",
+   "adm3_pcode": "PK31101",
+   "adm2_pcode": "PK311",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Tangir",
+   "adm3_pcode": "PK31201",
+   "adm2_pcode": "PK312",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Gupis",
+   "adm3_pcode": "PK31301",
+   "adm2_pcode": "PK313",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Phandar",
+   "adm3_pcode": "PK31302",
+   "adm2_pcode": "PK313",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Yasin",
+   "adm3_pcode": "PK31303",
+   "adm2_pcode": "PK313",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Rondu",
+   "adm3_pcode": "PK31401",
+   "adm2_pcode": "PK314",
+   "adm1_pcode": "PK3"
+  },
+  {
+   "adm3_name": "Islamabad",
+   "adm3_pcode": "PK40101",
+   "adm2_pcode": "PK401",
+   "adm1_pcode": "PK4"
+  },
+  {
+   "adm3_name": "Abbottabad",
+   "adm3_pcode": "PK50101",
+   "adm2_pcode": "PK501",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Havelian",
+   "adm3_pcode": "PK50102",
+   "adm2_pcode": "PK501",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lora",
+   "adm3_pcode": "PK50103",
+   "adm2_pcode": "PK501",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lower Tanawal",
+   "adm3_pcode": "PK50104",
+   "adm2_pcode": "PK501",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bar Chamarkand",
+   "adm3_pcode": "PK50201",
+   "adm2_pcode": "PK502",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Barang",
+   "adm3_pcode": "PK50202",
+   "adm2_pcode": "PK502",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Khar",
+   "adm3_pcode": "PK50203",
+   "adm2_pcode": "PK502",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Mamund",
+   "adm3_pcode": "PK50204",
+   "adm2_pcode": "PK502",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Nawagai",
+   "adm3_pcode": "PK50205",
+   "adm2_pcode": "PK502",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Salarzai",
+   "adm3_pcode": "PK50206",
+   "adm2_pcode": "PK502",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Utman Khel",
+   "adm3_pcode": "PK50207",
+   "adm2_pcode": "PK502",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bannu",
+   "adm3_pcode": "PK50301",
+   "adm2_pcode": "PK503",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Baka Khel",
+   "adm3_pcode": "PK50302",
+   "adm2_pcode": "PK503",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Domel",
+   "adm3_pcode": "PK50303",
+   "adm2_pcode": "PK503",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Kakki",
+   "adm3_pcode": "PK50304",
+   "adm2_pcode": "PK503",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Miryan",
+   "adm3_pcode": "PK50305",
+   "adm2_pcode": "PK503",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Wazir",
+   "adm3_pcode": "PK50306",
+   "adm2_pcode": "PK503",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Allai",
+   "adm3_pcode": "PK50401",
+   "adm2_pcode": "PK504",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Batagram",
+   "adm3_pcode": "PK50402",
+   "adm2_pcode": "PK504",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Daggar",
+   "adm3_pcode": "PK50501",
+   "adm2_pcode": "PK505",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Gagra",
+   "adm3_pcode": "PK50502",
+   "adm2_pcode": "PK505",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Khado Khel",
+   "adm3_pcode": "PK50503",
+   "adm2_pcode": "PK505",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Mandanr",
+   "adm3_pcode": "PK50504",
+   "adm2_pcode": "PK505",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Charsadda",
+   "adm3_pcode": "PK50601",
+   "adm2_pcode": "PK506",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Shabqadar",
+   "adm3_pcode": "PK50602",
+   "adm2_pcode": "PK506",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Tangi",
+   "adm3_pcode": "PK50603",
+   "adm2_pcode": "PK506",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Chitral",
+   "adm3_pcode": "PK50701",
+   "adm2_pcode": "PK507",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Drosh",
+   "adm3_pcode": "PK50702",
+   "adm2_pcode": "PK507",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lotkoh",
+   "adm3_pcode": "PK50703",
+   "adm2_pcode": "PK507",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Mastuj",
+   "adm3_pcode": "PK50801",
+   "adm2_pcode": "PK508",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Mulkhow",
+   "adm3_pcode": "PK50802",
+   "adm2_pcode": "PK508",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "D. I. Khan",
+   "adm3_pcode": "PK50901",
+   "adm2_pcode": "PK509",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Daraban",
+   "adm3_pcode": "PK50902",
+   "adm2_pcode": "PK509",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Kulachi",
+   "adm3_pcode": "PK50903",
+   "adm2_pcode": "PK509",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Paharpur",
+   "adm3_pcode": "PK50904",
+   "adm2_pcode": "PK509",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Paroa",
+   "adm3_pcode": "PK50905",
+   "adm2_pcode": "PK509",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Darazinda",
+   "adm3_pcode": "PK50906",
+   "adm2_pcode": "PK509",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Hangu",
+   "adm3_pcode": "PK51001",
+   "adm2_pcode": "PK510",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Tall",
+   "adm3_pcode": "PK51002",
+   "adm2_pcode": "PK510",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Ghazi",
+   "adm3_pcode": "PK51101",
+   "adm2_pcode": "PK511",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Haripur",
+   "adm3_pcode": "PK51102",
+   "adm2_pcode": "PK511",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Khanpur",
+   "adm3_pcode": "PK51103",
+   "adm2_pcode": "PK511",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Banda Daud Shah",
+   "adm3_pcode": "PK51201",
+   "adm2_pcode": "PK512",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Karak",
+   "adm3_pcode": "PK51202",
+   "adm2_pcode": "PK512",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Takht-E-Nasrati",
+   "adm3_pcode": "PK51203",
+   "adm2_pcode": "PK512",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bara",
+   "adm3_pcode": "PK51301",
+   "adm2_pcode": "PK513",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Jamrud",
+   "adm3_pcode": "PK51302",
+   "adm2_pcode": "PK513",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Landi Kotal",
+   "adm3_pcode": "PK51303",
+   "adm2_pcode": "PK513",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Mulagori",
+   "adm3_pcode": "PK51304",
+   "adm2_pcode": "PK513",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Kohat",
+   "adm3_pcode": "PK51401",
+   "adm2_pcode": "PK514",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lachi",
+   "adm3_pcode": "PK51402",
+   "adm2_pcode": "PK514",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Gumbat",
+   "adm3_pcode": "PK51403",
+   "adm2_pcode": "PK514",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Darra Adam Khel",
+   "adm3_pcode": "PK51404",
+   "adm2_pcode": "PK514",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Pattan",
+   "adm3_pcode": "PK51501",
+   "adm2_pcode": "PK515",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bankad",
+   "adm3_pcode": "PK51502",
+   "adm2_pcode": "PK515",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Dassu",
+   "adm3_pcode": "PK51601",
+   "adm2_pcode": "PK516",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Kandia",
+   "adm3_pcode": "PK51602",
+   "adm2_pcode": "PK516",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Harban Basha",
+   "adm3_pcode": "PK51603",
+   "adm2_pcode": "PK516",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Seo",
+   "adm3_pcode": "PK51604",
+   "adm2_pcode": "PK516",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Palas",
+   "adm3_pcode": "PK51701",
+   "adm2_pcode": "PK517",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Battera Kolai",
+   "adm3_pcode": "PK51702",
+   "adm2_pcode": "PK517",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Central Kurram",
+   "adm3_pcode": "PK51801",
+   "adm2_pcode": "PK518",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lower Kurram",
+   "adm3_pcode": "PK51802",
+   "adm2_pcode": "PK518",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Upper Kurram",
+   "adm3_pcode": "PK51803",
+   "adm2_pcode": "PK518",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lakki Marwat",
+   "adm3_pcode": "PK51901",
+   "adm2_pcode": "PK519",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Sarai Naurang",
+   "adm3_pcode": "PK51902",
+   "adm2_pcode": "PK519",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bettani",
+   "adm3_pcode": "PK51903",
+   "adm2_pcode": "PK519",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Adenzai",
+   "adm3_pcode": "PK52001",
+   "adm2_pcode": "PK520",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Balambat",
+   "adm3_pcode": "PK52002",
+   "adm2_pcode": "PK520",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lalqila",
+   "adm3_pcode": "PK52003",
+   "adm2_pcode": "PK520",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Munda",
+   "adm3_pcode": "PK52004",
+   "adm2_pcode": "PK520",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Samarbagh",
+   "adm3_pcode": "PK52005",
+   "adm2_pcode": "PK520",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Timergara",
+   "adm3_pcode": "PK52006",
+   "adm2_pcode": "PK520",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bat Khela",
+   "adm3_pcode": "PK52101",
+   "adm2_pcode": "PK521",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Dargai",
+   "adm3_pcode": "PK52102",
+   "adm2_pcode": "PK521",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bala Kot",
+   "adm3_pcode": "PK52201",
+   "adm2_pcode": "PK522",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Mansehra",
+   "adm3_pcode": "PK52202",
+   "adm2_pcode": "PK522",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Oghi",
+   "adm3_pcode": "PK52203",
+   "adm2_pcode": "PK522",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Baffa Pakhal",
+   "adm3_pcode": "PK52204",
+   "adm2_pcode": "PK522",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Darband",
+   "adm3_pcode": "PK52205",
+   "adm2_pcode": "PK522",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Katlang",
+   "adm3_pcode": "PK52301",
+   "adm2_pcode": "PK523",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Mardan",
+   "adm3_pcode": "PK52302",
+   "adm2_pcode": "PK523",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Takht Bhai",
+   "adm3_pcode": "PK52303",
+   "adm2_pcode": "PK523",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Rustam",
+   "adm3_pcode": "PK52304",
+   "adm2_pcode": "PK523",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Garhi Kapura",
+   "adm3_pcode": "PK52305",
+   "adm2_pcode": "PK523",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Ambar",
+   "adm3_pcode": "PK52401",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Baizai",
+   "adm3_pcode": "PK52402",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Halimzai",
+   "adm3_pcode": "PK52403",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Khwazai",
+   "adm3_pcode": "PK52404",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Pandiali",
+   "adm3_pcode": "PK52405",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Prang Ghar",
+   "adm3_pcode": "PK52406",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Safi",
+   "adm3_pcode": "PK52407",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Yaka Ghund",
+   "adm3_pcode": "PK52408",
+   "adm2_pcode": "PK524",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Data Khel",
+   "adm3_pcode": "PK52501",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Dossali",
+   "adm3_pcode": "PK52502",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Garyum",
+   "adm3_pcode": "PK52503",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Ghulam Khan",
+   "adm3_pcode": "PK52504",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Mir Ali",
+   "adm3_pcode": "PK52505",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Miran Shah",
+   "adm3_pcode": "PK52506",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Razmak",
+   "adm3_pcode": "PK52507",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Shewa",
+   "adm3_pcode": "PK52508",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Spinwam",
+   "adm3_pcode": "PK52509",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Shawal",
+   "adm3_pcode": "PK52510",
+   "adm2_pcode": "PK525",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Nowshera",
+   "adm3_pcode": "PK52601",
+   "adm2_pcode": "PK526",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Pabbi",
+   "adm3_pcode": "PK52602",
+   "adm2_pcode": "PK526",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Jehangira",
+   "adm3_pcode": "PK52603",
+   "adm2_pcode": "PK526",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Central Orakzai",
+   "adm3_pcode": "PK52701",
+   "adm2_pcode": "PK527",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Ismailzai",
+   "adm3_pcode": "PK52702",
+   "adm2_pcode": "PK527",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lower Orakzai",
+   "adm3_pcode": "PK52703",
+   "adm2_pcode": "PK527",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Upper Orakzai",
+   "adm3_pcode": "PK52704",
+   "adm2_pcode": "PK527",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Town-I",
+   "adm3_pcode": "PK52801",
+   "adm2_pcode": "PK528",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Town-Ii",
+   "adm3_pcode": "PK52802",
+   "adm2_pcode": "PK528",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Town-Iii",
+   "adm3_pcode": "PK52803",
+   "adm2_pcode": "PK528",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Town-Iv",
+   "adm3_pcode": "PK52804",
+   "adm2_pcode": "PK528",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Hassan Khel",
+   "adm3_pcode": "PK52805",
+   "adm2_pcode": "PK528",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Alpuri",
+   "adm3_pcode": "PK52901",
+   "adm2_pcode": "PK529",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bisham",
+   "adm3_pcode": "PK52902",
+   "adm2_pcode": "PK529",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Chakisar",
+   "adm3_pcode": "PK52903",
+   "adm2_pcode": "PK529",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Makhuzai",
+   "adm3_pcode": "PK52904",
+   "adm2_pcode": "PK529",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Martoong",
+   "adm3_pcode": "PK52905",
+   "adm2_pcode": "PK529",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Puran",
+   "adm3_pcode": "PK52906",
+   "adm2_pcode": "PK529",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Birmal",
+   "adm3_pcode": "PK53001",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Ladha",
+   "adm3_pcode": "PK53002",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Makin",
+   "adm3_pcode": "PK53003",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Sararogha",
+   "adm3_pcode": "PK53004",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Serwakai",
+   "adm3_pcode": "PK53005",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Tiarza",
+   "adm3_pcode": "PK53006",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Toi Khulla",
+   "adm3_pcode": "PK53007",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Wana",
+   "adm3_pcode": "PK53008",
+   "adm2_pcode": "PK530",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Lahor",
+   "adm3_pcode": "PK53101",
+   "adm2_pcode": "PK531",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Swabi",
+   "adm3_pcode": "PK53102",
+   "adm2_pcode": "PK531",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Topi",
+   "adm3_pcode": "PK53103",
+   "adm2_pcode": "PK531",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Razar",
+   "adm3_pcode": "PK53104",
+   "adm2_pcode": "PK531",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Babuzai",
+   "adm3_pcode": "PK53201",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Bahrain",
+   "adm3_pcode": "PK53202",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Barikot",
+   "adm3_pcode": "PK53203",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Charbagh",
+   "adm3_pcode": "PK53204",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Kabal",
+   "adm3_pcode": "PK53205",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Kalam",
+   "adm3_pcode": "PK53206",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Khwaza Khela",
+   "adm3_pcode": "PK53207",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Matta Kharirai",
+   "adm3_pcode": "PK53208",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Matta Sebujni",
+   "adm3_pcode": "PK53209",
+   "adm2_pcode": "PK532",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Tank",
+   "adm3_pcode": "PK53301",
+   "adm2_pcode": "PK533",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Jandola",
+   "adm3_pcode": "PK53302",
+   "adm2_pcode": "PK533",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Judba",
+   "adm3_pcode": "PK53401",
+   "adm2_pcode": "PK534",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Khander",
+   "adm3_pcode": "PK53402",
+   "adm2_pcode": "PK534",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Barawal",
+   "adm3_pcode": "PK53501",
+   "adm2_pcode": "PK535",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Dir",
+   "adm3_pcode": "PK53502",
+   "adm2_pcode": "PK535",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Kalkot",
+   "adm3_pcode": "PK53503",
+   "adm2_pcode": "PK535",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Khall",
+   "adm3_pcode": "PK53504",
+   "adm2_pcode": "PK535",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Shrengal",
+   "adm3_pcode": "PK53505",
+   "adm2_pcode": "PK535",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Wari",
+   "adm3_pcode": "PK53506",
+   "adm2_pcode": "PK535",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Larjam",
+   "adm3_pcode": "PK53507",
+   "adm2_pcode": "PK535",
+   "adm1_pcode": "PK5"
+  },
+  {
+   "adm3_name": "Attock",
+   "adm3_pcode": "PK60101",
+   "adm2_pcode": "PK601",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Fateh Jang",
+   "adm3_pcode": "PK60102",
+   "adm2_pcode": "PK601",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Hasan Abdal",
+   "adm3_pcode": "PK60103",
+   "adm2_pcode": "PK601",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Hazro",
+   "adm3_pcode": "PK60104",
+   "adm2_pcode": "PK601",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Jand",
+   "adm3_pcode": "PK60105",
+   "adm2_pcode": "PK601",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Pindi Gheb",
+   "adm3_pcode": "PK60106",
+   "adm2_pcode": "PK601",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Bahawalnagar",
+   "adm3_pcode": "PK60201",
+   "adm2_pcode": "PK602",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Chishtian",
+   "adm3_pcode": "PK60202",
+   "adm2_pcode": "PK602",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Fort Abbas",
+   "adm3_pcode": "PK60203",
+   "adm2_pcode": "PK602",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Haroonabad",
+   "adm3_pcode": "PK60204",
+   "adm2_pcode": "PK602",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Minchinabad",
+   "adm3_pcode": "PK60205",
+   "adm2_pcode": "PK602",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Ahmadpur East",
+   "adm3_pcode": "PK60301",
+   "adm2_pcode": "PK603",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Bahawalpur",
+   "adm3_pcode": "PK60302",
+   "adm2_pcode": "PK603",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Hasilpur",
+   "adm3_pcode": "PK60303",
+   "adm2_pcode": "PK603",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Khairpur Tamewali",
+   "adm3_pcode": "PK60304",
+   "adm2_pcode": "PK603",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Yazman",
+   "adm3_pcode": "PK60305",
+   "adm2_pcode": "PK603",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Bhakkar",
+   "adm3_pcode": "PK60401",
+   "adm2_pcode": "PK604",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Darya Khan",
+   "adm3_pcode": "PK60402",
+   "adm2_pcode": "PK604",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kalur Kot",
+   "adm3_pcode": "PK60403",
+   "adm2_pcode": "PK604",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Mankera",
+   "adm3_pcode": "PK60404",
+   "adm2_pcode": "PK604",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Chakwal",
+   "adm3_pcode": "PK60501",
+   "adm2_pcode": "PK605",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Choa Saidan Shah",
+   "adm3_pcode": "PK60502",
+   "adm2_pcode": "PK605",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kallar Kahar",
+   "adm3_pcode": "PK60503",
+   "adm2_pcode": "PK605",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Tala Gang",
+   "adm3_pcode": "PK60504",
+   "adm2_pcode": "PK605",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Bhawana",
+   "adm3_pcode": "PK60601",
+   "adm2_pcode": "PK606",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Chiniot",
+   "adm3_pcode": "PK60602",
+   "adm2_pcode": "PK606",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Lalian",
+   "adm3_pcode": "PK60603",
+   "adm2_pcode": "PK606",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "D.G Khan (Tribal Area)",
+   "adm3_pcode": "PK60701",
+   "adm2_pcode": "PK607",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Dera Ghazi Khan",
+   "adm3_pcode": "PK60702",
+   "adm2_pcode": "PK607",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kot Chatta",
+   "adm3_pcode": "PK60703",
+   "adm2_pcode": "PK607",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Taunsa",
+   "adm3_pcode": "PK60704",
+   "adm2_pcode": "PK607",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Chak Jhumra",
+   "adm3_pcode": "PK60801",
+   "adm2_pcode": "PK608",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Faisalabad City",
+   "adm3_pcode": "PK60802",
+   "adm2_pcode": "PK608",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Faisalabad Sadar",
+   "adm3_pcode": "PK60803",
+   "adm2_pcode": "PK608",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Jaranwala",
+   "adm3_pcode": "PK60804",
+   "adm2_pcode": "PK608",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Summundri",
+   "adm3_pcode": "PK60805",
+   "adm2_pcode": "PK608",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Tandlian Wala",
+   "adm3_pcode": "PK60806",
+   "adm2_pcode": "PK608",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Gujranwala",
+   "adm3_pcode": "PK60901",
+   "adm2_pcode": "PK609",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kamoke",
+   "adm3_pcode": "PK60902",
+   "adm2_pcode": "PK609",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Nowshera Virkan",
+   "adm3_pcode": "PK60903",
+   "adm2_pcode": "PK609",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Wazirabad",
+   "adm3_pcode": "PK60904",
+   "adm2_pcode": "PK609",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Gujrat",
+   "adm3_pcode": "PK61001",
+   "adm2_pcode": "PK610",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kharian",
+   "adm3_pcode": "PK61002",
+   "adm2_pcode": "PK610",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sarai Alamgir",
+   "adm3_pcode": "PK61003",
+   "adm2_pcode": "PK610",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Hafizabad",
+   "adm3_pcode": "PK61101",
+   "adm2_pcode": "PK611",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Pindi Bhattian",
+   "adm3_pcode": "PK61102",
+   "adm2_pcode": "PK611",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Ahmadpur Sial",
+   "adm3_pcode": "PK61201",
+   "adm2_pcode": "PK612",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Jhang",
+   "adm3_pcode": "PK61202",
+   "adm2_pcode": "PK612",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Shorkot",
+   "adm3_pcode": "PK61203",
+   "adm2_pcode": "PK612",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Athara Hazari",
+   "adm3_pcode": "PK61204",
+   "adm2_pcode": "PK612",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Dina",
+   "adm3_pcode": "PK61301",
+   "adm2_pcode": "PK613",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Jhelum",
+   "adm3_pcode": "PK61302",
+   "adm2_pcode": "PK613",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Pind Dadan Khan",
+   "adm3_pcode": "PK61303",
+   "adm2_pcode": "PK613",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sohawa",
+   "adm3_pcode": "PK61304",
+   "adm2_pcode": "PK613",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Chunian",
+   "adm3_pcode": "PK61401",
+   "adm2_pcode": "PK614",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kasur",
+   "adm3_pcode": "PK61402",
+   "adm2_pcode": "PK614",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kot Radha Kishen",
+   "adm3_pcode": "PK61403",
+   "adm2_pcode": "PK614",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Pattoki",
+   "adm3_pcode": "PK61404",
+   "adm2_pcode": "PK614",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Jahanian",
+   "adm3_pcode": "PK61501",
+   "adm2_pcode": "PK615",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kabirwala",
+   "adm3_pcode": "PK61502",
+   "adm2_pcode": "PK615",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Khanewal",
+   "adm3_pcode": "PK61503",
+   "adm2_pcode": "PK615",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Mian Channu",
+   "adm3_pcode": "PK61504",
+   "adm2_pcode": "PK615",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Khushab",
+   "adm3_pcode": "PK61601",
+   "adm2_pcode": "PK616",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Naushera",
+   "adm3_pcode": "PK61602",
+   "adm2_pcode": "PK616",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Noorpur",
+   "adm3_pcode": "PK61603",
+   "adm2_pcode": "PK616",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Quaidabad",
+   "adm3_pcode": "PK61604",
+   "adm2_pcode": "PK616",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Lahore Cantt",
+   "adm3_pcode": "PK61701",
+   "adm2_pcode": "PK617",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Lahore City",
+   "adm3_pcode": "PK61702",
+   "adm2_pcode": "PK617",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Choubara",
+   "adm3_pcode": "PK61801",
+   "adm2_pcode": "PK618",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Karor Lal Esan",
+   "adm3_pcode": "PK61802",
+   "adm2_pcode": "PK618",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Leiah",
+   "adm3_pcode": "PK61803",
+   "adm2_pcode": "PK618",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Dunyapur",
+   "adm3_pcode": "PK61901",
+   "adm2_pcode": "PK619",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kahror Pacca",
+   "adm3_pcode": "PK61902",
+   "adm2_pcode": "PK619",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Lodhran",
+   "adm3_pcode": "PK61903",
+   "adm2_pcode": "PK619",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Malakwal",
+   "adm3_pcode": "PK62001",
+   "adm2_pcode": "PK620",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Mandi Bahauddin",
+   "adm3_pcode": "PK62002",
+   "adm2_pcode": "PK620",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Phalia",
+   "adm3_pcode": "PK62003",
+   "adm2_pcode": "PK620",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Isakhel",
+   "adm3_pcode": "PK62101",
+   "adm2_pcode": "PK621",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Mianwali",
+   "adm3_pcode": "PK62102",
+   "adm2_pcode": "PK621",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Piplan",
+   "adm3_pcode": "PK62103",
+   "adm2_pcode": "PK621",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Jalalpur Pirwala",
+   "adm3_pcode": "PK62201",
+   "adm2_pcode": "PK622",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Multan City",
+   "adm3_pcode": "PK62202",
+   "adm2_pcode": "PK622",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Multan Saddar",
+   "adm3_pcode": "PK62203",
+   "adm2_pcode": "PK622",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Shujabad",
+   "adm3_pcode": "PK62204",
+   "adm2_pcode": "PK622",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Alipur",
+   "adm3_pcode": "PK62301",
+   "adm2_pcode": "PK623",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Jatoi",
+   "adm3_pcode": "PK62302",
+   "adm2_pcode": "PK623",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kot Addu",
+   "adm3_pcode": "PK62303",
+   "adm2_pcode": "PK623",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Muzaffargarh",
+   "adm3_pcode": "PK62304",
+   "adm2_pcode": "PK623",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Nankana Sahib",
+   "adm3_pcode": "PK62401",
+   "adm2_pcode": "PK624",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sangla Hill",
+   "adm3_pcode": "PK62402",
+   "adm2_pcode": "PK624",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Shah Kot",
+   "adm3_pcode": "PK62403",
+   "adm2_pcode": "PK624",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Narowal",
+   "adm3_pcode": "PK62501",
+   "adm2_pcode": "PK625",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Shakargarh",
+   "adm3_pcode": "PK62502",
+   "adm2_pcode": "PK625",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Zafarwal",
+   "adm3_pcode": "PK62503",
+   "adm2_pcode": "PK625",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Depalpur",
+   "adm3_pcode": "PK62601",
+   "adm2_pcode": "PK626",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Okara",
+   "adm3_pcode": "PK62602",
+   "adm2_pcode": "PK626",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Renala Khurd",
+   "adm3_pcode": "PK62603",
+   "adm2_pcode": "PK626",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Arif Wala",
+   "adm3_pcode": "PK62701",
+   "adm2_pcode": "PK627",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Pakpattan",
+   "adm3_pcode": "PK62702",
+   "adm2_pcode": "PK627",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Khanpur",
+   "adm3_pcode": "PK62801",
+   "adm2_pcode": "PK628",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Liaqatpur",
+   "adm3_pcode": "PK62802",
+   "adm2_pcode": "PK628",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Rahim Yar Khan",
+   "adm3_pcode": "PK62803",
+   "adm2_pcode": "PK628",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sadiqabad",
+   "adm3_pcode": "PK62804",
+   "adm2_pcode": "PK628",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Jampur",
+   "adm3_pcode": "PK62901",
+   "adm2_pcode": "PK629",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Rajanpur",
+   "adm3_pcode": "PK62902",
+   "adm2_pcode": "PK629",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Rajanpur (Tribal Area)",
+   "adm3_pcode": "PK62903",
+   "adm2_pcode": "PK629",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Rojhan",
+   "adm3_pcode": "PK62904",
+   "adm2_pcode": "PK629",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Gujar Khan",
+   "adm3_pcode": "PK63001",
+   "adm2_pcode": "PK630",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kahuta",
+   "adm3_pcode": "PK63002",
+   "adm2_pcode": "PK630",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kallar Sayaddan",
+   "adm3_pcode": "PK63003",
+   "adm2_pcode": "PK630",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kotli Sattian",
+   "adm3_pcode": "PK63004",
+   "adm2_pcode": "PK630",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Murree",
+   "adm3_pcode": "PK63005",
+   "adm2_pcode": "PK630",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Rawalpindi",
+   "adm3_pcode": "PK63006",
+   "adm2_pcode": "PK630",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Taxila",
+   "adm3_pcode": "PK63007",
+   "adm2_pcode": "PK630",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Chichawatni",
+   "adm3_pcode": "PK63101",
+   "adm2_pcode": "PK631",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sahiwal",
+   "adm3_pcode": "PK63102",
+   "adm2_pcode": "PK631",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Bhalwal",
+   "adm3_pcode": "PK63201",
+   "adm2_pcode": "PK632",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kot Momin",
+   "adm3_pcode": "PK63202",
+   "adm2_pcode": "PK632",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sahiwal",
+   "adm3_pcode": "PK63203",
+   "adm2_pcode": "PK632",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sargodha",
+   "adm3_pcode": "PK63204",
+   "adm2_pcode": "PK632",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Shahpur",
+   "adm3_pcode": "PK63205",
+   "adm2_pcode": "PK632",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sillanwali",
+   "adm3_pcode": "PK63206",
+   "adm2_pcode": "PK632",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Bhera",
+   "adm3_pcode": "PK63207",
+   "adm2_pcode": "PK632",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Ferozewala",
+   "adm3_pcode": "PK63301",
+   "adm2_pcode": "PK633",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Muridke",
+   "adm3_pcode": "PK63302",
+   "adm2_pcode": "PK633",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Safdarabad",
+   "adm3_pcode": "PK63303",
+   "adm2_pcode": "PK633",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sharak Pur",
+   "adm3_pcode": "PK63304",
+   "adm2_pcode": "PK633",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sheikhupura",
+   "adm3_pcode": "PK63305",
+   "adm2_pcode": "PK633",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Daska",
+   "adm3_pcode": "PK63401",
+   "adm2_pcode": "PK634",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Pasrur",
+   "adm3_pcode": "PK63402",
+   "adm2_pcode": "PK634",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sambrial",
+   "adm3_pcode": "PK63403",
+   "adm2_pcode": "PK634",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Sialkot",
+   "adm3_pcode": "PK63404",
+   "adm2_pcode": "PK634",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Gojra",
+   "adm3_pcode": "PK63501",
+   "adm2_pcode": "PK635",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Kamalia",
+   "adm3_pcode": "PK63502",
+   "adm2_pcode": "PK635",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Toba Tek Singh",
+   "adm3_pcode": "PK63503",
+   "adm2_pcode": "PK635",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Pir Mahal",
+   "adm3_pcode": "PK63504",
+   "adm2_pcode": "PK635",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Burewala",
+   "adm3_pcode": "PK63601",
+   "adm2_pcode": "PK636",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Mailsi",
+   "adm3_pcode": "PK63602",
+   "adm2_pcode": "PK636",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Vehari",
+   "adm3_pcode": "PK63603",
+   "adm2_pcode": "PK636",
+   "adm1_pcode": "PK6"
+  },
+  {
+   "adm3_name": "Badin",
+   "adm3_pcode": "PK70101",
+   "adm2_pcode": "PK701",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Matli",
+   "adm3_pcode": "PK70102",
+   "adm2_pcode": "PK701",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Shaheed Fazil Rahu",
+   "adm3_pcode": "PK70103",
+   "adm2_pcode": "PK701",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Talhar",
+   "adm3_pcode": "PK70104",
+   "adm2_pcode": "PK701",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Tando Bago",
+   "adm3_pcode": "PK70105",
+   "adm2_pcode": "PK701",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Gulberg Town",
+   "adm3_pcode": "PK70201",
+   "adm2_pcode": "PK702",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Liaqatabad Town",
+   "adm3_pcode": "PK70202",
+   "adm2_pcode": "PK702",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "New Karachi Town",
+   "adm3_pcode": "PK70203",
+   "adm2_pcode": "PK702",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "North Nazimabad Town",
+   "adm3_pcode": "PK70204",
+   "adm2_pcode": "PK702",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Dadu",
+   "adm3_pcode": "PK70301",
+   "adm2_pcode": "PK703",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Johi",
+   "adm3_pcode": "PK70302",
+   "adm2_pcode": "PK703",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Khairpur Nathan Shah",
+   "adm3_pcode": "PK70303",
+   "adm2_pcode": "PK703",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Mehar",
+   "adm3_pcode": "PK70304",
+   "adm2_pcode": "PK703",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Gulshan Iqbal Town",
+   "adm3_pcode": "PK70401",
+   "adm2_pcode": "PK704",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Jamshaid Town",
+   "adm3_pcode": "PK70402",
+   "adm2_pcode": "PK704",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Daharki",
+   "adm3_pcode": "PK70501",
+   "adm2_pcode": "PK705",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Ghotki",
+   "adm3_pcode": "PK70502",
+   "adm2_pcode": "PK705",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Khangarh",
+   "adm3_pcode": "PK70503",
+   "adm2_pcode": "PK705",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Mirpur Mathelo",
+   "adm3_pcode": "PK70504",
+   "adm2_pcode": "PK705",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Ubauro",
+   "adm3_pcode": "PK70505",
+   "adm2_pcode": "PK705",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Hyderabad",
+   "adm3_pcode": "PK70601",
+   "adm2_pcode": "PK706",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Hyderabad City",
+   "adm3_pcode": "PK70602",
+   "adm2_pcode": "PK706",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Latifabad",
+   "adm3_pcode": "PK70603",
+   "adm2_pcode": "PK706",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Qasimabad",
+   "adm3_pcode": "PK70604",
+   "adm2_pcode": "PK706",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Garhi Khairo",
+   "adm3_pcode": "PK70701",
+   "adm2_pcode": "PK707",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Jacobabad",
+   "adm3_pcode": "PK70702",
+   "adm2_pcode": "PK707",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Thul",
+   "adm3_pcode": "PK70703",
+   "adm2_pcode": "PK707",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kotri",
+   "adm3_pcode": "PK70801",
+   "adm2_pcode": "PK708",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Manjhand",
+   "adm3_pcode": "PK70802",
+   "adm2_pcode": "PK708",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sehwan Sharif",
+   "adm3_pcode": "PK70803",
+   "adm2_pcode": "PK708",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Thano Bula Khan",
+   "adm3_pcode": "PK70804",
+   "adm2_pcode": "PK708",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Meero Khan",
+   "adm3_pcode": "PK70901",
+   "adm2_pcode": "PK709",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Nasir Abad",
+   "adm3_pcode": "PK70902",
+   "adm2_pcode": "PK709",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Qambar Ali Khan",
+   "adm3_pcode": "PK70903",
+   "adm2_pcode": "PK709",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Qubo Saeed Khan",
+   "adm3_pcode": "PK70904",
+   "adm2_pcode": "PK709",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Shahdad Kot",
+   "adm3_pcode": "PK70905",
+   "adm2_pcode": "PK709",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sijawal Junejo",
+   "adm3_pcode": "PK70906",
+   "adm2_pcode": "PK709",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Warah",
+   "adm3_pcode": "PK70907",
+   "adm2_pcode": "PK709",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kandh Kot",
+   "adm3_pcode": "PK71001",
+   "adm2_pcode": "PK710",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kashmore",
+   "adm3_pcode": "PK71002",
+   "adm2_pcode": "PK710",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Tangwani",
+   "adm3_pcode": "PK71003",
+   "adm2_pcode": "PK710",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Faiz Ganj",
+   "adm3_pcode": "PK71101",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Gambat",
+   "adm3_pcode": "PK71102",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Khairpur",
+   "adm3_pcode": "PK71103",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kingri",
+   "adm3_pcode": "PK71104",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kot Diji",
+   "adm3_pcode": "PK71105",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Nara",
+   "adm3_pcode": "PK71106",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sobho Dero",
+   "adm3_pcode": "PK71107",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Thari Meer Wah",
+   "adm3_pcode": "PK71108",
+   "adm2_pcode": "PK711",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Korangi Town",
+   "adm3_pcode": "PK71201",
+   "adm2_pcode": "PK712",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Landhi Town",
+   "adm3_pcode": "PK71202",
+   "adm2_pcode": "PK712",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Shah Faisal Town",
+   "adm3_pcode": "PK71203",
+   "adm2_pcode": "PK712",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Baqrani",
+   "adm3_pcode": "PK71301",
+   "adm2_pcode": "PK713",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Dokri",
+   "adm3_pcode": "PK71302",
+   "adm2_pcode": "PK713",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Larkana",
+   "adm3_pcode": "PK71303",
+   "adm2_pcode": "PK713",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Rato Dero",
+   "adm3_pcode": "PK71304",
+   "adm2_pcode": "PK713",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Bin Qasim Town",
+   "adm3_pcode": "PK71401",
+   "adm2_pcode": "PK714",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Gadap Town",
+   "adm3_pcode": "PK71402",
+   "adm2_pcode": "PK714",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Malir Town",
+   "adm3_pcode": "PK71403",
+   "adm2_pcode": "PK714",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Hala",
+   "adm3_pcode": "PK71501",
+   "adm2_pcode": "PK715",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Matiari",
+   "adm3_pcode": "PK71502",
+   "adm2_pcode": "PK715",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Saeedabad",
+   "adm3_pcode": "PK71503",
+   "adm2_pcode": "PK715",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Digri",
+   "adm3_pcode": "PK71601",
+   "adm2_pcode": "PK716",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Hussain Bux Muree",
+   "adm3_pcode": "PK71602",
+   "adm2_pcode": "PK716",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Jhudo",
+   "adm3_pcode": "PK71603",
+   "adm2_pcode": "PK716",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kot Ghulam Muhammad",
+   "adm3_pcode": "PK71604",
+   "adm2_pcode": "PK716",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Mirpur Khas",
+   "adm3_pcode": "PK71605",
+   "adm2_pcode": "PK716",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Shuja Abad",
+   "adm3_pcode": "PK71606",
+   "adm2_pcode": "PK716",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sindhri",
+   "adm3_pcode": "PK71607",
+   "adm2_pcode": "PK716",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Bhiria",
+   "adm3_pcode": "PK71701",
+   "adm2_pcode": "PK717",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kandiaro",
+   "adm3_pcode": "PK71702",
+   "adm2_pcode": "PK717",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Mehrab Pur",
+   "adm3_pcode": "PK71703",
+   "adm2_pcode": "PK717",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Moro",
+   "adm3_pcode": "PK71704",
+   "adm2_pcode": "PK717",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Naushahro Feroze",
+   "adm3_pcode": "PK71705",
+   "adm2_pcode": "PK717",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Jam Nawaz Ali",
+   "adm3_pcode": "PK71801",
+   "adm2_pcode": "PK718",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Khipro",
+   "adm3_pcode": "PK71802",
+   "adm2_pcode": "PK718",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sanghar",
+   "adm3_pcode": "PK71803",
+   "adm2_pcode": "PK718",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Shahdadpur",
+   "adm3_pcode": "PK71804",
+   "adm2_pcode": "PK718",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sinjhoro",
+   "adm3_pcode": "PK71805",
+   "adm2_pcode": "PK718",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Tando Adam",
+   "adm3_pcode": "PK71806",
+   "adm2_pcode": "PK718",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Daulat Pur",
+   "adm3_pcode": "PK71901",
+   "adm2_pcode": "PK719",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Daur",
+   "adm3_pcode": "PK71902",
+   "adm2_pcode": "PK719",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Nawabshah",
+   "adm3_pcode": "PK71903",
+   "adm2_pcode": "PK719",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sakrand",
+   "adm3_pcode": "PK71904",
+   "adm2_pcode": "PK719",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Garhi Yasin",
+   "adm3_pcode": "PK72001",
+   "adm2_pcode": "PK720",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Khanpur",
+   "adm3_pcode": "PK72002",
+   "adm2_pcode": "PK720",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Lakhi",
+   "adm3_pcode": "PK72003",
+   "adm2_pcode": "PK720",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Shikarpur",
+   "adm3_pcode": "PK72004",
+   "adm2_pcode": "PK720",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kemari Town",
+   "adm3_pcode": "PK72101",
+   "adm2_pcode": "PK721",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Liyari Town",
+   "adm3_pcode": "PK72102",
+   "adm2_pcode": "PK721",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Saddar Town",
+   "adm3_pcode": "PK72103",
+   "adm2_pcode": "PK721",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Jati",
+   "adm3_pcode": "PK72201",
+   "adm2_pcode": "PK722",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kharo Chan",
+   "adm3_pcode": "PK72202",
+   "adm2_pcode": "PK722",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Mirpur Bathoro",
+   "adm3_pcode": "PK72203",
+   "adm2_pcode": "PK722",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Shah Bunder",
+   "adm3_pcode": "PK72204",
+   "adm2_pcode": "PK722",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sujawal",
+   "adm3_pcode": "PK72205",
+   "adm2_pcode": "PK722",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "New Sukkur",
+   "adm3_pcode": "PK72301",
+   "adm2_pcode": "PK723",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Pano Aqil",
+   "adm3_pcode": "PK72302",
+   "adm2_pcode": "PK723",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Rohri",
+   "adm3_pcode": "PK72303",
+   "adm2_pcode": "PK723",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Salehpat",
+   "adm3_pcode": "PK72304",
+   "adm2_pcode": "PK723",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Sukkur",
+   "adm3_pcode": "PK72305",
+   "adm2_pcode": "PK723",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Chamber",
+   "adm3_pcode": "PK72401",
+   "adm2_pcode": "PK724",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Jhando Mari",
+   "adm3_pcode": "PK72402",
+   "adm2_pcode": "PK724",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Tando Allahyar",
+   "adm3_pcode": "PK72403",
+   "adm2_pcode": "PK724",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Bulri Shah Karim",
+   "adm3_pcode": "PK72501",
+   "adm2_pcode": "PK725",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Tando Ghulam Hyder",
+   "adm3_pcode": "PK72502",
+   "adm2_pcode": "PK725",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Tando Muhammad Khan",
+   "adm3_pcode": "PK72503",
+   "adm2_pcode": "PK725",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Chachro",
+   "adm3_pcode": "PK72601",
+   "adm2_pcode": "PK726",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Dahli",
+   "adm3_pcode": "PK72602",
+   "adm2_pcode": "PK726",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Diplo",
+   "adm3_pcode": "PK72603",
+   "adm2_pcode": "PK726",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Islam Kot",
+   "adm3_pcode": "PK72604",
+   "adm2_pcode": "PK726",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Mithi",
+   "adm3_pcode": "PK72605",
+   "adm2_pcode": "PK726",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Nagar Parkar",
+   "adm3_pcode": "PK72606",
+   "adm2_pcode": "PK726",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kaloi",
+   "adm3_pcode": "PK72607",
+   "adm2_pcode": "PK726",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Ghorabari",
+   "adm3_pcode": "PK72701",
+   "adm2_pcode": "PK727",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Keti Bunder",
+   "adm3_pcode": "PK72702",
+   "adm2_pcode": "PK727",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Mirpur Sakro",
+   "adm3_pcode": "PK72703",
+   "adm2_pcode": "PK727",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Thatta",
+   "adm3_pcode": "PK72704",
+   "adm2_pcode": "PK727",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Kunri",
+   "adm3_pcode": "PK72801",
+   "adm2_pcode": "PK728",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Pithoro",
+   "adm3_pcode": "PK72802",
+   "adm2_pcode": "PK728",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Samaro",
+   "adm3_pcode": "PK72803",
+   "adm2_pcode": "PK728",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Umer Kot",
+   "adm3_pcode": "PK72804",
+   "adm2_pcode": "PK728",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Baldia Town",
+   "adm3_pcode": "PK72901",
+   "adm2_pcode": "PK729",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Orangi Town",
+   "adm3_pcode": "PK72902",
+   "adm2_pcode": "PK729",
+   "adm1_pcode": "PK7"
+  },
+  {
+   "adm3_name": "Site Town",
+   "adm3_pcode": "PK72903",
+   "adm2_pcode": "PK729",
+   "adm1_pcode": "PK7"
+  }
+ ]
+}
