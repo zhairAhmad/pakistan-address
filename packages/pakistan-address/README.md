@@ -2,7 +2,7 @@
 
 Pakistan's administrative hierarchy — **Province → Division → District → Tehsil** — as typed JSON plus tiny helpers for cascading address dropdowns. Zero dependencies, ESM + CJS, framework-agnostic.
 
-> **Status: 0.1.0, not yet verified against official lists.** Districts and tehsils follow the OCHA/WFP COD-AB boundaries (valid from September 2022), divisions come from older 2017-era data, and some later changes are not applied. Read [What is covered](#what-is-covered) and [DATA.md](./DATA.md) before relying on it, and always give users an "Other / not listed" escape hatch.
+> **Status: 0.1.0, a snapshot of roughly September 2022, not verified against official lists.** Districts and tehsils follow the OCHA/WFP COD-AB boundaries, divisions come from older 2017-era data, and **several provinces have changed since** (notably Balochistan, whose divisions and districts were reorganised in 2026, plus new districts in Punjab, Khyber Pakhtunkhwa and Sindh). Read [What is covered](#what-is-covered) and the [known gaps](./DATA.md#known-gaps) before relying on it, and always give users an "Other / not listed" escape hatch.
 
 ## Install
 
@@ -83,7 +83,7 @@ Data version **2026-10-06**. Districts and tehsils: [OCHA/WFP COD-AB](https://da
 - **Records with a `pcode`** match the OCHA COD-AB data. 43 tehsils have no `pcode`: they come from geo-pakistan only and are unverified.
 - **Alternate names.** Districts and tehsils can carry `altNames` ("Nawabshah", "DG Khan", old spellings) so your search box can match what people actually type.
 - **Not covered in v1:** union councils, towns, chaks, mouzas, villages, postal codes, Urdu names.
-- **Known gaps:** units created after the COD-AB baseline (for example Punjab's Murree, Kot Addu, Wazirabad and Talagang, and Keamari in Karachi) are not included; divisions of the new districts were inferred. See [DATA.md](./DATA.md#known-gaps).
+- **Known gaps:** units created or reorganised after the COD-AB baseline are not included (Balochistan 2026 restructuring, new districts in Punjab, Khyber Pakhtunkhwa and Sindh); divisions of the districts added from COD-AB were inferred. See [DATA.md](./DATA.md#known-gaps).
 
 Nothing here has yet been checked line-by-line against the Pakistan Bureau of Statistics or the provincial notifications. Treat it as a good starting list, not an authority.
 
