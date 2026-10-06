@@ -18,9 +18,19 @@ COD-AB has no divisions, so divisions still come only from step 1.
 Every decision is listed in [`data-sources/hdx/merge-report.md`](./data-sources/hdx/merge-report.md). In short:
 
 - COD-AB decides which districts exist. Existing names and ids were kept where COD-AB spells a district differently (for example Layyah / "Leiah", Qambar Shahdadkot / "Kambar Shahdad Kot").
-- COD-AB decides each district's tehsils. geo-pakistan tehsils that COD-AB does not list were **kept** (48, mostly Balochistan sub-tehsils, plus Lahore's Model Town, Raiwind and Shalimar), with "Taluka" / "Sub-Tehsil" style suffixes removed. Spelling variants of the same tehsil (63, e.g. "Hassan Abdal" / "Hasan Abdal") were matched by approximate name and the COD-AB spelling used.
+- COD-AB decides each district's tehsils. geo-pakistan tehsils that COD-AB does not list were **kept** (43 after the cleanup below, mostly Balochistan sub-tehsils, plus Lahore's Model Town, Raiwind and Shalimar), with "Taluka" / "Sub-Tehsil" style suffixes removed. Spelling variants of the same tehsil (63, e.g. "Hassan Abdal" / "Hasan Abdal") were matched by approximate name and the COD-AB spelling used.
 - **Karachi's six districts use COD-AB only.** The sources describe different sub-district schemes (towns vs sub-divisions) and mixing them would confuse users.
 - Tehsils carry a `pcode` when COD-AB lists them. A tehsil **without** a `pcode` comes from geo-pakistan only and has not been cross-checked.
+
+### Cleanup after the merge
+
+A second, manual pass (see `CHANGELOG.md`) before the first release:
+
+- Removed parentheses from district names and moved the second name to `altNames` (Kachhi / Bolan, Shaheed Benazir Abad / Nawabshah, Torghar / Kala Dhaka).
+- Standardised spellings: Sherani, Sudhnoti, Torghar, Rondu. Ids changed with them.
+- Removed 5 tehsils that duplicated an HDX tehsil under another spelling (the old spelling is kept as an alternate name).
+- Added alternate names for well-known short forms (DG Khan, DI Khan, RYK, TT Singh) and for the HDX spellings of the Karachi districts.
+- Not changed: Peshawar's "Town-I" to "Town-IV" and Lahore's geo-pakistan-only tehsils.
 
 ### Corrections to the geo-pakistan data
 
@@ -50,7 +60,7 @@ COD-AB does not give divisions, so each new district was put in the division of 
 | Sindh | Keamari district (21 Aug 2020, from Karachi West) is not in COD-AB either. Karachi's sub-district structure has changed repeatedly. | Not applied |
 | Balochistan | Reports say Duki and Surab were upgraded to districts together (34 in total at the time); COD-AB has Duki and a "Shaheed Sikandarabad" district whose only tehsil is Surab, presumably the same unit, which is worth confirming. Lehri was reportedly abolished in 2018; the data still has it. Sub-tehsils come from geo-pakistan only. | Verify |
 | Divisions | All divisions come from the 2017-era geo-pakistan data and have not been cross-checked | Verify against PBS |
-| Tehsils | Boundaries change often; the 48 geo-pakistan-only tehsils are unverified | Verify |
+| Tehsils | Boundaries change often; the 43 geo-pakistan-only tehsils are unverified | Verify |
 | Names | Names follow the sources' English spellings; some are variants (for example "Sudhnati" vs the usual "Sudhnoti") and Urdu names are absent | PRs welcome |
 
 Nothing has been checked line-by-line against the Pakistan Bureau of Statistics or provincial notifications.

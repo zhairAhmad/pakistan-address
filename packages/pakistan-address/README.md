@@ -58,7 +58,7 @@ The flat, normalized shape (every record points at its parent by id):
   "meta": { "dataVersion": "2026-10-06", "baseline": "…", "sources": [ … ] },
   "provinces":  [{ "id": "pb", "name": "Punjab" }],
   "divisions":  [{ "id": "pb-multan-div", "provinceId": "pb", "name": "Multan" }],
-  "districts":  [{ "id": "pb-vehari", "provinceId": "pb", "divisionId": "pb-multan-div", "name": "Vehari" }],
+  "districts":  [{ "id": "sd-shaheed-benazir-abad", "provinceId": "sd", "divisionId": "sd-shaheed-benazir-abad-div", "name": "Shaheed Benazir Abad", "altNames": ["Nawabshah"], "pcode": "PK7…" }],
   "tehsils":    [{ "id": "pb-vehari-mailsi", "districtId": "pb-vehari", "name": "Mailsi" }],
   "localities": []
 }
@@ -71,16 +71,17 @@ Data version **2026-10-06**. Districts and tehsils: [OCHA/WFP COD-AB](https://da
 | Province / territory | Divisions | Districts | Tehsils |
 | --- | --: | --: | --: |
 | Azad Jammu & Kashmir | 3 | 10 | 32 |
-| Balochistan | 7 | 35 | 140 |
+| Balochistan | 7 | 35 | 136 |
 | Gilgit-Baltistan | 3 | 14 | 24 |
 | Islamabad Capital Territory | 0 | 1 | 1 |
 | Khyber Pakhtunkhwa | 7 | 35 | 157 |
-| Punjab | 9 | 36 | 146 |
+| Punjab | 9 | 36 | 145 |
 | Sindh | 7 | 29 | 125 |
-| **Total** | **36** | **160** | **625** |
+| **Total** | **36** | **160** | **620** |
 
 - **Tehsil counts are not comparable across provinces.** Balochistan includes sub-tehsils, Karachi uses the town scheme, Sindh uses talukas.
-- **Records with a `pcode`** match the OCHA COD-AB data. About 50 tehsils have no `pcode`: they come from geo-pakistan only and are unverified.
+- **Records with a `pcode`** match the OCHA COD-AB data. 43 tehsils have no `pcode`: they come from geo-pakistan only and are unverified.
+- **Alternate names.** Districts and tehsils can carry `altNames` ("Nawabshah", "DG Khan", old spellings) so your search box can match what people actually type.
 - **Not covered in v1:** union councils, towns, chaks, mouzas, villages, postal codes, Urdu names.
 - **Known gaps:** units created after the COD-AB baseline (for example Punjab's Murree, Kot Addu, Wazirabad and Talagang, and Keamari in Karachi) are not included; divisions of the new districts were inferred. See [DATA.md](./DATA.md#known-gaps).
 

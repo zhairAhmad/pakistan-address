@@ -403,6 +403,10 @@
    "provinceId": "pb",
    "divisionId": "pb-dera-ghazi-khan-div",
    "name": "Dera Ghazi Khan",
+   "altNames": [
+    "DG Khan",
+    "D.G. Khan"
+   ],
    "pcode": "PK607"
   },
   {
@@ -410,6 +414,10 @@
    "provinceId": "kp",
    "divisionId": "kp-dera-ismail-khan-div",
    "name": "Dera Ismail Khan",
+   "altNames": [
+    "DI Khan",
+    "D.I. Khan"
+   ],
    "pcode": "PK509"
   },
   {
@@ -417,6 +425,9 @@
    "provinceId": "gb",
    "divisionId": "gb-diamer-div",
    "name": "Diamer",
+   "altNames": [
+    "Diamir"
+   ],
    "pcode": "PK302"
   },
   {
@@ -522,6 +533,9 @@
    "provinceId": "ajk",
    "divisionId": "ajk-muzaffarabad-div",
    "name": "Hattian Bala",
+   "altNames": [
+    "Jhelum Valley"
+   ],
    "pcode": "PK103"
   },
   {
@@ -598,7 +612,11 @@
    "id": "bl-kachhi",
    "provinceId": "bl",
    "divisionId": "bl-naseerabad-div",
-   "name": "Kachhi (Bolan)",
+   "name": "Kachhi",
+   "altNames": [
+    "Bolan",
+    "Kachhi (Bolan)"
+   ],
    "pcode": "PK209"
   },
   {
@@ -613,6 +631,9 @@
    "provinceId": "sd",
    "divisionId": "sd-karachi-div",
    "name": "Karachi Central",
+   "altNames": [
+    "Central Karachi"
+   ],
    "pcode": "PK702"
   },
   {
@@ -620,6 +641,9 @@
    "provinceId": "sd",
    "divisionId": "sd-karachi-div",
    "name": "Karachi East",
+   "altNames": [
+    "East Karachi"
+   ],
    "pcode": "PK704"
   },
   {
@@ -627,6 +651,9 @@
    "provinceId": "sd",
    "divisionId": "sd-karachi-div",
    "name": "Karachi South",
+   "altNames": [
+    "South Karachi"
+   ],
    "pcode": "PK721"
   },
   {
@@ -634,6 +661,9 @@
    "provinceId": "sd",
    "divisionId": "sd-karachi-div",
    "name": "Karachi West",
+   "altNames": [
+    "West Karachi"
+   ],
    "pcode": "PK729"
   },
   {
@@ -746,6 +776,9 @@
    "provinceId": "kp",
    "divisionId": "kp-hazara-div",
    "name": "Kolai-Palas",
+   "altNames": [
+    "Kolai Palas Kohistan"
+   ],
    "pcode": "PK517"
   },
   {
@@ -753,6 +786,9 @@
    "provinceId": "sd",
    "divisionId": "sd-karachi-div",
    "name": "Korangi",
+   "altNames": [
+    "Korangi Karachi"
+   ],
    "pcode": "PK712"
   },
   {
@@ -802,6 +838,9 @@
    "provinceId": "pb",
    "divisionId": "pb-dera-ghazi-khan-div",
    "name": "Layyah",
+   "altNames": [
+    "Leiah"
+   ],
    "pcode": "PK618"
   },
   {
@@ -858,6 +897,9 @@
    "provinceId": "sd",
    "divisionId": "sd-karachi-div",
    "name": "Malir",
+   "altNames": [
+    "Malir Karachi"
+   ],
    "pcode": "PK714"
   },
   {
@@ -1068,6 +1110,9 @@
    "provinceId": "sd",
    "divisionId": "sd-larkana-div",
    "name": "Qambar Shahdadkot",
+   "altNames": [
+    "Kambar Shahdadkot"
+   ],
    "pcode": "PK709"
   },
   {
@@ -1082,6 +1127,10 @@
    "provinceId": "pb",
    "divisionId": "pb-bahawalpur-div",
    "name": "Rahim Yar Khan",
+   "altNames": [
+    "RYK",
+    "R.Y. Khan"
+   ],
    "pcode": "PK628"
   },
   {
@@ -1099,10 +1148,13 @@
    "pcode": "PK630"
   },
   {
-   "id": "gb-roundu",
+   "id": "gb-rondu",
    "provinceId": "gb",
    "divisionId": "gb-baltistan-div",
-   "name": "Roundu",
+   "name": "Rondu",
+   "altNames": [
+    "Roundu"
+   ],
    "pcode": "PK314"
   },
   {
@@ -1130,7 +1182,10 @@
    "id": "sd-shaheed-benazir-abad",
    "provinceId": "sd",
    "divisionId": "sd-shaheed-benazirabad-div",
-   "name": "Shaheed Benazir Abad (Nawabshah)",
+   "name": "Shaheed Benazir Abad",
+   "altNames": [
+    "Nawabshah"
+   ],
    "pcode": "PK719"
   },
   {
@@ -1148,18 +1203,21 @@
    "pcode": "PK529"
   },
   {
-   "id": "bl-sheerani",
-   "provinceId": "bl",
-   "divisionId": "bl-zhob-div",
-   "name": "Sheerani (Sherani)",
-   "pcode": "PK227"
-  },
-  {
    "id": "pb-sheikhupura",
    "provinceId": "pb",
    "divisionId": "pb-lahore-div",
    "name": "Sheikhupura",
    "pcode": "PK633"
+  },
+  {
+   "id": "bl-sherani",
+   "provinceId": "bl",
+   "divisionId": "bl-zhob-div",
+   "name": "Sherani",
+   "altNames": [
+    "Sheerani"
+   ],
+   "pcode": "PK227"
   },
   {
    "id": "gb-shigar",
@@ -1211,10 +1269,13 @@
    "pcode": "PK530"
   },
   {
-   "id": "ajk-sudhnati",
+   "id": "ajk-sudhnoti",
    "provinceId": "ajk",
    "divisionId": "ajk-poonch-div",
-   "name": "Sudhnati",
+   "name": "Sudhnoti",
+   "altNames": [
+    "Sudhnati"
+   ],
    "pcode": "PK110"
   },
   {
@@ -1292,13 +1353,20 @@
    "provinceId": "pb",
    "divisionId": "pb-faisalabad-div",
    "name": "Toba Tek Singh",
+   "altNames": [
+    "TT Singh"
+   ],
    "pcode": "PK635"
   },
   {
-   "id": "kp-tor-ghar",
+   "id": "kp-torghar",
    "provinceId": "kp",
    "divisionId": "kp-hazara-div",
-   "name": "Tor Ghar (Kala Dhaka)",
+   "name": "Torghar",
+   "altNames": [
+    "Tor Ghar",
+    "Kala Dhaka"
+   ],
    "pcode": "PK534"
   },
   {
@@ -1359,11 +1427,6 @@
   }
  ],
  "tehsils": [
-  {
-   "id": "pb-jhang-18-hazari",
-   "districtId": "pb-jhang",
-   "name": "18 Hazari"
-  },
   {
    "id": "ajk-poonch-abbaspur",
    "districtId": "ajk-poonch",
@@ -1450,6 +1513,9 @@
    "id": "pb-jhang-athara-hazari",
    "districtId": "pb-jhang",
    "name": "Athara Hazari",
+   "altNames": [
+    "18 Hazari"
+   ],
    "pcode": "PK61204"
   },
   {
@@ -1574,8 +1640,8 @@
    "name": "Balnigor"
   },
   {
-   "id": "ajk-sudhnati-baluch",
-   "districtId": "ajk-sudhnati",
+   "id": "ajk-sudhnoti-baluch",
+   "districtId": "ajk-sudhnoti",
    "name": "Baluch",
    "pcode": "PK11001"
   },
@@ -2719,8 +2785,8 @@
    "pcode": "PK70302"
   },
   {
-   "id": "kp-tor-ghar-judba",
-   "districtId": "kp-tor-ghar",
+   "id": "kp-torghar-judba",
+   "districtId": "kp-torghar",
    "name": "Judba",
    "pcode": "PK53401"
   },
@@ -2896,9 +2962,13 @@
    "pcode": "PK52301"
   },
   {
-   "id": "bl-kech-kech-turbat",
+   "id": "bl-kech-kech",
    "districtId": "bl-kech",
-   "name": "Kech (Turbat)",
+   "name": "Kech",
+   "altNames": [
+    "Turbat",
+    "Kech (Turbat)"
+   ],
    "pcode": "PK21103"
   },
   {
@@ -2955,8 +3025,8 @@
    "pcode": "PK53504"
   },
   {
-   "id": "kp-tor-ghar-khander",
-   "districtId": "kp-tor-ghar",
+   "id": "kp-torghar-khander",
+   "districtId": "kp-torghar",
    "name": "Khander",
    "pcode": "PK53402"
   },
@@ -3232,6 +3302,9 @@
    "id": "bl-lasbela-lairi",
    "districtId": "bl-lasbela",
    "name": "Lairi",
+   "altNames": [
+    "Liari"
+   ],
    "pcode": "PK21709"
   },
   {
@@ -3328,11 +3401,6 @@
    "districtId": "pb-rahim-yar-khan",
    "name": "Liaqatpur",
    "pcode": "PK62802"
-  },
-  {
-   "id": "bl-lasbela-liari",
-   "districtId": "bl-lasbela",
-   "name": "Liari"
   },
   {
    "id": "sd-karachi-south-liyari-town",
@@ -3665,8 +3733,8 @@
    "pcode": "PK21302"
   },
   {
-   "id": "ajk-sudhnati-mong",
-   "districtId": "ajk-sudhnati",
+   "id": "ajk-sudhnoti-mong",
+   "districtId": "ajk-sudhnoti",
    "name": "Mong",
    "pcode": "PK11002"
   },
@@ -3752,6 +3820,9 @@
    "id": "bl-khuzdar-naal",
    "districtId": "bl-khuzdar",
    "name": "Naal",
+   "altNames": [
+    "Nal"
+   ],
    "pcode": "PK21303"
   },
   {
@@ -3771,11 +3842,6 @@
    "districtId": "sd-tharparkar",
    "name": "Nagar Parkar",
    "pcode": "PK72606"
-  },
-  {
-   "id": "bl-khuzdar-nal",
-   "districtId": "bl-khuzdar",
-   "name": "Nal"
   },
   {
    "id": "pb-nankana-sahib-nankana-sahib",
@@ -3933,8 +3999,8 @@
    "pcode": "PK51701"
   },
   {
-   "id": "ajk-sudhnati-pallandari",
-   "districtId": "ajk-sudhnati",
+   "id": "ajk-sudhnoti-pallandari",
+   "districtId": "ajk-sudhnoti",
    "name": "Pallandari",
    "pcode": "PK11003"
   },
@@ -4199,8 +4265,8 @@
    "pcode": "PK62904"
   },
   {
-   "id": "gb-roundu-rondu",
-   "districtId": "gb-roundu",
+   "id": "gb-rondu-rondu",
+   "districtId": "gb-rondu",
    "name": "Rondu",
    "pcode": "PK31401"
   },
@@ -4445,11 +4511,6 @@
    "pcode": "PK70103"
   },
   {
-   "id": "bl-washuk-shahoo-garhi",
-   "districtId": "bl-washuk",
-   "name": "Shahoo Garhi"
-  },
-  {
    "id": "pb-sargodha-shahpur",
    "districtId": "pb-sargodha",
    "name": "Shahpur",
@@ -4476,6 +4537,9 @@
    "id": "bl-washuk-shaogari",
    "districtId": "bl-washuk",
    "name": "Shaogari",
+   "altNames": [
+    "Shahoo Garhi"
+   ],
    "pcode": "PK23005"
   },
   {
@@ -4503,8 +4567,8 @@
    "pcode": "PK63305"
   },
   {
-   "id": "bl-sheerani-sherani",
-   "districtId": "bl-sheerani",
+   "id": "bl-sherani-sherani",
+   "districtId": "bl-sherani",
    "name": "Sherani",
    "pcode": "PK22701"
   },
@@ -4676,15 +4740,14 @@
    "pcode": "PK60805"
   },
   {
-   "id": "bl-gwadar-sunster",
-   "districtId": "bl-gwadar",
-   "name": "Sunster",
-   "pcode": "PK20505"
-  },
-  {
    "id": "bl-gwadar-suntsar",
    "districtId": "bl-gwadar",
-   "name": "Suntsar"
+   "name": "Suntsar",
+   "altNames": [
+    "Sunster",
+    "Suntsar Sub-Tehsil"
+   ],
+   "pcode": "PK20505"
   },
   {
    "id": "bl-shaheed-sikandarabad-surab",
@@ -4806,8 +4869,8 @@
    "pcode": "PK53301"
   },
   {
-   "id": "ajk-sudhnati-tarar-khal",
-   "districtId": "ajk-sudhnati",
+   "id": "ajk-sudhnoti-tarar-khal",
+   "districtId": "ajk-sudhnoti",
    "name": "Tarar Khal",
    "pcode": "PK11004"
   },

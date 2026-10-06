@@ -17,6 +17,8 @@ export interface District {
   /** `null` where the district sits outside any division (Islamabad Capital Territory). */
   divisionId: string | null;
   name: string;
+  /** Other names people use or search for (e.g. "Nawabshah" for Shaheed Benazir Abad). */
+  altNames?: string[];
   /** OCHA/WFP COD-AB place code (e.g. `PK618`). */
   pcode?: string;
 }
@@ -25,6 +27,8 @@ export interface Tehsil {
   id: string;
   districtId: string;
   name: string;
+  /** Other spellings or names for the tehsil. */
+  altNames?: string[];
   /** OCHA/WFP COD-AB place code. Absent for tehsils the COD-AB data does not list. */
   pcode?: string;
 }

@@ -36,6 +36,20 @@ const districts = collect('district', data.districts);
 const tehsils = collect('tehsil', data.tehsils);
 const localities = collect('locality', data.localities);
 
+// Alternate names: optional, trimmed, distinct from the name and from each other.
+for (const [kind, items] of [['district', data.districts], ['tehsil', data.tehsils]]) {
+  for (const it of items) {
+    if (it.altNames === undefined) continue;
+    if (!Array.isArray(it.altNames) || !it.altNames.length) { err(`${kind} "${it.id}": altNames must be a non-empty array`); continue; }
+    const seen = new Set([it.name.toLowerCase()]);
+    for (const a of it.altNames) {
+      if (typeof a !== 'string' || !a.trim() || a !== a.trim()) err(`${kind} "${it.id}": bad alternate name ${JSON.stringify(a)}`);
+      else if (seen.has(a.toLowerCase())) err(`${kind} "${it.id}": alternate name "${a}" repeats another name`);
+      else seen.add(a.toLowerCase());
+    }
+  }
+}
+
 // p-codes are optional but, where present, must look right and be unique per level.
 for (const [kind, items] of [['province', data.provinces], ['district', data.districts], ['tehsil', data.tehsils]]) {
   const seen = new Set();

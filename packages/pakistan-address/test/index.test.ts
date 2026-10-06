@@ -19,7 +19,7 @@ describe('hierarchy', () => {
     const divisions = provinces.flatMap((p) => getDivisions(p.id));
     const districts = provinces.flatMap((p) => getDistrictsByProvince(p.id));
     const tehsils = districts.flatMap((d) => getTehsils(d.id));
-    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 36, 160, 625]);
+    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 36, 160, 620]);
   });
 
   it('cascades Punjab -> Multan -> Vehari -> Mailsi', () => {
@@ -53,6 +53,17 @@ describe('hierarchy', () => {
     expect(names('kp')).not.toContain('Chitral');
     expect(names('bl')).toEqual(expect.arrayContaining(['Chaman', 'Duki', 'Shaheed Sikandarabad']));
     expect(getDistrict('kp-lower-chitral')?.divisionId).toBe('kp-malakand-div');
+  });
+
+  it('keeps alternate names for search and drops duplicate tehsils', () => {
+    expect(getDistrict('sd-shaheed-benazir-abad')?.altNames).toContain('Nawabshah');
+    expect(getDistrict('pb-dera-ghazi-khan')?.altNames).toContain('DG Khan');
+    expect(getDistrict('bl-sherani')?.name).toBe('Sherani');
+    expect(getDistrict('ajk-sudhnoti')?.name).toBe('Sudhnoti');
+    const jhang = getTehsils('pb-jhang').map((t) => t.name);
+    expect(jhang).toContain('Athara Hazari');
+    expect(jhang).not.toContain('18 Hazari');
+    expect(getDistricts('kp-hazara-div').map((d) => d.name).join()).not.toMatch(/[()]/);
   });
 
   it('carries OCHA p-codes', () => {
