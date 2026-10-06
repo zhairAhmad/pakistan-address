@@ -87,6 +87,14 @@ describe('<AddressFields />', () => {
     expect(html).not.toContain('Division');
   });
 
+  it('shows the province notice for Balochistan only', () => {
+    const bl = renderToStaticMarkup(<AddressFields defaultValue={pick(['province', 'bl'])} />);
+    expect(bl).toContain('role="note"');
+    expect(bl).toContain('July 2026');
+    const pb = renderToStaticMarkup(<AddressFields defaultValue={pick(['province', 'pb'])} />);
+    expect(pb).not.toContain('role="note"');
+  });
+
   it('renders an "Other / not listed" option once a level has choices', () => {
     const defaultValue = pick(['province', 'pb']);
     const html = renderToStaticMarkup(<AddressFields defaultValue={defaultValue} />);

@@ -30,6 +30,7 @@
   .meta { color: var(--muted); font-size: .8125rem; margin-top: 24px; }
   .meta a { color: inherit; }
   .note { font-size: .8125rem; color: var(--muted); margin: 0 0 12px; }
+  .notice { font-size: .8125rem; margin: 6px 0 0; padding: 8px 10px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--code); }
 </style>
 </head>
 <body>
@@ -72,7 +73,7 @@ for (const level of levels) {
   const wrap = document.createElement('div');
   wrap.className = 'field';
   wrap.innerHTML = `<label for="${level}">${labels[level]}</label><select id="${level}"></select>` +
-    (level === 'province' ? '' : `<input class="other" id="${level}-text" type="text" placeholder="Type your ${labels[level].toLowerCase()}" aria-label="${labels[level]} (not listed)" hidden>`);
+    (level === 'province' ? '<p class="notice" id="province-notice" role="note" hidden></p>' : `<input class="other" id="${level}-text" type="text" placeholder="Type your ${labels[level].toLowerCase()}" aria-label="${labels[level]} (not listed)" hidden>`);
   form.append(wrap);
   els[level] = { wrap, select: wrap.querySelector('select'), text: wrap.querySelector('input') };
   els[level].select.addEventListener('change', (e) => choose(level, e.target.value));
@@ -113,6 +114,10 @@ function optionsFor() {
 }
 
 function render(rebuildLists) {
+  const notice = document.getElementById('province-notice');
+  const text = listed(state.province) ? getProvince(state.province)?.notice : '';
+  notice.textContent = text || '';
+  notice.hidden = !text;
   const { visible, options } = optionsFor();
   for (const level of levels) {
     const { wrap, select, text } = els[level];

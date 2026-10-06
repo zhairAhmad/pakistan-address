@@ -36,6 +36,12 @@ const districts = collect('district', data.districts);
 const tehsils = collect('tehsil', data.tehsils);
 const localities = collect('locality', data.localities);
 
+for (const p of data.provinces) {
+  if (p.notice !== undefined && (typeof p.notice !== 'string' || !p.notice.trim() || p.notice !== p.notice.trim())) {
+    err(`province "${p.id}": notice must be a non-empty trimmed string`);
+  }
+}
+
 // Alternate names: optional, trimmed, distinct from the name and from each other.
 for (const [kind, items] of [['district', data.districts], ['tehsil', data.tehsils]]) {
   for (const it of items) {

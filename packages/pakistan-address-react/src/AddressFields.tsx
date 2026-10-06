@@ -1,11 +1,12 @@
 import { useId } from 'react';
+import { getProvince } from 'pakistan-address';
 import { OTHER, type Level } from './cascade';
 import { type UseAddressCascadeOptions, useAddressCascade } from './useAddressCascade';
 
 export interface AddressFieldsProps extends UseAddressCascadeOptions {
   labels?: Partial<Record<Level | 'addressLine' | 'other' | 'placeholder', string>>;
-  /** Class names for styling: `root`, `field`, `label`, `select`, `input`. */
-  classNames?: Partial<Record<'root' | 'field' | 'label' | 'select' | 'input', string>>;
+  /** Class names for styling: `root`, `field`, `label`, `select`, `input`, `notice`. */
+  classNames?: Partial<Record<'root' | 'field' | 'label' | 'select' | 'input' | 'notice', string>>;
   /** Prefix for form field names so the fields submit with a native `<form>`: `name[provinceId]`, ... */
   name?: string;
 }
@@ -27,6 +28,7 @@ export function AddressFields({ labels, classNames = {}, name, ...options }: Add
   const c = useAddressCascade(options);
   const uid = useId();
   const field = (key: string) => (name ? `${name}[${key}]` : key);
+  const provinceNotice = c.address.ids.province ? getProvince(c.address.ids.province)?.notice : undefined;
 
   return (
     <div className={classNames.root}>
@@ -68,6 +70,11 @@ export function AddressFields({ labels, classNames = {}, name, ...options }: Add
                 aria-label={hasList ? `${text[level]} (${text.other})` : undefined}
                 onChange={(e) => c.setText(level, e.target.value)}
               />
+            )}
+            {level === 'province' && provinceNotice && (
+              <p role="note" className={classNames.notice}>
+                {provinceNotice}
+              </p>
             )}
           </div>
         );

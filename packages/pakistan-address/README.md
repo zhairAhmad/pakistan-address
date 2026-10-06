@@ -2,7 +2,7 @@
 
 Pakistan's administrative hierarchy — **Province → Division → District → Tehsil** — as typed JSON plus tiny helpers for cascading address dropdowns. Zero dependencies, ESM + CJS, framework-agnostic.
 
-> **Status: 0.1.0, a snapshot of roughly September 2022, not verified against official lists.** Districts and tehsils follow the OCHA/WFP COD-AB boundaries, divisions come from older 2017-era data, and **several provinces have changed since** (notably Balochistan, whose divisions and districts were reorganised in 2026, plus new districts in Punjab, Khyber Pakhtunkhwa and Sindh). Read [What is covered](#what-is-covered) and the [known gaps](./DATA.md#known-gaps) before relying on it, and always give users an "Other / not listed" escape hatch.
+> **Status: 0.1.0, a snapshot of roughly September 2022, not verified against official lists.** Districts and tehsils follow the OCHA/WFP COD-AB boundaries, divisions come from older 2017-era data, and **several provinces have changed since** (notably Balochistan, whose divisions and districts were reorganised in 2026; some Punjab and Khyber Pakhtunkhwa changes are included from press reports, others are not). Read [What is covered](#what-is-covered) and the [known gaps](./DATA.md#known-gaps) before relying on it, and always give users an "Other / not listed" escape hatch.
 
 ## Install
 
@@ -74,16 +74,17 @@ Data version **2026-10-06**. Districts and tehsils: [OCHA/WFP COD-AB](https://da
 | Balochistan | 7 | 35 | 136 |
 | Gilgit-Baltistan | 3 | 14 | 24 |
 | Islamabad Capital Territory | 0 | 1 | 1 |
-| Khyber Pakhtunkhwa | 7 | 35 | 157 |
-| Punjab | 9 | 36 | 145 |
+| Khyber Pakhtunkhwa | 7 | 37 | 160 |
+| Punjab | 10 | 40 | 145 |
 | Sindh | 7 | 29 | 125 |
-| **Total** | **36** | **160** | **620** |
+| **Total** | **37** | **166** | **623** |
 
 - **Tehsil counts are not comparable across provinces.** Balochistan includes sub-tehsils, Karachi uses the town scheme, Sindh uses talukas.
-- **Records with a `pcode`** match the OCHA COD-AB data. 43 tehsils have no `pcode`: they come from geo-pakistan only and are unverified.
+- **Records with a `pcode`** match the OCHA COD-AB data. 46 tehsils (and 7 districts) have no `pcode`: they come from geo-pakistan only or from press reports of provincial notifications (see [DATA.md](./DATA.md)) and are unverified.
 - **Alternate names.** Districts and tehsils can carry `altNames` ("Nawabshah", "DG Khan", old spellings) so your search box can match what people actually type.
 - **Not covered in v1:** union councils, towns, chaks, mouzas, villages, postal codes, Urdu names.
-- **Known gaps:** units created or reorganised after the COD-AB baseline are not included (Balochistan 2026 restructuring, new districts in Punjab, Khyber Pakhtunkhwa and Sindh); divisions of the districts added from COD-AB were inferred. See [DATA.md](./DATA.md#known-gaps).
+- **Partly updated from press reports.** Four Punjab districts and the Gujrat division, and the Swat and South Waziristan splits in Khyber Pakhtunkhwa, are included (the notifications themselves were not located). **Not included:** Balochistan's July 2026 restructuring (a `notice` on the province warns users), Punjab's Taunsa, Khyber Pakhtunkhwa's Paharpur, Keamari in Karachi. See [DATA.md](./DATA.md#known-gaps).
+- **Province `notice`.** A province can carry a `notice` string to show users when it is selected; the demo and the React component do this for Balochistan.
 
 Nothing here has yet been checked line-by-line against the Pakistan Bureau of Statistics or the provincial notifications. Treat it as a good starting list, not an authority.
 

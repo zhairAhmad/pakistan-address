@@ -14,6 +14,18 @@
     "url": "https://github.com/aaqibmehran/geo-pakistan",
     "license": "MIT (declared in composer.json)",
     "note": "Provinces, divisions and the tehsils HDX does not list; last upstream update 2020"
+   },
+   {
+    "name": "Press reports of Khyber Pakhtunkhwa notifications (Dawn, APP)",
+    "url": "https://www.dawn.com/news/1714876",
+    "license": "Facts only; no text copied",
+    "note": "South Waziristan Upper/Lower (Dawn, 14 Oct 2022) and Swat/Upper Swat (APP). The notifications themselves were not located; see DATA.md"
+   },
+   {
+    "name": "Press reports of Punjab Board of Revenue notifications (Dawn, Geo)",
+    "url": "https://www.geo.tv/latest/458487-there-are-at-the-moment-10-divisions-and-40-districts-in-punjab-as-per-the-official-notifications-of-the-punjab-board-of-revenue",
+    "license": "Facts only; no text copied",
+    "note": "Gujrat division and the districts Wazirabad, Murree, Kot Addu and Talagang (October 2022). The notifications themselves were not located; only each district's namesake tehsil is included; see DATA.md"
    }
   ]
  },
@@ -26,6 +38,7 @@
   {
    "id": "bl",
    "name": "Balochistan",
+   "notice": "Balochistan reorganised its divisions and districts in July 2026. This list shows the earlier structure, so your division or district may be missing or listed differently. Choose \"Other / not listed\" if you cannot find it.",
    "pcode": "PK2"
   },
   {
@@ -104,6 +117,11 @@
    "id": "pb-gujranwala-div",
    "provinceId": "pb",
    "name": "Gujranwala"
+  },
+  {
+   "id": "pb-gujrat-div",
+   "provinceId": "pb",
+   "name": "Gujrat"
   },
   {
    "id": "kp-hazara-div",
@@ -482,7 +500,7 @@
   {
    "id": "pb-gujrat",
    "provinceId": "pb",
-   "divisionId": "pb-gujranwala-div",
+   "divisionId": "pb-gujrat-div",
    "name": "Gujrat",
    "pcode": "PK610"
   },
@@ -503,7 +521,7 @@
   {
    "id": "pb-hafizabad",
    "provinceId": "pb",
-   "divisionId": "pb-gujranwala-div",
+   "divisionId": "pb-gujrat-div",
    "name": "Hafizabad",
    "pcode": "PK611"
   },
@@ -792,6 +810,12 @@
    "pcode": "PK712"
   },
   {
+   "id": "pb-kot-addu",
+   "provinceId": "pb",
+   "divisionId": "pb-dera-ghazi-khan-div",
+   "name": "Kot Addu"
+  },
+  {
    "id": "ajk-kotli",
    "provinceId": "ajk",
    "divisionId": "ajk-mirpur-div",
@@ -886,6 +910,15 @@
    "pcode": "PK515"
   },
   {
+   "id": "kp-lower-south-waziristan",
+   "provinceId": "kp",
+   "divisionId": "kp-dera-ismail-khan-div",
+   "name": "Lower South Waziristan",
+   "altNames": [
+    "South Waziristan Lower"
+   ]
+  },
+  {
    "id": "kp-malakand",
    "provinceId": "kp",
    "divisionId": "kp-malakand-div",
@@ -905,7 +938,7 @@
   {
    "id": "pb-mandi-bahauddin",
    "provinceId": "pb",
-   "divisionId": "pb-gujranwala-div",
+   "divisionId": "pb-gujrat-div",
    "name": "Mandi Bahauddin",
    "pcode": "PK620"
   },
@@ -971,6 +1004,12 @@
    "divisionId": "pb-multan-div",
    "name": "Multan",
    "pcode": "PK622"
+  },
+  {
+   "id": "pb-murree",
+   "provinceId": "pb",
+   "divisionId": "pb-rawalpindi-div",
+   "name": "Murree"
   },
   {
    "id": "bl-musakhel",
@@ -1262,13 +1301,6 @@
    "pcode": "PK229"
   },
   {
-   "id": "kp-south-waziristan",
-   "provinceId": "kp",
-   "divisionId": "kp-dera-ismail-khan-div",
-   "name": "South Waziristan",
-   "pcode": "PK530"
-  },
-  {
    "id": "ajk-sudhnoti",
    "provinceId": "ajk",
    "divisionId": "ajk-poonch-div",
@@ -1305,6 +1337,12 @@
    "divisionId": "kp-malakand-div",
    "name": "Swat",
    "pcode": "PK532"
+  },
+  {
+   "id": "pb-talagang",
+   "provinceId": "pb",
+   "divisionId": "pb-rawalpindi-div",
+   "name": "Talagang"
   },
   {
    "id": "sd-tando-allahyar",
@@ -1398,6 +1436,25 @@
    "pcode": "PK516"
   },
   {
+   "id": "kp-upper-south-waziristan",
+   "provinceId": "kp",
+   "divisionId": "kp-dera-ismail-khan-div",
+   "name": "Upper South Waziristan",
+   "altNames": [
+    "South Waziristan Upper"
+   ]
+  },
+  {
+   "id": "kp-upper-swat",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Upper Swat",
+   "altNames": [
+    "Bar Swat",
+    "Upper Bar Swat"
+   ]
+  },
+  {
    "id": "pb-vehari",
    "provinceId": "pb",
    "divisionId": "pb-multan-div",
@@ -1410,6 +1467,12 @@
    "divisionId": "bl-rakhshan-div",
    "name": "Washuk",
    "pcode": "PK230"
+  },
+  {
+   "id": "pb-wazirabad",
+   "provinceId": "pb",
+   "divisionId": "pb-gujrat-div",
+   "name": "Wazirabad"
   },
   {
    "id": "bl-zhob",
@@ -1588,8 +1651,8 @@
    "name": "Bahawalpur Saddar"
   },
   {
-   "id": "kp-swat-bahrain",
-   "districtId": "kp-swat",
+   "id": "kp-upper-swat-bahrain",
+   "districtId": "kp-upper-swat",
    "name": "Bahrain",
    "pcode": "PK53202"
   },
@@ -1802,8 +1865,8 @@
    "pcode": "PK71401"
   },
   {
-   "id": "kp-south-waziristan-birmal",
-   "districtId": "kp-south-waziristan",
+   "id": "kp-lower-south-waziristan-birmal",
+   "districtId": "kp-lower-south-waziristan",
    "name": "Birmal",
    "pcode": "PK53001"
   },
@@ -2833,8 +2896,8 @@
    "pcode": "PK50304"
   },
   {
-   "id": "kp-swat-kalam",
-   "districtId": "kp-swat",
+   "id": "kp-upper-swat-kalam",
+   "districtId": "kp-upper-swat",
    "name": "Kalam",
    "pcode": "PK53206"
   },
@@ -3138,8 +3201,8 @@
    "pcode": "PK21301"
   },
   {
-   "id": "kp-swat-khwaza-khela",
-   "districtId": "kp-swat",
+   "id": "kp-upper-swat-khwaza-khela",
+   "districtId": "kp-upper-swat",
    "name": "Khwaza Khela",
    "pcode": "PK53207"
   },
@@ -3198,8 +3261,8 @@
    "pcode": "PK71201"
   },
   {
-   "id": "pb-muzaffargarh-kot-addu",
-   "districtId": "pb-muzaffargarh",
+   "id": "pb-kot-addu-kot-addu",
+   "districtId": "pb-kot-addu",
    "name": "Kot Addu",
    "pcode": "PK62303"
   },
@@ -3275,8 +3338,8 @@
    "pcode": "PK51402"
   },
   {
-   "id": "kp-south-waziristan-ladha",
-   "districtId": "kp-south-waziristan",
+   "id": "kp-upper-south-waziristan-ladha",
+   "districtId": "kp-upper-south-waziristan",
    "name": "Ladha",
    "pcode": "PK53002"
   },
@@ -3479,8 +3542,8 @@
    "pcode": "PK52904"
   },
   {
-   "id": "kp-south-waziristan-makin",
-   "districtId": "kp-south-waziristan",
+   "id": "kp-upper-south-waziristan-makin",
+   "districtId": "kp-upper-south-waziristan",
    "name": "Makin",
    "pcode": "PK53003"
   },
@@ -3603,14 +3666,14 @@
    "pcode": "PK70102"
   },
   {
-   "id": "kp-swat-matta-kharirai",
-   "districtId": "kp-swat",
+   "id": "kp-upper-swat-matta-kharirai",
+   "districtId": "kp-upper-swat",
    "name": "Matta Kharirai",
    "pcode": "PK53208"
   },
   {
-   "id": "kp-swat-matta-sebujni",
-   "districtId": "kp-swat",
+   "id": "kp-upper-swat-matta-sebujni",
+   "districtId": "kp-upper-swat",
    "name": "Matta Sebujni",
    "pcode": "PK53209"
   },
@@ -3787,8 +3850,8 @@
    "pcode": "PK63302"
   },
   {
-   "id": "pb-rawalpindi-murree",
-   "districtId": "pb-rawalpindi",
+   "id": "pb-murree-murree",
+   "districtId": "pb-murree",
    "name": "Murree",
    "pcode": "PK63005"
   },
@@ -4428,8 +4491,8 @@
    "pcode": "PK22505"
   },
   {
-   "id": "kp-south-waziristan-sararogha",
-   "districtId": "kp-south-waziristan",
+   "id": "kp-upper-south-waziristan-sararogha",
+   "districtId": "kp-upper-south-waziristan",
    "name": "Sararogha",
    "pcode": "PK53004"
   },
@@ -4463,8 +4526,8 @@
    "pcode": "PK51604"
   },
   {
-   "id": "kp-south-waziristan-serwakai",
-   "districtId": "kp-south-waziristan",
+   "id": "kp-upper-south-waziristan-serwakai",
+   "districtId": "kp-upper-south-waziristan",
    "name": "Serwakai",
    "pcode": "PK53005"
   },
@@ -4523,10 +4586,20 @@
    "pcode": "PK20602"
   },
   {
+   "id": "kp-lower-south-waziristan-shakai",
+   "districtId": "kp-lower-south-waziristan",
+   "name": "Shakai"
+  },
+  {
    "id": "pb-narowal-shakargarh",
    "districtId": "pb-narowal",
    "name": "Shakargarh",
    "pcode": "PK62502"
+  },
+  {
+   "id": "kp-upper-south-waziristan-shaktui",
+   "districtId": "kp-upper-south-waziristan",
+   "name": "Shaktui"
   },
   {
    "id": "pb-lahore-shalimar",
@@ -4559,6 +4632,11 @@
    "districtId": "kp-north-waziristan",
    "name": "Shawal",
    "pcode": "PK52510"
+  },
+  {
+   "id": "kp-upper-south-waziristan-shawal",
+   "districtId": "kp-upper-south-waziristan",
+   "name": "Shawal"
   },
   {
    "id": "pb-sheikhupura-sheikhupura",
@@ -4785,9 +4863,12 @@
    "pcode": "PK51203"
   },
   {
-   "id": "pb-chakwal-tala-gang",
-   "districtId": "pb-chakwal",
-   "name": "Tala Gang",
+   "id": "pb-talagang-talagang",
+   "districtId": "pb-talagang",
+   "name": "Talagang",
+   "altNames": [
+    "Tala Gang"
+   ],
    "pcode": "PK60504"
   },
   {
@@ -4917,8 +4998,8 @@
    "pcode": "PK70703"
   },
   {
-   "id": "kp-south-waziristan-tiarza",
-   "districtId": "kp-south-waziristan",
+   "id": "kp-upper-south-waziristan-tiarza",
+   "districtId": "kp-upper-south-waziristan",
    "name": "Tiarza",
    "pcode": "PK53006"
   },
@@ -4935,9 +5016,12 @@
    "pcode": "PK63503"
   },
   {
-   "id": "kp-south-waziristan-toi-khulla",
-   "districtId": "kp-south-waziristan",
+   "id": "kp-lower-south-waziristan-toi-khulla",
+   "districtId": "kp-lower-south-waziristan",
    "name": "Toi Khulla",
+   "altNames": [
+    "Tolkhela"
+   ],
    "pcode": "PK53007"
   },
   {
@@ -5042,8 +5126,8 @@
    "pcode": "PK21304"
   },
   {
-   "id": "kp-south-waziristan-wana",
-   "districtId": "kp-south-waziristan",
+   "id": "kp-lower-south-waziristan-wana",
+   "districtId": "kp-lower-south-waziristan",
    "name": "Wana",
    "pcode": "PK53008"
   },
@@ -5072,8 +5156,8 @@
    "pcode": "PK50306"
   },
   {
-   "id": "pb-gujranwala-wazirabad",
-   "districtId": "pb-gujranwala",
+   "id": "pb-wazirabad-wazirabad",
+   "districtId": "pb-wazirabad",
    "name": "Wazirabad",
    "pcode": "PK60904"
   },

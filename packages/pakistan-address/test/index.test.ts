@@ -19,7 +19,7 @@ describe('hierarchy', () => {
     const divisions = provinces.flatMap((p) => getDivisions(p.id));
     const districts = provinces.flatMap((p) => getDistrictsByProvince(p.id));
     const tehsils = districts.flatMap((d) => getTehsils(d.id));
-    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 36, 160, 620]);
+    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 37, 166, 623]);
   });
 
   it('cascades Punjab -> Multan -> Vehari -> Mailsi', () => {
@@ -64,6 +64,24 @@ describe('hierarchy', () => {
     expect(jhang).toContain('Athara Hazari');
     expect(jhang).not.toContain('18 Hazari');
     expect(getDistricts('kp-hazara-div').map((d) => d.name).join()).not.toMatch(/[()]/);
+  });
+
+  it('has the press-reported KP and Punjab changes', () => {
+    const names = (id: string) => getTehsils(id).map((t) => t.name);
+    expect(getDistrict('kp-south-waziristan')).toBeUndefined();
+    expect(names('kp-lower-south-waziristan')).toEqual(['Birmal', 'Shakai', 'Toi Khulla', 'Wana']);
+    expect(names('kp-upper-swat')).toContain('Matta Kharirai');
+    expect(names('kp-swat')).toEqual(['Babuzai', 'Barikot', 'Charbagh', 'Kabal']);
+    expect(getDivisions('pb')).toHaveLength(10);
+    expect(getDistricts('pb-gujrat-div').map((d) => d.name)).toEqual(['Gujrat', 'Hafizabad', 'Mandi Bahauddin', 'Wazirabad']);
+    expect(getDistrictsByProvince('pb')).toHaveLength(40);
+    expect(getDistrict('pb-murree')?.divisionId).toBe('pb-rawalpindi-div');
+    expect(names('pb-kot-addu')).toEqual(['Kot Addu']);
+  });
+
+  it('warns about Balochistan and no other province', () => {
+    expect(getProvince('bl')?.notice).toMatch(/July 2026/);
+    expect(getProvinces().filter((p) => p.notice).map((p) => p.id)).toEqual(['bl']);
   });
 
   it('carries OCHA p-codes', () => {

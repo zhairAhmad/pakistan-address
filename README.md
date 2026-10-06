@@ -8,7 +8,7 @@ Pakistan's administrative hierarchy for address forms: **Province â†’ Division â
 | [`pakistan-address-react`](./packages/pakistan-address-react) | Cascading select fields and a headless hook for React. |
 | [`demo/`](./demo) | Static demo page (GitHub Pages). |
 
-7 provinces/territories, 36 divisions, 160 districts, 620 tehsils, from the OCHA/WFP COD-AB boundaries (valid from Sept 2022) merged with older geo-pakistan data. Not yet verified against official lists; see [DATA.md](./packages/pakistan-address/DATA.md) for coverage and known gaps. Corrections welcome: [CONTRIBUTING.md](./CONTRIBUTING.md).
+7 provinces/territories, 37 divisions, 166 districts, 623 tehsils, from the OCHA/WFP COD-AB boundaries (valid from Sept 2022) merged with older geo-pakistan data. Not yet verified against official lists; see [DATA.md](./packages/pakistan-address/DATA.md) for coverage and known gaps. Corrections welcome: [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ```bash
 npm install

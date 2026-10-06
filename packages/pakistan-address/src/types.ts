@@ -1,6 +1,8 @@
 export interface Province {
   id: string;
   name: string;
+  /** A caution to show users when this province is selected (for example, that its structure recently changed). */
+  notice?: string;
   /** OCHA/WFP COD-AB place code (e.g. `PK6`), for linking to other datasets. */
   pcode?: string;
 }
