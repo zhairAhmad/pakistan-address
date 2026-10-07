@@ -19,7 +19,7 @@ describe('hierarchy', () => {
     const divisions = provinces.flatMap((p) => getDivisions(p.id));
     const districts = provinces.flatMap((p) => getDistrictsByProvince(p.id));
     const tehsils = districts.flatMap((d) => getTehsils(d.id));
-    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 37, 166, 623]);
+    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 38, 166, 668]);
   });
 
   it('cascades Punjab -> Multan -> Vehari -> Mailsi', () => {
@@ -51,7 +51,7 @@ describe('hierarchy', () => {
     const names = (provinceId: string) => getDistrictsByProvince(provinceId).map((d) => d.name);
     expect(names('kp')).toEqual(expect.arrayContaining(['Lower Chitral', 'Upper Chitral', 'Lower Kohistan', 'Upper Kohistan', 'Kolai-Palas']));
     expect(names('kp')).not.toContain('Chitral');
-    expect(names('bl')).toEqual(expect.arrayContaining(['Chaman', 'Duki', 'Shaheed Sikandarabad']));
+    expect(names('bl')).toEqual(expect.arrayContaining(['Chaman', 'Duki', 'Surab']));
     expect(getDistrict('kp-lower-chitral')?.divisionId).toBe('kp-malakand-div');
   });
 
@@ -69,7 +69,7 @@ describe('hierarchy', () => {
   it('has the press-reported KP and Punjab changes', () => {
     const names = (id: string) => getTehsils(id).map((t) => t.name);
     expect(getDistrict('kp-south-waziristan')).toBeUndefined();
-    expect(names('kp-lower-south-waziristan')).toEqual(['Birmal', 'Shakai', 'Toi Khulla', 'Wana']);
+    expect(names('kp-lower-south-waziristan')).toEqual(['Birmal', 'Toi Khulla', 'Wana']);
     expect(names('kp-upper-swat')).toContain('Matta Kharirai');
     expect(names('kp-swat')).toEqual(['Babuzai', 'Barikot', 'Charbagh', 'Kabal']);
     expect(getDivisions('pb')).toHaveLength(10);
@@ -82,6 +82,26 @@ describe('hierarchy', () => {
   it('warns about Balochistan and no other province', () => {
     expect(getProvince('bl')?.notice).toMatch(/July 2026/);
     expect(getProvinces().filter((p) => p.notice).map((p) => p.id)).toEqual(['bl']);
+  });
+
+  it('follows the PBS census 2023 for Balochistan, Karachi and Punjab', () => {
+    const names = (id: string) => getTehsils(id).map((t) => t.name);
+    expect(getDistricts('bl-loralai-div').map((d) => d.name)).toEqual(['Barkhan', 'Duki', 'Loralai', 'Musakhel']);
+    expect(getDistricts('bl-zhob-div').map((d) => d.name)).toEqual(['Killa Saifullah', 'Sherani', 'Zhob']);
+    expect(getDistrict('bl-lehri')).toBeUndefined();
+    expect(getDistrict('bl-surab')?.altNames).toContain('Shaheed Sikandarabad');
+    expect(getDistrict('sd-keamari')?.divisionId).toBe('sd-karachi-div');
+    expect(names('sd-keamari')).toEqual(['Baldia', 'Keamari', 'Mauripur', 'SITE']);
+    expect(names('sd-karachi-south')).toContain('Saddar');
+    expect(names('pb-muzaffargarh')).toContain('Chowk Sarwar Shaheed');
+    expect(names('pb-layyah')).toContain('Layyah');
+  });
+
+  it('carries PBS census codes', () => {
+    expect(getProvince('pb')?.pbsCode).toBe('2');
+    expect(getDistrict('pb-vehari')?.pbsCode).toMatch(/^\d+$/);
+    expect(getTehsils('pb-vehari').every((t) => t.pbsCode)).toBe(true);
+    expect(getDistrict('pb-murree')?.pbsCode).toBeUndefined();
   });
 
   it('carries OCHA p-codes', () => {

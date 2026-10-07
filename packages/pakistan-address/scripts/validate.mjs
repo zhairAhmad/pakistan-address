@@ -56,6 +56,17 @@ for (const [kind, items] of [['district', data.districts], ['tehsil', data.tehsi
   }
 }
 
+// PBS census codes: optional digit strings, unique per level.
+for (const [kind, items] of [['province', data.provinces], ['division', data.divisions], ['district', data.districts], ['tehsil', data.tehsils]]) {
+  const seen = new Set();
+  for (const it of items) {
+    if (it.pbsCode === undefined) continue;
+    if (!/^\d+$/.test(it.pbsCode)) err(`${kind} "${it.id}": malformed pbsCode "${it.pbsCode}"`);
+    if (seen.has(it.pbsCode)) err(`${kind} "${it.id}": duplicate pbsCode "${it.pbsCode}"`);
+    seen.add(it.pbsCode);
+  }
+}
+
 // p-codes are optional but, where present, must look right and be unique per level.
 for (const [kind, items] of [['province', data.provinces], ['district', data.districts], ['tehsil', data.tehsils]]) {
   const seen = new Set();

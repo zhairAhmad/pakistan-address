@@ -8,7 +8,7 @@ The most valuable contribution is a **correction backed by an official source**:
    - Ids are lowercase kebab-case: `<province>-<name>` (divisions end in `-div`, tehsils are `<district-id>-<name>`).
    - Every record points to its parent by id (`provinceId`, `divisionId`, `districtId`). `divisionId` is `null` only for Islamabad.
    - Keep arrays sorted by `name`.
-   - `pcode` is the OCHA COD-AB place code. Leave it out for units that source does not list; never invent one.
+   - `pcode` is the OCHA COD-AB place code and `pbsCode` the PBS census 2023 code. Leave them out for units those sources do not list; never invent one.
    - Bump `meta.dataVersion` to today's date.
 2. Run the checks:
 

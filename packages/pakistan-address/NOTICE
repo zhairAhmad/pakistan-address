@@ -9,7 +9,13 @@ pakistan-address contains data derived from:
    attribute tables, merged with the source below, and some names normalised. The original workbook is in
    data-sources/hdx/. This is not an official product of, and is not endorsed by, WFP or OCHA.
 
-2. aaqibmehran/geo-pakistan (https://github.com/aaqibmehran/geo-pakistan)
+2. Pakistan Bureau of Statistics, Population Census 2023
+   Digital census portal, https://census23.pbos.gov.pk/
+   Official statistics of the Government of Pakistan. The publisher states no licence. Only the names and codes of
+   administrative units (provinces, divisions, districts, tehsils) were read from the portal's dropdown lists, and
+   they are attributed to it. The extracted list is in data-sources/census2023/. Not endorsed by PBS.
+
+3. aaqibmehran/geo-pakistan (https://github.com/aaqibmehran/geo-pakistan)
    Copyright (c) Aaqib Mehran
    Licensed under the MIT License (declared in the project's composer.json).
    The original PHP seeders are kept unmodified in data-sources/geo-pakistan/.

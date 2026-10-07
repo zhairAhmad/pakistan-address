@@ -5,12 +5,16 @@ export interface Province {
   notice?: string;
   /** OCHA/WFP COD-AB place code (e.g. `PK6`), for linking to other datasets. */
   pcode?: string;
+  /** Pakistan Bureau of Statistics Census 2023 code. */
+  pbsCode?: string;
 }
 
 export interface Division {
   id: string;
   provinceId: string;
   name: string;
+  /** Pakistan Bureau of Statistics Census 2023 code. */
+  pbsCode?: string;
 }
 
 export interface District {
@@ -23,6 +27,8 @@ export interface District {
   altNames?: string[];
   /** OCHA/WFP COD-AB place code (e.g. `PK618`). */
   pcode?: string;
+  /** Pakistan Bureau of Statistics Census 2023 code. */
+  pbsCode?: string;
 }
 
 export interface Tehsil {
@@ -33,6 +39,8 @@ export interface Tehsil {
   altNames?: string[];
   /** OCHA/WFP COD-AB place code. Absent for tehsils the COD-AB data does not list. */
   pcode?: string;
+  /** Pakistan Bureau of Statistics Census 2023 code. Absent for units the census does not list. */
+  pbsCode?: string;
 }
 
 /** Reserved for v2 (chaks, towns, mouzas). Always empty in v1. */
