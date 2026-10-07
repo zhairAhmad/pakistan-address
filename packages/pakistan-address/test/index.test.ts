@@ -19,7 +19,7 @@ describe('hierarchy', () => {
     const divisions = provinces.flatMap((p) => getDivisions(p.id));
     const districts = provinces.flatMap((p) => getDistrictsByProvince(p.id));
     const tehsils = districts.flatMap((d) => getTehsils(d.id));
-    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 38, 166, 668]);
+    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 37, 167, 678]);
   });
 
   it('cascades Punjab -> Multan -> Vehari -> Mailsi', () => {
@@ -60,9 +60,9 @@ describe('hierarchy', () => {
     expect(getDistrict('pb-dera-ghazi-khan')?.altNames).toContain('DG Khan');
     expect(getDistrict('bl-sherani')?.name).toBe('Sherani');
     expect(getDistrict('ajk-sudhnoti')?.name).toBe('Sudhnoti');
-    const jhang = getTehsils('pb-jhang').map((t) => t.name);
-    expect(jhang).toContain('Athara Hazari');
-    expect(jhang).not.toContain('18 Hazari');
+    const hazari = getTehsils('pb-jhang').find((t) => t.name === '18-Hazari');
+    expect(hazari?.altNames).toContain('Athara Hazari');
+    expect(getTehsils('pb-jhang').filter((t) => /hazari/i.test(t.name))).toHaveLength(1);
     expect(getDistricts('kp-hazara-div').map((d) => d.name).join()).not.toMatch(/[()]/);
   });
 
@@ -74,9 +74,9 @@ describe('hierarchy', () => {
     expect(names('kp-swat')).toEqual(['Babuzai', 'Barikot', 'Charbagh', 'Kabal']);
     expect(getDivisions('pb')).toHaveLength(10);
     expect(getDistricts('pb-gujrat-div').map((d) => d.name)).toEqual(['Gujrat', 'Hafizabad', 'Mandi Bahauddin', 'Wazirabad']);
-    expect(getDistrictsByProvince('pb')).toHaveLength(40);
+    expect(getDistrictsByProvince('pb')).toHaveLength(41);
     expect(getDistrict('pb-murree')?.divisionId).toBe('pb-rawalpindi-div');
-    expect(names('pb-kot-addu')).toEqual(['Kot Addu']);
+    expect(names('pb-kot-addu')).toEqual(['Chowk Sarwar Shaheed', 'Kot Addu']);
   });
 
   it('warns about Balochistan and no other province', () => {
@@ -93,8 +93,28 @@ describe('hierarchy', () => {
     expect(getDistrict('sd-keamari')?.divisionId).toBe('sd-karachi-div');
     expect(names('sd-keamari')).toEqual(['Baldia', 'Keamari', 'Mauripur', 'SITE']);
     expect(names('sd-karachi-south')).toContain('Saddar');
-    expect(names('pb-muzaffargarh')).toContain('Chowk Sarwar Shaheed');
+    expect(names('pb-muzaffargarh')).toEqual(['Alipur', 'Jatoi', 'Muzaffargarh']);
     expect(names('pb-layyah')).toContain('Layyah');
+  });
+
+  it('matches the Punjab notification of 18 December 2024 (10 divisions, 41 districts, 156 tehsils)', () => {
+    const divisions = getDivisions('pb');
+    const districts = getDistrictsByProvince('pb');
+    expect(divisions).toHaveLength(10);
+    expect(districts).toHaveLength(41);
+    expect(districts.flatMap((d) => getTehsils(d.id))).toHaveLength(156);
+    expect(getTehsils('pb-taunsa').map((t) => t.name)).toEqual(['Koh-e-Suleman', 'Taunsa', 'Vehova']);
+    expect(getDistrict('pb-taunsa')?.divisionId).toBe('pb-dera-ghazi-khan-div');
+    expect(getTehsils('pb-lahore')).toHaveLength(10);
+    expect(getTehsils('pb-talagang').map((t) => t.name)).toEqual(['Lawa', 'Talagang']);
+    expect(getTehsils('pb-murree').map((t) => t.name)).toEqual(['Kotli Sattian', 'Murree']);
+    expect(getTehsils('pb-gujrat').map((t) => t.name)).toContain('Kunjah');
+  });
+
+  it('has the six Sindh divisions of the census (no Banbhore division)', () => {
+    expect(getDivisions('sd').map((d) => d.name)).toEqual(['Hyderabad', 'Karachi', 'Larkana', 'Mirpur Khas', 'Shaheed Benazirabad', 'Sukkur']);
+    expect(getDistricts('sd-hyderabad-div').map((d) => d.name)).toEqual(expect.arrayContaining(['Badin', 'Sujawal', 'Thatta']));
+    expect(getDivision('sd-banbhore-div')).toBeUndefined();
   });
 
   it('carries PBS census codes', () => {

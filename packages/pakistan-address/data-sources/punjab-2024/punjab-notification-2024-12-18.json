@@ -1,0 +1,75 @@
+{
+  "document": {
+    "title": "Notification: divisions, districts and tehsils of the Punjab",
+    "issuer": "Government of the Punjab, Revenue Department (Board of Revenue, Punjab)",
+    "number": "No. 479-2024/6904-DIR(DEV&G)",
+    "date": "2024-12-18",
+    "authority": "Sections 5 and 6 of the Punjab Land Revenue Act, 1967; in supersession of all previous notifications; with immediate effect",
+    "signedBy": "Nabeel Javed, PAS, Senior Member, Board of Revenue, Punjab",
+    "copyUsed": "Scanned copy, 4 pages, published as a PDF by Minute Mirror: https://minutemirror.com.pk/wp-content/uploads/2024/12/Notification-of-Divisions-Districts-Tehsils-in-the-Punjab.pdf",
+    "note": "Transcribed by hand from the scan, with the spellings used in the notification. Totals stated by Dawn and Minute Mirror: 10 divisions, 41 districts, 156 tehsils."
+  },
+  "divisions": [
+    { "name": "Lahore", "districts": [
+      { "name": "Lahore", "tehsils": ["Lahore City", "Lahore Cantt", "Model Town", "Shalimar", "Raiwind", "Allama Iqbal", "Nishter", "Saddar", "Wahga", "Ravi"] },
+      { "name": "Kasur", "tehsils": ["Kasur", "Kot Radha Kishan", "Chunian", "Pattoki"] },
+      { "name": "Sheikhupura", "tehsils": ["Sheikhupura", "Ferozwala", "Muridke", "Sharaqpur", "Safdarabad"] },
+      { "name": "Nankana Sahib", "tehsils": ["Nankana Sahib", "Shahkot", "Sangla Hill"] }
+    ] },
+    { "name": "Gujranwala", "districts": [
+      { "name": "Gujranwala", "tehsils": ["Gujranwala City", "Gujranwala Sadar", "Kamoke", "Naushera Virkan"] },
+      { "name": "Sialkot", "tehsils": ["Sialkot", "Daska", "Pasrur", "Sambrial"] },
+      { "name": "Narowal", "tehsils": ["Narowal", "Shakargarh", "Zafarwal"] }
+    ] },
+    { "name": "Gujrat", "districts": [
+      { "name": "Gujrat", "tehsils": ["Gujrat", "Kharian", "Sarai Alamgir", "Jalalpur Jattan", "Kunjah"] },
+      { "name": "Hafizabad", "tehsils": ["Hafizabad", "Pindi Bhattian"] },
+      { "name": "Mandi Bahauddin", "tehsils": ["Mandi Bahauddin", "Phalia", "Malakwal"] },
+      { "name": "Wazirabad", "tehsils": ["Wazirabad", "Alipur Chatha"] }
+    ] },
+    { "name": "Rawalpindi", "districts": [
+      { "name": "Rawalpindi", "tehsils": ["Rawalpindi Saddar", "Rawalpindi Cantt", "Rawalpindi City", "Kahuta", "Taxila", "Kallar Sayeddan", "Gujjar Khan"] },
+      { "name": "Murree", "tehsils": ["Murree", "Kotli Sattian"] },
+      { "name": "Chakwal", "tehsils": ["Chakwal", "Choa Saidan Shah", "Kallar Kahar"] },
+      { "name": "Attock", "tehsils": ["Attock", "Hassanabdal", "Fateh Jang", "Jand", "Pindi Gheb", "Hazro"] },
+      { "name": "Jhelum", "tehsils": ["Jhelum", "Pind Dadan Khan", "Sohawa", "Dina"] },
+      { "name": "Talagang", "tehsils": ["Talagang", "Lawa"] }
+    ] },
+    { "name": "Multan", "districts": [
+      { "name": "Multan", "tehsils": ["Multan City", "Multan Sadar", "Shujabad", "Jalalpur Pirwala"] },
+      { "name": "Lodhran", "tehsils": ["Lodhran", "Dunyapur", "Kahror Pacca"] },
+      { "name": "Vehari", "tehsils": ["Vehari", "Mailsi", "Burewala"] },
+      { "name": "Khanewal", "tehsils": ["Khanewal", "Mian Channu", "Kabirwala", "Jahanian"] }
+    ] },
+    { "name": "Sahiwal", "districts": [
+      { "name": "Sahiwal", "tehsils": ["Sahiwal", "Chichawatni"] },
+      { "name": "Pakpattan", "tehsils": ["Pakpattan", "Arifwala"] },
+      { "name": "Okara", "tehsils": ["Okara", "Rinala Khurd", "Depalpur"] }
+    ] },
+    { "name": "Bahawalpur", "districts": [
+      { "name": "Bahawalpur", "tehsils": ["Bahawalpur City", "Bahawalpur Saddar", "Ahmadpur East", "Hasilpur", "Yazman", "Khairpur Tamewali"] },
+      { "name": "Bahawalnagar", "tehsils": ["Bahawalnagar", "Fortabbas", "Chishtian", "Haroonabad", "Minchinabad"] },
+      { "name": "Rahim Yar Khan", "tehsils": ["Rahim Yar Khan", "Sadiqabad", "Liaqatpur", "Khanpur"] }
+    ] },
+    { "name": "Dera Ghazi Khan", "districts": [
+      { "name": "Dera Ghazi Khan", "tehsils": ["Dera Ghazi Khan", "Kot Chutta"] },
+      { "name": "Taunsa", "tehsils": ["Taunsa", "Vehova", "Koh-e-Suleman"] },
+      { "name": "Rajanpur", "tehsils": ["Rajanpur", "Jampur", "Rojhan"] },
+      { "name": "Layyah", "tehsils": ["Layyah", "Karor Lal Esan", "Choubara"] },
+      { "name": "Muzaffargarh", "tehsils": ["Muzaffargarh", "Alipur", "Jatoi"] },
+      { "name": "Kot Addu", "tehsils": ["Kot Addu", "Chowk Sarwar Shaheed"] }
+    ] },
+    { "name": "Faisalabad", "districts": [
+      { "name": "Faisalabad", "tehsils": ["Faisalabad City", "Faisalabad Saddar", "Chak Jhumra", "Jaranwala", "Samundari", "Tandlianwala"] },
+      { "name": "Jhang", "tehsils": ["Jhang", "Shorkot", "Ahmad Pur Sial", "18-Hazari"] },
+      { "name": "Chiniot", "tehsils": ["Chiniot", "Lalian", "Bhowana"] },
+      { "name": "Toba Tek Singh", "tehsils": ["Toba Tek Singh", "Gojra", "Kamalia", "Pir Mahal"] }
+    ] },
+    { "name": "Sargodha", "districts": [
+      { "name": "Sargodha", "tehsils": ["Sargodha", "Sillanwali", "Bhalwal", "Kot Momin", "Shahpur", "Sahiwal", "Bhera"] },
+      { "name": "Khushab", "tehsils": ["Khushab", "Noorpur", "Quaidabad", "Naushera"] },
+      { "name": "Mianwali", "tehsils": ["Mianwali", "Isa Khel", "Piplan"] },
+      { "name": "Bhakkar", "tehsils": ["Bhakkar", "Darya Khan", "Mankera", "Kalur Kot"] }
+    ] }
+  ]
+}

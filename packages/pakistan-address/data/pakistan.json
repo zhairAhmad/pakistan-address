@@ -32,6 +32,12 @@
     "url": "https://census23.pbos.gov.pk/",
     "license": "Not stated by the publisher; official government statistics, used for unit names and codes with attribution",
     "note": "Divisions, districts and tehsils of Balochistan, Islamabad, Khyber Pakhtunkhwa, Punjab and Sindh as at the census frame (about early 2023); PBS codes in `pbsCode`. See data-sources/census2023/README.md"
+   },
+   {
+    "name": "Government of the Punjab, Revenue Department, Notification No. 479-2024/6904-DIR(DEV&G), 2024-12-18",
+    "url": "https://minutemirror.com.pk/wp-content/uploads/2024/12/Notification-of-Divisions-Districts-Tehsils-in-the-Punjab.pdf",
+    "license": "Official government notification; only unit names are used",
+    "note": "Divisions, districts and tehsils of Punjab (10 / 41 / 156), replacing the older Punjab lists. Scanned copy published by Minute Mirror; transcribed in data-sources/punjab-2024/"
    }
   ]
  },
@@ -89,11 +95,6 @@
    "id": "gb-baltistan-div",
    "provinceId": "gb",
    "name": "Baltistan"
-  },
-  {
-   "id": "sd-banbhore-div",
-   "provinceId": "sd",
-   "name": "Banbhore"
   },
   {
    "id": "kp-bannu-div",
@@ -335,7 +336,7 @@
   {
    "id": "sd-badin",
    "provinceId": "sd",
-   "divisionId": "sd-banbhore-div",
+   "divisionId": "sd-hyderabad-div",
    "name": "Badin",
    "pcode": "PK701",
    "pbsCode": "062"
@@ -1466,7 +1467,7 @@
   {
    "id": "sd-sujawal",
    "provinceId": "sd",
-   "divisionId": "sd-banbhore-div",
+   "divisionId": "sd-hyderabad-div",
    "name": "Sujawal",
    "pcode": "PK722",
    "pbsCode": "152"
@@ -1544,6 +1545,15 @@
    "pbsCode": "004"
   },
   {
+   "id": "pb-taunsa",
+   "provinceId": "pb",
+   "divisionId": "pb-dera-ghazi-khan-div",
+   "name": "Taunsa",
+   "altNames": [
+    "Taunsa Sharif"
+   ]
+  },
+  {
    "id": "sd-tharparkar",
    "provinceId": "sd",
    "divisionId": "sd-mirpur-khas-div",
@@ -1554,7 +1564,7 @@
   {
    "id": "sd-thatta",
    "provinceId": "sd",
-   "divisionId": "sd-banbhore-div",
+   "divisionId": "sd-hyderabad-div",
    "name": "Thatta",
    "pcode": "PK727",
    "pbsCode": "069"
@@ -1675,6 +1685,16 @@
  ],
  "tehsils": [
   {
+   "id": "pb-jhang-18-hazari",
+   "districtId": "pb-jhang",
+   "name": "18-Hazari",
+   "altNames": [
+    "Athara Hazari"
+   ],
+   "pcode": "PK61204",
+   "pbsCode": "108"
+  },
+  {
    "id": "ajk-poonch-abbaspur",
    "districtId": "ajk-poonch",
    "name": "Abbaspur",
@@ -1695,18 +1715,18 @@
    "pbsCode": "038"
   },
   {
+   "id": "pb-jhang-ahmad-pur-sial",
+   "districtId": "pb-jhang",
+   "name": "Ahmad Pur Sial",
+   "pcode": "PK61201",
+   "pbsCode": "109"
+  },
+  {
    "id": "pb-bahawalpur-ahmadpur-east",
    "districtId": "pb-bahawalpur",
    "name": "Ahmadpur East",
    "pcode": "PK60301",
    "pbsCode": "074"
-  },
-  {
-   "id": "pb-jhang-ahmadpur-sial",
-   "districtId": "pb-jhang",
-   "name": "Ahmadpur Sial",
-   "pcode": "PK61201",
-   "pbsCode": "109"
   },
   {
    "id": "sd-malir-airport",
@@ -1728,11 +1748,21 @@
    "pbsCode": "091"
   },
   {
+   "id": "pb-wazirabad-alipur-chatha",
+   "districtId": "pb-wazirabad",
+   "name": "Alipur Chatha"
+  },
+  {
    "id": "kp-batagram-allai",
    "districtId": "kp-batagram",
    "name": "Allai",
    "pcode": "PK50401",
    "pbsCode": "013"
+  },
+  {
+   "id": "pb-lahore-allama-iqbal",
+   "districtId": "pb-lahore",
+   "name": "Allama Iqbal"
   },
   {
    "id": "kp-shangla-alpuri",
@@ -1764,9 +1794,9 @@
    "pbsCode": "326"
   },
   {
-   "id": "pb-pakpattan-arif-wala",
+   "id": "pb-pakpattan-arifwala",
    "districtId": "pb-pakpattan",
-   "name": "Arif Wala",
+   "name": "Arifwala",
    "pcode": "PK62701",
    "pbsCode": "190"
   },
@@ -1781,17 +1811,6 @@
    "districtId": "gb-astore",
    "name": "Astore",
    "pcode": "PK30101"
-  },
-  {
-   "id": "pb-jhang-athara-hazari",
-   "districtId": "pb-jhang",
-   "name": "Athara Hazari",
-   "altNames": [
-    "18 Hazari",
-    "18-Hazari"
-   ],
-   "pcode": "PK61204",
-   "pbsCode": "108"
   },
   {
    "id": "ajk-neelum-athmuqam",
@@ -1869,11 +1888,11 @@
    "pbsCode": "069"
   },
   {
-   "id": "pb-bahawalpur-bahawalpur",
+   "id": "pb-bahawalpur-bahawalpur-city",
    "districtId": "pb-bahawalpur",
-   "name": "Bahawalpur",
+   "name": "Bahawalpur City",
    "altNames": [
-    "Bahawalpur City"
+    "Bahawalpur"
    ],
    "pcode": "PK60302",
    "pbsCode": "075"
@@ -2116,13 +2135,6 @@
    "pbsCode": "204"
   },
   {
-   "id": "pb-chiniot-bhawana",
-   "districtId": "pb-chiniot",
-   "name": "Bhawana",
-   "pcode": "PK60601",
-   "pbsCode": "099"
-  },
-  {
    "id": "pb-sargodha-bhera",
    "districtId": "pb-sargodha",
    "name": "Bhera",
@@ -2141,6 +2153,16 @@
    "name": "Bhiria",
    "pcode": "PK71701",
    "pbsCode": "300"
+  },
+  {
+   "id": "pb-chiniot-bhowana",
+   "districtId": "pb-chiniot",
+   "name": "Bhowana",
+   "altNames": [
+    "Bhawana"
+   ],
+   "pcode": "PK60601",
+   "pbsCode": "099"
   },
   {
    "id": "sd-malir-bin-qasim",
@@ -2370,8 +2392,8 @@
    "pbsCode": "088"
   },
   {
-   "id": "pb-muzaffargarh-chowk-sarwar-shaheed",
-   "districtId": "pb-muzaffargarh",
+   "id": "pb-kot-addu-chowk-sarwar-shaheed",
+   "districtId": "pb-kot-addu",
    "name": "Chowk Sarwar Shaheed",
    "pbsCode": "672"
   },
@@ -2707,9 +2729,12 @@
    "pbsCode": "103"
   },
   {
-   "id": "pb-faisalabad-faisalabad-sadar",
+   "id": "pb-faisalabad-faisalabad-saddar",
    "districtId": "pb-faisalabad",
-   "name": "Faisalabad Sadar",
+   "name": "Faisalabad Saddar",
+   "altNames": [
+    "Faisalabad Sadar"
+   ],
    "pcode": "PK60803",
    "pbsCode": "104"
   },
@@ -2746,16 +2771,19 @@
    "pbsCode": "562"
   },
   {
-   "id": "pb-sheikhupura-ferozewala",
+   "id": "pb-sheikhupura-ferozwala",
    "districtId": "pb-sheikhupura",
-   "name": "Ferozewala",
+   "name": "Ferozwala",
+   "altNames": [
+    "Ferozewala"
+   ],
    "pcode": "PK63301",
    "pbsCode": "146"
   },
   {
-   "id": "pb-bahawalnagar-fort-abbas",
+   "id": "pb-bahawalnagar-fortabbas",
    "districtId": "pb-bahawalnagar",
-   "name": "Fort Abbas",
+   "name": "Fortabbas",
    "pcode": "PK60203",
    "pbsCode": "071"
   },
@@ -2954,26 +2982,32 @@
    "pbsCode": "416"
   },
   {
-   "id": "pb-rawalpindi-gujar-khan",
+   "id": "pb-rawalpindi-gujjar-khan",
    "districtId": "pb-rawalpindi",
-   "name": "Gujar Khan",
+   "name": "Gujjar Khan",
+   "altNames": [
+    "Gujar Khan"
+   ],
    "pcode": "PK63001",
    "pbsCode": "180"
   },
   {
-   "id": "pb-gujranwala-gujranwala",
+   "id": "pb-gujranwala-gujranwala-city",
    "districtId": "pb-gujranwala",
-   "name": "Gujranwala",
+   "name": "Gujranwala City",
    "altNames": [
-    "Gujranwala City"
+    "Gujranwala"
    ],
    "pcode": "PK60901",
    "pbsCode": "117"
   },
   {
-   "id": "pb-gujranwala-gujranwala-saddar",
+   "id": "pb-gujranwala-gujranwala-sadar",
    "districtId": "pb-gujranwala",
-   "name": "Gujranwala Saddar",
+   "name": "Gujranwala Sadar",
+   "altNames": [
+    "Gujranwala Saddar"
+   ],
    "pbsCode": "118"
   },
   {
@@ -3112,13 +3146,6 @@
    "pbsCode": "072"
   },
   {
-   "id": "pb-attock-hasan-abdal",
-   "districtId": "pb-attock",
-   "name": "Hasan Abdal",
-   "pcode": "PK60103",
-   "pbsCode": "167"
-  },
-  {
    "id": "pb-bahawalpur-hasilpur",
    "districtId": "pb-bahawalpur",
    "name": "Hasilpur",
@@ -3130,6 +3157,16 @@
    "districtId": "kp-peshawar",
    "name": "Hassan Khel",
    "pbsCode": "608"
+  },
+  {
+   "id": "pb-attock-hassanabdal",
+   "districtId": "pb-attock",
+   "name": "Hassanabdal",
+   "altNames": [
+    "Hasan Abdal"
+   ],
+   "pcode": "PK60103",
+   "pbsCode": "167"
   },
   {
    "id": "ajk-hattian-bala-hattian",
@@ -3211,9 +3248,9 @@
    "pbsCode": "570"
   },
   {
-   "id": "pb-mianwali-isakhel",
+   "id": "pb-mianwali-isa-khel",
    "districtId": "pb-mianwali",
-   "name": "Isakhel",
+   "name": "Isa Khel",
    "pcode": "PK62101",
    "pbsCode": "201"
   },
@@ -3264,6 +3301,11 @@
    "name": "Jaheen Parome",
    "pcode": "PK22402",
    "pbsCode": "369"
+  },
+  {
+   "id": "pb-gujrat-jalalpur-jattan",
+   "districtId": "pb-gujrat",
+   "name": "Jalalpur Jattan"
   },
   {
    "id": "pb-multan-jalalpur-pirwala",
@@ -3502,9 +3544,12 @@
    "pbsCode": "173"
   },
   {
-   "id": "pb-rawalpindi-kallar-sayaddan",
+   "id": "pb-rawalpindi-kallar-sayeddan",
    "districtId": "pb-rawalpindi",
-   "name": "Kallar Sayaddan",
+   "name": "Kallar Sayeddan",
+   "altNames": [
+    "Kallar Sayaddan"
+   ],
    "pcode": "PK63003",
    "pbsCode": "182"
   },
@@ -3890,8 +3935,8 @@
    "pbsCode": "346"
   },
   {
-   "id": "pb-dera-ghazi-khan-koh-e-suleman",
-   "districtId": "pb-dera-ghazi-khan",
+   "id": "pb-taunsa-koh-e-suleman",
+   "districtId": "pb-taunsa",
    "name": "Koh-e-Suleman",
    "altNames": [
     "D.G Khan (Tribal Area)"
@@ -3933,11 +3978,12 @@
    "pbsCode": "093"
   },
   {
-   "id": "pb-dera-ghazi-khan-kot-chatta",
+   "id": "pb-dera-ghazi-khan-kot-chutta",
    "districtId": "pb-dera-ghazi-khan",
-   "name": "Kot Chatta",
+   "name": "Kot Chutta",
    "altNames": [
-    "Kot Chhutta"
+    "Kot Chhutta",
+    "Kot Chatta"
    ],
    "pcode": "PK60703",
    "pbsCode": "086"
@@ -3964,11 +4010,11 @@
    "pbsCode": "206"
   },
   {
-   "id": "pb-kasur-kot-radha-kishen",
+   "id": "pb-kasur-kot-radha-kishan",
    "districtId": "pb-kasur",
-   "name": "Kot Radha Kishen",
+   "name": "Kot Radha Kishan",
    "altNames": [
-    "Kot Radha Kishan"
+    "Kot Radha Kishen"
    ],
    "pcode": "PK61403",
    "pbsCode": "139"
@@ -3980,8 +4026,8 @@
    "pcode": "PK10505"
   },
   {
-   "id": "pb-rawalpindi-kotli-sattian",
-   "districtId": "pb-rawalpindi",
+   "id": "pb-murree-kotli-sattian",
+   "districtId": "pb-murree",
    "name": "Kotli Sattian",
    "pcode": "PK63004",
    "pbsCode": "183"
@@ -4011,6 +4057,11 @@
    "name": "Kulachi",
    "pcode": "PK50903",
    "pbsCode": "007"
+  },
+  {
+   "id": "pb-gujrat-kunjah",
+   "districtId": "pb-gujrat",
+   "name": "Kunjah"
   },
   {
    "id": "sd-umerkot-kunri",
@@ -4143,8 +4194,8 @@
    "pbsCode": "222"
   },
   {
-   "id": "pb-chakwal-lawa",
-   "districtId": "pb-chakwal",
+   "id": "pb-talagang-lawa",
+   "districtId": "pb-talagang",
    "name": "Lawa",
    "pbsCode": "174"
   },
@@ -4671,9 +4722,12 @@
    "pbsCode": "159"
   },
   {
-   "id": "pb-multan-multan-saddar",
+   "id": "pb-multan-multan-sadar",
    "districtId": "pb-multan",
-   "name": "Multan Saddar",
+   "name": "Multan Sadar",
+   "altNames": [
+    "Multan Saddar"
+   ],
    "pcode": "PK62203",
    "pbsCode": "160"
   },
@@ -4824,6 +4878,16 @@
    "pbsCode": "597"
   },
   {
+   "id": "pb-gujranwala-naushera-virkan",
+   "districtId": "pb-gujranwala",
+   "name": "Naushera Virkan",
+   "altNames": [
+    "Nowshera Virkan"
+   ],
+   "pcode": "PK60903",
+   "pbsCode": "120"
+  },
+  {
    "id": "sd-shaheed-benazir-abad-nawabshah",
    "districtId": "sd-shaheed-benazir-abad",
    "name": "Nawabshah",
@@ -4857,6 +4921,11 @@
    "pbsCode": "309"
   },
   {
+   "id": "pb-lahore-nishter",
+   "districtId": "pb-lahore",
+   "name": "Nishter"
+  },
+  {
    "id": "bl-chagai-nokkundi",
    "districtId": "bl-chagai",
    "name": "Nokkundi",
@@ -4885,13 +4954,6 @@
    "name": "Nowshera",
    "pcode": "PK52601",
    "pbsCode": "066"
-  },
-  {
-   "id": "pb-gujranwala-nowshera-virkan",
-   "districtId": "pb-gujranwala",
-   "name": "Nowshera Virkan",
-   "pcode": "PK60903",
-   "pbsCode": "120"
   },
   {
    "id": "bl-nushki-nushki",
@@ -5234,16 +5296,6 @@
    "pbsCode": "097"
   },
   {
-   "id": "pb-rajanpur-rajanpur-tribal-area",
-   "districtId": "pb-rajanpur",
-   "name": "Rajanpur (Tribal Area)",
-   "altNames": [
-    "De-Excluded Area Rajanpur"
-   ],
-   "pcode": "PK62903",
-   "pbsCode": "095"
-  },
-  {
    "id": "bl-barkhan-rakhni",
    "districtId": "bl-barkhan",
    "name": "Rakhni",
@@ -5257,17 +5309,35 @@
    "pbsCode": "255"
   },
   {
+   "id": "pb-lahore-ravi",
+   "districtId": "pb-lahore",
+   "name": "Ravi"
+  },
+  {
    "id": "ajk-poonch-rawalakot",
    "districtId": "ajk-poonch",
    "name": "Rawalakot",
    "pcode": "PK10903"
   },
   {
-   "id": "pb-rawalpindi-rawalpindi",
+   "id": "pb-rawalpindi-rawalpindi-cantt",
    "districtId": "pb-rawalpindi",
-   "name": "Rawalpindi",
+   "name": "Rawalpindi Cantt"
+  },
+  {
+   "id": "pb-rawalpindi-rawalpindi-city",
+   "districtId": "pb-rawalpindi",
+   "name": "Rawalpindi City",
+   "altNames": [
+    "Rawalpindi"
+   ],
    "pcode": "PK63006",
    "pbsCode": "185"
+  },
+  {
+   "id": "pb-rawalpindi-rawalpindi-saddar",
+   "districtId": "pb-rawalpindi",
+   "name": "Rawalpindi Saddar"
   },
   {
    "id": "kp-swabi-razar",
@@ -5284,9 +5354,12 @@
    "pbsCode": "475"
   },
   {
-   "id": "pb-okara-renala-khurd",
+   "id": "pb-okara-rinala-khurd",
    "districtId": "pb-okara",
-   "name": "Renala Khurd",
+   "name": "Rinala Khurd",
+   "altNames": [
+    "Renala Khurd"
+   ],
    "pcode": "PK62603",
    "pbsCode": "189"
   },
@@ -5322,6 +5395,11 @@
    "districtId": "sd-karachi-south",
    "name": "Saddar",
    "pbsCode": "591"
+  },
+  {
+   "id": "pb-lahore-saddar",
+   "districtId": "pb-lahore",
+   "name": "Saddar"
   },
   {
    "id": "pb-rahim-yar-khan-sadiqabad",
@@ -5430,6 +5508,17 @@
    "name": "Sambrial",
    "pcode": "PK63403",
    "pbsCode": "135"
+  },
+  {
+   "id": "pb-faisalabad-samundari",
+   "districtId": "pb-faisalabad",
+   "name": "Samundari",
+   "altNames": [
+    "Sammundri",
+    "Summundri"
+   ],
+   "pcode": "PK60805",
+   "pbsCode": "106"
   },
   {
    "id": "bl-sibi-sangan",
@@ -5583,13 +5672,6 @@
    "pbsCode": "592"
   },
   {
-   "id": "pb-nankana-sahib-shah-kot",
-   "districtId": "pb-nankana-sahib",
-   "name": "Shah Kot",
-   "pcode": "PK62403",
-   "pbsCode": "145"
-  },
-  {
    "id": "sd-malir-shah-mureed",
    "districtId": "sd-malir",
    "name": "Shah Mureed",
@@ -5624,6 +5706,13 @@
    "districtId": "bl-surab",
    "name": "Shaheed Meharabad Zehri",
    "pbsCode": "721"
+  },
+  {
+   "id": "pb-nankana-sahib-shahkot",
+   "districtId": "pb-nankana-sahib",
+   "name": "Shahkot",
+   "pcode": "PK62403",
+   "pbsCode": "145"
   },
   {
    "id": "pb-sargodha-shahpur",
@@ -5675,9 +5764,12 @@
    "pbsCode": "351"
   },
   {
-   "id": "pb-sheikhupura-sharak-pur",
+   "id": "pb-sheikhupura-sharaqpur",
    "districtId": "pb-sheikhupura",
-   "name": "Sharak Pur",
+   "name": "Sharaqpur",
+   "altNames": [
+    "Sharak Pur"
+   ],
    "pcode": "PK63304",
    "pbsCode": "149"
   },
@@ -5903,16 +5995,6 @@
    "pbsCode": "313"
   },
   {
-   "id": "pb-faisalabad-summundri",
-   "districtId": "pb-faisalabad",
-   "name": "Summundri",
-   "altNames": [
-    "Sammundri"
-   ],
-   "pcode": "PK60805",
-   "pbsCode": "106"
-  },
-  {
    "id": "bl-gwadar-suntsar",
    "districtId": "bl-gwadar",
    "name": "Suntsar",
@@ -5969,9 +6051,6 @@
    "id": "pb-talagang-talagang",
    "districtId": "pb-talagang",
    "name": "Talagang",
-   "altNames": [
-    "Tala Gang"
-   ],
    "pcode": "PK60504",
    "pbsCode": "175"
   },
@@ -6009,9 +6088,9 @@
    "pbsCode": "420"
   },
   {
-   "id": "pb-faisalabad-tandlian-wala",
+   "id": "pb-faisalabad-tandlianwala",
    "districtId": "pb-faisalabad",
-   "name": "Tandlian Wala",
+   "name": "Tandlianwala",
    "pcode": "PK60806",
    "pbsCode": "107"
   },
@@ -6084,8 +6163,8 @@
    "pcode": "PK11004"
   },
   {
-   "id": "pb-dera-ghazi-khan-taunsa",
-   "districtId": "pb-dera-ghazi-khan",
+   "id": "pb-taunsa-taunsa",
+   "districtId": "pb-taunsa",
    "name": "Taunsa",
    "pcode": "PK60704",
    "pbsCode": "087"
@@ -6269,11 +6348,21 @@
    "pbsCode": "164"
   },
   {
+   "id": "pb-taunsa-vehova",
+   "districtId": "pb-taunsa",
+   "name": "Vehova"
+  },
+  {
    "id": "bl-khuzdar-wadh",
    "districtId": "bl-khuzdar",
    "name": "Wadh",
    "pcode": "PK21304",
    "pbsCode": "333"
+  },
+  {
+   "id": "pb-lahore-wahga",
+   "districtId": "pb-lahore",
+   "name": "Wahga"
   },
   {
    "id": "kp-lower-south-waziristan-wana",

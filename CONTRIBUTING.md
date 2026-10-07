@@ -1,6 +1,6 @@
 # Contributing
 
-The most valuable contribution is a **correction backed by an official source**: a Pakistan Bureau of Statistics list, a provincial Board of Revenue / Local Government notification, or a gazette.
+The most valuable contribution is a **correction backed by an official source**: a Pakistan Bureau of Statistics list, a provincial Board of Revenue / Local Government notification, or a gazette (the Punjab one of 18 December 2024 is already applied; see `packages/pakistan-address/data-sources/punjab-2024/`).
 
 ## Fixing or adding a record
 

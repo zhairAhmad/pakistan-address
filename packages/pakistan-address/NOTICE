@@ -15,7 +15,11 @@ pakistan-address contains data derived from:
    administrative units (provinces, divisions, districts, tehsils) were read from the portal's dropdown lists, and
    they are attributed to it. The extracted list is in data-sources/census2023/. Not endorsed by PBS.
 
-3. aaqibmehran/geo-pakistan (https://github.com/aaqibmehran/geo-pakistan)
+3. Government of the Punjab, Revenue Department, Notification No. 479-2024/6904-DIR(DEV&G), 18 December 2024
+   Official notification of the divisions, districts and tehsils of the Punjab. Only the names of administrative units
+   were used. Transcribed in data-sources/punjab-2024/ from a scanned copy published by Minute Mirror.
+
+4. aaqibmehran/geo-pakistan (https://github.com/aaqibmehran/geo-pakistan)
    Copyright (c) Aaqib Mehran
    Licensed under the MIT License (declared in the project's composer.json).
    The original PHP seeders are kept unmodified in data-sources/geo-pakistan/.
