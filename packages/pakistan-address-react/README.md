@@ -45,7 +45,7 @@ function Checkout() {
 
 Where the user typed their own text, the name is that text and the matching `ids` entry is `null`.
 
-Props: `value` / `defaultValue` / `onChange` (controlled or uncontrolled), `labels` (translate or rename), `classNames` (`root`, `field`, `label`, `select`, `input`), `name` (prefix, so the fields post with a native form: `shipping[provinceId]`, `shipping[districtOther]`, `shipping[addressLine]`, …).
+Props: `value` / `defaultValue` / `onChange` (controlled or uncontrolled), `labels` (translate or rename), `classNames` (`root`, `field`, `label`, `select`, `input`, `notice`), `name` (prefix, so the fields post with a native form: `shipping[provinceId]`, `shipping[districtOther]`, `shipping[addressLine]`, …).
 
 ## Headless hook (react-select, MUI, Radix…)
 
@@ -53,34 +53,51 @@ Props: `value` / `defaultValue` / `onChange` (controlled or uncontrolled), `labe
 import Select from 'react-select';
 import { OTHER, useAddressCascade } from 'pakistan-address-react';
 
-function ProvinceAndDistrict() {
+function ProvinceDivisionDistrict() {
   const c = useAddressCascade();
-  const districtOptions = [...c.levels.district.options, { value: OTHER, label: 'Other / not listed' }];
+  const withOther = (level: 'division' | 'district') => [
+    ...c.levels[level].options,
+    { value: OTHER, label: 'Other / not listed' },
+  ];
   const find = (options: { value: string }[], id: string | null) => options.find((o) => o.value === id) ?? null;
 
   return (
     <>
       <Select
+        aria-label="Province"
         options={c.levels.province.options}
         value={find(c.levels.province.options, c.value.province.id)}
         onChange={(o) => c.select('province', o?.value ?? null)}
       />
+      {c.levels.division.visible && (
+        <Select
+          aria-label="Division"
+          options={withOther('division')}
+          value={find(withOther('division'), c.value.division.id)}
+          onChange={(o) => c.select('division', o?.value ?? null)}
+        />
+      )}
       {c.levels.district.visible && (
         <Select
-          options={districtOptions}
-          value={find(districtOptions, c.value.district.id)}
+          aria-label="District"
+          options={withOther('district')}
+          value={find(withOther('district'), c.value.district.id)}
           onChange={(o) => c.select('district', o?.value ?? null)}
         />
       )}
       {c.levels.district.showText && (
-        <input value={c.value.district.text} onChange={(e) => c.setText('district', e.target.value)} />
+        <input
+          aria-label="District (other)"
+          value={c.value.district.text}
+          onChange={(e) => c.setText('district', e.target.value)}
+        />
       )}
     </>
   );
 }
 ```
 
-`c.levels[level]` gives `{ visible, options, allowOther, showText }` for each level, `c.address` the resolved value, and `c.select`, `c.setText`, `c.setAddressLine`, `c.reset` update it. The same logic is available without React as `getLevelStates`, `selectLevel`, `setLevelText` and `resolveAddress`.
+Levels appear one at a time (division, then district, then tehsil), so render each one only when `c.levels[level].visible` is true. `c.levels[level]` gives `{ visible, options, allowOther, showText }` for each level, `c.address` the resolved value, and `c.select`, `c.setText`, `c.setAddressLine`, `c.reset` update it. The same logic is available without React as `getLevelStates`, `selectLevel`, `setLevelText` and `resolveAddress`.
 
 ## Behaviour notes
 
