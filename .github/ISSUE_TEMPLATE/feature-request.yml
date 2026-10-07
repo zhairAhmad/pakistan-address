@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest an addition, including sources for chaks, towns and mouzas (v2)
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you need?
+      description: The problem you are trying to solve, not only the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposed approach
+  - type: textarea
+    id: source
+    attributes:
+      label: Data source and licence
+      description: For new data (for example localities), name the source and its licence. Wholesale copies of someone else's database can't be added.

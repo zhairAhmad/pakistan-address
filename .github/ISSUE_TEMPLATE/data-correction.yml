@@ -1,0 +1,42 @@
+name: Data correction
+description: A province, division, district or tehsil is missing, wrong, renamed or abolished
+labels: [data]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections backed by an official source (a PBS list, a Board of Revenue, Local Government or Revenue Department notification, or a gazette) are the most useful. See [CONTRIBUTING.md](https://github.com/zhairAhmad/pakistan-address/blob/main/CONTRIBUTING.md).
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - Missing unit
+        - Wrong name or spelling
+        - Wrong parent (placed under the wrong division, district or province)
+        - Abolished or merged unit still listed
+        - Renamed unit
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: record
+    attributes:
+      label: Record affected
+      description: The unit and its id if you know it, e.g. `Mailsi` (`pb-vehari-mailsi`).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What it should be
+      description: The correct name, parent and level.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Link to the notification, gazette or official list, with its date. If it is only a news report, say so. Please don't paste a copy of a database or PDF table.
+    validations:
+      required: true
