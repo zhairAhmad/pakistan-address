@@ -6,16 +6,16 @@
 <title>pakistan-address demo</title>
 <style>
   :root {
-    --bg: #f7f8f7; --card: #fff; --text: #1a1f1c; --muted: #5b655f; --line: #d5dbd7; --accent: #01411c; --accent-text: #fff; --code: #eef1ef;
+    --bg: #f7f8f7; --card: #fff; --text: #1a1f1c; --muted: #5b655f; --line: #d5dbd7; --accent: #01411c; --accent-text: #fff; --code: #eef1ef; --warn: #b45309;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #111513; --card: #1a201d; --text: #e8ece9; --muted: #98a39c; --line: #2f3833; --accent: #4fa56c; --accent-text: #08130c; --code: #232b27; }
+    :root { --bg: #111513; --card: #1a201d; --text: #e8ece9; --muted: #98a39c; --line: #2f3833; --accent: #4fa56c; --accent-text: #08130c; --code: #232b27; --warn: #f59e0b; }
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
   h1 { font-size: 1.6rem; margin: 0 0 4px; }
-  .lede { color: var(--muted); margin: 0 0 24px; }
+  .lede { color: var(--muted); margin: 0 0 16px; }
   .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
   @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; align-items: start; } }
   section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
@@ -30,18 +30,30 @@
   .meta { color: var(--muted); font-size: .8125rem; margin-top: 24px; }
   .meta a { color: inherit; }
   .note { font-size: .8125rem; color: var(--muted); margin: 0 0 12px; }
+  .switch { border: 0; padding: 0; margin: 0 0 16px; }
+  .switch legend { font-size: .875rem; font-weight: 600; padding: 0; margin-bottom: 4px; }
+  .switch label { display: inline-block; font-weight: 400; margin-right: 16px; }
+  .switch input { width: auto; margin-right: 4px; }
   .notice { font-size: .8125rem; margin: 6px 0 0; padding: 8px 10px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--code); }
+  .notice.unofficial { border-left-color: var(--warn); margin: 0 0 12px; }
 </style>
 </head>
 <body>
 <main>
   <h1>pakistan-address</h1>
-  <p class="lede">Province → Division → District → Tehsil, with an "Other / not listed" fallback at every level.</p>
+  <p class="lede" id="lede"></p>
+
+  <fieldset class="switch">
+    <legend>Address list</legend>
+    <label><input type="radio" name="source" value="official" checked> Official administrative units</label>
+    <label><input type="radio" name="source" value="delivery"> Delivery areas (unofficial)</label>
+  </fieldset>
 
   <div class="grid">
     <section aria-labelledby="form-h">
       <h2 id="form-h">Address</h2>
       <p class="note">Data is never complete, so each level can be typed in, and the full address is a separate field.</p>
+      <p class="notice unofficial" id="source-notice" role="note" hidden></p>
       <form id="form" autocomplete="off"></form>
     </section>
     <section aria-labelledby="out-h">
@@ -54,103 +66,170 @@
 </main>
 
 <script type="module">
-import {
-  getProvinces, getDivisions, getDistricts, getDistrictsByProvince, getTehsils, getMeta,
-  getProvince, getDivision, getDistrict, getTehsil,
-} from './pakistan-address.js';
+import * as official from './pakistan-address.js';
 
 const OTHER = '__other__';
-const levels = ['province', 'division', 'district', 'tehsil'];
-const labels = { province: 'Province', division: 'Division', district: 'District', tehsil: 'Tehsil' };
-const lookup = { province: getProvince, division: getDivision, district: getDistrict, tehsil: getTehsil };
-const state = { province: '', division: '', district: '', tehsil: '', text: { division: '', district: '', tehsil: '' }, addressLine: '' };
+const listed = (v) => v && v !== OTHER;
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+// Each source describes its levels and how to work out what is visible and what each list contains.
+const SOURCES = {
+  official: {
+    lede: 'Province → Division → District → Tehsil, with an "Other / not listed" fallback at every level.',
+    levels: [
+      { key: 'province', label: 'Province' },
+      { key: 'division', label: 'Division' },
+      { key: 'district', label: 'District' },
+      { key: 'tehsil', label: 'Tehsil' },
+    ],
+    api: () => official,
+    compute(api, ids) {
+      const divisions = listed(ids.province) ? api.getDivisions(ids.province) : [];
+      const hasDivisions = divisions.length > 0;
+      const districts = listed(ids.division) ? api.getDistricts(ids.division)
+        : ids.province && listed(ids.province) && (!hasDivisions || ids.division === OTHER) ? api.getDistrictsByProvince(ids.province) : [];
+      const tehsils = listed(ids.district) ? api.getTehsils(ids.district) : [];
+      const reachDistricts = !!ids.province && (!hasDivisions || !!ids.division);
+      return {
+        visible: { province: true, division: hasDivisions, district: reachDistricts, tehsil: reachDistricts && !!ids.district },
+        options: { province: api.getProvinces(), division: divisions, district: districts, tehsil: tehsils },
+        textWhenEmpty: { tehsil: true },
+      };
+    },
+    lookup: (api) => ({ province: api.getProvince, division: api.getDivision, district: api.getDistrict, tehsil: api.getTehsil }),
+    provinceNotice: (api, ids) => (listed(ids.province) ? api.getProvince(ids.province)?.notice : ''),
+    meta(api) {
+      const m = api.getMeta();
+      return `Data version ${m.dataVersion} · ${esc(m.baseline)} · ` + m.sources.map((s) => `<a href="${s.url}">${esc(s.name)}</a>`).join(', ') +
+        ' · boundaries change and this data is not yet verified against official lists; see DATA.md.';
+    },
+  },
+  delivery: {
+    lede: "Province → City → Area → Zone: delivery places taken from an online store's address form (the area step only for big cities). Unofficial.",
+    levels: [
+      { key: 'province', label: 'Province' },
+      { key: 'city', label: 'City' },
+      { key: 'area', label: 'Area' },
+      { key: 'zone', label: 'Zone / neighbourhood' },
+    ],
+    load: () => import('./pakistan-address-delivery.js'),
+    compute(api, ids) {
+      const cities = listed(ids.province) ? api.getDeliveryCities(ids.province) : [];
+      const areas = listed(ids.city) ? api.getDeliveryAreas(ids.city) : [];
+      const cityHasAreas = areas.length > 0;
+      // Zones hang off the area when the city has areas, otherwise off the city.
+      const zoneParent = cityHasAreas ? (listed(ids.area) ? ids.area : '') : (listed(ids.city) ? ids.city : '');
+      const zones = zoneParent ? api.getDeliveryZones(zoneParent) : [];
+      const reachCities = listed(ids.province);
+      return {
+        visible: {
+          province: true,
+          city: reachCities,
+          area: reachCities && cityHasAreas,
+          zone: cityHasAreas ? !!ids.area : reachCities && !!ids.city,
+        },
+        options: { province: api.getDeliveryProvinces(), city: cities, area: areas, zone: zones },
+        textWhenEmpty: { zone: true },
+      };
+    },
+    lookup: (api) => ({ province: api.getDeliveryProvince, city: api.getDeliveryCity, area: api.getDeliveryArea, zone: api.getDeliveryZone }),
+    meta(api) {
+      const m = api.getDeliveryMeta();
+      return `${esc(m.label)} · collected ${esc(m.source.collected)} · ${esc(m.description)}`;
+    },
+  },
+};
 
 const form = document.getElementById('form');
 const out = document.getElementById('out');
-const els = {};
+const notice = document.getElementById('source-notice');
+const cache = {};
+let current, api, ids, text, addressLine, els;
 
-for (const level of levels) {
-  const wrap = document.createElement('div');
-  wrap.className = 'field';
-  wrap.innerHTML = `<label for="${level}">${labels[level]}</label><select id="${level}"></select>` +
-    (level === 'province' ? '<p class="notice" id="province-notice" role="note" hidden></p>' : `<input class="other" id="${level}-text" type="text" placeholder="Type your ${labels[level].toLowerCase()}" aria-label="${labels[level]} (not listed)" hidden>`);
-  form.append(wrap);
-  els[level] = { wrap, select: wrap.querySelector('select'), text: wrap.querySelector('input') };
-  els[level].select.addEventListener('change', (e) => choose(level, e.target.value));
-  els[level].text?.addEventListener('input', (e) => { state.text[level] = e.target.value; render(false); });
-}
-
-const addr = document.createElement('div');
-addr.className = 'field';
-addr.innerHTML = '<label for="line">Full address / landmark</label><textarea id="line" rows="3" placeholder="House, street, nearby landmark"></textarea>';
-form.append(addr);
-addr.querySelector('textarea').addEventListener('input', (e) => { state.addressLine = e.target.value; render(false); });
-
-function choose(level, value) {
-  state[level] = value;
-  for (const lower of levels.slice(levels.indexOf(level) + 1)) { state[lower] = ''; state.text[lower] = ''; }
-  state.text[level] = '';
+async function useSource(name) {
+  const src = SOURCES[name];
+  if (src.load && !cache[name]) {
+    document.getElementById('meta').textContent = 'Loading…';
+    cache[name] = await src.load();
+  }
+  api = src.api ? src.api() : cache[name];
+  current = { name, ...src };
+  ids = Object.fromEntries(src.levels.map((l) => [l.key, '']));
+  text = Object.fromEntries(src.levels.map((l) => [l.key, '']));
+  addressLine = '';
+  document.getElementById('lede').textContent = src.lede;
+  notice.hidden = name === 'official';
+  notice.textContent = name === 'official' ? '' : 'Unofficial list. These are courier delivery areas taken from an online store, not administrative units, and may be incomplete or out of date.';
+  document.getElementById('meta').innerHTML = src.meta(api);
+  buildForm();
   render(true);
 }
 
-const listed = (v) => v && v !== OTHER;
+function buildForm() {
+  form.innerHTML = '';
+  els = {};
+  for (const { key, label } of current.levels) {
+    const wrap = document.createElement('div');
+    wrap.className = 'field';
+    wrap.innerHTML = `<label for="${key}">${label}</label><select id="${key}"></select>` +
+      (key === 'province' ? '<p class="notice" id="province-notice" role="note" hidden></p>'
+        : `<input class="other" id="${key}-text" type="text" placeholder="Type your ${label.toLowerCase()}" aria-label="${label} (not listed)" hidden>`);
+    form.append(wrap);
+    els[key] = { wrap, select: wrap.querySelector('select'), text: wrap.querySelector('input') };
+    els[key].select.addEventListener('change', (e) => choose(key, e.target.value));
+    els[key].text?.addEventListener('input', (e) => { text[key] = e.target.value; render(false); });
+  }
+  const addr = document.createElement('div');
+  addr.className = 'field';
+  addr.innerHTML = '<label for="line">Full address / landmark</label><textarea id="line" rows="3" placeholder="House, street, nearby landmark"></textarea>';
+  form.append(addr);
+  addr.querySelector('textarea').addEventListener('input', (e) => { addressLine = e.target.value; render(false); });
+}
 
-function optionsFor() {
-  const divisions = listed(state.province) ? getDivisions(state.province) : [];
-  const hasDivisions = divisions.length > 0;
-  const districts = listed(state.division) ? getDistricts(state.division)
-    : state.province && listed(state.province) && (!hasDivisions || state.division === OTHER) ? getDistrictsByProvince(state.province) : [];
-  const tehsils = listed(state.district) ? getTehsils(state.district) : [];
-  return {
-    hasDivisions,
-    visible: {
-      province: true,
-      division: hasDivisions,
-      district: !!state.province && (!hasDivisions || !!state.division),
-      tehsil: !!state.province && (!hasDivisions || !!state.division) && !!state.district,
-    },
-    options: { province: getProvinces(), division: divisions, district: districts, tehsil: tehsils },
-  };
+function choose(key, value) {
+  const keys = current.levels.map((l) => l.key);
+  ids[key] = value;
+  for (const lower of keys.slice(keys.indexOf(key) + 1)) { ids[lower] = ''; text[lower] = ''; }
+  text[key] = '';
+  render(true);
 }
 
 function render(rebuildLists) {
-  const notice = document.getElementById('province-notice');
-  const text = listed(state.province) ? getProvince(state.province)?.notice : '';
-  notice.textContent = text || '';
-  notice.hidden = !text;
-  const { visible, options } = optionsFor();
-  for (const level of levels) {
-    const { wrap, select, text } = els[level];
-    wrap.hidden = !visible[level];
-    const list = options[level];
+  const { visible, options, textWhenEmpty } = current.compute(api, ids);
+  const pn = document.getElementById('province-notice');
+  const pnText = current.provinceNotice ? current.provinceNotice(api, ids) : '';
+  pn.textContent = pnText || '';
+  pn.hidden = !pnText;
+  for (const { key } of current.levels) {
+    const { wrap, select, text: input } = els[key];
+    wrap.hidden = !visible[key];
+    const list = options[key];
     const hasList = list.length > 0;
     select.hidden = !hasList;
     if (rebuildLists) {
-      const head = '<option value="">Select…</option>';
-      const opts = list.map((o) => `<option value="${o.id}">${o.name.replace(/&/g, '&amp;')}</option>`).join('');
-      select.innerHTML = head + opts + (level !== 'province' && hasList ? `<option value="${OTHER}">Other / not listed</option>` : '');
-      select.value = state[level];
+      const opts = list.map((o) => `<option value="${o.id}">${esc(o.name)}</option>`).join('');
+      select.innerHTML = '<option value="">Select…</option>' + opts + (key !== 'province' && hasList ? `<option value="${OTHER}">Other / not listed</option>` : '');
+      select.value = ids[key];
     }
-    if (text) {
-      text.hidden = !(visible[level] && (state[level] === OTHER || (level === 'tehsil' && visible.tehsil && !hasList)));
-      if (rebuildLists) text.value = state.text[level];
+    if (input) {
+      input.hidden = !(visible[key] && (ids[key] === OTHER || (textWhenEmpty?.[key] && !hasList)));
+      if (rebuildLists) input.value = text[key];
     }
   }
-  const name = (level) => listed(state[level]) ? (lookup[level](state[level])?.name ?? '') : (state.text[level] || '').trim();
+  const lookup = current.lookup(api);
+  const name = (key) => (listed(ids[key]) ? (lookup[key](ids[key])?.name ?? '') : (text[key] || '').trim());
   out.textContent = JSON.stringify({
-    province: name('province'), division: name('division'), district: name('district'), tehsil: name('tehsil'),
-    addressLine: state.addressLine.trim(),
-    ids: Object.fromEntries(levels.map((l) => [l, listed(state[l]) ? state[l] : null])),
+    source: current.name,
+    ...Object.fromEntries(current.levels.map((l) => [l.key, name(l.key)])),
+    addressLine: addressLine.trim(),
+    ids: Object.fromEntries(current.levels.map((l) => [l.key, listed(ids[l.key]) ? ids[l.key] : null])),
   }, null, 2);
 }
 
-const meta = getMeta();
-document.getElementById('meta').innerHTML =
-  `Data version ${meta.dataVersion} · ${meta.baseline} · ` +
-  meta.sources.map((s) => `<a href="${s.url}">${s.name}</a>`).join(', ') +
-  ' · boundaries change and this data is not yet verified against official lists; see DATA.md.';
-
-render(true);
+for (const radio of document.querySelectorAll('input[name="source"]')) {
+  radio.addEventListener('change', (e) => useSource(e.target.value));
+}
+useSource('official');
 </script>
 </body>
 </html>

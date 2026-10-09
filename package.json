@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run build -w pakistan-address && npm run build -w pakistan-address-react",
     "test": "npm test -w pakistan-address && npm test -w pakistan-address-react",
-    "demo": "npm run build -w pakistan-address && node -e \"require('fs').copyFileSync('packages/pakistan-address/dist/index.js','demo/pakistan-address.js')\" && npx --yes serve demo"
+    "demo": "npm run build -w pakistan-address && node -e \"const fs=require('fs');fs.copyFileSync('packages/pakistan-address/dist/index.js','demo/pakistan-address.js');fs.copyFileSync('packages/pakistan-address/dist/delivery.js','demo/pakistan-address-delivery.js')\" && npx --yes serve demo"
   },
   "overrides": {
     "esbuild": "^0.28.2"

@@ -29,6 +29,7 @@ jobs:
       - run: npm ci
       - run: npm run build -w pakistan-address
       - run: cp packages/pakistan-address/dist/index.js demo/pakistan-address.js
+      - run: cp packages/pakistan-address/dist/delivery.js demo/pakistan-address-delivery.js
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
