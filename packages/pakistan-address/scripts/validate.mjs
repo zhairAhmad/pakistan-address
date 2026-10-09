@@ -113,11 +113,63 @@ noSiblingDuplicates('division', data.divisions, 'provinceId');
 noSiblingDuplicates('district', data.districts, 'provinceId');
 noSiblingDuplicates('tehsil', data.tehsils, 'districtId');
 
+// The unofficial delivery-areas dataset (data/delivery-areas.json) has its own, lighter checks.
+const dfile = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data', 'delivery-areas.json');
+const delivery = JSON.parse(fs.readFileSync(dfile, 'utf8'));
+if (delivery.meta?.unofficial !== true) err('delivery-areas.json: meta.unofficial must be true');
+if (!/^\d{4}-\d{2}-\d{2}$/.test(delivery.meta?.dataVersion ?? '')) err('delivery-areas.json: meta.dataVersion must be YYYY-MM-DD');
+for (const k of ['label', 'description']) if (!delivery.meta?.[k]?.trim()) err(`delivery-areas.json: meta.${k} is required`);
+const dIds = new Set();
+const dKinds = [['delivery province', delivery.provinces], ['delivery city', delivery.cities], ['delivery area', delivery.areas], ['delivery zone', delivery.zones]];
+for (const [kind, items] of dKinds) {
+  for (const it of items) {
+    if (!ID.test(it.id)) err(`${kind} id "${it.id}" is not lowercase-kebab`);
+    if (dIds.has(it.id)) err(`duplicate delivery id "${it.id}"`);
+    dIds.add(it.id);
+    if (typeof it.name !== 'string' || !it.name.trim() || it.name !== it.name.trim() || /\s{2,}/.test(it.name)) {
+      err(`${kind} "${it.id}" has a missing, untrimmed or double-spaced name`);
+    }
+  }
+}
+const dProvinces = new Map(delivery.provinces.map((p) => [p.id, p]));
+const dCities = new Map(delivery.cities.map((c) => [c.id, c]));
+for (const p of delivery.provinces) {
+  if (p.officialProvinceId !== undefined && !provinces.has(p.officialProvinceId)) {
+    err(`delivery province "${p.id}": unknown officialProvinceId "${p.officialProvinceId}"`);
+  }
+}
+for (const c of delivery.cities) if (!dProvinces.has(c.provinceId)) err(`delivery city "${c.id}": unknown provinceId "${c.provinceId}"`);
+const dAreas = new Map(delivery.areas.map((a) => [a.id, a]));
+for (const a of delivery.areas) if (!dCities.has(a.cityId)) err(`delivery area "${a.id}": unknown cityId "${a.cityId}"`);
+const citiesWithAreas = new Set(delivery.areas.map((a) => a.cityId));
+for (const z of delivery.zones) {
+  if (!dCities.has(z.cityId)) err(`delivery zone "${z.id}": unknown cityId "${z.cityId}"`);
+  if (z.areaId !== undefined) {
+    if (dAreas.get(z.areaId)?.cityId !== z.cityId) err(`delivery zone "${z.id}": areaId is missing or in another city`);
+  } else if (citiesWithAreas.has(z.cityId)) {
+    err(`delivery zone "${z.id}": its city is split into areas, so the zone needs an areaId`);
+  }
+}
+const dSeen = new Set();
+for (const [kind, items, parentOf] of [
+  ['delivery city', delivery.cities, (c) => c.provinceId],
+  ['delivery area', delivery.areas, (a) => a.cityId],
+  ['delivery zone', delivery.zones, (z) => z.areaId ?? z.cityId],
+]) {
+  for (const it of items) {
+    const parentKey = parentOf(it);
+    const k = `${kind}|${parentKey}|${it.name.toLowerCase()}`;
+    if (dSeen.has(k)) err(`${kind} "${it.name}" appears twice under "${parentKey}"`);
+    dSeen.add(k);
+  }
+}
+
 if (errors.length) {
   console.error(`data/pakistan.json: ${errors.length} problem(s)\n` + errors.map((e) => ` - ${e}`).join('\n'));
   process.exit(1);
 }
 console.log(
   `data/pakistan.json OK: ${provinces.size} provinces, ${divisions.size} divisions, ` +
-    `${districts.size} districts, ${tehsils.size} tehsils, ${localities.size} localities`,
+    `${districts.size} districts, ${tehsils.size} tehsils, ${localities.size} localities; ` +
+    `delivery-areas.json (unofficial): ${delivery.provinces.length} provinces, ${delivery.cities.length} cities, ${delivery.areas.length} areas, ${delivery.zones.length} zones`,
 );

@@ -77,3 +77,52 @@ export interface PakistanData {
   tehsils: Tehsil[];
   localities: Locality[];
 }
+
+/** A province or territory as listed in the unofficial delivery-areas dataset. */
+export interface DeliveryProvince {
+  id: string;
+  name: string;
+  /** Id of the matching record in the official data (`getProvince`). Absent where there is none (the former FATA). */
+  officialProvinceId?: string;
+}
+
+/** A city, town or delivery area ("Lahore - Gulberg"). Not an administrative unit. */
+export interface DeliveryCity {
+  id: string;
+  provinceId: string;
+  name: string;
+}
+
+/** An area of a large delivery city ("Ali Town" in Lahore). Only some cities have areas. */
+export interface DeliveryArea {
+  id: string;
+  cityId: string;
+  name: string;
+}
+
+/** A neighbourhood. Belongs to an area if its city has areas, otherwise directly to the city. */
+export interface DeliveryZone {
+  id: string;
+  cityId: string;
+  /** Present when the city is split into areas. */
+  areaId?: string;
+  name: string;
+}
+
+export interface DeliveryMeta {
+  /** ISO date (YYYY-MM-DD) the lists were collected. */
+  dataVersion: string;
+  /** Always `true`: this dataset is not an official list. */
+  unofficial: true;
+  label: string;
+  description: string;
+  source: { name: string; collected: string };
+}
+
+export interface DeliveryData {
+  meta: DeliveryMeta;
+  provinces: DeliveryProvince[];
+  cities: DeliveryCity[];
+  areas: DeliveryArea[];
+  zones: DeliveryZone[];
+}

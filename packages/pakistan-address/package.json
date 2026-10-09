@@ -29,8 +29,19 @@
         "default": "./dist/index.cjs"
       }
     },
+    "./delivery": {
+      "import": {
+        "types": "./dist/delivery.d.ts",
+        "default": "./dist/delivery.js"
+      },
+      "require": {
+        "types": "./dist/delivery.d.cts",
+        "default": "./dist/delivery.cjs"
+      }
+    },
     "./data.json": "./data/pakistan.json",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./delivery-areas.json": "./data/delivery-areas.json"
   },
   "files": [
     "dist",
