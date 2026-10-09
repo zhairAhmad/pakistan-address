@@ -3,6 +3,16 @@
 Data and ids are part of the public contract. Changes to ids, names or the shape of `data/pakistan.json` are recorded here.
 
 
+## 0.2.1 (2026-10-09)
+
+`pakistan-address-react` only; `pakistan-address` stays at 0.2.0.
+
+### Docs
+- Fixed the react-select example in the README. It went from province straight to district, but districts only appear once a division is chosen, so the district select never showed for most provinces. The example now includes the division level. Documented the `notice` class name.
+
+### Tests
+- Added DOM interaction, accessibility (axe-core) and react-select tests. The published code is unchanged.
+
 ## 0.2.0 (2026-10-07)
 
 Data release. **Ids changed**, so this is a minor (breaking) version while the packages are below 1.0. `pakistan-address-react` is released with it, depending on `pakistan-address ^0.2.0`; its code is unchanged.
