@@ -88,6 +88,29 @@ Data version **2026-10-07**. Sources, in order of authority: the [Punjab Board o
 
 Nothing here has yet been checked line-by-line against the Pakistan Bureau of Statistics or the provincial notifications. Treat it as a good starting list, not an authority.
 
+## Unofficial delivery areas (optional)
+
+A second, separate list for courier-style addresses: **Province → City → Area → Zone**, taken from the address form of an online store (collected October 2026). It exists because delivery addresses use places ("Lahore - Gulberg", "Islamabad - F-10") that the administrative hierarchy does not have.
+
+```ts
+import {
+  getDeliveryProvinces, getDeliveryCities, getDeliveryAreas, getDeliveryZones, getDeliveryMeta,
+} from 'pakistan-address/delivery';
+
+const cities = getDeliveryCities('dl-pb');                    // 389 cities in Punjab, "Lahore" once
+const areas = getDeliveryAreas('dl-pb-lahore');               // 103 areas: Agrics, Ali Town, Askari...
+const zones = getDeliveryZones('dl-pb-lahore-ali-town');      // neighbourhoods of that area
+getDeliveryZones('dl-ajk-bagh');                              // a city with no areas: zones come straight from the city
+getDeliveryMeta().unofficial;                                 // always true
+```
+
+- **Areas exist only for large cities.** The store lists them as many "Lahore - Ali Town" entries; those were split at the first " - " into the city (Lahore) and its area (Ali Town). 17 cities are split (Lahore, Karachi, Islamabad, Rawalpindi, Gujranwala...). Every other city has no areas: `getDeliveryAreas(id)` is empty and `getDeliveryZones(cityId)` returns its zones. A name with only one entry for that city ("Gojra - Toba Tek Singh") is left whole.
+- **It is not official and not an administrative list.** "Cities" are often towns, and Islamabad's areas are sectors and societies. They do not map to districts or tehsils, and nothing in it is checked against any official source.
+- **It is a separate entry point.** `import ... from 'pakistan-address'` does not include it, so it costs nothing unless you import `pakistan-address/delivery` (about 1.2 MB unpacked).
+- **Own ids.** `dl-pb` → `dl-pb-lahore` → `dl-pb-lahore-ali-town` → `dl-pb-lahore-ali-town-<zone>`. Provinces carry `officialProvinceId` (`pb`) where the official data has a matching one; the former Federally Administered Tribal Areas have none.
+- Totals: 8 provinces, 682 cities, 407 areas, 11,356 zones. How it was split and cleaned is in [data-sources/delivery/build-report.md](./data-sources/delivery/build-report.md); the raw collection is not in the repository.
+- Raw JSON: `import data from 'pakistan-address/delivery-areas.json'`.
+
 ## Using it in a form
 
 Recommended pattern:

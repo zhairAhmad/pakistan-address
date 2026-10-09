@@ -99,6 +99,27 @@ function ProvinceDivisionDistrict() {
 
 Levels appear one at a time (division, then district, then tehsil), so render each one only when `c.levels[level].visible` is true. `c.levels[level]` gives `{ visible, options, allowOther, showText }` for each level, `c.address` the resolved value, and `c.select`, `c.setText`, `c.setAddressLine`, `c.reset` update it. The same logic is available without React as `getLevelStates`, `selectLevel`, `setLevelText` and `resolveAddress`.
 
+## Unofficial delivery areas, and switching between the two lists
+
+Besides the official hierarchy, `pakistan-address` has an optional, **unofficial** list of courier delivery areas (province, city, zone) taken from an online store's address form; see its [README](../pakistan-address#unofficial-delivery-areas-optional). The fields for it live in a separate entry point, so the main bundle does not include that data:
+
+```tsx
+import { DeliveryAddressFields, SwitchableAddressFields } from 'pakistan-address-react/delivery';
+
+// Delivery areas only (shows a note that the list is unofficial)
+<DeliveryAddressFields name="shipping" onChange={(_value, resolved) => setAddress(resolved)} />
+
+// A switch between "Official administrative units" and "Delivery areas (unofficial)"
+<SwitchableAddressFields
+  defaultSource="official"
+  onChange={(address) => setAddress(address)} // address.source is 'official' or 'delivery'
+/>
+```
+
+- `DeliveryAddressFields` takes the same props as `AddressFields` (`value`, `defaultValue`, `onChange`, `labels`, `classNames`, `name`) plus `hideNotice`. Its `resolved` value is `{ province, city, area, zone, addressLine, ids }` with `dl-...` ids (`area` is empty for cities that have no areas, and the Area field is then not shown). There is also a headless `useDeliveryCascade`.
+- `SwitchableAddressFields` takes `source` / `defaultSource` / `onSourceChange`, `hideSwitch`, `switchLabels`, and `officialProps` / `deliveryProps`. Switching clears the fields, and `onChange` tags each value with its `source`. Importing it includes both datasets (the delivery one is about 1.2 MB unpacked).
+- The delivery note is on by default. Only turn it off if you tell your users some other way that the list is unofficial.
+
 ## Behaviour notes
 
 - Changing a level clears every level below it.

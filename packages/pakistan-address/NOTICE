@@ -23,3 +23,10 @@ pakistan-address contains data derived from:
    Copyright (c) Aaqib Mehran
    Licensed under the MIT License (declared in the project's composer.json).
    The original PHP seeders are kept unmodified in data-sources/geo-pakistan/.
+
+5. Delivery areas (UNOFFICIAL), data/delivery-areas.json, the `pakistan-address/delivery` entry point
+   Province, city and zone names taken from the address form of an online store, collected in October 2026.
+   Only place names were kept (no other store content, ids or markup), and the names were cleaned as described in data-sources/delivery/build-report.md. It is kept apart from
+   the official data and is labelled unofficial. The store's own terms and any rights in its lists are not
+   covered by this package's MIT licence, and this package is not affiliated with or endorsed by the store.
+   If the owner of the source objects to its inclusion, remove data/delivery-areas.json and src/delivery.ts.

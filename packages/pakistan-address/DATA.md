@@ -79,6 +79,17 @@ These two changes were made from news reports that quote a provincial notificati
 
 The Punjab PDF (11.4 MB, retrieved 7 Oct 2026) is not stored in the repository. The Khyber Pakhtunkhwa and Sindh Bureau of Statistics publications have not been cross-checked.
 
+## Unofficial delivery areas
+
+`data/delivery-areas.json` is **not** part of the administrative hierarchy above. It holds the province, city and zone names that an online store offers in its address form, collected on 2026-10-09 by reading the store's address-form lists while logged in, at a slow pace. The raw collection is not stored in the repository.
+
+- **What it is:** courier delivery places: 8 provinces, 682 cities, 407 areas, 11,356 zones.
+- **What it is not:** districts, tehsils or any official unit. Islamabad's areas are sectors and societies, and many "cities" are towns. It was not compared with any official source.
+- **Reshaping:** the store lists big cities as many "City - Area" entries. They were split at the first " - " into a city and its areas, for the 17 cities with two or more such entries (Lahore 103 areas, Karachi 84, Islamabad 62...). This is a text rule, not something the store states. Single entries ("Gojra - Toba Tek Singh") stay whole, and Sargodha and Sheikhupura, which the store lists both as bare cities and with areas, keep their bare-city zones in an area named after the city.
+- **Cleaning:** names trimmed and spaces collapsed, en dashes written as hyphens, two zones that differed only by capitalisation merged, and one entry removed (Kamalia listed under Khyber Pakhtunkhwa with no zones; Kamalia is in Punjab). Everything changed is in [data-sources/delivery/build-report.md](./data-sources/delivery/build-report.md). Rebuild with `node scripts/build-delivery-data.mjs <collection.json>`.
+- **Ids:** this package's own (`dl-...`), not the store's. Stable only as long as the names are.
+- **Licence:** the lists are the store's. They are included as place names only, kept separate and labelled; see [NOTICE](./NOTICE). The MIT licence of this package does not grant rights in them.
+
 ## Known gaps
 
 **Punjab follows the December 2024 notification; the other provinces follow the census 2023 frame (about early 2023), plus the press-reported changes above.** Administrative units are still being created. What news reports describe and is **not** applied (checked October 2026):

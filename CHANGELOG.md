@@ -3,6 +3,14 @@
 Data and ids are part of the public contract. Changes to ids, names or the shape of `data/pakistan.json` are recorded here.
 
 
+## Unreleased
+
+### Added: unofficial delivery areas (new entry points; nothing existing changes)
+- `pakistan-address/delivery`: province, city, area and zone names (8 / 682 / 407 / 11,356) taken from an online store's address form, collected 2026-10-09. The store's "City - Area" entries are split into a city and its areas for the 17 cities that have two or more; other cities have no areas. They are courier delivery places, not administrative units, and are labelled `unofficial` (`getDeliveryMeta().unofficial` is always `true`). Functions: `getDeliveryProvinces`, `getDeliveryCities`, `getDeliveryAreas`, `getDeliveryZones` (takes an area id, or a city id for a city without areas), `getDeliveryProvince`, `getDeliveryCity`, `getDeliveryArea`, `getDeliveryZone`, `getDeliveryMeta`. Ids start with `dl-`. The main entry point does not include this data. Raw JSON: `pakistan-address/delivery-areas.json`. See `NOTICE` and `DATA.md` for the source and its licence caveat.
+- `pakistan-address-react/delivery`: `DeliveryAddressFields`, `useDeliveryCascade` and `SwitchableAddressFields` (switch between the official hierarchy and the delivery areas).
+- The demo has a switch between the two lists.
+- Release note: `pakistan-address-react` now needs a `pakistan-address` version that has `/delivery`, so raise its dependency range when the core package is released.
+
 ## 0.2.1 (2026-10-09)
 
 `pakistan-address-react` only; `pakistan-address` stays at 0.2.0.
