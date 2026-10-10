@@ -2,7 +2,7 @@
 
 ## Provenance
 
-`data/pakistan.json` was built from four sources in one-time steps and is now the source of truth, edited directly by PR. Each step's script is kept in `scripts/`; re-running one overwrites later edits.
+`data/pakistan.json` was built from several sources in one-time steps and is now the source of truth, edited directly by PR. Each step's script is kept in `scripts/`; re-running one overwrites later edits.
 
 | Step | Source | What it provides |
 | --- | --- | --- |
@@ -10,6 +10,8 @@
 | 2. `merge-hdx.mjs` | [OCHA / WFP COD-AB Pakistan](https://data.humdata.org/dataset/cod-ab-pak) (CC BY-IGO; valid from 2022-09-09) | Which districts and tehsils exist, their `pcode`s, newer names |
 | 3. `apply-census2023.mjs` | [Pakistan Bureau of Statistics, Census 2023 portal](https://census23.pbos.gov.pk/) (official; no licence stated) | The official division, district and tehsil lists for Balochistan, Islamabad, Khyber Pakhtunkhwa, Punjab and Sindh, and their `pbsCode`s |
 | 4. `apply-punjab-2024.mjs` | [Punjab Board of Revenue notification of 18 December 2024](./data-sources/punjab-2024/README.md) (official) | **Punjab only**: the schedule of 10 divisions, 41 districts and 156 tehsils, which supersedes the older Punjab lists |
+
+5. `apply-balochistan-bor.mjs`: the [Balochistan Board of Revenue notifications](./data-sources/balochistan-bor/README.md) (official, 2021 to 29 April 2026): the Hub, Usta Muhammad, Tump, Barshore and Upper Dera Bugti districts, the Koh-e-Suleman division, Sibi division renamed Sevi, and the new tehsils. **Balochistan only.** See the [report](./data-sources/balochistan-bor/apply-report.md).
 
 On top of these, two district splits in Khyber Pakhtunkhwa were applied from press reports (below). The original files and each step's report are in `data-sources/`.
 
@@ -96,7 +98,7 @@ The Punjab PDF (11.4 MB, retrieved 7 Oct 2026) is not stored in the repository. 
 
 | Province | Reported change | Source | Status |
 | --- | --- | --- | --- |
-| Balochistan | Revenue Department notification of 8 July 2026: 11 divisions and 41 districts, up from 8 and 36. Reported changes include Quetta split into Quetta East and West, Barshore created from Pishin, a new Wadh district, a South Dera Bugti district, Kalat division abolished (replaced by Khuzdar and Lasbela divisions), Mastung moved to Quetta division, Sibi division renamed Sevi and Makran renamed Makuran | [ProPakistani, 12 Jul 2026](https://propakistani.pk/2026/07/12/balochistan-govt-notifies-new-divisions-and-districts/) | **Not applied; the province carries a `notice` warning users.** Needs the notification itself |
+| Balochistan | Revenue Department notification of about 8 July 2026: 11 divisions and 41 districts. Reported changes still unapplied: Quetta split into Quetta East and West, a new Wadh district, Kalat division abolished (Khuzdar and Lasbela divisions), Mastung to Quetta division, Kachhi to Sevi division, Ziarat and Harnai to Loralai division, Makran renamed Makuran, Upper/Lower Dera Bugti renamed North/South, Shaheed Sikandarabad renamed back to Surab, and more tehsils. (Barshore, Koh-e-Suleman, Sevi and the others of Feb to Apr 2026 **are** applied from their own notifications.) | [ProPakistani, 12 Jul 2026](https://propakistani.pk/2026/07/12/balochistan-govt-notifies-new-divisions-and-districts/), [Dawn](https://www.dawn.com/news/2014627/quetta-split-into-two-districts-as-balochistan-undergoes-administrative-restructuring) | **Not applied; the province carries a `notice`.** The notification is not on the Board of Revenue page; needs the document itself |
 | Khyber Pakhtunkhwa | District Paharpur created from Dera Ismail Khan (cabinet approval reported October 2025); reports give 40 districts | [Aaj](https://english.aaj.tv/news/30301132) | Not applied: only a cabinet approval was reported |
 | Gilgit-Baltistan, AJK | Not checked for changes; no tehsil-level official source was found | | Unknown |
 
@@ -110,7 +112,8 @@ Only Punjab has been matched against a provincial notification. For the other pr
 - [x] Sindh's divisions match the census (Banbhore removed)
 - [ ] Find the notifications for the Khyber Pakhtunkhwa splits and for the Sindh and Khyber Pakhtunkhwa changes since 2023
 - [ ] Cross-check the KP and Sindh Bureau of Statistics publications
-- [ ] Apply Balochistan's 2026 restructuring from the notification, then remove the province `notice`
+- [x] Balochistan follows the Board of Revenue notifications up to April 2026
+- [ ] Apply Balochistan's July 2026 restructuring from the notification, then remove the province `notice`
 - [ ] Review the "kept though not in the census list" entries in the apply report
 - [ ] Bump `meta.dataVersion`, update the README coverage table
 - [ ] Record removed/renamed ids in the changelog

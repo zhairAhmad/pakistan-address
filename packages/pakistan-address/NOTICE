@@ -24,7 +24,12 @@ pakistan-address contains data derived from:
    Licensed under the MIT License (declared in the project's composer.json).
    The original PHP seeders are kept unmodified in data-sources/geo-pakistan/.
 
-5. Delivery areas (UNOFFICIAL), data/delivery-areas.json, the `pakistan-address/delivery` entry point
+5. Government of Balochistan, Revenue Department (Board of Revenue), notifications 2021 to April 2026
+   https://bor.balochistan.gov.pk/notifications/
+   Official notifications of divisions, districts, tehsils and sub-divisions of Balochistan. Only the names of
+   administrative units and the notification numbers were used. Recorded in data-sources/balochistan-bor/.
+
+6. Delivery areas (UNOFFICIAL), data/delivery-areas.json, the `pakistan-address/delivery` entry point
    Province, city and zone names taken from the address form of an online store, collected in October 2026.
    Only place names were kept (no other store content, ids or markup), and the names were cleaned as described in data-sources/delivery/build-report.md. It is kept apart from
    the official data and is labelled unofficial. The store's own terms and any rights in its lists are not

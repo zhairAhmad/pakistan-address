@@ -3,6 +3,16 @@
 Data and ids are part of the public contract. Changes to ids, names or the shape of `data/pakistan.json` are recorded here.
 
 
+## Unreleased
+
+### Data: Balochistan follows the Board of Revenue notifications up to April 2026
+Source: the scanned notifications at <https://bor.balochistan.gov.pk/notifications/> (`packages/pakistan-address/data-sources/balochistan-bor/`). Balochistan is now 9 divisions, 39 districts and 167 tehsils (was 8 / 34 / 164); all provinces are 38 / 172 / 681.
+- **Added districts:** `bl-hub` (from Lasbela), `bl-usta-muhammad` (from Jaffarabad), `bl-tump` (from Kech), `bl-barshore` (from Pishin), `bl-upper-dera-bugti` (from Dera Bugti). **Added division:** `bl-koh-e-suleman-div` (Barkhan, Kohlu, Upper Dera Bugti). **Renamed:** division `bl-sibi-div` is now **Sevi** (id kept).
+- **Added tehsils:** Karbala, Ahmed Wal, Kishingi, Sufaid, Chief Ali Muhammad, Nabi Dad Shaheed, Sar Loop. **Renamed (ids kept):** Lairi to Liari, Huramzai to Hurramzai, Karezat to Karezat Khanozai, Kech to Turbat, Balnigor to Balnigore, Dak to Daak, Jhal Jhao to Jhao, Sangsillah to Sangseelah (the old names are alternate names).
+- **Ids that changed (moved tehsils):** `bl-lasbela-{hub,gaddani,sonmiani,dureji}` are now `bl-hub-*`; `bl-jaffarabad-{usta-mohammad,gandakha}` are now `bl-usta-muhammad-{usta-muhammad,gandakha}`; `bl-kech-{tump,mand}` are now `bl-tump-*`; `bl-pishin-barshore` is now `bl-barshore-barshore`; `bl-dera-bugti-{qadirabad,pir-koh}` are now `bl-upper-dera-bugti-*`.
+- **Removed ids:** `bl-dera-bugti-phelawagh` (the old name of Qadirabad, whose alternate name it is now), `bl-dera-bugti-baiker`, `bl-dera-bugti-loti`, `bl-dera-bugti-malam` (union councils or towns, not tehsils, in the February 2026 notification).
+- **Not applied:** the July 2026 restructuring, which is press-reported only; the province `notice` is reworded and stays. `Surab` is left under its census name although the September 2025 notification renamed it Shaheed Sikandarabad (the press says it was reverted).
+
 ## 0.3.0 (2026-10-10)
 
 Both packages are released together at 0.3.0. **No ids or official data changed since 0.2.0** (`data/pakistan.json` is the same); this release adds an opt-in list and changes the React dropdowns. `pakistan-address-react` now depends on `pakistan-address ^0.3.0`, and it is a minor (breaking) version for the React package because the default dropdown changed (see "Changed").
