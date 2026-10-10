@@ -24,6 +24,11 @@ export interface SwitchableAddressFieldsProps {
   /** Passed to whichever fields are showing. */
   name?: string;
   classNames?: AddressFieldsProps['classNames'];
+  /** Use the browser's native `<select>` instead of the custom searchable dropdown. */
+  native?: boolean;
+  /** Lists longer than this get a search box. Default 10. */
+  searchThreshold?: number;
+  unstyled?: boolean;
   officialProps?: Omit<AddressFieldsProps, 'name' | 'classNames' | 'onChange'>;
   deliveryProps?: Omit<DeliveryAddressFieldsProps, 'name' | 'classNames' | 'onChange'>;
 }
@@ -48,6 +53,9 @@ export function SwitchableAddressFields({
   switchLabels,
   name,
   classNames,
+  native,
+  searchThreshold,
+  unstyled,
   officialProps,
   deliveryProps,
 }: SwitchableAddressFieldsProps) {
@@ -86,6 +94,9 @@ export function SwitchableAddressFields({
           {...officialProps}
           name={name}
           classNames={classNames}
+          native={native}
+          searchThreshold={searchThreshold}
+          unstyled={unstyled}
           onChange={(_value, resolved) => onChange?.({ source: 'official', ...resolved })}
         />
       ) : (
@@ -94,6 +105,9 @@ export function SwitchableAddressFields({
           {...deliveryProps}
           name={name}
           classNames={classNames}
+          native={native}
+          searchThreshold={searchThreshold}
+          unstyled={unstyled}
           onChange={(_value, resolved) => onChange?.({ source: 'delivery', ...resolved })}
         />
       )}

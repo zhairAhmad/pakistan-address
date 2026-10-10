@@ -35,6 +35,10 @@ export interface AddressValue {
 export interface Option {
   value: string;
   label: string;
+  /** Other names the search box should match, such as a district's alternate names. */
+  keywords?: string[];
+  /** Stays at the bottom of a searchable list whatever the search (used for "Other / not listed"). */
+  pinned?: boolean;
 }
 
 export interface LevelState {
@@ -67,8 +71,8 @@ export const emptyAddress = (): AddressValue => ({
   addressLine: '',
 });
 
-const toOptions = (items: { id: string; name: string }[]): Option[] =>
-  items.map((i) => ({ value: i.id, label: i.name }));
+const toOptions = (items: { id: string; name: string; altNames?: string[] }[]): Option[] =>
+  items.map((i) => ({ value: i.id, label: i.name, ...(i.altNames?.length ? { keywords: i.altNames } : {}) }));
 
 const chosen = (v: LevelValue) => v.id !== null;
 const isListed = (v: LevelValue) => v.id !== null && v.id !== OTHER;

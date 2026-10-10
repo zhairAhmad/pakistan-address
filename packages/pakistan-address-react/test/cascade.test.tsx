@@ -82,9 +82,23 @@ describe('<AddressFields />', () => {
   it('renders province plus the address line initially', () => {
     const html = renderToStaticMarkup(<AddressFields />);
     expect(html).toContain('Province');
-    expect(html).toContain('Punjab');
+    expect(html).toContain('role="combobox"');
     expect(html).toContain('Full address / landmark');
     expect(html).not.toContain('Division');
+    // options render when the dropdown opens, not in the server markup
+    expect(html).not.toContain('Punjab');
+  });
+
+  it('server-renders the chosen value and posts it with a hidden input', () => {
+    const html = renderToStaticMarkup(<AddressFields name="a" defaultValue={pick(['province', 'pb'])} />);
+    expect(html).toContain('value="Punjab"');
+    expect(html).toContain('<input type="hidden" name="a[provinceId]" value="pb"/>');
+  });
+
+  it('renders every option in the markup with the native select', () => {
+    const html = renderToStaticMarkup(<AddressFields native />);
+    expect(html).toContain('<select');
+    expect(html).toContain('Punjab');
   });
 
   it('shows the province notice for Balochistan only', () => {
@@ -97,7 +111,7 @@ describe('<AddressFields />', () => {
 
   it('renders an "Other / not listed" option once a level has choices', () => {
     const defaultValue = pick(['province', 'pb']);
-    const html = renderToStaticMarkup(<AddressFields defaultValue={defaultValue} />);
+    const html = renderToStaticMarkup(<AddressFields native defaultValue={defaultValue} />);
     expect(html).toContain('Division');
     expect(html).toContain('Other / not listed');
   });

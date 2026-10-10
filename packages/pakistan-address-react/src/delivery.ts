@@ -2,6 +2,7 @@
 // the main bundle does not include the delivery data.
 export { DeliveryAddressFields, type DeliveryAddressFieldsProps } from './DeliveryAddressFields';
 export { useDeliveryCascade, type UseDeliveryCascadeOptions } from './useDeliveryCascade';
+export { Combobox, type ComboboxClassNames, type ComboboxProps } from './Combobox';
 export {
   SwitchableAddressFields,
   type AddressSource,

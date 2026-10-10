@@ -1,14 +1,31 @@
 import { useId } from 'react';
 import { getProvince } from 'pakistan-address';
-import { OTHER, type Level } from './cascade';
+import { OTHER, type Level, type Option } from './cascade';
+import { Combobox, type ComboboxClassNames } from './Combobox';
 import { type UseAddressCascadeOptions, useAddressCascade } from './useAddressCascade';
 
 export interface AddressFieldsProps extends UseAddressCascadeOptions {
-  labels?: Partial<Record<Level | 'addressLine' | 'other' | 'placeholder', string>>;
-  /** Class names for styling: `root`, `field`, `label`, `select`, `input`, `notice`. */
-  classNames?: Partial<Record<'root' | 'field' | 'label' | 'select' | 'input' | 'notice', string>>;
+  labels?: Partial<
+    Record<
+      Level | 'addressLine' | 'other' | 'placeholder' | 'searchPlaceholder' | 'noResults' | 'clear',
+      string
+    >
+  >;
+  /**
+   * Class names for styling: `root`, `field`, `label`, `select` (the text box of each dropdown, or the native
+   * `<select>`), `input` (typed-in text and the address line), `notice`, plus `control`, `clear`, `toggle`, `listbox`,
+   * `option` and `empty` for the custom dropdown.
+   */
+  classNames?: Partial<Record<'root' | 'field' | 'label' | 'select' | 'input' | 'notice', string>> &
+    Omit<ComboboxClassNames, 'root' | 'input'> & { combobox?: string };
   /** Prefix for form field names so the fields submit with a native `<form>`: `name[provinceId]`, ... */
   name?: string;
+  /** Use the browser's native `<select>` instead of the custom searchable dropdown. */
+  native?: boolean;
+  /** Lists longer than this get a search box (custom dropdown only). Default 10. */
+  searchThreshold?: number;
+  /** Drop the dropdown's built-in inline styles so your own CSS decides how it looks. */
+  unstyled?: boolean;
 }
 
 const DEFAULT_LABELS = {
@@ -19,11 +36,22 @@ const DEFAULT_LABELS = {
   addressLine: 'Full address / landmark',
   other: 'Other / not listed',
   placeholder: 'Select...',
+  searchPlaceholder: 'Select or type to search...',
+  noResults: 'No matches',
+  clear: 'Clear',
 };
 
 const LEVELS: Level[] = ['province', 'division', 'district', 'tehsil'];
 
-export function AddressFields({ labels, classNames = {}, name, ...options }: AddressFieldsProps) {
+export function AddressFields({
+  labels,
+  classNames = {},
+  name,
+  native,
+  searchThreshold,
+  unstyled,
+  ...options
+}: AddressFieldsProps) {
   const text = { ...DEFAULT_LABELS, ...labels };
   const c = useAddressCascade(options);
   const uid = useId();
@@ -37,28 +65,56 @@ export function AddressFields({ labels, classNames = {}, name, ...options }: Add
         if (!state.visible) return null;
         const id = `${uid}-${level}`;
         const hasList = state.options.length > 0;
+        const listed: Option[] = state.allowOther
+          ? [...state.options, { value: OTHER, label: text.other, pinned: true }]
+          : state.options;
         return (
           <div key={level} className={classNames.field}>
             <label htmlFor={id} className={classNames.label}>
               {text[level]}
             </label>
-            {hasList && (
-              <select
-                id={id}
-                name={field(`${level}Id`)}
-                className={classNames.select}
-                value={c.value[level].id ?? ''}
-                onChange={(e) => c.select(level, e.target.value || null)}
-              >
-                <option value="">{text.placeholder}</option>
-                {state.options.map((o) => (
-                  <option key={o.value} value={o.value}>
-                    {o.label}
-                  </option>
-                ))}
-                {state.allowOther && <option value={OTHER}>{text.other}</option>}
-              </select>
-            )}
+            {hasList &&
+              (native ? (
+                <select
+                  id={id}
+                  name={field(`${level}Id`)}
+                  className={classNames.select}
+                  value={c.value[level].id ?? ''}
+                  onChange={(e) => c.select(level, e.target.value || null)}
+                >
+                  <option value="">{text.placeholder}</option>
+                  {state.options.map((o) => (
+                    <option key={o.value} value={o.value}>
+                      {o.label}
+                    </option>
+                  ))}
+                  {state.allowOther && <option value={OTHER}>{text.other}</option>}
+                </select>
+              ) : (
+                <Combobox
+                  id={id}
+                  name={field(`${level}Id`)}
+                  options={listed}
+                  value={c.value[level].id}
+                  onChange={(v) => c.select(level, v)}
+                  placeholder={text.placeholder}
+                  searchPlaceholder={text.searchPlaceholder}
+                  noResultsText={text.noResults}
+                  clearLabel={`${text.clear} ${text[level]}`}
+                  searchThreshold={searchThreshold}
+                  unstyled={unstyled}
+                  classNames={{
+                    root: classNames.combobox,
+                    control: classNames.control,
+                    input: classNames.select,
+                    clear: classNames.clear,
+                    toggle: classNames.toggle,
+                    listbox: classNames.listbox,
+                    option: classNames.option,
+                    empty: classNames.empty,
+                  }}
+                />
+              ))}
             {state.showText && (
               <input
                 // With no list, the input is the label's target.

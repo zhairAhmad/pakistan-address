@@ -5,11 +5,9 @@ import axe from 'axe-core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { AddressFields, type ResolvedAddress } from '../src/index';
 import { ProvinceDivisionDistrict } from './ReactSelectExample';
+import { combo, hasCombo, listOptions, pick } from './helpers';
 
 afterEach(cleanup);
-
-const combo = (name: string) => screen.getByRole('combobox', { name }) as HTMLSelectElement;
-const optionLabels = (select: HTMLElement) => within(select).getAllByRole('option').map((o) => o.textContent);
 
 async function violations(container: HTMLElement) {
   const results = await axe.run(container, { rules: { region: { enabled: false } } });
@@ -20,36 +18,46 @@ describe('<AddressFields /> interaction', () => {
   it('reveals each level as the user picks the one above', async () => {
     const user = userEvent.setup();
     render(<AddressFields />);
-    expect(screen.queryByRole('combobox', { name: 'Division' })).toBeNull();
+    expect(hasCombo('Division')).toBe(false);
 
-    await user.selectOptions(combo('Province'), 'Punjab');
-    await user.selectOptions(combo('Division'), 'Multan');
-    expect(optionLabels(combo('District'))).toContain('Vehari');
-    expect(optionLabels(combo('District'))).not.toContain('Lahore');
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'Division', 'Multan');
+    const districts = await listOptions(user, 'District');
+    expect(districts).toContain('Vehari');
+    expect(districts).not.toContain('Lahore');
 
-    await user.selectOptions(combo('District'), 'Vehari');
-    expect(optionLabels(combo('Tehsil'))).toContain('Mailsi');
+    await pick(user, 'District', 'Vehari');
+    expect(await listOptions(user, 'Tehsil')).toContain('Mailsi');
+  });
+
+  it('shows the chosen name in the text box and offers "Other / not listed" last', async () => {
+    const user = userEvent.setup();
+    render(<AddressFields />);
+    await pick(user, 'Province', 'Punjab');
+    expect(combo('Province').value).toBe('Punjab');
+    const divisions = await listOptions(user, 'Division');
+    expect(divisions[divisions.length - 1]).toBe('Other / not listed');
   });
 
   it('clears the levels below when a higher level changes', async () => {
     const user = userEvent.setup();
     render(<AddressFields />);
-    await user.selectOptions(combo('Province'), 'Punjab');
-    await user.selectOptions(combo('Division'), 'Multan');
-    await user.selectOptions(combo('District'), 'Vehari');
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'Division', 'Multan');
+    await pick(user, 'District', 'Vehari');
 
-    await user.selectOptions(combo('Province'), 'Sindh');
+    await pick(user, 'Province', 'Sindh');
     expect(combo('Division').value).toBe('');
-    expect(screen.queryByRole('combobox', { name: 'District' })).toBeNull();
+    expect(hasCombo('District')).toBe(false);
   });
 
   it('shows a text input for "Other / not listed" and reports it in onChange', async () => {
     const user = userEvent.setup();
     const onChange = vi.fn();
     render(<AddressFields onChange={onChange} />);
-    await user.selectOptions(combo('Province'), 'Punjab');
-    await user.selectOptions(combo('Division'), 'Multan');
-    await user.selectOptions(combo('District'), 'Other / not listed');
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'Division', 'Multan');
+    await pick(user, 'District', 'Other / not listed');
 
     await user.type(screen.getByRole('textbox', { name: 'District (Other / not listed)' }), ' New District ');
     await user.type(screen.getByRole('textbox', { name: 'Tehsil' }), 'New Tehsil');
@@ -70,23 +78,23 @@ describe('<AddressFields /> interaction', () => {
     const user = userEvent.setup();
     const onChange = vi.fn();
     const { rerender } = render(<AddressFields onChange={onChange} />);
-    await user.selectOptions(combo('Province'), 'Punjab');
+    await pick(user, 'Province', 'Punjab');
     const next = onChange.mock.lastCall![0];
 
     rerender(<AddressFields value={next} onChange={onChange} />);
-    expect(combo('Province').value).toBe('pb');
-    expect(combo('Division')).toBeTruthy();
+    expect(combo('Province').value).toBe('Punjab');
+    expect(hasCombo('Division')).toBe(true);
   });
 
-  it('posts under the name prefix in a native form', async () => {
+  it('posts the ids under the name prefix in a native form', async () => {
     const user = userEvent.setup();
     const { container } = render(
       <form>
         <AddressFields name="shipping" />
       </form>,
     );
-    await user.selectOptions(combo('Province'), 'Punjab');
-    await user.selectOptions(combo('Division'), 'Multan');
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'Division', 'Multan');
     await user.type(screen.getByRole('textbox', { name: 'Full address / landmark' }), 'House 1');
 
     const data = new FormData(container.querySelector('form')!);
@@ -98,16 +106,78 @@ describe('<AddressFields /> interaction', () => {
   it('shows the Balochistan notice as a note, and only for Balochistan', async () => {
     const user = userEvent.setup();
     render(<AddressFields />);
-    await user.selectOptions(combo('Province'), 'Balochistan');
+    await pick(user, 'Province', 'Balochistan');
     expect(screen.getByRole('note').textContent).toContain('July 2026');
-    await user.selectOptions(combo('Province'), 'Punjab');
+    await pick(user, 'Province', 'Punjab');
     expect(screen.queryByRole('note')).toBeNull();
   });
 
-  it('uses custom labels', () => {
+  it('uses custom labels', async () => {
+    const user = userEvent.setup();
     render(<AddressFields labels={{ province: 'Suba', placeholder: 'Choose one' }} />);
-    expect(combo('Suba')).toBeTruthy();
-    expect(within(combo('Suba')).getByRole('option', { name: 'Choose one' })).toBeTruthy();
+    expect(combo('Suba').placeholder).toBe('Choose one');
+    await user.click(combo('Suba'));
+    expect(within(screen.getByRole('listbox')).getAllByRole('option').length).toBeGreaterThan(0);
+  });
+
+  it('can use the browser select instead', async () => {
+    const user = userEvent.setup();
+    render(<AddressFields native />);
+    const province = screen.getByRole('combobox', { name: 'Province' }) as HTMLSelectElement;
+    expect(province.tagName).toBe('SELECT');
+    await user.selectOptions(province, 'Punjab');
+    expect(screen.getByRole('combobox', { name: 'Division' }).tagName).toBe('SELECT');
+  });
+});
+
+describe('<AddressFields /> search', () => {
+  it('filters a long list as the user types, and chooses with Enter', async () => {
+    const user = userEvent.setup();
+    const onChange = vi.fn();
+    render(<AddressFields onChange={onChange} />);
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'Division', 'Other / not listed'); // all 41 districts of Punjab
+
+    await user.click(combo('District'));
+    await user.type(combo('District'), 'veh');
+    const shown = within(screen.getByRole('listbox')).getAllByRole('option').map((o) => o.textContent);
+    expect(shown).toContain('Vehari');
+    expect(shown).not.toContain('Lahore');
+    expect(shown[shown.length - 1]).toBe('Other / not listed'); // stays reachable
+
+    await user.keyboard('{Enter}');
+    expect(onChange.mock.lastCall![1]).toMatchObject({ district: 'Vehari' });
+    expect(combo('District').value).toBe('Vehari');
+  });
+
+  it('finds a district by its alternate name', async () => {
+    const user = userEvent.setup();
+    render(<AddressFields />);
+    await pick(user, 'Province', 'Sindh');
+    await pick(user, 'Division', 'Other / not listed');
+    await user.click(combo('District'));
+    await user.type(combo('District'), 'Nawabshah');
+    const shown = within(screen.getByRole('listbox')).getAllByRole('option').map((o) => o.textContent);
+    expect(shown).toContain('Shaheed Benazir Abad');
+  });
+
+  it('says so when nothing matches', async () => {
+    const user = userEvent.setup();
+    render(<AddressFields />);
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'Division', 'Other / not listed');
+    await user.click(combo('District'));
+    await user.type(combo('District'), 'zzzz');
+    expect(screen.getByText('No matches')).toBeTruthy();
+  });
+
+  it('keeps short lists as a plain dropdown without a search box', async () => {
+    const user = userEvent.setup();
+    render(<AddressFields />);
+    expect(combo('Province').readOnly).toBe(true);
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'Division', 'Other / not listed');
+    expect(combo('District').readOnly).toBe(false); // 41 districts: searchable
   });
 });
 
@@ -120,9 +190,17 @@ describe('<AddressFields /> accessibility (axe-core)', () => {
   it('has no violations with every level, an "Other" input and a notice showing', async () => {
     const user = userEvent.setup();
     const { container } = render(<AddressFields />);
-    await user.selectOptions(combo('Province'), 'Balochistan');
-    await user.selectOptions(combo('Division'), 'Other / not listed');
-    await user.selectOptions(combo('District'), 'Other / not listed');
+    await pick(user, 'Province', 'Balochistan');
+    await pick(user, 'Division', 'Other / not listed');
+    await pick(user, 'District', 'Other / not listed');
+    expect(await violations(container)).toEqual([]);
+  });
+
+  it('has no violations with a dropdown open', async () => {
+    const user = userEvent.setup();
+    const { container } = render(<AddressFields />);
+    await user.click(combo('Province'));
+    expect(screen.getByRole('listbox')).toBeTruthy();
     expect(await violations(container)).toEqual([]);
   });
 

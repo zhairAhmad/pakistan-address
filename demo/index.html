@@ -36,6 +36,20 @@
   .switch input { width: auto; margin-right: 4px; }
   .notice { font-size: .8125rem; margin: 6px 0 0; padding: 8px 10px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--code); }
   .notice.unofficial { border-left-color: var(--warn); margin: 0 0 12px; }
+
+  /* searchable dropdown */
+  .combo { position: relative; }
+  .combo .control { position: relative; display: flex; }
+  .combo input { padding-right: 52px; cursor: pointer; }
+  .combo input:not([readonly]) { cursor: text; }
+  .combo .clear { position: absolute; right: 26px; top: 50%; transform: translateY(-50%); border: 0; background: none; color: var(--muted); font-size: 1.1rem; line-height: 1; cursor: pointer; padding: 2px 4px; }
+  .combo .chev { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--muted); font-size: .7rem; }
+  .combo ul { position: absolute; z-index: 20; left: 0; right: 0; top: 100%; margin: 2px 0 0; padding: 0; list-style: none; max-height: 260px; overflow-y: auto; background: var(--card); border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+  .combo li { padding: 7px 10px; cursor: pointer; }
+  .combo li[aria-selected="true"] { font-weight: 600; }
+  .combo li.active { background: var(--accent); color: var(--accent-text); }
+  .combo li.pinned { border-top: 1px solid var(--line); }
+  .combo li.empty { color: var(--muted); cursor: default; }
 </style>
 </head>
 <body>
@@ -52,7 +66,7 @@
   <div class="grid">
     <section aria-labelledby="form-h">
       <h2 id="form-h">Address</h2>
-      <p class="note">Data is never complete, so each level can be typed in, and the full address is a separate field.</p>
+      <p class="note">Open a list and type to search. Data is never complete, so each level can be typed in, and the full address is a separate field.</p>
       <p class="notice unofficial" id="source-notice" role="note" hidden></p>
       <form id="form" autocomplete="off"></form>
     </section>
@@ -69,9 +83,120 @@
 import * as official from './pakistan-address.js';
 
 const OTHER = '__other__';
+const SEARCH_THRESHOLD = 10; // lists longer than this get a search box
 const listed = (v) => v && v !== OTHER;
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const normalize = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 
+// ---- searchable dropdown (the same behaviour as the React Combobox) ------------------------------------------------
+function createCombobox({ id, onChange }) {
+  const root = document.createElement('div');
+  root.className = 'combo';
+  root.innerHTML = `<div class="control"><input id="${id}" type="text" role="combobox" autocomplete="off" spellcheck="false"
+      aria-expanded="false" aria-controls="${id}-listbox"><button type="button" class="clear" tabindex="-1" aria-label="Clear" hidden>×</button>
+      <span class="chev" aria-hidden="true">▾</span></div><ul id="${id}-listbox" role="listbox" hidden></ul>`;
+  const input = root.querySelector('input');
+  const clear = root.querySelector('.clear');
+  const list = root.querySelector('ul');
+
+  let options = []; // { id, name, altNames?, pinned? }
+  let value = '';
+  let open = false;
+  let query = null;
+  let active = 0;
+  let searchable = false;
+
+  const selected = () => options.find((o) => o.id === value);
+
+  function shown() {
+    const words = normalize(query || '').split(/\s+/).filter(Boolean);
+    let base = options.filter((o) => !o.pinned);
+    if (searchable && words.length) {
+      base = base
+        .map((o, index) => {
+          const label = normalize(o.name);
+          const hay = [label, ...(o.altNames || []).map(normalize)].join(' ');
+          if (!words.every((w) => hay.includes(w))) return null;
+          return { o, index, rank: label.startsWith(words[0]) ? 0 : label.includes(' ' + words[0]) ? 1 : 2 };
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.rank - b.rank || a.index - b.index)
+        .map((x) => x.o);
+    }
+    return [...base, ...options.filter((o) => o.pinned)];
+  }
+
+  function paint() {
+    input.setAttribute('aria-expanded', String(open));
+    list.hidden = !open;
+    input.value = searchable && open && query !== null ? query : selected()?.name || '';
+    clear.hidden = !(value && selected());
+    if (!open) return;
+    const items = shown();
+    if (active >= items.length) active = Math.max(items.length - 1, 0);
+    const none = items.every((o) => o.pinned);
+    list.innerHTML =
+      (none ? '<li class="empty" role="option" aria-disabled="true" aria-selected="false">No matches</li>' : '') +
+      items.map((o, i) => `<li role="option" id="${id}-opt-${i}" data-i="${i}" aria-selected="${o.id === value}"
+        class="${i === active ? 'active' : ''}${o.pinned ? ' pinned' : ''}">${esc(o.name)}</li>`).join('');
+    input.setAttribute('aria-activedescendant', items[active] ? `${id}-opt-${active}` : '');
+    list.querySelector('.active')?.scrollIntoView({ block: 'nearest' });
+  }
+
+  function openList() {
+    if (open) return;
+    open = true;
+    const at = shown().findIndex((o) => o.id === value);
+    active = at >= 0 ? at : 0;
+    paint();
+  }
+  function close() { open = false; query = null; paint(); }
+  function choose(opt) { value = opt.id; close(); onChange(value); input.focus(); }
+
+  input.addEventListener('click', () => (open ? close() : openList()));
+  input.addEventListener('input', () => { query = input.value; active = 0; open = true; paint(); });
+  input.addEventListener('blur', close);
+  input.addEventListener('keydown', (e) => {
+    const items = shown();
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (!open) openList(); else { active = Math.min(active + 1, items.length - 1); paint(); } }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); if (!open) openList(); else { active = Math.max(active - 1, 0); paint(); } }
+    else if (e.key === 'Enter' && open && items[active]) { e.preventDefault(); choose(items[active]); }
+    else if (e.key === ' ' && !searchable) { e.preventDefault(); open && items[active] ? choose(items[active]) : openList(); }
+    else if (e.key === 'Escape' && open) { e.preventDefault(); close(); }
+    else if (e.key === 'Tab') close();
+  });
+  list.addEventListener('mousedown', (e) => e.preventDefault()); // keep focus in the input
+  list.addEventListener('click', (e) => {
+    const li = e.target.closest('li[data-i]');
+    if (li) choose(shown()[Number(li.dataset.i)]);
+  });
+  list.addEventListener('mousemove', (e) => {
+    const li = e.target.closest('li[data-i]');
+    if (li && Number(li.dataset.i) !== active) { active = Number(li.dataset.i); paint(); }
+  });
+  clear.addEventListener('mousedown', (e) => e.preventDefault());
+  clear.addEventListener('click', () => { value = ''; close(); onChange(''); input.focus(); });
+
+  return {
+    root,
+    input,
+    // `items` are records ({ id, name, altNames? }); `withOther` adds the pinned "Other / not listed" entry.
+    setOptions(items, current, withOther, placeholder) {
+      options = items.map((o) => ({ id: o.id, name: o.name, altNames: o.altNames }));
+      if (withOther) options.push({ id: OTHER, name: 'Other / not listed', pinned: true });
+      value = current || '';
+      query = null;
+      open = false;
+      searchable = items.length > SEARCH_THRESHOLD;
+      input.readOnly = !searchable;
+      input.placeholder = searchable ? 'Select or type to search…' : placeholder;
+      clear.setAttribute('aria-label', 'Clear');
+      paint();
+    },
+  };
+}
+
+// ---- the two address lists ----------------------------------------------------------------------------------------
 // Each source describes its levels and how to work out what is visible and what each list contains.
 const SOURCES = {
   official: {
@@ -171,12 +296,13 @@ function buildForm() {
   for (const { key, label } of current.levels) {
     const wrap = document.createElement('div');
     wrap.className = 'field';
-    wrap.innerHTML = `<label for="${key}">${label}</label><select id="${key}"></select>` +
+    wrap.innerHTML = `<label for="${key}">${label}</label>` +
       (key === 'province' ? '<p class="notice" id="province-notice" role="note" hidden></p>'
         : `<input class="other" id="${key}-text" type="text" placeholder="Type your ${label.toLowerCase()}" aria-label="${label} (not listed)" hidden>`);
+    const combo = createCombobox({ id: key, onChange: (v) => choose(key, v) });
+    wrap.querySelector('label').after(combo.root);
     form.append(wrap);
-    els[key] = { wrap, select: wrap.querySelector('select'), text: wrap.querySelector('input') };
-    els[key].select.addEventListener('change', (e) => choose(key, e.target.value));
+    els[key] = { wrap, combo, text: wrap.querySelector('input.other') };
     els[key].text?.addEventListener('input', (e) => { text[key] = e.target.value; render(false); });
   }
   const addr = document.createElement('div');
@@ -201,16 +327,12 @@ function render(rebuildLists) {
   pn.textContent = pnText || '';
   pn.hidden = !pnText;
   for (const { key } of current.levels) {
-    const { wrap, select, text: input } = els[key];
+    const { wrap, combo, text: input } = els[key];
     wrap.hidden = !visible[key];
     const list = options[key];
     const hasList = list.length > 0;
-    select.hidden = !hasList;
-    if (rebuildLists) {
-      const opts = list.map((o) => `<option value="${o.id}">${esc(o.name)}</option>`).join('');
-      select.innerHTML = '<option value="">Select…</option>' + opts + (key !== 'province' && hasList ? `<option value="${OTHER}">Other / not listed</option>` : '');
-      select.value = ids[key];
-    }
+    combo.root.hidden = !hasList;
+    if (rebuildLists) combo.setOptions(list, ids[key], key !== 'province' && hasList, 'Select…');
     if (input) {
       input.hidden = !(visible[key] && (ids[key] === OTHER || (textWhenEmpty?.[key] && !hasList)));
       if (rebuildLists) input.value = text[key];

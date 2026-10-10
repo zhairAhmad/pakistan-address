@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { cleanup, render, screen, within } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import axe from 'axe-core';
 import { afterEach, describe, expect, it, vi } from 'vitest';
@@ -14,12 +14,9 @@ import {
   type ResolvedAnyAddress,
 } from '../src/delivery';
 import { OTHER } from '../src/index';
+import { combo, hasCombo, listOptions, pick } from './helpers';
 
 afterEach(cleanup);
-
-const combo = (name: string) => screen.getByRole('combobox', { name }) as HTMLSelectElement;
-const hasCombo = (name: string) => screen.queryByRole('combobox', { name }) !== null;
-const optionLabels = (select: HTMLElement) => within(select).getAllByRole('option').map((o) => o.textContent);
 
 describe('delivery cascade logic', () => {
   it('starts with only the province list', () => {
@@ -101,12 +98,12 @@ describe('<DeliveryAddressFields />', () => {
         <DeliveryAddressFields name="ship" onChange={onChange} />
       </form>,
     );
-    await user.selectOptions(combo('Province'), 'Punjab');
-    await user.selectOptions(combo('City'), 'Lahore');
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'City', 'Lahore');
     expect(hasCombo('Zone / neighbourhood')).toBe(false);
-    await user.selectOptions(combo('Area'), 'Ali Town');
-    const zone = optionLabels(combo('Zone / neighbourhood')).find((l) => l && !/Select|Other/.test(l))!;
-    await user.selectOptions(combo('Zone / neighbourhood'), zone);
+    await pick(user, 'Area', 'Ali Town');
+    const zone = (await listOptions(user, 'Zone / neighbourhood')).find((l) => l !== 'Other / not listed')!;
+    await pick(user, 'Zone / neighbourhood', zone);
 
     const resolved = onChange.mock.lastCall![1];
     expect(resolved).toMatchObject({ province: 'Punjab', city: 'Lahore', area: 'Ali Town', zone });
@@ -116,11 +113,23 @@ describe('<DeliveryAddressFields />', () => {
     expect(data.get('ship[areaId]')).toBe('dl-pb-lahore-ali-town');
   });
 
+  it('searches the long list of cities', async () => {
+    const user = userEvent.setup();
+    render(<DeliveryAddressFields />);
+    await pick(user, 'Province', 'Punjab');
+    expect(combo('City').readOnly).toBe(false);
+    await user.click(combo('City'));
+    await user.type(combo('City'), 'lah');
+    const shown = screen.getAllByRole('option').map((o) => o.textContent);
+    expect(shown[0]).toBe('Lahore');
+    expect(shown.length).toBeLessThan(20);
+  });
+
   it('skips the Area select for a plain city', async () => {
     const user = userEvent.setup();
     render(<DeliveryAddressFields />);
-    await user.selectOptions(combo('Province'), 'Azad Kashmir');
-    await user.selectOptions(combo('City'), 'Bagh');
+    await pick(user, 'Province', 'Azad Kashmir');
+    await pick(user, 'City', 'Bagh');
     expect(hasCombo('Area')).toBe(false);
     expect(hasCombo('Zone / neighbourhood')).toBe(true);
   });
@@ -128,9 +137,9 @@ describe('<DeliveryAddressFields />', () => {
   it('has no accessibility violations (axe-core), including with an "Other" input', async () => {
     const user = userEvent.setup();
     const { container } = render(<DeliveryAddressFields />);
-    await user.selectOptions(combo('Province'), 'Punjab');
-    await user.selectOptions(combo('City'), 'Lahore');
-    await user.selectOptions(combo('Area'), 'Other / not listed');
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'City', 'Lahore');
+    await pick(user, 'Area', 'Other / not listed');
     const results = await axe.run(container, { rules: { region: { enabled: false } } });
     expect(results.violations.map((v) => v.id)).toEqual([]);
   });
@@ -143,16 +152,16 @@ describe('<SwitchableAddressFields />', () => {
     render(<SwitchableAddressFields onChange={onChange} />);
 
     expect(screen.getByRole('radio', { name: 'Official administrative units' })).toHaveProperty('checked', true);
-    await user.selectOptions(combo('Province'), 'Punjab');
+    await pick(user, 'Province', 'Punjab');
     expect(onChange.mock.lastCall![0]).toMatchObject({ source: 'official', province: 'Punjab' });
     expect(screen.queryByRole('note')).toBeNull();
 
     await user.click(screen.getByRole('radio', { name: 'Delivery areas (unofficial)' }));
     expect(screen.getByRole('note').textContent).toMatch(/unofficial/i);
     expect(combo('Province').value).toBe(''); // switching clears the fields
-    await user.selectOptions(combo('Province'), 'Punjab');
-    await user.selectOptions(combo('City'), 'Lahore');
-    await user.selectOptions(combo('Area'), 'Ali Town');
+    await pick(user, 'Province', 'Punjab');
+    await pick(user, 'City', 'Lahore');
+    await pick(user, 'Area', 'Ali Town');
     expect(onChange.mock.lastCall![0]).toMatchObject({ source: 'delivery', city: 'Lahore', area: 'Ali Town' });
   });
 
