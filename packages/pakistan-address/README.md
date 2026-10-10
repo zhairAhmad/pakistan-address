@@ -80,7 +80,7 @@ Data version **2026-10-07**. Sources, in order of authority: the [Punjab Board o
 | **Total** | **38** | **172** | **681** |
 
 - **Tehsil counts are not comparable across provinces.** Balochistan includes sub-tehsils, Karachi uses sub-divisions, Sindh uses talukas.
-- **Cross-checked against official statistics (Oct 2026):** Sindh matches *Sindh in Figures 2025* (30 districts, 138 talukas). AJK's official count is 35 tehsils against 32 here, and Gilgit-Baltistan's official statistics report 10 districts against 14 here; see [data-sources/official-crosscheck](./data-sources/official-crosscheck/README.md).
+- **Cross-checked against official statistics (Oct 2026):** Sindh matches *Sindh in Figures 2025* (30 districts, 138 talukas). the AJK Statistical Year Book names the same 32 sub-divisions as here (its newer count is 35, unnamed), and Gilgit-Baltistan's official statistics report 10 districts against 14 here; see [data-sources/official-crosscheck](./data-sources/official-crosscheck/README.md).
 - **Codes.** `pbsCode` is the PBS census code and `pcode` the OCHA COD-AB code. About 30 tehsils in the five census provinces have no `pbsCode` (mostly the 11 new Punjab tehsils and sub-tehsils kept from older data); Gilgit-Baltistan and AJK have a `pcode` only. See [DATA.md](./DATA.md).
 - **Alternate names.** Districts and tehsils can carry `altNames` ("Nawabshah", "DG Khan", old spellings) so your search box can match what people actually type.
 - **Not covered in v1:** union councils, towns, chaks, mouzas, villages, postal codes, Urdu names.
