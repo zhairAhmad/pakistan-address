@@ -80,10 +80,11 @@ Data version **2026-10-07**. Sources, in order of authority: the [Punjab Board o
 | **Total** | **38** | **172** | **681** |
 
 - **Tehsil counts are not comparable across provinces.** Balochistan includes sub-tehsils, Karachi uses sub-divisions, Sindh uses talukas.
+- **Cross-checked against official statistics (Oct 2026):** Sindh matches *Sindh in Figures 2025* (30 districts, 138 talukas). AJK's official count is 35 tehsils against 32 here, and Gilgit-Baltistan's official statistics report 10 districts against 14 here; see [data-sources/official-crosscheck](./data-sources/official-crosscheck/README.md).
 - **Codes.** `pbsCode` is the PBS census code and `pcode` the OCHA COD-AB code. About 30 tehsils in the five census provinces have no `pbsCode` (mostly the 11 new Punjab tehsils and sub-tehsils kept from older data); Gilgit-Baltistan and AJK have a `pcode` only. See [DATA.md](./DATA.md).
 - **Alternate names.** Districts and tehsils can carry `altNames` ("Nawabshah", "DG Khan", old spellings) so your search box can match what people actually type.
 - **Not covered in v1:** union councils, towns, chaks, mouzas, villages, postal codes, Urdu names.
-- **Press-reported:** the Swat and South Waziristan splits in Khyber Pakhtunkhwa (the notifications were not located). **Not included:** Balochistan's July 2026 restructuring (press-reported only; a `notice` on the province warns users) and Khyber Pakhtunkhwa's Paharpur. See [DATA.md](./DATA.md#known-gaps).
+- **Press-reported:** the tehsils of the Swat / Bar Swat split and the South Waziristan split in Khyber Pakhtunkhwa (the notifications were not located; the Election Commission confirms that Bar Swat exists). **Not included:** Balochistan's July 2026 restructuring (press-reported only; a `notice` on the province warns users) and Khyber Pakhtunkhwa's Paharpur. See [DATA.md](./DATA.md#known-gaps).
 - **Province `notice`.** A province can carry a `notice` string to show users when it is selected; the demo and the React component do this for Balochistan.
 
 Nothing here has yet been checked line-by-line against the Pakistan Bureau of Statistics or the provincial notifications. Treat it as a good starting list, not an authority.

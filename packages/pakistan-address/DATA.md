@@ -69,7 +69,7 @@ These two changes were made from news reports that quote a provincial notificati
 | Change | Reported by | Notes |
 | --- | --- | --- |
 | South Waziristan split into **Upper South Waziristan** and **Lower South Waziristan** | [Dawn, 14 Oct 2022](https://www.dawn.com/news/1714876) | Tehsils follow the census list for the old district (Upper: Tiarza, Serwakai, Ladha, Makin, Shaktoi, Sararogha; Lower: Wana, Birmal, Toi Khulla). Dawn also named **Shawal** and **Shakai**, which the census does not list; they were removed as unconfirmed. Both districts are in Dera Ismail Khan division (inherited, an assumption) |
-| Swat split into **Swat** (Babuzai, Kabal, Charbagh, Barikot) and **Upper Swat** (Matta, Bahrain, Khwazakhela) | [APP](https://www.app.com.pk/national/swat-divided-into-two-separate-districts/) | **Kalam** is not named in the report; it is in Upper Swat because of where it lies (inferred). Reports disagree on the date. Malakand division |
+| Swat split into **Swat** (Babuzai, Kabal, Charbagh, Barikot) and **Bar Swat** (Matta, Bahrain, Khwazakhela). *The district name and the date, 27 Jan 2026, are now confirmed by an Election Commission notification; the tehsil list is still press-reported.* | [APP](https://www.app.com.pk/national/swat-divided-into-two-separate-districts/) | **Kalam** is not named in the report; it is in Upper Swat because of where it lies (inferred). Reports disagree on the date. Malakand division |
 
 
 ## Cross-checks against official publications
@@ -79,7 +79,11 @@ These two changes were made from news reports that quote a provincial notificati
 | Punjab | [Punjab in Figures 2025](https://bos.punjab.gov.pk/system/files/Punjab%20In%20Figures%202025Pd.pdf), Bureau of Statistics Punjab (file dated April 2026), "Administrative set-up, the Punjab: 2024" | 10 divisions, 41 districts, 156 tehsils | 10, 41, 156 | **Matches**, after step 4. Before it, the data had one district and 10 tehsils fewer |
 | Balochistan, KP, Sindh, Islamabad | PBS Census 2023 portal | 8/34/158, 7/35/148, 6/30/138, 1/1/1 (divisions/districts/tehsils) | 8/34/164, 7/37/163, 6/30/138, 0/1/1 | Agree, except where the data adds press-reported units or keeps extra tehsils the census does not list |
 
-The Punjab PDF (11.4 MB, retrieved 7 Oct 2026) is not stored in the repository. The Khyber Pakhtunkhwa and Sindh Bureau of Statistics publications have not been cross-checked.
+| Sindh | *Sindh in Figures 2025*, Bureau of Statistics Sindh | 30 districts, 138 talukas | 30 districts, 138 tehsils | **Matches** |
+| Azad Jammu & Kashmir | *AJK at a Glance 2025*, Planning & Development Dept | 10 districts, 35 sub-divisions (tehsils) | 10 districts, 32 tehsils | Districts match; **three tehsils missing** (names not given) |
+| Gilgit-Baltistan | *GB at a Glance 2025*, Planning & Development Dept | 10 districts | 14 districts, 24 tehsils | **Differs**; see [official-crosscheck](./data-sources/official-crosscheck/README.md) |
+
+The Punjab PDF (11.4 MB, retrieved 7 Oct 2026) is not stored in the repository. The documents for the last three rows were read on 10 Oct 2026; details in [data-sources/official-crosscheck](./data-sources/official-crosscheck/README.md).
 
 ## Unofficial delivery areas
 
@@ -99,8 +103,9 @@ The Punjab PDF (11.4 MB, retrieved 7 Oct 2026) is not stored in the repository. 
 | Province | Reported change | Source | Status |
 | --- | --- | --- | --- |
 | Balochistan | Revenue Department notification of about 8 July 2026: 11 divisions and 41 districts. Reported changes still unapplied: Quetta split into Quetta East and West, a new Wadh district, Kalat division abolished (Khuzdar and Lasbela divisions), Mastung to Quetta division, Kachhi to Sevi division, Ziarat and Harnai to Loralai division, Makran renamed Makuran, Upper/Lower Dera Bugti renamed North/South, Shaheed Sikandarabad renamed back to Surab, and more tehsils. (Barshore, Koh-e-Suleman, Sevi and the others of Feb to Apr 2026 **are** applied from their own notifications.) | [ProPakistani, 12 Jul 2026](https://propakistani.pk/2026/07/12/balochistan-govt-notifies-new-divisions-and-districts/), [Dawn](https://www.dawn.com/news/2014627/quetta-split-into-two-districts-as-balochistan-undergoes-administrative-restructuring) | **Not applied; the province carries a `notice`.** The notification is not on the Board of Revenue page; needs the document itself |
-| Khyber Pakhtunkhwa | District Paharpur created from Dera Ismail Khan (cabinet approval reported October 2025); reports give 40 districts | [Aaj](https://english.aaj.tv/news/30301132) | Not applied: only a cabinet approval was reported |
-| Gilgit-Baltistan, AJK | Not checked for changes; no tehsil-level official source was found | | Unknown |
+| Khyber Pakhtunkhwa | District Paharpur created from Dera Ismail Khan (cabinet approval 2 Oct 2025, notification reported 26 Nov 2025); reports give 38 to 40 districts | [Aaj](https://english.aaj.tv/news/30301132) | Not applied: only a cabinet approval was reported |
+| Gilgit-Baltistan | Official statistics report 10 districts, the data has 14 (four from OCHA and a 2019 press-reported notification) | [official-crosscheck](./data-sources/official-crosscheck/README.md) | Unresolved; tehsils unverified |
+| AJK | Official count is 35 sub-divisions, the data has 32 | [official-crosscheck](./data-sources/official-crosscheck/README.md) | Three tehsils missing; names needed |
 
 Other gaps: all divisions except those the census confirms come from the 2017-era geo-pakistan data; names follow the sources' English spellings and Urdu names are absent; tehsil boundaries change often.
 
@@ -111,7 +116,8 @@ Only Punjab has been matched against a provincial notification. For the other pr
 - [x] Punjab matches the Board of Revenue notification and the official counts
 - [x] Sindh's divisions match the census (Banbhore removed)
 - [ ] Find the notifications for the Khyber Pakhtunkhwa splits and for the Sindh and Khyber Pakhtunkhwa changes since 2023
-- [ ] Cross-check the KP and Sindh Bureau of Statistics publications
+- [x] Sindh cross-checked against *Sindh in Figures 2025* (matches)
+- [ ] Cross-check Khyber Pakhtunkhwa against the KP Bureau of Statistics and obtain the Bar Swat, Paharpur and South Waziristan notifications
 - [x] Balochistan follows the Board of Revenue notifications up to April 2026
 - [ ] Apply Balochistan's July 2026 restructuring from the notification, then remove the province `notice`
 - [ ] Review the "kept though not in the census list" entries in the apply report
