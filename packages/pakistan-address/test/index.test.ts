@@ -19,7 +19,7 @@ describe('hierarchy', () => {
     const divisions = provinces.flatMap((p) => getDivisions(p.id));
     const districts = provinces.flatMap((p) => getDistrictsByProvince(p.id));
     const tehsils = districts.flatMap((d) => getTehsils(d.id));
-    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 38, 172, 681]);
+    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 40, 174, 682]);
   });
 
   it('cascades Punjab -> Multan -> Vehari -> Mailsi', () => {
@@ -87,7 +87,7 @@ describe('hierarchy', () => {
   it('applies the Balochistan Board of Revenue notifications up to April 2026', () => {
     const names = (id: string) => getTehsils(id).map((t) => t.name);
     // new divisions and districts
-    expect(getDistricts('bl-koh-e-suleman-div').map((d) => d.name)).toEqual(['Barkhan', 'Kohlu', 'Upper Dera Bugti']);
+    expect(getDistricts('bl-koh-e-suleman-div').map((d) => d.name)).toEqual(['Barkhan', 'Kohlu', 'North Dera Bugti']);
     expect(getDivision('bl-sibi-div')?.name).toBe('Sevi');
     for (const id of ['bl-hub', 'bl-usta-muhammad', 'bl-tump', 'bl-barshore', 'bl-upper-dera-bugti']) {
       expect(getDistrict(id)).toBeDefined();
@@ -99,16 +99,36 @@ describe('hierarchy', () => {
     expect(names('bl-barshore')).toEqual(['Barshore']);
     expect(names('bl-tump')).toEqual(['Mand', 'Tump']);
     expect(names('bl-nushki')).toEqual(['Ahmed Wal', 'Daak', 'Kishingi', 'Nushki']);
-    expect(names('bl-dera-bugti')).toEqual(['Dera Bugti', 'Sangseelah', 'Sui']);
+    expect(names('bl-dera-bugti')).toEqual(['Dera Bugti', 'Sangseelah', 'Sui']); // South Dera Bugti after July 2026
     expect(names('bl-kohlu')).toContain('Sufaid');
-    // the old Phelawagh name is an alternate name of Qadirabad, which now sits in Upper Dera Bugti
+    // the old Phelawagh name is an alternate name of Qadirabad, which now sits in Upper (North) Dera Bugti
     expect(getTehsil('bl-upper-dera-bugti-qadirabad')?.altNames).toContain('Phelawagh');
     expect(getTehsil('bl-dera-bugti-phelawagh')).toBeUndefined();
   });
 
-  it('follows the PBS census 2023 for Karachi and Punjab, and Balochistan before the notifications', () => {
+  it('applies the press-reported July 2026 restructuring of Balochistan at division and district level', () => {
+    const divisions = getDivisions('bl');
+    const districts = divisions.flatMap((d) => getDistricts(d.id));
+    expect([divisions.length, districts.length]).toEqual([11, 41]);
+    const of = (id: string) => getDistricts(id).map((d) => d.name);
+    expect(of('bl-quetta-div')).toEqual(['Mastung', 'Quetta East', 'Quetta West']);
+    expect(of('bl-khuzdar-div')).toEqual(['Kalat', 'Khuzdar', 'Surab', 'Wadh']);
+    expect(of('bl-lasbela-div')).toEqual(['Awaran', 'Hub', 'Lasbela']);
+    expect(of('bl-pishin-div')).toEqual(['Barshore', 'Chaman', 'Killa Abdullah', 'Pishin']);
+    expect(of('bl-sibi-div')).toEqual(['Kachhi', 'Sevi', 'South Dera Bugti']);
+    expect(of('bl-loralai-div')).toEqual(['Duki', 'Harnai', 'Loralai', 'Musakhel', 'Ziarat']);
+    expect(getDivision('bl-kalat-div')).toBeUndefined();
+    expect(getDivision('bl-makran-div')?.name).toBe('Makuran');
+    // Quetta East continues the old district (codes kept); Quetta West is new and has no codes
+    expect(getDistrict('bl-quetta')?.pbsCode).toBeDefined();
+    expect(getDistrict('bl-quetta-west')?.pbsCode).toBeUndefined();
+    expect(getTehsils('bl-quetta-west').map((t) => t.name)).toEqual(['Brewery', 'Kuchlak', 'Panjpai']);
+    expect(getTehsils('bl-wadh').map((t) => t.name)).toEqual(['Naal', 'Ornach', 'Wadh']);
+    expect(getProvince('bl')?.notice).toMatch(/press reports/);
+  });
+
+  it('follows the PBS census 2023 for Karachi, Punjab and the untouched parts of Balochistan', () => {
     const names = (id: string) => getTehsils(id).map((t) => t.name);
-    expect(getDistricts('bl-loralai-div').map((d) => d.name)).toEqual(['Duki', 'Loralai', 'Musakhel']);
     expect(getDistricts('bl-zhob-div').map((d) => d.name)).toEqual(['Killa Saifullah', 'Sherani', 'Zhob']);
     expect(getDistrict('bl-lehri')).toBeUndefined();
     expect(getDistrict('bl-surab')?.altNames).toContain('Shaheed Sikandarabad');
