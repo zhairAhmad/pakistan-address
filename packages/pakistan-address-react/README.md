@@ -6,7 +6,8 @@ Cascading **Province → Division → District → Tehsil** address fields for R
 - **"Other / not listed"** at every level below province, revealing a free-text input.
 - Islamabad (no divisions) and areas with no tehsil data fall back to the right inputs automatically.
 - A separate **full address / landmark** field.
-- Native `<select>`s: accessible, no extra dependencies, easy to style. Or use the headless hook with any select library.
+- **Searchable dropdowns.** Long lists (more than 10 options, such as districts and delivery cities) get a search box: type to filter, arrow keys to move, Enter to choose. Alternate names match too ("Nawabshah" finds Shaheed Benazir Abad). Short lists stay a plain dropdown.
+- Custom, accessible dropdowns (WAI-ARIA combobox), no extra dependencies, styled through class names. A native `<select>` is one prop away (`native`). Or use the headless hook with any select library.
 
 > Data baseline is the 2017 census; see the [data notes](../pakistan-address/DATA.md) for what is and isn't covered.
 
@@ -45,7 +46,24 @@ function Checkout() {
 
 Where the user typed their own text, the name is that text and the matching `ids` entry is `null`.
 
-Props: `value` / `defaultValue` / `onChange` (controlled or uncontrolled), `labels` (translate or rename), `classNames` (`root`, `field`, `label`, `select`, `input`, `notice`), `name` (prefix, so the fields post with a native form: `shipping[provinceId]`, `shipping[districtOther]`, `shipping[addressLine]`, …).
+Props: `value` / `defaultValue` / `onChange` (controlled or uncontrolled), `labels` (translate or rename), `classNames`, `name` (prefix, so the fields post with a native form: `shipping[provinceId]`, `shipping[districtOther]`, `shipping[addressLine]`, …), `native`, `searchThreshold` and `unstyled`.
+
+### The dropdowns
+
+```tsx
+<AddressFields
+  searchThreshold={5}   // search box for lists longer than 5 options (default 10)
+  native                // or: use the browser's own <select> (no search box)
+  unstyled              // drop the built-in inline styles and style everything yourself
+  labels={{ searchPlaceholder: 'Type to search…', noResults: 'Nothing found', placeholder: 'Choose…' }}
+  classNames={{ select: 'input', listbox: 'menu', option: 'menu-item', clear: 'clear-btn' }}
+/>
+```
+
+- `classNames` keys: `root`, `field`, `label`, `select` (the dropdown's text box, or the `<select>` when `native`), `input` (typed-in text and the address line), `notice`, and for the custom dropdown `combobox`, `control`, `clear`, `toggle`, `listbox`, `option`, `empty`. The active and selected options carry `data-active` / `aria-selected` for CSS (`[data-active] { … }`), and the list sets `data-open` on the root.
+- Without `unstyled` the dropdown uses a few inline styles so it works with no CSS (system colours, positioned list).
+- The chosen id is posted by a hidden input, so native forms and `FormData` see `name[provinceId]` as before. With JavaScript off the custom dropdown can't open; use `native` if you need a no-JS form.
+- The dropdown is exported on its own as `Combobox` (with `filterOptions`) if you want the same control elsewhere: `options` of `{ value, label, keywords?, pinned? }`, `value`, `onChange`.
 
 ## Headless hook (react-select, MUI, Radix…)
 

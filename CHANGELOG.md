@@ -9,6 +9,12 @@ Data and ids are part of the public contract. Changes to ids, names or the shape
 - `pakistan-address/delivery`: province, city, area and zone names (8 / 682 / 407 / 11,356) taken from an online store's address form, collected 2026-10-09. The store's "City - Area" entries are split into a city and its areas for the 17 cities that have two or more; other cities have no areas. They are courier delivery places, not administrative units, and are labelled `unofficial` (`getDeliveryMeta().unofficial` is always `true`). Functions: `getDeliveryProvinces`, `getDeliveryCities`, `getDeliveryAreas`, `getDeliveryZones` (takes an area id, or a city id for a city without areas), `getDeliveryProvince`, `getDeliveryCity`, `getDeliveryArea`, `getDeliveryZone`, `getDeliveryMeta`. Ids start with `dl-`. The main entry point does not include this data. Raw JSON: `pakistan-address/delivery-areas.json`. See `NOTICE` and `DATA.md` for the source and its licence caveat.
 - `pakistan-address-react/delivery`: `DeliveryAddressFields`, `useDeliveryCascade` and `SwitchableAddressFields` (switch between the official hierarchy and the delivery areas).
 - The demo has a switch between the two lists.
+
+### Changed: custom searchable dropdowns in `pakistan-address-react`
+- `AddressFields` and `DeliveryAddressFields` now use a custom, accessible dropdown (WAI-ARIA combobox) instead of the browser `<select>`. Lists with more than 10 options get a search box (type to filter, arrow keys, Enter, Escape), alternate names match ("Nawabshah" finds Shaheed Benazir Abad), and "Other / not listed" stays at the bottom of every search. Short lists stay a plain dropdown.
+- New props: `native` (use the browser `<select>` as before), `searchThreshold`, `unstyled`, and more `classNames` keys (`combobox`, `control`, `clear`, `toggle`, `listbox`, `option`, `empty`). New `labels`: `searchPlaceholder`, `noResults`, `clear`.
+- The `Combobox` component and `filterOptions` are exported. `Option` gains optional `keywords` and `pinned`.
+- Behaviour change: options are no longer in the server-rendered HTML of the default dropdown (they render when it opens), and it needs JavaScript to open. Use `native` for a no-JavaScript form. The chosen id is still posted under the same field names, through a hidden input.
 - Release note: `pakistan-address-react` now needs a `pakistan-address` version that has `/delivery`, so raise its dependency range when the core package is released.
 
 ## 0.2.1 (2026-10-09)
