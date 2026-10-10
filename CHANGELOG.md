@@ -5,6 +5,14 @@ Data and ids are part of the public contract. Changes to ids, names or the shape
 
 ## Unreleased
 
+### Data: Balochistan's July 2026 restructuring, press-reported, division and district level
+The Revenue Department notification itself was not found; four outlets agree on 11 divisions and 41 districts (`data-sources/balochistan-bor/july-2026-press-report.md`). Balochistan is now 11 divisions, 41 districts and 168 tehsils; all provinces are 40 / 174 / 682.
+- **Added:** districts `bl-quetta-west` and `bl-wadh`; divisions `bl-khuzdar-div`, `bl-lasbela-div` and `bl-pishin-div`; the tehsil Brewery.
+- **Removed:** division `bl-kalat-div` (abolished; Kalat, Khuzdar, Surab and Wadh are in Khuzdar division, Lasbela, Hub and Awaran in Lasbela division, Mastung in Quetta division).
+- **Renamed (ids kept, old names as alternate names):** `bl-quetta` is now **Quetta East** (it continues the old district and keeps its codes), `bl-dera-bugti` is **South Dera Bugti**, `bl-upper-dera-bugti` is **North Dera Bugti**, `bl-sibi` is **Sevi**; division `bl-makran-div` is **Makuran**.
+- **Moved:** Kachhi to Sevi division, Ziarat and Harnai to Loralai division, Pishin, Killa Abdullah, Chaman and Barshore to the new Pishin division. **Ids changed:** `bl-quetta-{kuchlak,panjpai}` are now `bl-quetta-west-*`, and `bl-khuzdar-{wadh,ornach,naal}` are now `bl-wadh-*`.
+- **Not applied:** the new sub-divisions and tehsils the reports list inconsistently, and Surab reverting from Shaheed Sikandarabad (left as Surab). The province `notice` is reworded and stays.
+
 ### Data: small corrections from official documents, and cross-checks (October 2026)
 - **Khyber Pakhtunkhwa:** the district split from Swat is named **Bar Swat** in an Election Commission notification (18 Feb 2026) citing the Board of Revenue notification of 27 Jan 2026. Renamed from "Upper Swat"; the id `kp-upper-swat` is kept and "Upper Swat" is an alternate name. Its tehsils are unchanged (press-reported).
 - **Peshawar tehsils** follow the Board of Revenue notifications of 26 Dec 2019: Cham Kani to Chamkani, Pishta Khara to Pishtakhara, Peshawar to Peshawar City (ids kept, old names are alternate names).
