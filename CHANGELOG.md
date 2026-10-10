@@ -3,7 +3,11 @@
 Data and ids are part of the public contract. Changes to ids, names or the shape of `data/pakistan.json` are recorded here.
 
 
-## Unreleased
+## 0.4.0 (2026-10-10)
+
+Data release. **Ids changed** (new districts and divisions, moved tehsils and a removed division), so this is a minor (breaking) version while the packages are below 1.0. `pakistan-address-react` is released with it, depending on `pakistan-address ^0.4.0`; its code is unchanged. If you stored ids from 0.3.0, look records up again by name or by `pcode` / `pbsCode`; the lists of removed and changed ids are below.
+
+**What is official and what is not:** Punjab follows the Board of Revenue notification of 18 December 2024; Balochistan follows the Board of Revenue notifications up to April 2026 and, at division and district level only, press reports of the July 2026 restructuring (the notification was not found); Sindh and AJK match official statistics; Khyber Pakhtunkhwa's Swat, Paharpur and South Waziristan changes are still press-reported or not applied. Nothing is described as verified.
 
 ### Data: Balochistan's July 2026 restructuring, press-reported, division and district level
 The Revenue Department notification itself was not found; four outlets agree on 11 divisions and 41 districts (`data-sources/balochistan-bor/july-2026-press-report.md`). Balochistan is now 11 divisions, 41 districts and 168 tehsils; all provinces are 40 / 174 / 682.
