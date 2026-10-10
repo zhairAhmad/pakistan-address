@@ -1,6 +1,6 @@
 {
   "name": "pakistan-address-react",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Cascading Province, Division, District and Tehsil address fields for React, with an \"Other / not listed\" option at every level. Built on pakistan-address.",
   "keywords": [
     "pakistan",
@@ -51,7 +51,7 @@
     "prepublishOnly": "npm run build && npm test"
   },
   "dependencies": {
-    "pakistan-address": "^0.2.0"
+    "pakistan-address": "^0.3.0"
   },
   "peerDependencies": {
     "react": ">=18"

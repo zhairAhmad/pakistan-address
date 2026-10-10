@@ -1,6 +1,6 @@
 {
   "name": "pakistan-address",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Pakistan's administrative hierarchy (province, division, district, tehsil) as typed JSON and tiny helpers for cascading address dropdowns. Zero dependencies.",
   "keywords": [
     "pakistan",

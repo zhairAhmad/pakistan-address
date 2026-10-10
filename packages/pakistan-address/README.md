@@ -2,7 +2,7 @@
 
 Pakistan's administrative hierarchy — **Province → Division → District → Tehsil** — as typed JSON plus tiny helpers for cascading address dropdowns. Zero dependencies, ESM + CJS, framework-agnostic.
 
-> **Status: 0.2.0.** Punjab follows the Board of Revenue notification of 18 December 2024; Balochistan, Khyber Pakhtunkhwa, Sindh and Islamabad follow the official PBS census 2023 lists (about early 2023), plus two press-reported splits in Khyber Pakhtunkhwa. **Balochistan was reorganised in July 2026 and is not yet updated here.** Read [What is covered](#what-is-covered) and the [known gaps](./DATA.md#known-gaps) before relying on it, and always give users an "Other / not listed" escape hatch.
+> **Status: 0.3.0.** Punjab follows the Board of Revenue notification of 18 December 2024; Balochistan, Khyber Pakhtunkhwa, Sindh and Islamabad follow the official PBS census 2023 lists (about early 2023), plus two press-reported splits in Khyber Pakhtunkhwa. **Balochistan was reorganised in July 2026 and is not yet updated here.** Read [What is covered](#what-is-covered) and the [known gaps](./DATA.md#known-gaps) before relying on it, and always give users an "Other / not listed" escape hatch.
 
 ## Install
 
