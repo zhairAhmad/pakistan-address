@@ -53,6 +53,7 @@
   ],
   "scripts": {
     "validate": "node scripts/validate.mjs",
+    "watch": "node scripts/check-official-sources.mjs",
     "build": "npm run validate && tsup",
     "test": "npm run validate && vitest run",
     "prepublishOnly": "npm run build && npm test"
