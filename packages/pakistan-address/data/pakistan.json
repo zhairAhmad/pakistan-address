@@ -1,6 +1,6 @@
 {
  "meta": {
-  "dataVersion": "2026-10-07",
+  "dataVersion": "2026-10-10",
   "baseline": "Pakistan census 2017 units (geo-pakistan) merged with the OCHA/WFP COD-AB boundaries valid from September 2022",
   "sources": [
    {
@@ -38,6 +38,12 @@
     "url": "https://minutemirror.com.pk/wp-content/uploads/2024/12/Notification-of-Divisions-Districts-Tehsils-in-the-Punjab.pdf",
     "license": "Official government notification; only unit names are used",
     "note": "Divisions, districts and tehsils of Punjab (10 / 41 / 156), replacing the older Punjab lists. Scanned copy published by Minute Mirror; transcribed in data-sources/punjab-2024/"
+   },
+   {
+    "name": "Government of Balochistan, Revenue Department (Board of Revenue), notifications 2021 to April 2026",
+    "url": "https://bor.balochistan.gov.pk/notifications/",
+    "license": "Official government notifications; only unit names are used",
+    "note": "Hub, Usta Muhammad, Tump, Barshore and Upper Dera Bugti districts, the Koh-e-Suleman division, Sibi renamed Sevi, and new tehsils; see data-sources/balochistan-bor/"
    }
   ]
  },
@@ -50,7 +56,7 @@
   {
    "id": "bl",
    "name": "Balochistan",
-   "notice": "Balochistan reorganised its divisions and districts in July 2026. This list shows the earlier structure, so your division or district may be missing or listed differently. Choose \"Other / not listed\" if you cannot find it.",
+   "notice": "Balochistan's divisions, districts and tehsils follow the Board of Revenue notifications up to April 2026. The restructuring reported for July 2026 is not applied yet, so your division or district may be missing or listed differently. Choose \"Other / not listed\" if you cannot find it.",
    "pcode": "PK2",
    "pbsCode": "4"
   },
@@ -166,6 +172,11 @@
    "pbsCode": "18"
   },
   {
+   "id": "bl-koh-e-suleman-div",
+   "provinceId": "bl",
+   "name": "Koh-e-Suleman"
+  },
+  {
    "id": "kp-kohat-div",
    "provinceId": "kp",
    "name": "Kohat",
@@ -277,16 +288,16 @@
    "pbsCode": "16"
   },
   {
+   "id": "bl-sibi-div",
+   "provinceId": "bl",
+   "name": "Sevi",
+   "pbsCode": "26"
+  },
+  {
    "id": "sd-shaheed-benazirabad-div",
    "provinceId": "sd",
    "name": "Shaheed Benazirabad",
    "pbsCode": "37"
-  },
-  {
-   "id": "bl-sibi-div",
-   "provinceId": "bl",
-   "name": "Sibi",
-   "pbsCode": "26"
   },
   {
    "id": "sd-sukkur-div",
@@ -383,10 +394,16 @@
   {
    "id": "bl-barkhan",
    "provinceId": "bl",
-   "divisionId": "bl-loralai-div",
+   "divisionId": "bl-koh-e-suleman-div",
    "name": "Barkhan",
    "pcode": "PK202",
    "pbsCode": "109"
+  },
+  {
+   "id": "bl-barshore",
+   "provinceId": "bl",
+   "divisionId": "bl-quetta-div",
+   "name": "Barshore"
   },
   {
    "id": "kp-batagram",
@@ -640,6 +657,12 @@
    "divisionId": "ajk-poonch-div",
    "name": "Haveli",
    "pcode": "PK104"
+  },
+  {
+   "id": "bl-hub",
+   "provinceId": "bl",
+   "divisionId": "bl-kalat-div",
+   "name": "Hub"
   },
   {
    "id": "gb-hunza",
@@ -897,7 +920,7 @@
   {
    "id": "bl-kohlu",
    "provinceId": "bl",
-   "divisionId": "bl-sibi-div",
+   "divisionId": "bl-koh-e-suleman-div",
    "name": "Kohlu",
    "pcode": "PK216",
    "pbsCode": "106"
@@ -1593,6 +1616,12 @@
    "pbsCode": "010"
   },
   {
+   "id": "bl-tump",
+   "provinceId": "bl",
+   "divisionId": "bl-makran-div",
+   "name": "Tump"
+  },
+  {
    "id": "sd-umerkot",
    "provinceId": "sd",
    "divisionId": "sd-mirpur-khas-div",
@@ -1607,6 +1636,12 @@
    "name": "Upper Chitral",
    "pcode": "PK508",
    "pbsCode": "170"
+  },
+  {
+   "id": "bl-upper-dera-bugti",
+   "provinceId": "bl",
+   "divisionId": "bl-koh-e-suleman-div",
+   "name": "Upper Dera Bugti"
   },
   {
    "id": "kp-upper-dir",
@@ -1643,6 +1678,12 @@
     "Bar Swat",
     "Upper Bar Swat"
    ]
+  },
+  {
+   "id": "bl-usta-muhammad",
+   "provinceId": "bl",
+   "divisionId": "bl-naseerabad-div",
+   "name": "Usta Muhammad"
   },
   {
    "id": "pb-vehari",
@@ -1727,6 +1768,11 @@
    "name": "Ahmadpur East",
    "pcode": "PK60301",
    "pbsCode": "074"
+  },
+  {
+   "id": "bl-nushki-ahmed-wal",
+   "districtId": "bl-nushki",
+   "name": "Ahmed Wal"
   },
   {
    "id": "sd-malir-airport",
@@ -1914,12 +1960,6 @@
    "pbsCode": "047"
   },
   {
-   "id": "bl-dera-bugti-baiker",
-   "districtId": "bl-dera-bugti",
-   "name": "Baiker",
-   "pbsCode": "405"
-  },
-  {
    "id": "kp-mohmand-baizai",
    "districtId": "kp-mohmand",
    "name": "Baizai",
@@ -1964,9 +2004,9 @@
   {
    "id": "bl-kech-balnigor",
    "districtId": "bl-kech",
-   "name": "Balnigor",
+   "name": "Balnigore",
    "altNames": [
-    "Balnigore"
+    "Balnigor"
    ],
    "pbsCode": "358"
   },
@@ -2061,8 +2101,8 @@
    "pcode": "PK10201"
   },
   {
-   "id": "bl-pishin-barshore",
-   "districtId": "bl-pishin",
+   "id": "bl-barshore-barshore",
+   "districtId": "bl-barshore",
    "name": "Barshore",
    "pcode": "PK22501",
    "pbsCode": "397"
@@ -2345,6 +2385,11 @@
    "pbsCode": "192"
   },
   {
+   "id": "bl-upper-dera-bugti-chief-ali-muhammad",
+   "districtId": "bl-upper-dera-bugti",
+   "name": "Chief Ali Muhammad"
+  },
+  {
    "id": "ajk-hattian-bala-chikar",
    "districtId": "ajk-hattian-bala",
    "name": "Chikar",
@@ -2411,6 +2456,15 @@
    "pbsCode": "559"
   },
   {
+   "id": "bl-nushki-dak",
+   "districtId": "bl-nushki",
+   "name": "Daak",
+   "altNames": [
+    "Dak"
+   ],
+   "pbsCode": "713"
+  },
+  {
    "id": "sd-dadu-dadu",
    "districtId": "sd-dadu",
    "name": "Dadu",
@@ -2449,12 +2503,6 @@
    "name": "Dahli",
    "pcode": "PK72602",
    "pbsCode": "552"
-  },
-  {
-   "id": "bl-nushki-dak",
-   "districtId": "bl-nushki",
-   "name": "Dak",
-   "pbsCode": "713"
   },
   {
    "id": "bl-chagai-dalbandin",
@@ -2715,8 +2763,8 @@
    "pbsCode": "155"
   },
   {
-   "id": "bl-lasbela-dureji",
-   "districtId": "bl-lasbela",
+   "id": "bl-hub-dureji",
+   "districtId": "bl-hub",
    "name": "Dureji",
    "pcode": "PK21702",
    "pbsCode": "336"
@@ -2794,8 +2842,8 @@
    "pbsCode": "563"
   },
   {
-   "id": "bl-lasbela-gaddani",
-   "districtId": "bl-lasbela",
+   "id": "bl-hub-gaddani",
+   "districtId": "bl-hub",
    "name": "Gaddani",
    "pcode": "PK21703",
    "pbsCode": "337"
@@ -2827,8 +2875,8 @@
    "pbsCode": "293"
   },
   {
-   "id": "bl-jaffarabad-gandakha",
-   "districtId": "bl-jaffarabad",
+   "id": "bl-usta-muhammad-gandakha",
+   "districtId": "bl-usta-muhammad",
    "name": "Gandakha",
    "pcode": "PK20701",
    "pbsCode": "370"
@@ -3201,8 +3249,8 @@
    "pbsCode": "361"
   },
   {
-   "id": "bl-lasbela-hub",
-   "districtId": "bl-lasbela",
+   "id": "bl-hub-hub",
+   "districtId": "bl-hub",
    "name": "Hub",
    "pcode": "PK21704",
    "pbsCode": "338"
@@ -3210,8 +3258,9 @@
   {
    "id": "bl-pishin-huramzai",
    "districtId": "bl-pishin",
-   "name": "Huramzai",
+   "name": "Hurramzai",
    "altNames": [
+    "Huramzai",
     "Hurram Zai"
    ],
    "pcode": "PK22502",
@@ -3384,16 +3433,6 @@
    "pbsCode": "546"
   },
   {
-   "id": "bl-awaran-jhal-jhao",
-   "districtId": "bl-awaran",
-   "name": "Jhal Jhao",
-   "altNames": [
-    "Jhal Jao"
-   ],
-   "pcode": "PK20102",
-   "pbsCode": "715"
-  },
-  {
    "id": "bl-jhal-magsi-jhal-magsi",
    "districtId": "bl-jhal-magsi",
    "name": "Jhal Magsi",
@@ -3413,6 +3452,17 @@
    "name": "Jhang",
    "pcode": "PK61202",
    "pbsCode": "110"
+  },
+  {
+   "id": "bl-awaran-jhal-jhao",
+   "districtId": "bl-awaran",
+   "name": "Jhao",
+   "altNames": [
+    "Jhal Jhao",
+    "Jhal Jao"
+   ],
+   "pcode": "PK20102",
+   "pbsCode": "715"
   },
   {
    "id": "bl-jaffarabad-jhat-pat",
@@ -3629,9 +3679,17 @@
    "pbsCode": "327"
   },
   {
+   "id": "bl-pishin-karbala",
+   "districtId": "bl-pishin",
+   "name": "Karbala"
+  },
+  {
    "id": "bl-pishin-karezat",
    "districtId": "bl-pishin",
-   "name": "Karezat",
+   "name": "Karezat Khanozai",
+   "altNames": [
+    "Karezat"
+   ],
    "pcode": "PK22503",
    "pbsCode": "399"
   },
@@ -3684,17 +3742,6 @@
    "districtId": "sd-keamari",
    "name": "Keamari",
    "pbsCode": "568"
-  },
-  {
-   "id": "bl-kech-kech",
-   "districtId": "bl-kech",
-   "name": "Kech",
-   "altNames": [
-    "Turbat",
-    "Kech (Turbat)"
-   ],
-   "pcode": "PK21103",
-   "pbsCode": "362"
   },
   {
    "id": "sd-thatta-keti-bunder",
@@ -3935,6 +3982,11 @@
    "pbsCode": "346"
   },
   {
+   "id": "bl-nushki-kishingi",
+   "districtId": "bl-nushki",
+   "name": "Kishingi"
+  },
+  {
    "id": "pb-taunsa-koh-e-suleman",
    "districtId": "pb-taunsa",
    "name": "Koh-e-Suleman",
@@ -4106,16 +4158,6 @@
    "pbsCode": "142"
   },
   {
-   "id": "bl-lasbela-lairi",
-   "districtId": "bl-lasbela",
-   "name": "Lairi",
-   "altNames": [
-    "Liari"
-   ],
-   "pcode": "PK21709",
-   "pbsCode": "341"
-  },
-  {
    "id": "sd-shikarpur-lakhi",
    "districtId": "sd-shikarpur",
    "name": "Lakhi",
@@ -4238,6 +4280,16 @@
    "pbsCode": "577"
   },
   {
+   "id": "bl-lasbela-lairi",
+   "districtId": "bl-lasbela",
+   "name": "Liari",
+   "altNames": [
+    "Lairi"
+   ],
+   "pcode": "PK21709",
+   "pbsCode": "341"
+  },
+  {
    "id": "pb-lodhran-lodhran",
    "districtId": "pb-lodhran",
    "name": "Lodhran",
@@ -4262,12 +4314,6 @@
    "districtId": "bl-loralai",
    "name": "Loralai",
    "pcode": "PK21901"
-  },
-  {
-   "id": "bl-dera-bugti-loti",
-   "districtId": "bl-dera-bugti",
-   "name": "Loti",
-   "pbsCode": "407"
   },
   {
    "id": "kp-lower-chitral-lotkoh",
@@ -4346,12 +4392,6 @@
    "pbsCode": "127"
   },
   {
-   "id": "bl-dera-bugti-malam",
-   "districtId": "bl-dera-bugti",
-   "name": "Malam",
-   "pbsCode": "408"
-  },
-  {
    "id": "kp-bajaur-mamund",
    "districtId": "kp-bajaur",
    "name": "Mamund",
@@ -4359,8 +4399,8 @@
    "pbsCode": "451"
   },
   {
-   "id": "bl-kech-mand",
-   "districtId": "bl-kech",
+   "id": "bl-tump-mand",
+   "districtId": "bl-tump",
    "name": "Mand",
    "pcode": "PK21104",
    "pbsCode": "363"
@@ -4801,6 +4841,11 @@
    "pbsCode": "330"
   },
   {
+   "id": "bl-upper-dera-bugti-nabi-dad-shaheed",
+   "districtId": "bl-upper-dera-bugti",
+   "name": "Nabi Dad Shaheed"
+  },
+  {
    "id": "bl-washuk-nag",
    "districtId": "bl-washuk",
    "name": "Nag",
@@ -5127,12 +5172,6 @@
    "pcode": "PK31302"
   },
   {
-   "id": "bl-dera-bugti-phelawagh",
-   "districtId": "bl-dera-bugti",
-   "name": "Phelawagh",
-   "pcode": "PK20402"
-  },
-  {
    "id": "pb-jhelum-pind-dadan-khan",
    "districtId": "pb-jhelum",
    "name": "Pind Dadan Khan",
@@ -5161,8 +5200,8 @@
    "pbsCode": "203"
   },
   {
-   "id": "bl-dera-bugti-pir-koh",
-   "districtId": "bl-dera-bugti",
+   "id": "bl-upper-dera-bugti-pir-koh",
+   "districtId": "bl-upper-dera-bugti",
    "name": "Pir Koh",
    "pbsCode": "410"
   },
@@ -5214,9 +5253,13 @@
    "pbsCode": "045"
   },
   {
-   "id": "bl-dera-bugti-qadirabad",
-   "districtId": "bl-dera-bugti",
+   "id": "bl-upper-dera-bugti-qadirabad",
+   "districtId": "bl-upper-dera-bugti",
    "name": "Qadirabad",
+   "altNames": [
+    "Phelawagh"
+   ],
+   "pcode": "PK20402",
    "pbsCode": "409"
   },
   {
@@ -5543,7 +5586,10 @@
   {
    "id": "bl-dera-bugti-sangsillah",
    "districtId": "bl-dera-bugti",
-   "name": "Sangsillah",
+   "name": "Sangseelah",
+   "altNames": [
+    "Sangsillah"
+   ],
    "pbsCode": "411"
   },
   {
@@ -5564,6 +5610,11 @@
    "name": "Sar Kharan",
    "pcode": "PK21202",
    "pbsCode": "324"
+  },
+  {
+   "id": "bl-upper-dera-bugti-sar-loop",
+   "districtId": "bl-upper-dera-bugti",
+   "name": "Sar Loop"
   },
   {
    "id": "pb-gujrat-sarai-alamgir",
@@ -5954,11 +6005,13 @@
    "pbsCode": "372"
   },
   {
-   "id": "bl-lasbela-sonmiani",
-   "districtId": "bl-lasbela",
+   "id": "bl-hub-sonmiani",
+   "districtId": "bl-hub",
    "name": "Sonmiani",
    "altNames": [
-    "Sonmiani/winder"
+    "Sonmiani/winder",
+    "Sonmiani (Winder)",
+    "Winder"
    ],
    "pcode": "PK21706",
    "pbsCode": "342"
@@ -5969,6 +6022,11 @@
    "name": "Spinwam",
    "pcode": "PK52509",
    "pbsCode": "477"
+  },
+  {
+   "id": "bl-kohlu-sufaid",
+   "districtId": "bl-kohlu",
+   "name": "Sufaid"
   },
   {
    "id": "bl-dera-bugti-sui",
@@ -6273,11 +6331,22 @@
    "pbsCode": "062"
   },
   {
-   "id": "bl-kech-tump",
-   "districtId": "bl-kech",
+   "id": "bl-tump-tump",
+   "districtId": "bl-tump",
    "name": "Tump",
    "pcode": "PK21105",
    "pbsCode": "364"
+  },
+  {
+   "id": "bl-kech-kech",
+   "districtId": "bl-kech",
+   "name": "Turbat",
+   "altNames": [
+    "Kech",
+    "Kech (Turbat)"
+   ],
+   "pcode": "PK21103",
+   "pbsCode": "362"
   },
   {
    "id": "sd-ghotki-ubauro",
@@ -6317,11 +6386,11 @@
    "pbsCode": "481"
   },
   {
-   "id": "bl-jaffarabad-usta-mohammad",
-   "districtId": "bl-jaffarabad",
-   "name": "Usta Mohammad",
+   "id": "bl-usta-muhammad-usta-muhammad",
+   "districtId": "bl-usta-muhammad",
+   "name": "Usta Muhammad",
    "altNames": [
-    "Usta Muhammad"
+    "Usta Mohammad"
    ],
    "pcode": "PK20703",
    "pbsCode": "373"

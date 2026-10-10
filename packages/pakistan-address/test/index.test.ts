@@ -19,7 +19,7 @@ describe('hierarchy', () => {
     const divisions = provinces.flatMap((p) => getDivisions(p.id));
     const districts = provinces.flatMap((p) => getDistrictsByProvince(p.id));
     const tehsils = districts.flatMap((d) => getTehsils(d.id));
-    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 37, 167, 678]);
+    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 38, 172, 681]);
   });
 
   it('cascades Punjab -> Multan -> Vehari -> Mailsi', () => {
@@ -84,9 +84,31 @@ describe('hierarchy', () => {
     expect(getProvinces().filter((p) => p.notice).map((p) => p.id)).toEqual(['bl']);
   });
 
-  it('follows the PBS census 2023 for Balochistan, Karachi and Punjab', () => {
+  it('applies the Balochistan Board of Revenue notifications up to April 2026', () => {
     const names = (id: string) => getTehsils(id).map((t) => t.name);
-    expect(getDistricts('bl-loralai-div').map((d) => d.name)).toEqual(['Barkhan', 'Duki', 'Loralai', 'Musakhel']);
+    // new divisions and districts
+    expect(getDistricts('bl-koh-e-suleman-div').map((d) => d.name)).toEqual(['Barkhan', 'Kohlu', 'Upper Dera Bugti']);
+    expect(getDivision('bl-sibi-div')?.name).toBe('Sevi');
+    for (const id of ['bl-hub', 'bl-usta-muhammad', 'bl-tump', 'bl-barshore', 'bl-upper-dera-bugti']) {
+      expect(getDistrict(id)).toBeDefined();
+    }
+    // tehsils follow the notifications
+    expect(names('bl-hub')).toEqual(['Dureji', 'Gaddani', 'Hub', 'Sonmiani']);
+    expect(names('bl-lasbela')).toEqual(['Bela', 'Kanraj', 'Lakhra', 'Liari', 'Uthal']);
+    expect(names('bl-pishin')).toEqual(['Bostan', 'Hurramzai', 'Karbala', 'Karezat Khanozai', 'Nana Sahib', 'Pishin', 'Saranan']);
+    expect(names('bl-barshore')).toEqual(['Barshore']);
+    expect(names('bl-tump')).toEqual(['Mand', 'Tump']);
+    expect(names('bl-nushki')).toEqual(['Ahmed Wal', 'Daak', 'Kishingi', 'Nushki']);
+    expect(names('bl-dera-bugti')).toEqual(['Dera Bugti', 'Sangseelah', 'Sui']);
+    expect(names('bl-kohlu')).toContain('Sufaid');
+    // the old Phelawagh name is an alternate name of Qadirabad, which now sits in Upper Dera Bugti
+    expect(getTehsil('bl-upper-dera-bugti-qadirabad')?.altNames).toContain('Phelawagh');
+    expect(getTehsil('bl-dera-bugti-phelawagh')).toBeUndefined();
+  });
+
+  it('follows the PBS census 2023 for Karachi and Punjab, and Balochistan before the notifications', () => {
+    const names = (id: string) => getTehsils(id).map((t) => t.name);
+    expect(getDistricts('bl-loralai-div').map((d) => d.name)).toEqual(['Duki', 'Loralai', 'Musakhel']);
     expect(getDistricts('bl-zhob-div').map((d) => d.name)).toEqual(['Killa Saifullah', 'Sherani', 'Zhob']);
     expect(getDistrict('bl-lehri')).toBeUndefined();
     expect(getDistrict('bl-surab')?.altNames).toContain('Shaheed Sikandarabad');
