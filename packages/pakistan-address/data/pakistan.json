@@ -56,6 +56,12 @@
     "url": "https://revenue.kp.gov.pk/notification/sub-divisions-and-tehsils-in-district-peshawar/",
     "license": "Official government notification; only unit names are used",
     "note": "Badhber, Chamkani, Peshawar City, Pishtakhara, Shah Alam and Mathra tehsils of Peshawar"
+   },
+   {
+    "name": "Azad Jammu & Kashmir Statistical Year Book 2024, Tables 7.10 and 7.11 (Local Government & Rural Development Department)",
+    "url": "https://www.pndajk.gov.pk/uploadfiles/downloads/AJ&K%20Statistical%20Year%20Book%202024(1).pdf",
+    "license": "Official government statistics; only unit names are used",
+    "note": "3 divisions, 10 districts and 32 sub-divisions (tehsils) by name; matches the data, with spelling variants kept as alternate names"
    }
   ]
  },
@@ -664,16 +670,6 @@
    "pbsCode": "105"
   },
   {
-   "id": "ajk-hattian-bala",
-   "provinceId": "ajk",
-   "divisionId": "ajk-muzaffarabad-div",
-   "name": "Hattian Bala",
-   "altNames": [
-    "Jhelum Valley"
-   ],
-   "pcode": "PK103"
-  },
-  {
    "id": "ajk-haveli",
    "provinceId": "ajk",
    "divisionId": "ajk-poonch-div",
@@ -756,6 +752,17 @@
    "name": "Jhelum",
    "pcode": "PK613",
    "pbsCode": "053"
+  },
+  {
+   "id": "ajk-hattian-bala",
+   "provinceId": "ajk",
+   "divisionId": "ajk-muzaffarabad-div",
+   "name": "Jhelum Valley",
+   "altNames": [
+    "Hattian Bala",
+    "Hattian"
+   ],
+   "pcode": "PK103"
   },
   {
    "id": "bl-kachhi",
@@ -2026,6 +2033,9 @@
    "id": "ajk-sudhnoti-baluch",
    "districtId": "ajk-sudhnoti",
    "name": "Baluch",
+   "altNames": [
+    "Baloch"
+   ],
    "pcode": "PK11001"
   },
   {
@@ -2490,6 +2500,9 @@
    "id": "ajk-mirpur-dadyal",
    "districtId": "ajk-mirpur",
    "name": "Dadyal",
+   "altNames": [
+    "Dudyal"
+   ],
    "pcode": "PK10601"
   },
   {
@@ -2685,6 +2698,9 @@
    "id": "ajk-bagh-dhir-kot",
    "districtId": "ajk-bagh",
    "name": "Dhir Kot",
+   "altNames": [
+    "Dhirkot"
+   ],
    "pcode": "PK10102"
   },
   {
@@ -2768,6 +2784,9 @@
    "id": "ajk-kotli-dulliya-jattan",
    "districtId": "ajk-kotli",
    "name": "Dulliya Jattan",
+   "altNames": [
+    "Darlia Jattan"
+   ],
    "pcode": "PK10502"
   },
   {
@@ -2825,6 +2844,9 @@
    "id": "ajk-kotli-fatehpur-thakiala",
    "districtId": "ajk-kotli",
    "name": "Fatehpur Thakiala",
+   "altNames": [
+    "Fatehpur Thakyala"
+   ],
    "pcode": "PK10503"
   },
   {
@@ -3923,12 +3945,18 @@
    "id": "ajk-kotli-khui-ratta",
    "districtId": "ajk-kotli",
    "name": "Khui Ratta",
+   "altNames": [
+    "Khuiratta"
+   ],
    "pcode": "PK10504"
   },
   {
    "id": "ajk-haveli-khurshid-abad",
    "districtId": "ajk-haveli",
    "name": "Khurshid Abad",
+   "altNames": [
+    "Khurshidabad"
+   ],
    "pcode": "PK10402"
   },
   {
@@ -4744,6 +4772,9 @@
    "id": "ajk-sudhnoti-mong",
    "districtId": "ajk-sudhnoti",
    "name": "Mong",
+   "altNames": [
+    "Mung"
+   ],
    "pcode": "PK11002"
   },
   {
@@ -6239,6 +6270,9 @@
    "id": "ajk-sudhnoti-tarar-khal",
    "districtId": "ajk-sudhnoti",
    "name": "Tarar Khal",
+   "altNames": [
+    "Trarkhal"
+   ],
    "pcode": "PK11004"
   },
   {
