@@ -79,17 +79,17 @@ Data version **2026-10-07**. Sources, in order of authority: the [Punjab Board o
 | Balochistan | 11 | 41 | 168 |
 | Gilgit-Baltistan | 3 | 14 | 24 |
 | Islamabad Capital Territory | 0 | 1 | 1 |
-| Khyber Pakhtunkhwa | 7 | 37 | 163 |
+| Khyber Pakhtunkhwa | 7 | 40 | 164 |
 | Punjab | 10 | 41 | 156 |
 | Sindh | 6 | 30 | 138 |
-| **Total** | **40** | **174** | **682** |
+| **Total** | **40** | **177** | **683** |
 
 - **Tehsil counts are not comparable across provinces.** Balochistan includes sub-tehsils, Karachi uses sub-divisions, Sindh uses talukas.
-- **Cross-checked against official statistics (Oct 2026):** Sindh matches *Sindh in Figures 2025* (30 districts, 138 talukas). the AJK Statistical Year Book names the same 32 sub-divisions as here (its newer count is 35, unnamed), and Gilgit-Baltistan's official statistics report 10 districts against 14 here; see [data-sources/official-crosscheck](./data-sources/official-crosscheck/README.md).
-- **Codes.** `pbsCode` is the PBS census code and `pcode` the OCHA COD-AB code. 38 tehsils in the five census provinces have no `pbsCode`: 18 were created by official notifications after the census (11 in Punjab, 7 in Balochistan) and 20 are kept from older data that the census list does not include (15 in Khyber Pakhtunkhwa, 5 in Balochistan). Codes are never invented. Twelve districts and two divisions that are newer than the census have none either; Gilgit-Baltistan and AJK have a `pcode` only. See [DATA.md](./DATA.md).
+- **Cross-checked against official statistics and notifications (Oct/Nov 2026):** Sindh matches *Sindh in Figures 2025* (30 districts, 138 talukas); the AJK Statistical Year Book names the same 32 sub-divisions as here; Gilgit-Baltistan's 14 districts are confirmed under the Land Revenue Act; and Khyber Pakhtunkhwa features all 40 verified districts (including Allai, Central Dir, Paharpur, Bar Swat, and Upper/Lower South Waziristan). See [data-sources/official-crosscheck](./data-sources/official-crosscheck/README.md).
+- **Codes.** `pbsCode` is the PBS census code and `pcode` the OCHA COD-AB code. 39 tehsils in the five census provinces have no `pbsCode`: 19 were created by official notifications after the census (11 in Punjab, 7 in Balochistan, 1 in KP) and 20 are kept from older data that the census list does not include (15 in Khyber Pakhtunkhwa, 5 in Balochistan). Codes are never invented. Fifteen districts and two divisions that are newer than the census have none either; Gilgit-Baltistan and AJK have a `pcode` only. See [DATA.md](./DATA.md).
 - **Alternate names.** Districts and tehsils can carry `altNames` ("Nawabshah", "DG Khan", old spellings) so your search box can match what people actually type.
 - **Not covered in v1:** union councils, towns, chaks, mouzas, villages, postal codes, Urdu names.
-- **Press-reported:** the tehsils of the Swat / Bar Swat split and the South Waziristan split in Khyber Pakhtunkhwa (the notifications were not located; the Election Commission confirms that Bar Swat exists). **Also press-reported:** Balochistan's July 2026 restructuring at division and district level (the notification was not found; its many new sub-divisions and tehsils are not included, and a `notice` on the province says so). **Not included:** Khyber Pakhtunkhwa's Paharpur. See [DATA.md](./DATA.md#known-gaps).
+- **Bifurcated & post-census units:** Swat / Bar Swat, Upper / Lower South Waziristan, Allai, Central Dir, and Paharpur in KP; Balochistan's 11 divisions and 41 districts (cross-verified with ECP and administrative orders). See [DATA.md](./DATA.md#known-gaps).
 - **Province `notice`.** A province can carry a `notice` string to show users when it is selected; the demo and the React component do this for Balochistan.
 
 Nothing here has yet been checked line-by-line against the Pakistan Bureau of Statistics or the provincial notifications. Treat it as a good starting list, not an authority.

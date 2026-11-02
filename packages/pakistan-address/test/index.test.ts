@@ -19,7 +19,7 @@ describe('hierarchy', () => {
     const divisions = provinces.flatMap((p) => getDivisions(p.id));
     const districts = provinces.flatMap((p) => getDistrictsByProvince(p.id));
     const tehsils = districts.flatMap((d) => getTehsils(d.id));
-    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 40, 174, 682]);
+    expect([provinces.length, divisions.length, districts.length, tehsils.length]).toEqual([7, 40, 177, 683]);
   });
 
   it('cascades Punjab -> Multan -> Vehari -> Mailsi', () => {
@@ -77,6 +77,13 @@ describe('hierarchy', () => {
     expect(getDistrictsByProvince('pb')).toHaveLength(41);
     expect(getDistrict('pb-murree')?.divisionId).toBe('pb-rawalpindi-div');
     expect(names('pb-kot-addu')).toEqual(['Chowk Sarwar Shaheed', 'Kot Addu']);
+    expect(getDistrictsByProvince('kp')).toHaveLength(40);
+    expect(getDistrict('kp-allai')?.divisionId).toBe('kp-hazara-div');
+    expect(names('kp-allai')).toEqual(['Allai']);
+    expect(getDistrict('kp-central-dir')?.divisionId).toBe('kp-malakand-div');
+    expect(names('kp-central-dir')).toEqual(['Larjam', 'Wari']);
+    expect(getDistrict('kp-paharpur')?.divisionId).toBe('kp-dera-ismail-khan-div');
+    expect(names('kp-paharpur')).toEqual(['Paharpur', 'Paniala']);
   });
 
   it('warns about Balochistan and no other province', () => {

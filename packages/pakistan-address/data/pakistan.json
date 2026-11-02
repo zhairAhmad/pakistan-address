@@ -1,6 +1,6 @@
 {
  "meta": {
-  "dataVersion": "2026-10-10",
+  "dataVersion": "2026-11-02",
   "baseline": "Pakistan census 2017 units (geo-pakistan) merged with the OCHA/WFP COD-AB boundaries valid from September 2022",
   "sources": [
    {
@@ -68,6 +68,12 @@
     "url": "https://propakistani.pk/2026/07/12/balochistan-govt-notifies-new-divisions-and-districts/",
     "license": "Facts only; no text copied",
     "note": "Division and district level only (11 divisions, 41 districts); the notification itself was not located; see data-sources/balochistan-bor/july-2026-press-report.md"
+   },
+   {
+    "name": "Government of Khyber Pakhtunkhwa, Board of Revenue, Revenue & Estate Department, notifications of January 2023 and October 2025",
+    "url": "https://revenue.kp.gov.pk/notification/",
+    "license": "Official government notifications; only unit names are used",
+    "note": "Creation of Allai (from Battagram), Central Dir (from Upper Dir) and Paharpur (from Dera Ismail Khan) districts under the KP Land Revenue Act 1967; bringing KP to 40 districts"
    }
   ]
  },
@@ -355,6 +361,12 @@
    "pbsCode": "005"
   },
   {
+   "id": "kp-allai",
+   "provinceId": "kp",
+   "divisionId": "kp-hazara-div",
+   "name": "Allai"
+  },
+  {
    "id": "gb-astore",
    "provinceId": "gb",
    "divisionId": "gb-diamer-div",
@@ -478,6 +490,12 @@
    "name": "Buner",
    "pcode": "PK505",
    "pbsCode": "014"
+  },
+  {
+   "id": "kp-central-dir",
+   "provinceId": "kp",
+   "divisionId": "kp-malakand-div",
+   "name": "Central Dir"
   },
   {
    "id": "bl-chagai",
@@ -1319,6 +1337,12 @@
    "pbsCode": "120"
   },
   {
+   "id": "kp-paharpur",
+   "provinceId": "kp",
+   "divisionId": "kp-dera-ismail-khan-div",
+   "name": "Paharpur"
+  },
+  {
    "id": "pb-pakpattan",
    "provinceId": "pb",
    "divisionId": "pb-sahiwal-div",
@@ -1858,8 +1882,8 @@
    "name": "Alipur Chatha"
   },
   {
-   "id": "kp-batagram-allai",
-   "districtId": "kp-batagram",
+   "id": "kp-allai-allai",
+   "districtId": "kp-allai",
    "name": "Allai",
    "pcode": "PK50401",
    "pbsCode": "013"
@@ -4300,8 +4324,8 @@
    "pbsCode": "457"
   },
   {
-   "id": "kp-upper-dir-larjam",
-   "districtId": "kp-upper-dir",
+   "id": "kp-central-dir-larjam",
+   "districtId": "kp-central-dir",
    "name": "Larjam",
    "altNames": [
     "Larjum"
@@ -5139,8 +5163,8 @@
    "pbsCode": "067"
   },
   {
-   "id": "kp-dera-ismail-khan-paharpur",
-   "districtId": "kp-dera-ismail-khan",
+   "id": "kp-paharpur-paharpur",
+   "districtId": "kp-paharpur",
    "name": "Paharpur",
    "pcode": "PK50904",
    "pbsCode": "008"
@@ -5180,6 +5204,14 @@
    "districtId": "bl-sohbatpur",
    "name": "Panhwar",
    "pbsCode": "712"
+  },
+  {
+   "id": "kp-paharpur-paniala",
+   "districtId": "kp-paharpur",
+   "name": "Paniala",
+   "altNames": [
+    "Paniyala"
+   ]
   },
   {
    "id": "bl-panjgur-panjgur",
@@ -6548,8 +6580,8 @@
    "pbsCode": "262"
   },
   {
-   "id": "kp-upper-dir-wari",
-   "districtId": "kp-upper-dir",
+   "id": "kp-central-dir-wari",
+   "districtId": "kp-central-dir",
    "name": "Wari",
    "pcode": "PK53506",
    "pbsCode": "055"

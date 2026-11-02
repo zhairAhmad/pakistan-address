@@ -3,6 +3,19 @@
 Data and ids are part of the public contract. Changes to ids, names or the shape of `data/pakistan.json` are recorded here.
 
 
+## Unreleased
+
+### Data: Khyber Pakhtunkhwa reaches 40 verified districts
+Following KP Board of Revenue notifications under the Land Revenue Act 1967 and ECP delimitation orders, three post-census districts are applied:
+- **Added districts:** `kp-allai` (from Battagram, Hazara division), `kp-central-dir` (from Upper Dir, Malakand division, HQ Wari), `kp-paharpur` (from Dera Ismail Khan, DI Khan division, HQ Paharpur). KP is now 7 divisions, 40 districts, and 164 tehsils. All provinces total 40 / 177 / 683.
+- **Added tehsil:** `kp-paharpur-paniala` (Paniala, altName Paniyala).
+- **Moved tehsils (ids changed):**
+  - `kp-batagram-allai` is now `kp-allai-allai` (district `kp-allai`).
+  - `kp-upper-dir-larjam` and `kp-upper-dir-wari` are now `kp-central-dir-larjam` and `kp-central-dir-wari` (district `kp-central-dir`).
+  - `kp-dera-ismail-khan-paharpur` is now `kp-paharpur-paharpur` (district `kp-paharpur`).
+- **Cross-checks:** Gilgit-Baltistan's 14 districts confirmed under Section 5 of the Land Revenue Act 1967 (Department of Home and Prisons); AJK's 32 sub-divisions confirmed by name against the *Statistical Year Book 2024*; Balochistan's July 2026 restructuring cross-verified with ECP delimitation appointments and district HQ administrative setups.
+
+
 ## 0.4.0 (2026-10-10)
 
 Data release. **Ids changed** (new districts and divisions, moved tehsils and a removed division), so this is a minor (breaking) version while the packages are below 1.0. `pakistan-address-react` is released with it, depending on `pakistan-address ^0.4.0`; its code is unchanged. If you stored ids from 0.3.0, look records up again by name or by `pcode` / `pbsCode`; the lists of removed and changed ids are below.

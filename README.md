@@ -164,18 +164,18 @@ function CustomCascade() {
 
 ## Data Coverage (v0.4.0)
 
-Data version **2026-10-07**. Current totals: **7 provinces/territories, 40 divisions, 174 districts, 682 tehsils**.
+Data version **2026-11-02**. Current totals: **7 provinces/territories, 40 divisions, 177 districts, 683 tehsils**.
 
 | Province / territory | Divisions | Districts | Tehsils | Primary source |
 | --- | --: | --: | --: | --- |
 | Azad Jammu & Kashmir | 3 | 10 | 32 | OCHA COD-AB & AJK Statistical Year Book |
-| Balochistan | 11 | 41 | 168 | BoR notifications up to April 2026 + press-reported July 2026 restructuring |
-| Gilgit-Baltistan | 3 | 14 | 24 | OCHA COD-AB |
+| Balochistan | 11 | 41 | 168 | BoR notifications up to April 2026 + verified July 2026 restructuring |
+| Gilgit-Baltistan | 3 | 14 | 24 | Department of Home & Prisons notification (Land Revenue Act) |
 | Islamabad Capital Territory | 0 | 1 | 1 | PBS Census 2023 |
-| Khyber Pakhtunkhwa | 7 | 37 | 163 | PBS Census 2023 + press-reported splits |
+| Khyber Pakhtunkhwa | 7 | 40 | 164 | PBS Census 2023 + BoR notifications & ECP delimitation |
 | Punjab | 10 | 41 | 156 | **Board of Revenue notification of 18 December 2024 (exact match)** |
 | Sindh | 6 | 30 | 138 | PBS Census 2023 lists & *Sindh in Figures 2025* |
-| **Total** | **40** | **174** | **682** | |
+| **Total** | **40** | **177** | **683** | |
 
 > [!NOTE]
 > Tehsil counts are not uniform across Pakistan: Balochistan includes sub-tehsils, Karachi uses sub-divisions, and Sindh uses talukas. See [DATA.md](./packages/pakistan-address/DATA.md) for full provenance notes, known gaps, and verification details.

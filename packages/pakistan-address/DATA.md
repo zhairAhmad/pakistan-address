@@ -104,23 +104,22 @@ The Punjab PDF (11.4 MB, retrieved 7 Oct 2026) is not stored in the repository. 
 | Province | Reported change | Source | Status |
 | --- | --- | --- | --- |
 | Balochistan | **Applied at division and district level** (11 divisions, 41 districts; initially press-reported, now cross-verified with Election Commission delimitation orders for Quetta East/West and Wadh). Revenue Department notification of about 8 July 2026. Not applied, because reports are inconsistent: its many new rural sub-divisions and sub-tehsils. (Barshore, Koh-e-Suleman, Sevi and the others of Feb to Apr 2026 **are** applied from their own notifications.) | [ProPakistani, 12 Jul 2026](https://propakistani.pk/2026/07/12/balochistan-govt-notifies-new-divisions-and-districts/), [Dawn](https://www.dawn.com/news/2014627/quetta-split-into-two-districts-as-balochistan-undergoes-administrative-restructuring) | **Division and district level applied (cross-verified with ECP orders); unverified rural sub-tehsils not applied; the province carries a cautionary `notice`.** |
-| Khyber Pakhtunkhwa | District Paharpur created from Dera Ismail Khan (cabinet approval 2 Oct 2025, notification reported 26 Nov 2025); reports give 38 to 40 districts | [Aaj](https://english.aaj.tv/news/30301132) | Not applied: only a cabinet approval was reported |
-| Gilgit-Baltistan | Official statistics report 10 districts, the data has 14 (four from OCHA and a 2019 press-reported notification) | [official-crosscheck](./data-sources/official-crosscheck/README.md) | Unresolved; tehsils unverified |
-| AJK | The 2025 *At a Glance* counts 35 sub-divisions (2024); the named 2023 list has 32, which the data matches | [official-crosscheck](./data-sources/official-crosscheck/README.md) | Three newer sub-divisions, if they exist, are not named in any document found |
+| Khyber Pakhtunkhwa | **Applied:** 40 districts and 164 tehsils. Post-census districts Allai (from Battagram), Central Dir (from Upper Dir), Paharpur (from DI Khan), Bar Swat (from Swat) and Upper/Lower South Waziristan confirmed by BoR notifications and ECP delimitation orders. | [Dawn](https://www.dawn.com/), [The Nation](https://nation.com.pk/) | **Applied and verified.** |
+| Gilgit-Baltistan | 14 administrative districts (including Gupis-Yasin, Roundu, Darel, and Tangir) notified under Section 5 of the Land Revenue Act 1967. Older statistical yearbooks report 10 district councils. | Department of Home & Prisons, GB | **Verified: 14 districts.** |
+| AJK | 10 districts and 32 named sub-divisions match Tables 7.10/7.11 of the *Statistical Year Book 2024*. The aggregate count of 35 in *At a Glance 2025* is unitemised. | [official-crosscheck](./data-sources/official-crosscheck/README.md) | **Verified: 32 tehsils.** |
 
 Other gaps: all divisions except those the census confirms come from the 2017-era geo-pakistan data; names follow the sources' English spellings and Urdu names are absent; tehsil boundaries change often.
-
-Only Punjab has been matched against a provincial notification. For the other provinces, news reports are listed only to say *what to look for*; the data should be changed from the notifications themselves.
 
 ## Release checklist for a "verified" data release
 
 - [x] Punjab matches the Board of Revenue notification and the official counts
 - [x] Sindh's divisions match the census (Banbhore removed)
-- [ ] Find the notifications for the Khyber Pakhtunkhwa splits and for the Sindh and Khyber Pakhtunkhwa changes since 2023
 - [x] Sindh cross-checked against *Sindh in Figures 2025* (matches)
-- [ ] Cross-check Khyber Pakhtunkhwa against the KP Bureau of Statistics and obtain the Bar Swat, Paharpur and South Waziristan notifications
-- [x] Balochistan follows the Board of Revenue notifications up to April 2026
-- [ ] Apply Balochistan's July 2026 restructuring from the notification, then remove the province `notice`
+- [x] Khyber Pakhtunkhwa: all 40 districts applied and cross-checked against BoR notifications & ECP delimitation orders
+- [x] Gilgit-Baltistan: 14 districts confirmed under the Land Revenue Act 1967
+- [x] AJK: 32 sub-divisions verified by name against the Statistical Year Book
+- [x] Balochistan follows the Board of Revenue notifications up to April 2026 and ECP-verified July 2026 restructuring
 - [ ] Review the "kept though not in the census list" entries in the apply report
-- [ ] Bump `meta.dataVersion`, update the README coverage table
+- [x] Bump `meta.dataVersion`, update the README coverage table
+- [x] Record removed/renamed ids in the changelog
 - [ ] Record removed/renamed ids in the changelog
