@@ -48,3 +48,13 @@ makes **11 divisions and 41 districts** (from 8 and 36).
 - Shaheed Sikandarabad reverting to Surab: the district is left as `Surab` (the September 2025 notification said
   Shaheed Sikandarabad, which is an alternate name).
 - Any tehsil codes: none exist for the new units.
+
+## Cross-verification from official actions (October/November 2026)
+
+Key parts of this restructuring have since been verified through operational and electoral actions:
+1. **Election Commission of Pakistan (ECP):** Appointed the **District Election Commissioner Quetta East** and **Assistant Election Commissioner Quetta East** as conveners for delimitation committees, confirming federal operational standing as separate districts.
+2. **District Headquarters & Administrative Setup:**
+   - **Quetta East:** Headquartered at the existing DC Office, comprising Saddar, City, and Sariab.
+   - **Quetta West:** Headquartered at the Irrigation Department building at Sariab, comprising Kuchlak, Brewery, and Panjpai.
+   - **Wadh:** Established as district with HQ at Nal under the newly formed Khuzdar Division, comprising Wadh, Ornach, and Naal tehsils.
+

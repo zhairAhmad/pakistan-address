@@ -80,7 +80,7 @@
   {
    "id": "bl",
    "name": "Balochistan",
-   "notice": "Balochistan follows the Board of Revenue notifications up to April 2026. The divisions and districts of the July 2026 restructuring are applied from press reports, because the notification itself has not been found, and its new sub-divisions and tehsils are not included, so your tehsil may be missing or listed differently. Choose \"Other / not listed\" if you cannot find it.",
+   "notice": "Balochistan follows Board of Revenue notifications up to April 2026 and press reports of the July 2026 restructuring (11 divisions, 41 districts, Quetta East/West, Wadh), cross-verified with Election Commission delimitation orders. Certain new sub-divisions and tehsils may be unlisted until the official gazette is released. Choose \"Other / not listed\" if your tehsil is not found.",
    "pcode": "PK2",
    "pbsCode": "4"
   },
