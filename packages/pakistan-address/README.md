@@ -7,7 +7,7 @@ Pakistan's administrative hierarchy — **Province → Division → District →
 
 [**Live Interactive Demo**](https://zhairahmad.github.io/pakistan-address/)
 
-> **Status: 0.4.0.** Punjab follows the Board of Revenue notification of 18 December 2024; Balochistan follows the Board of Revenue notifications up to April 2026, plus the press-reported July 2026 restructuring at division and district level; Khyber Pakhtunkhwa, Sindh and Islamabad follow the official PBS census 2023 lists (about early 2023), plus two press-reported splits in Khyber Pakhtunkhwa. **Balochistan's July 2026 restructuring is applied from press reports at division and district level only; its notification and its new tehsils are not included.** Read [What is covered](#what-is-covered) and the [known gaps](./DATA.md#known-gaps) before relying on it, and always give users an "Other / not listed" escape hatch.
+> **Status: 0.5.0.** Punjab follows the Board of Revenue notification of 18 December 2024; Khyber Pakhtunkhwa has all 40 verified districts under BoR notifications and ECP delimitation orders; Balochistan follows the Board of Revenue notifications and ECP-verified July 2026 restructuring (11 divisions, 41 districts); Gilgit-Baltistan has 14 verified districts under the Land Revenue Act; Sindh and AJK match official statistics. Read [What is covered](#what-is-covered) and the [known gaps](./DATA.md#known-gaps) before relying on it, and always give users an "Other / not listed" escape hatch.
 
 ## Install
 

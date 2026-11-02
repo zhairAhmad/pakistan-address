@@ -162,7 +162,7 @@ function CustomCascade() {
 
 ---
 
-## Data Coverage (v0.4.0)
+## Data Coverage (v0.5.0)
 
 Data version **2026-11-02**. Current totals: **7 provinces/territories, 40 divisions, 177 districts, 683 tehsils**.
 

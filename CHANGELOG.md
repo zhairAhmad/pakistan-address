@@ -3,7 +3,11 @@
 Data and ids are part of the public contract. Changes to ids, names or the shape of `data/pakistan.json` are recorded here.
 
 
-## Unreleased
+## 0.5.0 (2026-11-02)
+
+Data release. **Ids changed** (3 new districts, moved tehsils and a new tehsil), so this is a minor (breaking) version while the packages are below 1.0. `pakistan-address-react` is released with it, depending on `pakistan-address ^0.5.0`; its code is unchanged. If you stored ids from 0.4.0, look records up again by name or by `pcode` / `pbsCode`.
+
+**Official verification:** Punjab follows the Board of Revenue notification of 18 December 2024; Khyber Pakhtunkhwa reaches 40 verified districts under BoR notifications and ECP delimitation orders; Balochistan follows Board of Revenue notifications and ECP-verified July 2026 restructuring (11 divisions, 41 districts); Gilgit-Baltistan's 14 districts are confirmed under Section 5 of the Land Revenue Act 1967; Sindh and AJK match official Bureau of Statistics publications.
 
 ### Data: Khyber Pakhtunkhwa reaches 40 verified districts
 Following KP Board of Revenue notifications under the Land Revenue Act 1967 and ECP delimitation orders, three post-census districts are applied:

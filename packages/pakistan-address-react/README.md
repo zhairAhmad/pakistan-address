@@ -14,7 +14,7 @@ Cascading **Province → Division → District → Tehsil** address fields for R
 - **Searchable dropdowns.** Long lists (more than 10 options, such as districts and delivery cities) get a search box: type to filter, arrow keys to move, Enter to choose. Alternate names match too ("Nawabshah" finds Shaheed Benazir Abad). Short lists stay a plain dropdown.
 - Custom, accessible dropdowns (WAI-ARIA combobox), no extra dependencies, styled through class names. A native `<select>` is one prop away (`native`). Or use the headless hook with any select library.
 
-> **Status: 0.4.0.** Built on [`pakistan-address`](https://www.npmjs.com/package/pakistan-address) 0.4.0 (Punjab BoR December 2024 notification, PBS Census 2023 lists, and Balochistan BoR notifications up to 2026). See [DATA.md](https://github.com/zhairAhmad/pakistan-address/blob/main/packages/pakistan-address/DATA.md) for coverage and known gaps. Always give users an "Other / not listed" escape hatch.
+> **Status: 0.5.0.** Built on [`pakistan-address`](https://www.npmjs.com/package/pakistan-address) 0.5.0 (Punjab BoR December 2024 notification, KP 40 districts, PBS Census 2023 lists, and Balochistan BoR notifications up to 2026). See [DATA.md](https://github.com/zhairAhmad/pakistan-address/blob/main/packages/pakistan-address/DATA.md) for coverage and known gaps. Always give users an "Other / not listed" escape hatch.
 
 ## Install
 
