@@ -1,6 +1,11 @@
 # pakistan-address-react
 
-Cascading **Province → Division → District → Tehsil** address fields for React, built on [`pakistan-address`](../pakistan-address).
+[![npm version](https://img.shields.io/npm/v/pakistan-address-react.svg)](https://www.npmjs.com/package/pakistan-address-react)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+Cascading **Province → Division → District → Tehsil** address fields for React, built on [`pakistan-address`](https://www.npmjs.com/package/pakistan-address).
+
+[**Live Interactive Demo**](https://zhairahmad.github.io/pakistan-address/)
 
 - Each level filters from the previous one.
 - **"Other / not listed"** at every level below province, revealing a free-text input.
@@ -9,7 +14,7 @@ Cascading **Province → Division → District → Tehsil** address fields for R
 - **Searchable dropdowns.** Long lists (more than 10 options, such as districts and delivery cities) get a search box: type to filter, arrow keys to move, Enter to choose. Alternate names match too ("Nawabshah" finds Shaheed Benazir Abad). Short lists stay a plain dropdown.
 - Custom, accessible dropdowns (WAI-ARIA combobox), no extra dependencies, styled through class names. A native `<select>` is one prop away (`native`). Or use the headless hook with any select library.
 
-> Data baseline is the 2017 census; see the [data notes](../pakistan-address/DATA.md) for what is and isn't covered.
+> **Status: 0.4.0.** Built on [`pakistan-address`](https://www.npmjs.com/package/pakistan-address) 0.4.0 (Punjab BoR December 2024 notification, PBS Census 2023 lists, and Balochistan BoR notifications up to 2026). See [DATA.md](https://github.com/zhairAhmad/pakistan-address/blob/main/packages/pakistan-address/DATA.md) for coverage and known gaps. Always give users an "Other / not listed" escape hatch.
 
 ## Install
 
@@ -119,7 +124,7 @@ Levels appear one at a time (division, then district, then tehsil), so render ea
 
 ## Unofficial delivery areas, and switching between the two lists
 
-Besides the official hierarchy, `pakistan-address` has an optional, **unofficial** list of courier delivery areas (province, city, zone) taken from an online store's address form; see its [README](../pakistan-address#unofficial-delivery-areas-optional). The fields for it live in a separate entry point, so the main bundle does not include that data:
+Besides the official hierarchy, `pakistan-address` has an optional, **unofficial** list of courier delivery areas (province, city, zone) taken from an online store's address form; see its [README](https://github.com/zhairAhmad/pakistan-address/tree/main/packages/pakistan-address#unofficial-delivery-areas-optional). The fields for it live in a separate entry point, so the main bundle does not include that data:
 
 ```tsx
 import { DeliveryAddressFields, SwitchableAddressFields } from 'pakistan-address-react/delivery';

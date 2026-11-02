@@ -1,6 +1,11 @@
 # pakistan-address
 
+[![npm version](https://img.shields.io/npm/v/pakistan-address.svg)](https://www.npmjs.com/package/pakistan-address)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 Pakistan's administrative hierarchy — **Province → Division → District → Tehsil** — as typed JSON plus tiny helpers for cascading address dropdowns. Zero dependencies, ESM + CJS, framework-agnostic.
+
+[**Live Interactive Demo**](https://zhairahmad.github.io/pakistan-address/)
 
 > **Status: 0.4.0.** Punjab follows the Board of Revenue notification of 18 December 2024; Balochistan follows the Board of Revenue notifications up to April 2026, plus the press-reported July 2026 restructuring at division and district level; Khyber Pakhtunkhwa, Sindh and Islamabad follow the official PBS census 2023 lists (about early 2023), plus two press-reported splits in Khyber Pakhtunkhwa. **Balochistan's July 2026 restructuring is applied from press reports at division and district level only; its notification and its new tehsils are not included.** Read [What is covered](#what-is-covered) and the [known gaps](./DATA.md#known-gaps) before relying on it, and always give users an "Other / not listed" escape hatch.
 
@@ -121,7 +126,7 @@ Recommended pattern:
 3. A separate **full address / landmark** field. Don't try to derive the street from the data.
 4. Store ids *and* the resolved names.
 
-For React, [`pakistan-address-react`](../pakistan-address-react) implements exactly this.
+For React, [`pakistan-address-react`](https://www.npmjs.com/package/pakistan-address-react) implements exactly this.
 
 ## Sources & licence
 
@@ -129,4 +134,4 @@ Code and data in this package: MIT. Upstream data © its authors; see [NOTICE](.
 
 ## Contributing corrections
 
-Spotted a wrong, missing or renamed unit? Open a PR that edits `data/pakistan.json` and cites an official source (PBS, a provincial notification, a gazette). See [CONTRIBUTING.md](../../CONTRIBUTING.md).
+Spotted a wrong, missing or renamed unit? Open a PR that edits `data/pakistan.json` and cites an official source (PBS, a provincial notification, a gazette). See [CONTRIBUTING.md](https://github.com/zhairAhmad/pakistan-address/blob/main/CONTRIBUTING.md).
