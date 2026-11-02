@@ -119,7 +119,6 @@ Other gaps: all divisions except those the census confirms come from the 2017-er
 - [x] Gilgit-Baltistan: 14 districts confirmed under the Land Revenue Act 1967
 - [x] AJK: 32 sub-divisions verified by name against the Statistical Year Book
 - [x] Balochistan follows the Board of Revenue notifications up to April 2026 and ECP-verified July 2026 restructuring
-- [ ] Review the "kept though not in the census list" entries in the apply report
+- [x] Review the "kept though not in the census list" entries in the apply report (verified: valid local administrative units like Khaliqabad, Rakhni)
 - [x] Bump `meta.dataVersion`, update the README coverage table
 - [x] Record removed/renamed ids in the changelog
-- [ ] Record removed/renamed ids in the changelog
