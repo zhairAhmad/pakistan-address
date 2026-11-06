@@ -63,9 +63,15 @@ async function entries(source) {
 
 const snapshot = fs.existsSync(snapshotFile) ? JSON.parse(fs.readFileSync(snapshotFile, 'utf8')) : { sources: {} };
 const update = process.argv.includes('--update');
+const outputIdx = process.argv.indexOf('--output');
+const outputFile = outputIdx !== -1 && process.argv[outputIdx + 1] ? process.argv[outputIdx + 1] : null;
+
 const next = { checked: new Date().toISOString().slice(0, 10), sources: { ...snapshot.sources } };
 let failed = 0;
 let anyNew = false;
+const newEntries = [];
+const removedEntries = [];
+const errorEntries = [];
 
 for (const source of SOURCES) {
   process.stdout.write(`${source.name}\n  ${source.url}\n`);
@@ -74,6 +80,7 @@ for (const source of SOURCES) {
     current = await entries(source);
   } catch (e) {
     failed++;
+    errorEntries.push({ source: source.name, url: source.url, error: e.message });
     console.log(`  ERROR: ${e.message} (not compared)\n`);
     continue;
   }
@@ -88,9 +95,20 @@ for (const source of SOURCES) {
     if (!added.length && !removed.length) console.log(`  no change (${current.length} entries)\n`);
     for (const e of added) {
       anyNew = true;
-      console.log(`  NEW${RELEVANT.test(e.text + ' ' + e.href) ? ' (looks relevant)' : ''}: ${e.text}\n       ${e.href}`);
+      const isRelevant = RELEVANT.test(e.text + ' ' + e.href);
+      newEntries.push({
+        source: source.name,
+        sourceUrl: source.url,
+        text: e.text,
+        href: e.href,
+        isRelevant,
+      });
+      console.log(`  NEW${isRelevant ? ' (looks relevant)' : ''}: ${e.text}\n       ${e.href}`);
     }
-    for (const e of removed) console.log(`  REMOVED: ${e.text}\n       ${e.href}`);
+    for (const e of removed) {
+      removedEntries.push({ source: source.name, text: e.text, href: e.href });
+      console.log(`  REMOVED: ${e.text}\n       ${e.href}`);
+    }
     if (added.length || removed.length) console.log('');
   }
   next.sources[source.id] = current;
@@ -101,5 +119,62 @@ if (update) {
   fs.writeFileSync(snapshotFile, JSON.stringify(next, null, 1) + '\n');
   console.log(`Snapshot saved: ${path.relative(process.cwd(), snapshotFile)}`);
 }
+
+function generateMarkdownReport() {
+  const lines = [];
+  lines.push('### 📢 Official Administrative Source Watch Report');
+  lines.push('');
+  lines.push(`> **Run Date:** ${next.checked}`);
+  lines.push('');
+
+  if (newEntries.length > 0) {
+    const relevantCount = newEntries.filter((e) => e.isRelevant).length;
+    lines.push(`**${newEntries.length} new notification(s) detected** (${relevantCount} flagged as potentially relevant).`);
+    lines.push('');
+    lines.push('| Source | Title | Relevant? | Link |');
+    lines.push('| --- | --- | :---: | --- |');
+    for (const e of newEntries) {
+      const relBadge = e.isRelevant ? '⚠️ **Yes**' : 'No';
+      const cleanTitle = e.text.replace(/\|/g, '\\|');
+      lines.push(`| ${e.source} | ${cleanTitle} | ${relBadge} | [View Document](${e.href}) |`);
+    }
+    lines.push('');
+    lines.push('#### Action for Maintainer');
+    lines.push('1. Review flagged documents for district, division, tehsil, or boundary modifications.');
+    lines.push('2. If verified, transcribe notifications and apply changes to `data/pakistan.json`.');
+    lines.push('3. Update `snapshot.json` by running `npm run watch -- --update` or triggering the workflow with update.');
+    lines.push('');
+  } else {
+    lines.push('✅ **No new official notifications found.** All monitored portals match current snapshots.');
+    lines.push('');
+  }
+
+  if (errorEntries.length > 0) {
+    lines.push('#### ⚠️ Portal Fetch Errors');
+    for (const err of errorEntries) {
+      lines.push(`- **${err.source}** (${err.url}): \`${err.error}\``);
+    }
+    lines.push('');
+  }
+
+  return lines.join('\n');
+}
+
+if (newEntries.length > 0 || errorEntries.length > 0 || outputFile) {
+  const report = generateMarkdownReport();
+  if (outputFile) {
+    fs.mkdirSync(path.dirname(path.resolve(outputFile)), { recursive: true });
+    fs.writeFileSync(outputFile, report + '\n');
+    console.log(`Report written to ${outputFile}`);
+  }
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    try {
+      fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, report + '\n');
+    } catch (e) {
+      console.error(`Failed to write to GITHUB_STEP_SUMMARY: ${e.message}`);
+    }
+  }
+}
+
 if (failed === SOURCES.length) process.exit(1);
 process.exit(anyNew ? 2 : 0);
