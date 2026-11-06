@@ -1,0 +1,78 @@
+name: Official Source Watcher
+
+on:
+  schedule:
+    # Runs on the 1st of every month at 06:00 UTC
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      update_snapshot:
+        description: 'Save current state to snapshot.json and commit'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: source-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Run official source watcher
+        id: watcher
+        run: |
+          set +e
+          UPDATE_FLAG=""
+          if [ "${{ inputs.update_snapshot }}" = "true" ]; then
+            UPDATE_FLAG="--update"
+          fi
+
+          node packages/pakistan-address/scripts/check-official-sources.mjs --output report.md $UPDATE_FLAG
+          EXIT_CODE=$?
+          echo "exit_code=$EXIT_CODE" >> "$GITHUB_OUTPUT"
+
+          if [ "$EXIT_CODE" -eq 1 ]; then
+            echo "Error: All monitored official sources failed to load."
+            exit 1
+          fi
+          exit 0
+
+      - name: Create or update GitHub issue
+        if: steps.watcher.outputs.exit_code == '2' && inputs.update_snapshot != true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING_ISSUE=$(gh issue list --search "[Data Watch] New official administrative notifications in:title state:open" --json number --jq '.[0].number')
+          if [ -n "$EXISTING_ISSUE" ] && [ "$EXISTING_ISSUE" != "null" ]; then
+            echo "Updating existing open issue #$EXISTING_ISSUE..."
+            gh issue comment "$EXISTING_ISSUE" --body-file report.md
+          else
+            echo "Creating new issue..."
+            gh issue create \
+              --title "[Data Watch] New official administrative notifications detected" \
+              --body-file report.md
+          fi
+
+      - name: Commit updated snapshot
+        if: inputs.update_snapshot == true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add packages/pakistan-address/data-sources/watch/snapshot.json
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(watch): update official sources snapshot [skip ci]"
+            git push
+          else
+            echo "No snapshot changes to commit."
+          fi
