@@ -42,7 +42,11 @@ const UA = 'Mozilla/5.0 (compatible; pakistan-address-source-watch; +https://git
 const clean = (s) => s.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&#8211;|&ndash;/g, '-').replace(/\s+/g, ' ').trim();
 
 async function entries(source) {
-  const res = await fetch(source.url, { headers: { 'user-agent': UA, accept: 'text/html' }, redirect: 'follow' });
+  const res = await fetch(source.url, {
+    headers: { 'user-agent': UA, accept: 'text/html' },
+    redirect: 'follow',
+    signal: AbortSignal.timeout(15000),
+  });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const html = await res.text();
   const seen = new Map();
