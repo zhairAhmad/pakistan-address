@@ -1,0 +1,80 @@
+{
+  "name": "pakistan-address-react-native",
+  "version": "0.5.0",
+  "description": "Cascading Province, Division, District and Tehsil address fields for React Native & Expo, with an \"Other / not listed\" option at every level. Built on pakistan-address.",
+  "keywords": [
+    "pakistan",
+    "address",
+    "react-native",
+    "expo",
+    "cascading-select",
+    "picker",
+    "dropdown",
+    "tehsil",
+    "district"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./delivery": {
+      "import": {
+        "types": "./dist/delivery.d.ts",
+        "default": "./dist/delivery.js"
+      },
+      "require": {
+        "types": "./dist/delivery.d.cts",
+        "default": "./dist/delivery.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "pakistan-address": "^0.5.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.70"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-native": "^0.73.0",
+    "react": "^18.3.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^5.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhairAhmad/pakistan-address.git",
+    "directory": "packages/pakistan-address-react-native"
+  }
+}
