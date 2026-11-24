@@ -75,5 +75,10 @@
     "type": "git",
     "url": "git+https://github.com/zhairAhmad/pakistan-address.git",
     "directory": "packages/pakistan-address-react-native"
-  }
+  },
+  "homepage": "https://github.com/zhairAhmad/pakistan-address#readme",
+  "bugs": {
+    "url": "https://github.com/zhairAhmad/pakistan-address/issues"
+  },
+  "author": "Zhair Ahmad"
 }
